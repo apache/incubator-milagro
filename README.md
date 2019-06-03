@@ -3,6 +3,8 @@
 The Apache Milagro (incubating) website
 ============================
 
+Milagro is a set of crypto libraries and core security infrastructure applications, built for decentralized networks yet suitable for enterprises.
+
 Milagro has several repos. The application repos are being overhauled to reflect new, modern architectures. Expect for these to be merged into one repo called Milagro Server. More detail is available at:
 
 * [Milagro JIRA](https://issues.apache.org/jira/projects/MILAGRO/issues/MILAGRO-18?filter=allopenissues)
