@@ -1,3 +1,5 @@
+![Milagro Logo](/images/MILAGRO_LOGO.png)
+
 The Apache Milagro (incubating) website
 ============================
 
