@@ -3,8 +3,8 @@ The Apache Milagro (incubating) website
 
 Milagro has several repos. The application repos are being overhauled to reflect new, modern architectures. Expect for these to be merged into one repo called Milagro Server. More detail is available at:
 
-[Milagro JIRA](https://issues.apache.org/jira/projects/MILAGRO/issues/MILAGRO-18?filter=allopenissues)
-[Milagro Wiki](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045)
+* [Milagro JIRA](https://issues.apache.org/jira/projects/MILAGRO/issues/MILAGRO-18?filter=allopenissues)
+* [Milagro Wiki](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045)
 
 The most current libraries are the core crypto libraries:
 
