@@ -40,7 +40,7 @@ In addition to the `LICENSE` and `NOTICE` files required of any proper Apache-li
 | `_config.yml` | Configuration information controlling the Jekyll build.  This is a standard Jekyll file. See: [Jekyll directory structure](https://jekyllrb.com/docs/structure/)
 | `build.sh`    | The website build script (usage documented below).
 | `doc/`        | Per-release documentation for Apache Milagro (incubating). This directory contains one subdirectory per release, where each subdirectory contains the overall manual and API documentation for each part of the Milagro (incubating) core crypto libraries and server applications. Files in this directory are not interpreted by Jekyll, as there are far too many files for this to be reasonable. They are instead copied into place by the `build.sh` script.
-| `img/`     | Images which are referenced within the website HTML and CSS.
+| `images/`     | Images which are referenced within the website HTML and CSS.
 | `pub/`        | Miscellaneous public files, such as test scripts. The test scripts in this directory have historically been shared to users to help with debugging.
 | `styles/`     | All CSS files referenced by the website HTML.
 | `_companies/` | Documents which contain metadata describing third-party companies that provide support for Apache Milagro (incubating). The content of these documents is rendered as the description for that company on the support page.
