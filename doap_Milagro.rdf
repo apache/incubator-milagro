@@ -30,7 +30,7 @@
     <shortdesc>Core security infrastructure for decentralized networks.</shortdesc>
     <description>Milagro is crypto libraries and core security infrastructure for decentralized networks and distributed systems.</description>
     <bug-database rdf:resource="https://issues.apache.org/jira/browse/MILAGRO" />
-    <mailing-list rdf:resource="http://milagro.incubator.apache.org/" />
+    <mailing-list rdf:resource="https://lists.apache.org/list.html?dev@milagro.apache.org" />
     <download-page rdf:resource="http://milagro.incubator.apache.org/" />
     <programming-language>Python</programming-language>
     <programming-language>Go</programming-language>
