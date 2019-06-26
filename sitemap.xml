@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://milagro.apache.org/help</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/en/help" /> </url>
+<url> <loc>https://milagro.apache.org/index.js-old</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/en/index.js-old" /> </url>
+<url> <loc>https://milagro.apache.org/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/en/users" /> </url>
+<url> <loc>https://milagro.apache.org/blog/2019/06/10/miss-me</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://milagro.apache.org/docs/amcl-c-api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/amcl-c-api" /> </url>
+<url> <loc>https://milagro.apache.org/docs/amcl-javascript-api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/amcl-javascript-api" /> </url>
+<url> <loc>https://milagro.apache.org/docs/amcl-overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/amcl-overview" /> </url>
+<url> <loc>https://milagro.apache.org/docs/contributor-guide</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/contributor-guide" /> </url>
+<url> <loc>https://milagro.apache.org/docs/d-ta-api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/d-ta-api" /> </url>
+<url> <loc>https://milagro.apache.org/docs/d-ta-overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/d-ta-overview" /> </url>
+<url> <loc>https://milagro.apache.org/docs/doc2</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/doc2" /> </url>
+<url> <loc>https://milagro.apache.org/docs/doc3</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/doc3" /> </url>
+<url> <loc>https://milagro.apache.org/docs/milagro-crypto</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/milagro-crypto" /> </url>
+<url> <loc>https://milagro.apache.org/docs/milagro-design</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/milagro-design" /> </url>
+<url> <loc>https://milagro.apache.org/docs/milagro-intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/milagro-intro" /> </url>
+<url> <loc>https://milagro.apache.org/docs/milagro-protocols</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/milagro-protocols" /> </url>
+<url> <loc>https://milagro.apache.org/docs/zkp-mfa-api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/zkp-mfa-api" /> </url>
+<url> <loc>https://milagro.apache.org/docs/zkp-mfa-overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://milagro.apache.org/docs/zkp-mfa-overview" /> </url>
+</urlset>

@@ -1,0 +1,864 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Milagro Protocols · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;The Apache Milagro crypto libraries contain an (almost) overwhelming choice of algorithms and cryptographic primitives for robust and rapid application development. This section focuses specifically on a few protocols that are used extensively as key building blocks within the Milagro Zero-Knowledge Proof Multi-Factor Authentication (ZKP-MFA) server and clients, and Milagro Decentralized Trust Authority (D-TA) applications. Both applications implement these protocols using the Milagro crypto libraries.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Milagro Protocols · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;p&gt;The Apache Milagro crypto libraries contain an (almost) overwhelming choice of algorithms and cryptographic primitives for robust and rapid application development. This section focuses specifically on a few protocols that are used extensively as key building blocks within the Milagro Zero-Knowledge Proof Multi-Factor Authentication (ZKP-MFA) server and clients, and Milagro Decentralized Trust Authority (D-TA) applications. Both applications implement these protocols using the Milagro crypto libraries.&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class="siteNavGroupActive"><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>About Milagro</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About Milagro</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/milagro-intro">Milagro Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-crypto">Milagro Crypto</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/milagro-protocols">Milagro Protocols</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-design">Milagro Design</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">AMCL Library</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/amcl-overview">AMCL Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/amcl-c-api">AMCL C API</a></li><li class="navListItem"><a class="navItem" href="/docs/amcl-javascript-api">AMCL JavaScript API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">D-TA Node</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/d-ta-overview">D-TA Node Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/d-ta-api">D-TA Node API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ZKP-MFA Clients/Servers</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/zkp-mfa-overview">ZKP-MFA Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/zkp-mfa-api">ZKP-MFA API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Project Info</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/contributor-guide">Contributor&#x27;s Guide</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Milagro Protocols</h1></header><article><div><span><p>The Apache Milagro crypto libraries contain an (almost) overwhelming choice of algorithms and cryptographic primitives for robust and rapid application development. This section focuses specifically on a few protocols that are used extensively as key building blocks within the Milagro Zero-Knowledge Proof Multi-Factor Authentication (ZKP-MFA) server and clients, and Milagro Decentralized Trust Authority (D-TA) applications. Both applications implement these protocols using the Milagro crypto libraries.</p>
+<h2><a class="anchor" aria-hidden="true" id="m-pin-protocol-introduction"></a><a href="#m-pin-protocol-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>M-Pin Protocol - Introduction</h2>
+<p>The genesis of the M-Pin Protocol was first put forward in a research paper by <a href="https://scholar.google.com/citations?user=GsM-aeEAAAAJ&amp;hl=en">Dr. Michael Scott</a> in 2002<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>The M-Pin Protocol has been iterated on several times over the years since, to develop three distinct modes, which will be explored in the following sections.</p>
+<p>As noted in <a href="milagro-crypto.html">Milagro Crypto</a>, the M-Pin Protocol is of these classifications and exploits the features of:</p>
+<ul>
+<li>Elliptic Curve Cryptography</li>
+<li>Pairing Based Cryptography</li>
+<li>Identity Based Encryption</li>
+<li>Zero Knowledge Proof</li>
+</ul>
+<p>Because of the characteristics that M-Pin inherits from the four techniques above, the M-Pin Protocol and its variants are able to deliver:</p>
+<ul>
+<li>Multi-factor authentication (MFA) using Zero Knowledge Proof</li>
+<li>Authenticated Key Agreement</li>
+<li>Distribution, or splitting, of Trust Authorities</li>
+<li><a href="https://en.wikipedia.org/wiki/Subliminal_channel">Subliminal Channel Communication</a><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+</ul>
+<p>The three modes of operation of the M-Pin Protocol are as follows:</p>
+<ul>
+<li><strong>M-Pin 1-pass</strong>: Client to server authentication via digital signature, this mode implements a <em>non-interactive</em> zero knowledge proof and is resistant to <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MITM (man in the middle)</a> attacks.</li>
+<li><strong>M-Pin 2-pass</strong>: Client to server authentication via a <em>interactive</em> zero knowledge proof, resistant to <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MITM</a> and <a href="https://kcitls.org">KCI (Key Compromise Impersonation)</a> attacks.</li>
+<li><strong>M-Pin FULL</strong>: Mutual client to server authentication via a <em>interactive</em> zero knowledge proof, resistant to MITM and KCI attacks and able to drive an Authenticated <a href="https://en.wikipedia.org/wiki/Key-agreement_protocol">Key Agreement</a> between client and server, resulting in 128 bit shared secret key.</li>
+</ul>
+<p>Note that the M-Pin Full Authenticated Key Agreement possesses the quality of <a href="https://en.wikipedia.org/wiki/Forward_secrecy">perfect forward secrecy (PFS)</a>, meaning, even if the client and server long term keys are compromised, the past session keys (used to encrypt TLS traffic, for example) are not compromised.</p>
+<h2><a class="anchor" aria-hidden="true" id="chow-choo-protocol-introduction"></a><a href="#chow-choo-protocol-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chow-Choo Protocol - Introduction</h2>
+<p>The Chow-Choo Protocol was developed by Sherman S.M. Chow and Kim-Kwang Raymond Choo and published in 2007 via a research paper titled Strongly-Secure Identity-based Key Agreement<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>.  The Chow-Choo Protocol can be technically described as an identity-based key agreement protocol.</p>
+<p>The Chow-Choo Protocol is of these classifications and exploits the features of:</p>
+<ul>
+<li>Elliptic Curve Cryptography</li>
+<li>Pairing Based Cryptography</li>
+<li>Identity Based Encryption</li>
+</ul>
+<p>Because of the characteristics that Chow-Choo inherits from the three techniques above, the Chow-Choo Protocol can deliver:</p>
+<ul>
+<li>Authenticated Key Agreement</li>
+<li>Distribution, or splitting, of Trust Authorities</li>
+</ul>
+<p>Note that the Chow-Choo Protocol is not a Zero Knowledge Proof protocol.</p>
+<h2><a class="anchor" aria-hidden="true" id="bls-signatures-introduction"></a><a href="#bls-signatures-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BLS Signatures - Introduction</h2>
+<p>The BLS signature (Boneh-Lynn-Schacham) scheme<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> uses a bilinear pairing for verification, and signatures are elements of an elliptic curve group. Working in an elliptic curve group provides some defense against index calculus attacks (with the caveat that such attacks are still possible in the target group \( G_{T} \) of the pairing), allowing shorter signatures than other systems for similar levels of security.</p>
+<p>BLS signatures have become the subject of much work as they are seen as being a possible way forward to solve privacy issues within cryptocurrencies through a process of signature aggregation. Apache Milagro uses signature aggregation and key splitting, and further aggregation of signatures from those split keys, as a key component of the Milagro Custody Node digital asset safekeeping protocol.</p>
+<h2><a class="anchor" aria-hidden="true" id="supersingular-isogeny-key-encapsulation-introduction"></a><a href="#supersingular-isogeny-key-encapsulation-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supersingular Isogeny Key Encapsulation - Introduction</h2>
+<p>Supersingular isogeny Diffie–Hellman key exchange (SIDH) and the key encapsulation protocol, SIKE<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup> (derived from SIDH), are post-quantum cryptographic algorithms used to establish a secret key between two parties over an otherwise insecure communications channel. SIKE boasts one of the smallest key sizes of all post-quantum key encapsulations; with compression, SIKE uses 2688-bit public keys at a 128-bit quantum security level.</p>
+<p>SIKE also distinguishes itself from similar systems such as NTRU and Ring-LWE by supporting perfect forward secrecy, a property that prevents compromised long-term keys from compromising the confidentiality of old communication sessions. These properties make SIKE a natural candidate to replace Diffie–Hellman (DHE and elliptic curve Diffie–Hellman (ECDHE), which are widely used in Internet communication.</p>
+<p>Since it is the only post-quantum cryptography protocol which is constructed on elliptic curves, hybrid cryptography protocols can be derived from SIKE and classical elliptic curve cryptography (ECC) to make the transition towards post-quantum cryptography more convenient and practical.</p>
+<p>Milagro Custody Node implements SIKE for key encapsulation within Milagro's encrypted envelope format.</p>
+<hr>
+<table>
+<thead>
+<tr><th>Protocols</th><th>Use Cases</th></tr>
+</thead>
+<tbody>
+<tr><td>M-Pin 1-Pass</td><td>Digital signature authentication in battery or bandwidth constrained environments such as IoT devices, embedded applications and mobile apps. <br>This should be considered the default implementation for client to server authentication suitable for almost all use cases.</td></tr>
+<tr><td>M-Pin 1-Pass + <br>M-Pin 2-Pass</td><td>Digital signature and client to server authentication in smartphones apps, desktop browsers and software applications.</td></tr>
+<tr><td>M-Pin 2-Pass</td><td>Client to server authentication in smartphone apps, desktop browsers and software applications.</td></tr>
+<tr><td>M-Pin FULL</td><td>Mutual client and server authentication with authenticated key agreement for use in smartphone apps, hardware and software applications. <br>Authenticated Key Agreement with PFS can be used as the basis for TLS sessions between clients and servers.</td></tr>
+<tr><td>Chow-Choo</td><td>Mutual peer to peer authentication with authenticated key agreement for use in smartphone apps, hardware and software applications. <br>Authenticated Key Agreement with PFS can be used as the basis for TLS sessions between clients and servers and peer to peer.</td></tr>
+<tr><td>BLS Signing + <br>Key Splitting + <br>Signature Aggregation</td><td>A simple approach for splitting keys and aggregating many BLS signatures (from the shares of keys acting as signing keys) on a common message. Public keys are not needed for verifying the multi-signature. <br>An important property of the construction is that the scheme is secure against a rogue public-key attack without requiring users to prove knowledge of their secret keys.</td></tr>
+<tr><td>SIKE (Key Encapsulation)</td><td>SIKE is a family of post-quantum key encapsulation mechanisms based on the Supersingular Isogeny Diffie-Hellman (SIDH) key exchange protocol. <br>The algorithms use arithmetic operations on elliptic curves defined over finite fields and compute maps, so-called isogenies, between such curves. <br>SIKE can also delivery perfect forward secrecy.</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="protocols-in-depth"></a><a href="#protocols-in-depth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Protocols In Depth</h2>
+<h3><a class="anchor" aria-hidden="true" id="m-pin-1-pass"></a><a href="#m-pin-1-pass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>M-Pin 1-Pass</h3>
+<p>As opposed to Chow-Choo, which can be used in a client to server as well as a peer to peer setting, M-Pin is strictly a client-server protocol.</p>
+<p>To embellish the security of the client-server protocol, it is important that client and server secrets should be kept distinct.</p>
+<p>A simple way to do this is to exploit the structure of a Type-3 pairing and put client secrets in \( G_1 \) and the server secret in \( G_2 \) as previously noted in the preceding section.</p>
+<p>For a Type-3 pairing there is assumed to be no computable isomorphism between these groups, even though both are of the same order.</p>
+<p>In the original implementation, the client was supplied with a challenge by the server as part of the second step within the protocol, after the first step whereby the client announced her identity to the server.</p>
+<p>In a later proposal, it was realised that an M-Pin 1-Pass Protocol could be obtained if the client itself derived the challenge as \( y \) as \( y=H(U|T) \) where \( T \) is a time-stamp transmitted by the Client along her claimed identity, \( U \) and \( V \).</p>
+<p>The protocol could then be reduced in an obvious way to a secure 1-pass protocol. However, this assumes that the Server checks the accuracy of the time-stamp before completing the protocol.</p>
+<p>This all works thanks to the pairing function \( e(.,.) \) and its remarkable bilinearity property \( e(aP,Q) = e(P,aQ) = e(P,Q)^{a} \).</p>
+<hr>
+<table>
+<thead>
+<tr><th style="text-align:center">Alice - identity \( ID_a \)</th><th style="text-align:center">Server</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Generates random \( x&lt;q \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( A=H(ID_a) \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( U=x{A} \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( ID_a \), \( U~~ \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( y=H(U \) | \( T) \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( V=-(x+y){((s-\alpha)A+\alpha A)} \rightarrow \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( A=H(ID_a) \)</td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( g=e(V,Q).e(U+yA,sQ) \)</td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">if \( g \ne 1 \), reject the connection</td></tr>
+</tbody>
+</table>
+<figure>
+  <caption><strong>Figure 1.</strong> M-Pin 1-Pass</caption>
+</figure>
+---
+<h3><a class="anchor" aria-hidden="true" id="m-pin-2-pass"></a><a href="#m-pin-2-pass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>M-Pin 2-Pass</h3>
+<p>As you can see below in Fig 2., M-Pin in the two pass operation operates in a challenge (from the Server) to client, who responds to challenge. This implementation obviates the any risk of Key Compromise Impersonation attack vector, at the cost of of a full roundtrip.</p>
+<hr>
+<table>
+<thead>
+<tr><th style="text-align:center">Alice - identity \( ID_a \)</th><th style="text-align:center">Server</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Generates random \( x&lt;q \)</td><td style="text-align:center">Generates random \( y&lt;q \)</td></tr>
+<tr><td style="text-align:center">\( A=H(ID_a) \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( U=x{A} \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( ID_a$, $U~~ \rightarrow  \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( \leftarrow y \)</td></tr>
+<tr><td style="text-align:center">\( V=-(x+y){((s-\alpha)A+\alpha A)} \rightarrow \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( A=H(ID_a) \)</td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( g=e(V,Q).e(U+yA,sQ) \)</td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">if \( g \ne 1 \), reject the connection</td></tr>
+</tbody>
+</table>
+<figure>
+  <caption><strong>Figure 2.</strong> M-Pin 2-Pass</caption>
+</figure>
+---
+<h3><a class="anchor" aria-hidden="true" id="m-pin-full"></a><a href="#m-pin-full" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>M-Pin FULL</h3>
+<p>This more elaborate protocol not only replaces Username/Password, but replaces the functionality of digital certificates being utilised to drive key agreement for TLS or VPN protocols as well.</p>
+<p>Our starting point is the M-Pin protocol as described above.</p>
+<p>The idea is to run it first (to authenticate the client to the server), and then proceed to authenticate the server to the client via an authenticated key exchange, which also establishes the agreed key of 128 bits.</p>
+<p>The first thing to note is that both the client and the server can already calculate a mutual authenticated encryption key!</p>
+<p>This protocol requires another general hash function \( H_g(.) \) which serializes, and hashes its input to a 256-bit value. Both sides can then extract a key from this value \( K \).</p>
+<p>It is left as a simple exercise for the reader to confirm that both client and server end up with the same key.</p>
+<p>Note that since the first part of the protocol is just the original M-Pin protocol, all of its features and extensions still apply.</p>
+<hr>
+<table>
+<thead>
+<tr><th style="text-align:center">Alice - identity \( ID_a \)</th><th style="text-align:center">Server</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Generates random \( x&lt;q \)</td><td style="text-align:center">Generates random \( y&lt;q \)</td></tr>
+<tr><td style="text-align:center">\( A=H(ID_a) \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( U=x{A} \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">\( ID_a$, $U~~ \rightarrow  \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( \leftarrow y \)</td></tr>
+<tr><td style="text-align:center">\( V=-(x+y){((s-\alpha)A+\alpha A)} \rightarrow \)</td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( A=H(ID_a) \)</td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">\( g=e(V,Q).e(U+yA,sQ) \)</td></tr>
+<tr><td style="text-align:center"></td><td style="text-align:center">if \( g \ne 1 \), reject the connection</td></tr>
+<tr><td style="text-align:center">\( R=r{A} \rightarrow \)</td><td style="text-align:center">\( \leftarrow W=w{A} \)</td></tr>
+<tr><td style="text-align:center">\( h=H(A,U,y,V,R,W) \)</td><td style="text-align:center">\( h=H(A,U,y,V,R,W) \)</td></tr>
+<tr><td style="text-align:center">\( K=H_g((g_1.{g_2}^\alpha)^{r+h} \ \) | \( x{W}) \)</td><td style="text-align:center">\( K=H_g(e(R+hA,sQ) \ \) | \( w{U}) \)</td></tr>
+</tbody>
+</table>
+<figure>
+  <caption><strong>Figure 3.</strong> M-Pin FULL</caption>
+</figure>
+<hr>
+<p>Note that the transmission of \( R \) from the client to the server can be done at the same time as \( V \) is transmitted, and the transmission of \( W \) from the server to the client can be done at the same time as  \( y \) is transmitted, to avoid introducing any extra flows into the protocol.</p>
+<h3><a class="anchor" aria-hidden="true" id="chow-choo-protocol"></a><a href="#chow-choo-protocol" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chow-Choo Protocol</h3>
+<p>As initially proposed, the Chow-Choo Protocol was based on a type-1 pairing. Note that in the Milagro framework, the Chow-Choo Protocol is made to work in a Type-3 setting.</p>
+<p>Pairings are usually written as functions of the form \( g=e(A,B) \), where \( A \in G_1 \), \( g \in G_T \), and for a Type-1 pairing \( B \in G_1 \) and for Type-3 \( B \in G_2 \).</p>
+<p>Consider now an application of this protocol to an imagined Internet of Things (IoT) setting.</p>
+<p>Each 'Thing' is issued with a serial number and its own Chow-Choo key (which can double as an M-Pin Key) based on that serial number as an identity.</p>
+<p>These keys may be embedded at the time of manufacture, by the manufacturer acting as a naturally trusted authority.</p>
+<p>When a Thing needs to communicate with another Thing, an action which requires knowing only the identity of the other, both parties can activate the Chow-Choo Protocol to calculate the same key to encrypt their communication.</p>
+<p>For both sending and receiving, Alice is issued with \( sA_1 \) and \( sA_2 \), where \( A_1=H_1 \) and \( A_2=H_2 \) both in the \( ID = Alice \).</p>
+<p>Similarly Bob is issued with \( sB_1 \) and \( sB_2 \). Now if Alice initiates and Bob responds, Alice calculates the key as \( e(sA_1,B_2) \) and Bob can calculate the same key as \( e(A_1,sB_2) \), where by convention the initiator uses their <em>sender</em> key and the responder uses their <em>receiver</em> key.</p>
+<p>One thing we can exploit -- in any communication context there is an initiator and a responder, or a <em>sender</em> and <em>receiver</em>, if you will.</p>
+<p>In the above example, Alice and Bob both were issued <em>sender</em> and <em>receiver</em> keys respectively, as this describes where they can appear in the pairing.</p>
+<p>An obvious advantage is to issue each Thing with two keys, one in \( G_1 \) and the other in \( G_2 \), <strong>if</strong> the Thing is approved to send and receive.</p>
+<p>However, the capability exists to cryptographically bound Things to only receiving information, or only sending information, based upon whether or not a Thing has been issued a sender and / or a receiver key.</p>
+<p>This capability is exploited in the Milagro framework to enable peer to peer authenticated key agreement.</p>
+<hr>
+<!--- This is the Chow Choo protocol in a Mathml table / frame because redering in Math LaTex equations exposes a bug in MathJax. It's just one equation that has this bug!  --->
+<figure>
+    <html>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display='block'>
+            <mtable frame="solid" rowlines="solid" rowalign="center" mathbackground="white">
+            <mstyle mathsize='.85em'>
+        <mtr>
+            <mtd>
+                <mspace width="0.1em" />
+            </mtd>
+            <mtd columnalign="left">
+                <mtable class="m-matrix">
+                    <mtr>
+                        <mtd>
+                            <mtext>SENDER</mtext>
+                        </mtd>
+                        <mtd>
+                            <mtext>RECEIVER</mtext>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>x</mi>
+                            <mo>&#x02208;</mo>
+                            <msubsup>
+                                <mi>&#x02124;</mi>
+                                <mi>q</mi>
+                                <mo>*</mo>
+                            </msubsup>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>A</mi>
+                            <mi>G</mi>
+                            <mn>1</mn>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>A</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>P</mi>
+                            <mi>a</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>x</mi>
+                            <mo>&#x022C5;</mo>
+                            <mi>A</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>I</mi>
+                            <mo>&#x02146;</mo>
+                            <mi>A</mi>
+                            <mo>,</mo>
+                            <mi>P</mi>
+                            <mi>a</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>&#x027F6;</mo>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>y</mi>
+                            <mo>,</mo>
+                            <mi>w</mi>
+                            <mo>&#x02208;</mo>
+                            <msubsup>
+                                <mi>&#x02124;</mi>
+                                <mi>q</mi>
+                                <mo>*</mo>
+                            </msubsup>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>A</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>A</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>B</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>B</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>P</mi>
+                            <mi>b</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>y</mi>
+                            <mo>&#x022C5;</mo>
+                            <mi>B</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>P</mi>
+                            <mi>g</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>w</mi>
+                            <mo>&#x022C5;</mo>
+                            <mi>A</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mtext>pia</mtext>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mi>q</mi>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>P</mi>
+                                <mi>a</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>b</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>g</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>B</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mtext>pib</mtext>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mi>q</mi>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>P</mi>
+                                <mi>b</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>a</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>g</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>A</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>k</mi>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>e</mi>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mtext>pia</mtext>
+                                <mo>&#x022C5;</mo>
+                                <mi>A</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mi>P</mi>
+                                <mi>a</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>,</mo>
+                                <mo form="prefix">(</mo>
+                                <mi>y</mi>
+                                <mo>+</mo>
+                                <mtext>pib</mtext>
+                                <mo form="postfix">)</mo>
+                                <mo>&#x022EF;</mo>
+                                <mo>&#x022C5;</mo>
+                                <mi>B</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mi>K</mi>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>H</mi>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>k</mi>
+                                <mo>,</mo>
+                                <mi>w</mi>
+                                <mo>&#x022C5;</mo>
+                                <mi>P</mi>
+                                <mi>a</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                        </mtd>
+                        <mtd>
+                            <mo>&#x027F5;</mo>
+                            <mi>I</mi>
+                            <mo>&#x02146;</mo>
+                            <mi>B</mi>
+                            <mo>,</mo>
+                            <mi>P</mi>
+                            <mi>g</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>,</mo>
+                            <mi>P</mi>
+                            <mi>b</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>B</mi>
+                            <msub>
+                                <mi>G</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>B</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mtext>pia</mtext>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mi>q</mi>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>P</mi>
+                                <mi>a</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>b</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>g</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>B</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mtext>pib</mtext>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>H</mi>
+                                <mi>q</mi>
+                            </msub>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>P</mi>
+                                <mi>b</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>a</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>P</mi>
+                                <mi>g</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>&#x02016;</mo>
+                                <mi>I</mi>
+                                <mo>&#x02146;</mo>
+                                <mi>A</mi>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>k</mi>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>e</mi>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mo form="prefix">(</mo>
+                                <mi>x</mi>
+                                <mo>+</mo>
+                                <mi>p</mi>
+                                <mi>i</mi>
+                                <mi>a</mi>
+                                <mo form="postfix">)</mo>
+                                <mo>&#x022EF;</mo>
+                                <mo>&#x022C5;</mo>
+                                <mi>A</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>,</mo>
+                                <mtext>pib</mtext>
+                                <mo>&#x022C5;</mo>
+                                <mi>B</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mi>P</mi>
+                                <mi>b</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mi>K</mi>
+                            <mo>:</mo>
+                            <mo>=</mo>
+                            <mi>H</mi>
+                            <mrow>
+                                <mo form="prefix">(</mo>
+                                <mi>k</mi>
+                                <mo>,</mo>
+                                <mi>x</mi>
+                                <mo>&#x022C5;</mo>
+                                <mi>P</mi>
+                                <mi>g</mi>
+                                <msub>
+                                    <mi>G</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo form="postfix">)</mo>
+                            </mrow>
+                        </mtd>
+                        <mtd>
+                        </mtd>
+                    </mtr>
+                </mtable>
+            </mtd>
+        </mtr>
+    </mtable>
+    </math>
+    </html>
+</figure>
+<figure>
+  <caption><strong>Figure 4.</strong> Chow-Choo Protocol</caption>
+</figure>
+<hr>
+<p><strong>Notes on Chow-Choo Protocol:</strong></p>
+<ul>
+<li>\( G_1 \): a \( r \)-order cyclic subgroup of \( E(F_p) \).</li>
+<li>\( G_2 \): a subgroup of \( E(F_{p^k}) \), where \( k \) is the embedding degree of the Curve.</li>
+<li>\( H1 \): Maps string value to a point on the curve in \( G_1 \).</li>
+<li>\( H2 \): Maps string value to a point on the curve in \( G_2 \).</li>
+<li>\( Hq \): Hashes inputs to an integer modulo the curve order \( q \).When run in the simple SIDH</li>
+<li>H(): Hash function.</li>
+<li>\( || \): denotes the concatenation of messages.</li>
+</ul>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="secret-revocation"></a><a href="#secret-revocation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Secret Revocation</h3>
+<p>We introduce Time Permits to handle the revocation issue. Normally in Identity-Based Encryption the problem of client revocation is solved by date-stamping identities so that the private key issued for an identity becomes useless once the time period expires. Now a new private key must be issued, and we will simply not issue one to a revoked client.</p>
+<p>Milagro achieves a much more immediate revocation capability through the use of Time Permits. The D-TA that is controlled by the application owner is envisioned to be the controlling D-TA to issue Time Permits at the point where a client needs to authenticate to a server, or create an authenticated key agreement between client and server or peer to peer.</p>
+<p>The idea is that the server includes an explicitly described time slot in its construction of Alice's hashed identity. Unless Alice has a corresponding &quot;Time permit&quot; for the same time slot, she cannot complete the protocol.</p>
+<p>In the protocol above we instead calculate \( H(ID_a) + H_T(T_i|ID_a) \) on both sides of the protocol where \( T_i \) is a textual description of the \( i \)-th time slot and \( H_T(.) \) is a hash function distinct from \( H(.) \).</p>
+<p>For the protocol to work correctly Alice must be issued by the Trusted Authority with a permit \( s.H_T(T_i|ID_a) \) which gets added to her combined PIN-plus-token secret \( s.H(ID_a) \).</p>
+<p>Observe that the permit is of no use to any other party, and hence can be issued publicly, uploaded to a public cloud data store (AWS S3), or delivered via the server directly.</p>
+<p>A proof of security for this idea in the context of Boneh and Franklin IBE can be found in Tseng<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> et al.</p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="bls-subgroup-multi-signatures"></a><a href="#bls-subgroup-multi-signatures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BLS Subgroup Multi-Signatures</h3>
+<p>Dan Boneh, Ben Lynn and Hovav Schacham introduced their paper entitled &quot;Short Signatures from the Weil Pairing&quot; in 2001<sup class="footnote-ref"><a href="#fn4" id="fnref4:1">[4]</a></sup>. The paper described a short signature scheme based on the computational Diffie-Hellman assumption on certain elliptic and hyper-elliptic curves.</p>
+<p>In a simple instantiation, given a secret key \( sk \), a public key \( p k=g^{S k} \), a message \( m \), a hashing-into-the-curve function \( H \), and a bilinear pairing \( e \):</p>
+<ul>
+<li>Key Generation: \( sk \) is a random integer over the field, \( p k=g^{S k} \)</li>
+<li>Signature: \( S=H(m)^{s k} \)</li>
+<li>Verify: \( e(H(m), p k)=e(S, g) \)</li>
+</ul>
+<p>Biliniarity is on display as the signature</p>
+<p>$$ \begin{array}{c}{e(H(m), p k)=e\left(H(m), g^{s k}\right)=e(H(m), g)^{s k}=} \ {=e\left(H(m)^{s k}, g\right)=e(S, g)}\end{array} $$</p>
+<p>but is also unique and deterministic, something missing from ECDSA.</p>
+<p>In June of 2018 Dan Boneh, Manu Drijvers and Gregory Neven released research that constructs the first practical, short accountable-subgroup multi-signature (ASM) scheme based on BLS signatures<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>.</p>
+<p>An ASM scheme enables any subset \( S \) of a set of \( n \) parties to sign a message \( m \) so that a valid signature discloses which subset generated the signature (hence the subset \( S \) is accountable for signing \( m \)).</p>
+<p>In addition to the ASM scheme, Milagro exploits a unique property of BLS signatures: Signing Keys can be split using Shamir's Secret Sharing<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup> in which the 'shares' of the keys, when distributed to signers, themselves become signing keys. By using a 'key splitter' and 'signature aggregator' role who also performs the Shamir Secret Sharing (SSS) dealer function, several benefits emerge.</p>
+<p>Thresholds can be set on the distribution of key shares just as in a normal SSS routine. So once the shares of the original signing key are distributed, the original signing key can be securely deleted, and is never re-created again. Instead, signatures derived from the shares of the original signing key are created. Again, the properties of BLS enable these shares of signature keys to be themselves used a signature keys. The object of the exercise is for the signature aggregator, who is collecting the signatures created from these shares, to complete the threshold and achieve the signature that the original signature would have created, which can be validated by its original public key component.</p>
+<p>In other words, if the aggregator takes m-of-n of these signature shares, and perform the same polynomial interpolation as one would usually do with the secret shares, you’ll recover a complete signature which is identical to what would have been created if the original complete private key would have been used.</p>
+<p>In this context, signing is a single round protocol and is non-interactive.</p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="supersingular-isogeny-key-encapsulation-sike"></a><a href="#supersingular-isogeny-key-encapsulation-sike" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supersingular Isogeny Key Encapsulation (SIKE)</h3>
+<p>A key encapsulation mechanism (KEM) is a set of three algorithms.</p>
+<ul>
+<li>key generation (KeyGen)</li>
+<li>encapsulation (Encaps)</li>
+<li>decapsulation (Decaps)</li>
+</ul>
+<p>and a defined key space, where</p>
+<ul>
+<li>KeyGen(): returns a public and a secret key \( (pk, sk) \).</li>
+<li>Encaps\( (pk) \): takes pk as input and outputs ciphertext \( c \) and a key \( K \) from the key space.</li>
+<li>Decaps\( (sk, c) \): takes \( sk \) and \( c \) as input, and returns a key \( K \) or ERROR. \( K \) is called the session key.</li>
+</ul>
+<p>SIKE uses Hofheinz transformation on SIDH to achieve CCA security. Let \( p=2^{e_{A}} 3^{e_{3}}-1 \), and let \( E \) be a supersingular elliptic curve defined over a field of characteristic \( p \). \( E \) can also be defined over \( \mathbb{F}_{p^{2}} \) up to its isomorphism. An isogeny \( \phi : E \rightarrow E^{\prime} \) is a non-constant map from \( E \) to \( E^{\prime} \) which translates the identity into the identity.</p>
+<p>An isogeny map is defined by its degree and kernel. The degree of an isogeny is its degree as morphism. An isogeny with degree \( \ell \) map is called \( \ell \)-isogeny. Let \( G \) be a subgroup of points on \( E \) which contains \( \ell \) + 1 cyclic subgroups of order \( \ell \). This subgroup is the torsion group \( E[\ell] \) and each element of this group is corresponding to an isogeny of degree \( \ell \); accordingly, an isogeny also can be identified by \( G \), i.e., the kernel of isogeny.</p>
+<p>This section provides a brief presentation of the SIKE protocol. We refer readers to <sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup> and <sup class="footnote-ref"><a href="#fn5" id="fnref5:1">[5]</a></sup> for more detailed explanation of the supersignular isogeny problem and the base key-exchange protocol which the SIKE is constructed upon.</p>
+<hr>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div>  See an error in this documentation?</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Submit a pull request on the development branch of <a href="https://github.com/apache/incubator-milagro">Milagro Website Repo</a>.</p>
+</div></div><!--
+Supported admonition types are: caution, note, important, tip, warning.
+--><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p><a href="https://eprint.iacr.org/2002/164">M-Pin protocol</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2"  class="footnote-item"><p><a href="https://eprint.iacr.org/2015/576">The Carnac protocol -- or how to read the contents of a sealed envelope</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3"  class="footnote-item"><p><a href="https://eprint.iacr.org/2007/018.pdf">Strongly-Secure Identity-based Key Agreement and Anonymous Extension</a> <a href="#fnref3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4"  class="footnote-item"><p><a href="https://www.iacr.org/archive/asiacrypt2001/22480516.pdf">Short Signatures from the Weil Pairing</a> <a href="#fnref4" class="footnote-backref">↩</a> <a href="#fnref4:1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn5"  class="footnote-item"><p><a href="https://sike.org/">Supersingular isogeny key encapsulation - NIST Submission</a> <a href="#fnref5" class="footnote-backref">↩</a> <a href="#fnref5:1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn6"  class="footnote-item"><p><a href="https://reader.elsevier.com/reader/sd/pii/S2213020915000592?token=5C2E08C17803B9549FB79F3A91A1ED2382360D3E840087C8C065BD06EFCABB55C4A5A300566388A2920786DCC63E631E">A brief review of revocable ID-based public key cryptosystem</a> <a href="#fnref6" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn7"  class="footnote-item"><p><a href="https://eprint.iacr.org/2018/483">Compact Multi-Signatures for Smaller Blockchains</a> <a href="#fnref7" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn8"  class="footnote-item"><p><a href="https://cs.jhu.edu/~sdoshi/crypto/papers/shamirturing.pdf">How to Share a Secret</a> <a href="#fnref8" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn9"  class="footnote-item"><p><a href="https://eprint.iacr.org/2011/506.pdf">Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies</a> <a href="#fnref9" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 25/06/2019 by Brian Spector</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/milagro-crypto"><span class="arrow-prev">← </span><span>Milagro Crypto</span></a><a class="docs-next button" href="/docs/milagro-design"><span>Milagro Design</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#m-pin-protocol-introduction">M-Pin Protocol - Introduction</a></li><li><a href="#chow-choo-protocol-introduction">Chow-Choo Protocol - Introduction</a></li><li><a href="#bls-signatures-introduction">BLS Signatures - Introduction</a></li><li><a href="#supersingular-isogeny-key-encapsulation-introduction">Supersingular Isogeny Key Encapsulation - Introduction</a></li><li><a href="#protocols-in-depth">Protocols In Depth</a><ul class="toc-headings"><li><a href="#m-pin-1-pass">M-Pin 1-Pass</a></li><li><a href="#m-pin-2-pass">M-Pin 2-Pass</a></li><li><a href="#m-pin-full">M-Pin FULL</a></li><li><a href="#chow-choo-protocol">Chow-Choo Protocol</a></li><li><a href="#secret-revocation">Secret Revocation</a></li><li><a href="#bls-subgroup-multi-signatures">BLS Subgroup Multi-Signatures</a></li><li><a href="#supersingular-isogeny-key-encapsulation-sike">Supersingular Isogeny Key Encapsulation (SIKE)</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>
