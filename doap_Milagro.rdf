@@ -34,7 +34,7 @@
     <download-page rdf:resource="http://milagro.incubator.apache.org/" />
     <programming-language>Python</programming-language>
     <programming-language>Go</programming-language>
-    <programming-language>Javascript</programming-language>
+    <programming-language>JavaScript</programming-language>
     <programming-language>C</programming-language>
     <category rdf:resource="http://projects.apache.org/category/cloud" />
   </Project>
