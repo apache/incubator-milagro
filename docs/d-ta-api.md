@@ -9,6 +9,9 @@ Interested in becoming a contributor? Milagro is looking for you.
 [CONTRIBUTOR'S GUIDE](/docs/contributor-guide.html).
 :::
 
+[Swagger](/swagger/index.html)
+
+
 <!--
 Supported admonition types are: caution, note, important, tip, warning.
 -->
