@@ -9,13 +9,20 @@
       ],
     "AMCL Library": 
       [
-        "amcl-overview", 
-        "amcl-c-api", 
+        "amcl-overview",                    
+        "amcl-c-api",
         "amcl-javascript-api"
       ],
     "D-TA Node": 
       [
       "d-ta-overview",
+      {
+        "type":"subcategory",
+        "label":"DTA Details",
+        "ids":[ "dta-details/identity-documents",
+                "dta-details/why-ipfs",
+                "dta-details/authentication"]
+      },
       "d-ta-api"
     ],
     "ZKP-MFA Clients/Servers": [

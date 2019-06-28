@@ -14,10 +14,10 @@ In order to safeguard a secret, a pair of Milagro DTA servers is required: a cli
 
 ![Figure 1](/img/dta/RC1-Overview-1.png)
 
-## Milagro DTA is Not Secure (on its own)
-The key seed is the focus of the system - Milagro DTA aims to provide a method for communicating with organisations who provide services for securing seeds (Custodians), it does not prescribe how the securing should be done. We hope that many custodial services will adopt Milagro as a communication protocol and that they will bring a proffusion of security paradigms: working together we can make the Internet a safer place. The most basic implementation of Milagro should secure seeds in an HSM using a PKCS#11 interface. (We aim to release a PKCS11 driver in a subsequent release)
+## Milagro DTA Security
+The key seed is the focus of the system - Milagro DTA aims to provide a method for communicating with organisations who provide services for securing seeds (Custodians), it does not prescribe how the securing should be done. We hope that many custodial services will adopt Milagro as a communication protocol and that they will bring a proffusion of security paradigms: working together we can make the Internet a safer place. The most basic implementation of Milagro should secure seeds in an HSM using a PKCS#11 interface. (We aim to publish a PKCS11 driver in a subsequent release)
 
-## The Milagro Communication Protocol
+## The Milagro DTA Communication Protocol
 Milagro DTA provides a secure, distributed method of communication between beneficiaries, principals and fiduciaries. It aims to solve the following problems:
 
 1. How can actors in the system be identified and trusted?
