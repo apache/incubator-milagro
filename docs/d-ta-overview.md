@@ -22,10 +22,10 @@ Milagro DTA provides a secure, distributed method of communication between benef
 
 1. How can actors in the system be identified and trusted?
 
-    **Answer:** Identity Documents
+    **Answer:** [Identity Documents](dta-details/identity-documents.md)
 2. How can records of interactions between actors in the system be trusted and verified?
 
-    **Answer:** Encrypted Envelopes via IPFS
+    **Answer:** [Encrypted Envelopes](dta-details/encrypted-envelope.md) via [IPFS](dta-details/why-ipfs.md)
 3. How can conditions for revealing or using secrets be specified? 
 
     **Answer:** Redemption Policies

@@ -20,6 +20,7 @@
         "type":"subcategory",
         "label":"DTA Details",
         "ids":[ "dta-details/identity-documents",
+                "dta-details/encrypted-envelope",
                 "dta-details/why-ipfs",
                 "dta-details/authentication"]
       },

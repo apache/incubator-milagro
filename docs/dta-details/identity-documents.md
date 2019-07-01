@@ -9,7 +9,7 @@ In order to create an identity document Milagro DTA provides the following endpo
 
 [POST: /identity](http://localhost:3000/swagger/index.html#/identity/createIdentity)
 
-The document contains public keys for signing and key encapsulation. The Milagro DTA communication protocol uses protbufs for serialisation, the defitnition of an identity document is:
+An Identity Document contains public keys for signing and key encapsulation. The defitnition of an identity document is:
 ```
 message IDDocument {
     string AuthenticationReference  = 2 ;
@@ -20,8 +20,12 @@ message IDDocument {
     string Username                 = 7 ;
     int64 Timestamp                 = 8;
 }
+
 ```
-Authentication reference refers to Milagro's out of the box oAuth integration
+
+* Note: The Milagro DTA communication protocol uses [protobufs](https://developers.google.com/protocol-buffers/) for serialisation
+
+* `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](authentication.md)
 
 The node that is used to create an identity document will store the seed and secret keys associated with the Identity. In RC1 these are store as a JSON file in the key value store:
 
