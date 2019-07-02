@@ -3,7 +3,7 @@ id: identity-documents
 title: Identity Documents
 sidebar_label: Identity Documents
 ---
-The first problem that Milagro-DTA aims to solve is how actors in the system can identify and trust each other. In order to participate in the Milagro DTA safeguarding process each actor must publish a set of public keys into IPFS. The IPFS hash for an identity documents is then the ID for each actor.
+The first problem that Milagro DTA aims to solve is how actors in the system can identify and trust each other. In order to participate in the Milagro DTA safeguarding process each actor must publish a set of public keys into IPFS. The IPFS hash for an identity documents is then the ID for each actor.
 
 In order to create an identity document Milagro DTA provides the following endpoint.
 
@@ -27,7 +27,7 @@ message IDDocument {
 
 * `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](authentication.md)
 
-The node that is used to create an identity document will store the seed and secret keys associated with the Identity. In RC1 these are store as a JSON file in the key value store:
+The node that is used to create an identity document will store the seed and secret keys associated with the Identity. In RC1 these are stored as a JSON file in the key value store:
 
 ```
 //IdentitySecrets - keys required for decryption and signing

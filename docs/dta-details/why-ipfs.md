@@ -8,6 +8,6 @@ Milagro DTA aims to provide and auditable record of all interactions between act
 
 IPFS is a globally distributed peer-to-peer file system - think GitHub meets BitTorrent. When a file is written (SET) into your local IPFS node a hash of the document is returned, you can then GET the document using that address. If somebody else who is running an IPFS tries to GET the same hash address the file will be pulled from your node to theirs. If the document is changed in way the hash will change. In this way a immutability and peer-to-peer consensus is achieved.
 
-:::Note: We appreciate feedback regarding this approach
+:::note We appreciate feedback regarding this approach
 If more complex multi-party consensus is required we could implement something like [Paxos](https://understandingpaxos.wordpress.com/), [Raft](https://raft.github.io/), [Tendermint](https://tendermint.com/)
-
+:::
