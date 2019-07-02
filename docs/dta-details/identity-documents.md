@@ -8,24 +8,27 @@ The first problem that Milagro DTA aims to solve is how actors in the system can
 In order to create an identity document Milagro DTA provides the following endpoint.
 
 [POST: /identity](http://localhost:3000/swagger/index.html#/identity/createIdentity)
+An Identity Document contains public keys for signing and key encapsulation. 
 
-An Identity Document contains public keys for signing and key encapsulation. The defitnition of an identity document is:
+:::note The Milagro DTA communication protocol uses protobufs for serialisation. 
+[Click here for more information about Protocol Buffers](https://developers.google.com/protocol-buffers/)
+:::
+
+The definition of an identity document is:
 ```
 message IDDocument {
     string AuthenticationReference  = 2 ;
     bytes SikePublicKey             = 3 ;
-    bytes PicnicPublicKey           = 4 ;
-    string Handle                   = 5 ;
-    string Email                    = 6 ;
-    string Username                 = 7 ;
-    int64 Timestamp                 = 8;
+    bytes PicnicPublicKey           = 4 ;    
+    string Username                 = 5 ;
+    int64 Timestamp                 = 6 ;
 }
 
 ```
 
-* Note: The Milagro DTA communication protocol uses [protobufs](https://developers.google.com/protocol-buffers/) for serialisation
 
-* `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](authentication.md)
+
+* `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](api-details/authentication.md)
 
 The node that is used to create an identity document will store the seed and secret keys associated with the Identity. In RC1 these are stored as a JSON file in the key value store:
 

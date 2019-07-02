@@ -19,16 +19,17 @@
       {
         "type":"subcategory",
         "label":"DTA Details",
-        "ids":[ "dta-details/usage",
+        "ids":[ "dta-details/quickstart",
                 "dta-details/identity-documents",
                 "dta-details/encrypted-envelope",
-                "dta-details/why-ipfs"
-                ]
+                "dta-details/ipfs"]
       },
       {
         "type":"subcategory",
         "label":"Set Up Instructions",
-        "ids":["api-details/configuration"]
+        "ids":["api-details/configuration",
+              "api-details/authentication",
+            "api-details/api"]
       }
     ],
     "ZKP-MFA Clients/Servers": [
