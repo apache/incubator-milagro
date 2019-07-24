@@ -30,6 +30,12 @@
         "ids":["api-details/configuration",
               "api-details/authentication",
             "api-details/api"]
+      },
+      {
+        "type":"subcategory",
+        "label":"D-TA Plugins",
+        "ids":["dta-plugins/plugins-overview"
+              ]
       }
     ],
     "ZKP-MFA Clients/Servers": [
