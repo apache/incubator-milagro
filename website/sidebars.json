@@ -18,7 +18,7 @@
       "d-ta-overview",
       {
         "type":"subcategory",
-        "label":"DTA Details",
+        "label":"D-TA Details",
         "ids":[ "dta-details/quickstart",
                 "dta-details/identity-documents",
                 "dta-details/encrypted-envelope",
@@ -34,7 +34,7 @@
       {
         "type":"subcategory",
         "label":"D-TA Plugins",
-        "ids":["dta-plugins/plugins-overview"
+        "ids":["dta-plugins/plugins-overview", "dta-plugins/plugin-dev-guide"
               ]
       }
     ],
