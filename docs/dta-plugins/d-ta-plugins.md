@@ -9,7 +9,7 @@ Out-of-the-box Milagro D-TA doesn't do much: a Principal gets a public key from 
 Out of the box Milagro comes with two plugins:
 1. **EncryptAThing** - allows the principal to use the public key to encrypt a string, then get the secret key back from the Master Fiduciary D-TA and decrypt it
 
-2. **BitCoin Address** - uses the public key to genarates a Bitcoin address and the constructs the corresponding secret key only when it is needed (this is a neat trick using eliptic curve magic).
+2. **BitCoin Address** - uses the public key to genarate a Bitcoin address and the constructs the corresponding secret key only when it is needed (this is a neat trick using eliptic curve magic).
 
 ***A Note About Security***
 
@@ -20,11 +20,11 @@ The Milagro D-TA plugin framework has been designed with following assumptions:
 
 * **Compile-Time**
 
-    Milagro D-TAs are compiled into the Milagro Code - to include one you simply clone the plugin into to the pkg directory and pass a reference to the plugin as a build directive like this...
+    Milagro D-TA plugins are compiled into the Milagro D-TA - to include one you simply clone the plugin into to the pkg directory and pass a reference to the plugin as a build directive like this...
     ```
     go build -tags "plugin encryptAThing" -o target/service github.com/apache/incubator-milagro-dta/cmd/service
     ```
-    We considered using run time plugins using shared objects using the [Go Plugin Package](https://golang.org/pkg/plugin/) however this presented significant security challenges. We would very much like explorte this idea further with the developer community.
+    We considered run-time plugins using shared objects via the [Go Plugin Package](https://golang.org/pkg/plugin/) however this presented significant security challenges. We would very much like explore this idea further with the developer community.
 
 * **One-at-a-Time**
 

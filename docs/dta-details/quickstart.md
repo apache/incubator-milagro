@@ -3,38 +3,85 @@ id: quickstart
 title: Quick Start
 sidebar_label: Quick Start
 ---
-Milagro DTA is designed to be built into the workflow of any organisation that needs to entrust another organisation to store the secret part of a key pair securely. It provides a [simple REST api](/swagger/index.html) "out-of-the-box" that can easily be integrated with an existing back office system, called from a front-end application or called from CURL, Postman, Swagger etc.
+Milagro DTA is designed to be built into the workflow of any organisation that needs to trust another organisation to manage encryption keys. It provides a [simple REST api](/swagger/index.html) "out-of-the-box" that can easily be integrated with an existing back office system, called from a front-end application or called from CURL, Postman, Swagger etc.
 
-## Configure a Pair
-In order to see Milagro in action you need a pair of servers: a Principal and Fiduciary. 
-
-1. Download and install the Milagro DTA by following these instructions...TBD
-2. By default the server will startup on port 5555, start one node on using this default port, this will be the Fiduciary (custody server)
-
-`./milagrodta`
-
-3. We will change the config for the Principal (client) node. [Click here to find out more about the configuration options](api-details/configuration.md) If you are building from source the easiest way to change the config is via the configuration file e.g.
+## Install AMCL
+Milagro D-TA uses the Apache Milagrio Cryptography Library. Before install D-TA AMCL must be installed.
 
 ```
-/cmd/service/flags.go
+git clone git@github.com:apache/incubator-milagro-crypto-c.git
 
-listen_addr : 5556 /* Choose a port for this server*/
+cd incubator-milagro-crypto-c
 
-custody_server: http://localhost:5556 /*Point to the Fiduciary (custody) server*/
+mkdir build
+
+cd build
+
+cmake -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=ON -D AMCL_CHUNK=64 -D AMCL_CURVE="BLS383" AMCL_CURVE="BLS381" AMCL_CURVE="SECP256K1" -D AMCL_RSA="" -D BUILD_PYTHON=OFF -D BUILD_WCC=OFF -D BUILD_MPIN=ON -D BUILD_X509=OFF -D CMAKE_INSTALL_PREFIX=/usr/local ..
+
+sudo make install
 
 ```
-Or use command line options like this...
+
+## Install Milagro D-TA from Source
+There are two primary roles in a D-TA workflow: the Principal and the Master Fiduciary, as a quick start you can configure one D-TA to provide both roles. (Obviously for a more thorough evaluation configure two servers)
+
+*GITLAB VERSION*
+
+1.  Install [the latest version of Go](https://golang.org/dl/)
+
+2.  Clone the D-TA source code and build it
+
 ```
-$ ./milagro-dta -listen-addr :5556 -custody-server http://localhost:5555
+cd ~/go/src
+
+git clone https://gitlab.com/howardkitto/milagro-custody
+
+./build.sh
+
 ```
 
-## Bootstrapping An Identity
+3.  Initialise the config
 
-In order to run a Milagro DTA Node it needs to be configured with an identity. This is usually passed to the node via one of the [configuration options](api-details/configuration.md), however if you are running a server for the first time it will prompt you to create a new one by entering a name string.
+This will put the config and data files in ~/.milagro
 
-![Init ID](/img/dta/initID.png)
+```
+target/setvice init
+```
 
-(If the server is being restarted it will allow you to select a previously created ID)
+4. Configure the D-TA
+
+For quick start a single server is Principal and fiduciary (as described above).
+[Click here to find out more about the configuration options](api-details/configuration.md)
+
+Use an editor of your choice, I'm using nano
+
+```
+nano ~/.milagro/config.yaml
+
+```
+Give the node a name e.g. testNode by editing the following line:
+```
+nodeName: "testNode"
+
+```
+5. Start the node for the first time. This will generate an identity for the node
+```
+target/service daemon
+```
+6. Configure the Master Ficuciary
+The D-Ta is currently running as a principal, and has also configured itself to be the master fiduciary. `masterFiduciaryServer: http://localhost:5556`.
+
+However before it can work properly we need to configure the Master Fiduciaries NoeId to be the same as the principal's
+
+```
+nano ~/.milagro/config.yaml
+
+copy the value of nodeID into masterFiduciaryNodeID e.g.
+
+masterFiduciaryNodeID: QmfWg5GffUEzwahd9hkvdnqTGQs5PfusoEpx3kSDSdG4ze
+nodeID: QmfWg5GffUEzwahd9hkvdnqTGQs5PfusoEpx3kSDSdG4ze
+```
 
 ## Hitting the API
 
