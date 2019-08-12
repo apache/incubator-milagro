@@ -102,6 +102,11 @@ class Footer extends React.Component {
             height="45"
           />
         </a>
+		
+		<section className="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section>
+		
+		<p></p>
+		
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );
