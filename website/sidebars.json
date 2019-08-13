@@ -11,17 +11,50 @@
       [
         "amcl-overview", 
         "amcl-c-api", 
-        "amcl-javascript-api"
+        "amcl-javascript-api",
+		
+				{
+		"type": "subcategory",
+		"label": "",
+		"ids": [
+				"cryptojs/aes",
+				"cryptojs/big",
+				"cryptojs/bls",
+				"cryptojs/bls192",
+				"cryptojs/bls256",
+				"cryptojs/dbig",
+				"cryptojs/ecdh",
+				"cryptojs/ecp",
+				"cryptojs/ecp2",
+				"cryptojs/ecp4",
+				"cryptojs/ecp8",
+				"cryptojs/ff",
+				"cryptojs/fp",
+				"cryptojs/fp2",
+				"cryptojs/fp4",
+				"cryptojs/fp8",
+				"cryptojs/fp12",
+				"cryptojs/fp16",
+				"cryptojs/fp24",
+				"cryptojs/fp48",
+				"cryptojs/gcm",
+				"cryptojs/hash256",
+				"cryptojs/hash384",
+				"cryptojs/hash512",
+				"cryptojs/mpin",
+				"cryptojs/mpin192",
+				"cryptojs/mpin256",
+				"cryptojs/pair",
+				"cryptojs/pair192",
+				"cryptojs/pair256",
+				"cryptojs/rand",
+				"cryptojs/rsa",
+				"cryptojs/sha3",
+				"cryptojs/unit64"
+				]
+		}
+		
       ],
-    "D-TA Node": 
-      [
-      "d-ta-overview",
-      "d-ta-api"
-    ],
-    "ZKP-MFA Clients/Servers": [
-      "zkp-mfa-overview",
-      "zkp-mfa-api"
-    ],
     "Project Info": [
       "contributor-guide",
       "../help",

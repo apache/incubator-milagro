@@ -85,7 +85,7 @@ If the statement consists _only_ of the fact that the prover possesses the secre
 
 **Zero-knowledge proof** is a method by which one party (the prover) can prove to another party (the verifier) that a given statement is true, without conveying any information apart from the fact that the statement is indeed true.
 
-For an in-depth dive into the cryptographic protocols in use within the Milagro framework, see the next section [Milagro Protocols](milagro-protocols.html).
+For an in-depth dive into the cryptographic protocols in use within the Milagro framework, see the next section [Milagro Protocols](/docs/milagro-protocols).
 
 ---
 
