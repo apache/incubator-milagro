@@ -15,4 +15,4 @@ cryptographically secure random number generator. Furthermore we recently
 added New Hope, a post-quantum key exchange.
 
 * MCJS is [Node.js](https://nodejs.org/en/) compatible and browser compatible
-(see some examples below).
+(see some examples by going to the next page).
