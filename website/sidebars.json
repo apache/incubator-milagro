@@ -55,15 +55,15 @@
 		}
 		
       ],
-    "D-TA Node": 
-      [
-      "d-ta-overview",
-      "d-ta-api"
-    ],
-    "ZKP-MFA": [
-      "zkp-mfa-overview",
-      "zkp-mfa-api"
-    ],
+    // "D-TA Node": 
+    //   [
+    //   "d-ta-overview",
+    //   "d-ta-api"
+    // ],
+    // "ZKP-MFA": [
+    //   "zkp-mfa-overview",
+    //   "zkp-mfa-api"
+    // ],
     "Project Info": [
       "contributor-guide",
       "../help",
