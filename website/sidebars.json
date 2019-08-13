@@ -11,7 +11,7 @@
       [
         "amcl-overview", 
         "amcl-c-api", 
-        "amcl-javascript-api",
+        "amcl-javascript-api"
 		
 				{
 		"type": "subcategory",
