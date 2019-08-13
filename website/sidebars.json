@@ -11,11 +11,11 @@
       [
         "amcl-overview", 
         "amcl-c-api", 
-        "amcl-javascript-api"
+        "amcl-javascript-api",
 		
 				{
 		"type": "subcategory",
-		"label": "AMCL JavaScript API",
+		"label": "",
 		"ids": [
 				"cryptojs/aes",
 				"cryptojs/big",
