@@ -58,9 +58,9 @@
     "D-TA Node": 
       [
       "d-ta-overview",
-      "d-ta-api"
+    //   "d-ta-api"
     ],
-    "ZKP-MFA Clients/Servers": [
+    "ZKP-MFA": [
       "zkp-mfa-overview",
       "zkp-mfa-api"
     ],
