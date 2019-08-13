@@ -15,9 +15,8 @@
 		
 				{
 		"type": "subcategory",
-		"label": "AMCL JavaScript API",
+		"label": "",
 		"ids": [
-				"cryptojs/amcl-javascript-api",
 				"cryptojs/aes",
 				"cryptojs/big",
 				"cryptojs/bls",
@@ -56,15 +55,6 @@
 		}
 		
       ],
-    "D-TA Node": 
-      [
-      "d-ta-overview",
-      "d-ta-api"
-    ],
-    "ZKP-MFA Clients/Servers": [
-      "zkp-mfa-overview",
-      "zkp-mfa-api"
-    ],
     "Project Info": [
       "contributor-guide",
       "../help",
