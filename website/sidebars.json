@@ -17,7 +17,6 @@
 		"type": "subcategory",
 		"label": "AMCL JavaScript API",
 		"ids": [
-				"cryptojs/amcl-javascript-api",
 				"cryptojs/aes",
 				"cryptojs/big",
 				"cryptojs/bls",
