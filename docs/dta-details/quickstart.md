@@ -6,16 +6,18 @@ sidebar_label: Quick Start
 Milagro DTA is designed to be built into the workflow of any organisation that needs to trust another organisation to manage encryption keys. It provides a [simple REST api](/swagger/index.html) "out-of-the-box" that can easily be integrated with an existing back office system, called from a front-end application or called from CURL, Postman, Swagger etc.
 
 ## Install AMCL
-Milagro D-TA uses the Apache Milagrio Cryptography Library. Before install D-TA AMCL must be installed.
+Milagro D-TA uses the Apache Milagrio Cryptography Library, so this must installed first
 
 ```
-git clone git@github.com:apache/incubator-milagro-crypto-c.git
+git clone https://github.com/apache/incubator-milagro-crypto-c.git
 
 cd incubator-milagro-crypto-c
 
 mkdir build
 
 cd build
+
+brew install cmake (or apt install cmake)
 
 cmake -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=ON -D AMCL_CHUNK=64 -D AMCL_CURVE="BLS383" AMCL_CURVE="BLS381" AMCL_CURVE="SECP256K1" -D AMCL_RSA="" -D BUILD_PYTHON=OFF -D BUILD_WCC=OFF -D BUILD_MPIN=ON -D BUILD_X509=OFF -D CMAKE_INSTALL_PREFIX=/usr/local ..
 
