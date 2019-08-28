@@ -18,6 +18,12 @@ The most current libraries are the core crypto libraries:
 
 For the time being, only the C and JavaScript libraries are being supported going forward.
 
+What's New
+============================
+
+* [apache-milagro-crypto-js-1.0.0-incubating](https://github.com/apache/incubator-milagro-crypto-js/releases/tag/1.0.0)- Initial release of the Crypto JS Library
+* [apache-milagro-crypto-c-1.0.0-incubating](https://github.com/apache/incubator-milagro-crypto-c/releases/tag/1.0.0)- Initial release of the Crypto C Library
+
 Website Detail
 ============================
 
