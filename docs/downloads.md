@@ -6,11 +6,11 @@ sidebar_label: Downloads
 
 # Project Downloads
 
-This page will be updated with all official Apache Software Foundation release from the Apache Milagro (incubating) project.
+This page will be updated with all official Apache Software Foundation releases from the Apache Milagro (incubating) project.
 
 ## Verifying Releases
 
-You can find instructions for checking hashes and signatures on the [Verifying Apache Software Foundation Releases](http://www.apache.org/info/verification.html) page. The committer’s pgp signatures can be found [here](https://www.apache.org/dist/incubator/milagro/KEYS).   
+You can find instructions for checking hashes and signatures on the [Verifying Apache Software Foundation Releases](http://www.apache.org/info/verification.html) page. The Milagro committer’s pgp signatures can be found [here](https://www.apache.org/dist/incubator/milagro/KEYS).   
 
 For fast downloads, current source distributions are hosted on mirror servers; older source distributions are in the archive. For security, public keys, hashes and signature files are always hosted at Apache.
 
