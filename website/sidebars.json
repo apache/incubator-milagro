@@ -16,28 +16,15 @@
     "Distributed Trust Authority": 
       [
       "d-ta-overview",
+      "dta-details/quickstart",
+          "api-details/api",
       {
         "type":"subcategory",
         "label":"D-TA Details",
-        "ids":[ "dta-details/quickstart",
-                "dta-details/identity-documents",
-                "dta-details/encrypted-envelope",
-                "dta-details/ipfs"]
-      },
-      {
-        "type":"subcategory",
-        "label":"Set Up Instructions",
-        "ids":["api-details/configuration",
-              "api-details/authentication",
-            "api-details/api"]
-      },
-      {
-        "type":"subcategory",
-        "label":"D-TA Plugins",
-        "ids":["dta-plugins/plugins-overview", "dta-plugins/plugin-dev-guide"
-              ]
+        "ids":[ 
+                ]
       }
-    ],
+    ],  
     "ZKP-MFA Clients/Servers": [
       "zkp-mfa-overview",
       "zkp-mfa-api"
