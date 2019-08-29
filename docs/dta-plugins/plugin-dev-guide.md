@@ -5,6 +5,27 @@ sidebar_label: Developers Guide
 ---
 We have provided a template plugin that provides the same functionality as out-of-the-box milagro.
 
+## Developer Notes
+
+You need to install protobufs
+
+If you change the portobufs definition run 
+
+$ protoc -I=. --go_out=. ./docs.proto
+
+To add a new endpoint to the goKit Microservices framework
+
+1. First define the contract in milagro/pkg/milagroservice/proto.go
+
+Add structs for http transport
+Add responses to milagro/swagger/swagger.config,yaml
+
+2. Add and endpoint definition
+
+milagro/pkg/milagroendpoints/endpoints.go
+
+3. Create a handler factory
+
 **Thise instructions still aren't perfect**
 
 1. Clone the repo and make sure that it works by following the [Quick Start](/docs/dta-details/quickstart) instructions
