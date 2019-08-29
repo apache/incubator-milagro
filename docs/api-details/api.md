@@ -7,12 +7,12 @@ sidebar_label: API
 Open-api specifications are provided for the core "vanilla" Milagro HTTP REST services and for both the shipped plugins: Bitcoin Address and Safeguard Secret
 
 * [Standard API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/open-api.yaml) Here it is in a [Swagger UI](/swagger/index.html)
-* [Bitcoin Plugin API](https://github.com/apache/incubator-milagro-dta/blob/develop/pkg/bitcoinplugin/open-api.yaml)
+* [Bitcoin Plugin API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/pkg/bitcoinplugin/open-api.yaml)
 * [Safeguard Secret API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/pkg/safeguardsecret/safeguardsecret-api.yaml)
 
 ## Testing The API
 
-(This assumes that your local DTA is running on port 8888 as described in the [quick start guide](/docs/dta-details/quickstart)
+(This assumes that your local DTA is running on port 5558 as described in the [quick start guide](/docs/dta-details/quickstart)
 
 Instructions for installing Swagger UI can be found [here](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/installation.md)
 
