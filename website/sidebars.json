@@ -15,15 +15,10 @@
       ],
     "Distributed Trust Authority": 
       [
-      "d-ta-overview",
-      "dta-details/quickstart",
-          "api-details/api",
-      {
-        "type":"subcategory",
-        "label":"D-TA Details",
-        "ids":[ 
-                ]
-      }
+        "d-ta-overview",
+        "dta-details/quickstart",
+        "dta-details/api",
+        "dta-details/configuration"
     ],  
     "ZKP-MFA Clients/Servers": [
       "zkp-mfa-overview",
