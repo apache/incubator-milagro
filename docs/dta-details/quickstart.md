@@ -7,6 +7,8 @@ sidebar_label: Quick Start
 ## Docker
 The easiest way to see a D-TA in action is to run it in a Docker container. The default settings will run a single D-TA that acts as Principal, Master Fiduciary and Beneficiary. The default settings include an embeded IPFS node connected to a Public IPFS network. This will get you up and running quickly but will turn your D-TA into a public IPFS relay. **Not recommended for production use!**
 
+Please see the repo's [README](https://github.com/apache/incubator-milagro-dta) for alternative build instructions.
+
 ```
 git clone https://github.com/apache/incubator-milagro-dta.git
 
@@ -46,7 +48,7 @@ The Safeguard Secret plugin encrypts a string with the public key and decrypts i
 docker run -it -p 5558:5556 milagrodta -service safeguardsecret
 ```
 
-**To Run Bit Coin Wallet**
+**To Run Bitcoin Wallet**
 
 Bitcon Wallet uses the public key to create a Bitcoin address. When you want to spend your bitcoins you can get the secret key from the Master Fiduciary
 ```
@@ -54,6 +56,8 @@ docker run -it -p 5558:5556 milagrodta -service bitcoinwallet
 ```
 
 You can confirm that the plugins have loaded by hitting [http://localhost:5558/v1/status](http://localhost:5558/v1/status)
+
+**IMPORTANT:** Currently, the Bitcoin wallet plugin only supports creating a Bitcoin wallet address where beneficiaryIDDocumentCID is set to NodeCID (the identity of the node itself which can be seen in the status endpoint as described above)
 
 
 ## Hitting the API
