@@ -7,7 +7,7 @@ sidebar_label: D-TA Overview
 # Introduction
 Milagro D-TA is a colaborative key management server
 
-Milagro D-TA facilitates secure and auditable communication between someone who to use a key pair (the Principal) and service providers who can keep secret keys safe (Master Fiduciary). It is written in Go and uses REST services based on the GoKit microservices framework, it uses IPFS to create a shared immutable log of transactions and relies on Milagro-Crypto-C for it's crypto.
+Milagro D-TA facilitates secure and auditable communication between someone who wants to use a key pair (the Principal) and service providers who can keep secret keys safe (Master Fiduciary). It is written in Go and uses REST services based on the GoKit microservices framework, it uses IPFS to create a shared immutable log of transactions and relies on Milagro-Crypto-C for it's crypto.
 
 ## Safeguarding Secrets 
 
@@ -17,13 +17,13 @@ This system can be imagined like a "network HSM". Here is a VERY simplified over
 
 ![Figure 1](/img/dta/RC1-Overview-1.png)
 
-## Milagro DTA Security
-The **Seed** is the focus of the system - Milagro D-TA provides a method for Principals to communicate with Master Fiduciares who can secure their secret keys, it does not prescribe how the securing should be done. The most basic implementation of Milagro DTA should secure seeds in an HSM using a PKCS#11 interface. 
+## Milagro D-TA Security
+The **Seed** is the focus of the system - Milagro D-TA provides a method for Principals to communicate with Master Fiduciares who can secure their secret keys, it does not prescribe how the securing should be done. The most basic implementation of Milagro D-TA should secure seeds in an HSM using a PKCS#11 interface. 
 
 We hope that many custodial services will adopt Milagro D-TA as a communication protocol and that they will bring a profusion of security paradigms, by working together we can make a dynamic market place for custodial services and together make the Internet a safer place.
 
-## The Milagro DTA Communication Protocol
-Milagro DTA provides a secure, distributed method of communication between beneficiaries, principals and fiduciaries. It aims to solve the following problems:
+## The Milagro D-TA Communication Protocol
+Milagro D-TA provides a secure, distributed method of communication between beneficiaries, principals and fiduciaries. It aims to solve the following problems:
 
 1. How can actors in the system be identified and trusted?
 
@@ -36,6 +36,6 @@ Milagro DTA provides a secure, distributed method of communication between benef
 
     **Answer:** Plugins
 
-A more complete view of the Milagro DTA ecosystem is shown below
+A more complete view of the Milagro D-TA ecosystem is shown below
 
 ![Figure 1](/img/dta/RC1.png)

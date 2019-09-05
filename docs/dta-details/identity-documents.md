@@ -28,7 +28,7 @@ message IDDocument {
 
 
 
-* `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](api-details/authentication.md)
+* `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](authentication.md)
 
 The node that is used to create an identity document will store the seed and secret keys associated with the Identity. In RC1 these are stored as a JSON file in the key value store:
 

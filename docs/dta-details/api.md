@@ -6,9 +6,10 @@ sidebar_label: API
 
 Open-api specifications are provided for the core "vanilla" Milagro HTTP REST services and for both the shipped plugins: Bitcoin Address and Safeguard Secret
 
-* [Standard API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/open-api.yaml) Here it is in a [Swagger UI](/swagger/index.html)
-* [Bitcoin Plugin API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/pkg/bitcoinplugin/open-api.yaml)
-* [Safeguard Secret API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/pkg/safeguardsecret/open-api.yaml)
+* [Standard API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/open-api.yaml) Here it is in a [Swagger UI](/swagger/index.html)   
+* [Bitcoin Plugin API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/pkg/bitcoinplugin/open-api.yaml)   
+* [Safeguard Secret API](https://raw.githubusercontent.com/apache/incubator-milagro-dta/develop/pkg/safeguardsecret/open-api.yaml)   
+
 
 ## Testing The API
 

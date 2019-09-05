@@ -9,15 +9,14 @@ When you first install Milagro DTA the API endpoints are not authenticated by de
 We strong recommend that you ***do not*** run Milagro DTA server without authentication
 :::
 
-To configure authentication all that is required is a standard oAuth 2.0 service. If you do not have an oAuth service currently running in your own infrastructure we recommend any of these fine service providers who will be able to authenticate your API users.
+To configure authentication all that is required is a standard OAuth 2.0 service. If you do not have an OAuth service currently running in your own infrastructure we recommend any of these fine service providers who will be able to authenticate your API users.
 * [AWS Cognito](https://aws.amazon.com/cognito/)
 * [Azure Active Directory](https://azure.microsoft.com/en-gb/services/active-directory/)
 * [AuthO](https://auth0.com/)
 
 ## Configuration
 
-```
-config.yaml
+Please see [Configuration](configuration.md) for details on how to configure config.yaml to support OAuth
 
 
 

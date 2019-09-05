@@ -5,7 +5,7 @@ sidebar_label: Quick Start
 ---
 
 ## Docker
-The easiest way to see a D-TA in action is to run it in a Docker container. The default settings will run a single D-TA that acts as Principal, Master Fiduciary and Beneficiary. The default settings include an embeded IPFS node connected to a Public IPFS network. This will get you up and running quickly but will turn your D-TA into a public IPFS relay. **Not recommended for production use!**
+The easiest way to see a D-TA in action is to run it in a Docker container. The default settings will run a single D-TA that acts as Principal, Master Fiduciary and Beneficiary. The default settings include an embeded IPFS node connected to a private IPFS network and an embedded "Bolt" database. This will get you up and running quickly but is **not recommended for production use!**
 
 Please see the repo's [README](https://github.com/apache/incubator-milagro-dta) for alternative build instructions.
 
@@ -56,9 +56,6 @@ docker run -it -p 5558:5556 milagrodta -service bitcoinwallet
 ```
 
 You can confirm that the plugins have loaded by hitting [http://localhost:5558/v1/status](http://localhost:5558/v1/status)
-
-**IMPORTANT:** Currently, the Bitcoin wallet plugin only supports creating a Bitcoin wallet address where beneficiaryIDDocumentCID is set to NodeCID (the identity of the node itself which can be seen in the status endpoint as described above)
-
 
 ## Hitting the API
 

@@ -3,10 +3,16 @@ id: configuration
 title: Configuration
 sidebar_label: Configuration
 ---
-Milagro D-TA can by configured by editing it's config file which is located in `~/.milagro/config.yaml`
+The Milagro D-TA can be configured either by editing its configuration file or using command line flags.
+
+## Configuration File
+The config file is located in `~/.milagro/config.yaml`
+
+:::important this configuration method is not yet supported when running in Docker.  Please use the command line flags described below.
+:::
 
 The default values are shown below with some explanatory comments:
-```
+```json
 // http ports
 http:
   listenAddr: :5556
@@ -49,27 +55,73 @@ log:
   format: text
   level: info
 
-// IPFS - by default D-TA connects to public network - NOT RECOMMENDED FOR PRODUCTION
-ipfs:
+// IPFS - by default D-TA connects to private IPFS network
   connector: embedded
   bootstrap:
-  - /dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN
-  - /dnsaddr/bootstrap.libp2p.io/ipfs/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa
-  - /dnsaddr/bootstrap.libp2p.io/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb
-  - /dnsaddr/bootstrap.libp2p.io/ipfs/QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt
-  - /ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ
-  - /ip4/104.236.179.241/tcp/4001/ipfs/QmSoLPppuBtQSGwKDZT2M73ULpjvfd3aZ6ha4oFGL1KrGM
-  - /ip4/128.199.219.111/tcp/4001/ipfs/QmSoLSafTMBsPKadTEgaXctDQVcqN88CNLHXMkTNwMKPnu
-  - /ip4/104.236.76.40/tcp/4001/ipfs/QmSoLV4Bbm51jM9C4gDYZQ9Cy3U6aXMJDAbzgu2fzaDs64
-  - /ip4/178.62.158.247/tcp/4001/ipfs/QmSoLer265NRgSp2LA3dPaeykiS1J6DifTC88f5uVQKNAd
-  - /ip6/2604:a880:1:20::203:d001/tcp/4001/ipfs/QmSoLPppuBtQSGwKDZT2M73ULpjvfd3aZ6ha4oFGL1KrGM
-  - /ip6/2400:6180:0:d0::151:6001/tcp/4001/ipfs/QmSoLSafTMBsPKadTEgaXctDQVcqN88CNLHXMkTNwMKPnu
-  - /ip6/2604:a880:800:10::4a:5001/tcp/4001/ipfs/QmSoLV4Bbm51jM9C4gDYZQ9Cy3U6aXMJDAbzgu2fzaDs64
-  - /ip6/2a03:b0c0:0:1010::23:1001/tcp/4001/ipfs/QmSoLer265NRgSp2LA3dPaeykiS1J6DifTC88f5uVQKNAd
+  - /ip4/34.252.47.231/tcp/4001/ipfs/QmcEPkctfqQs6vbvTD8EdJmzy4zouAtrV8AwjLbGhbURep
   listenAddress: /ip4/0.0.0.0/tcp/4001
   apiAddress: http://localhost:5001
 
-// load plugin
+// Define the plugin to be used.  Default is "milagro".  Currently available alternative plugins are "bitcoinwallet" and "safeguardsecret"
 plugins:
   service: milagro
 ```
+## Command Line Flags
+
+To view available service commands:
+
+```json
+ ./milagro
+Milagro DTA
+USAGE
+	milagro <command> [options]
+	
+COMMANDS
+	init	Initialize configuration
+	daemon	Starts the milagro daemon
+```
+
+To view the available initialization option flags, use the `-help` flag:
+
+### INIT
+
+```json
+./milagro init -help
+Usage of init:
+  -interactive
+    	Interactive setup
+  -masterfiduciarynode string
+    	Master fiduciary node
+  -nodename string
+    	Node name
+  -service string
+    	Service plugin (default "milagro")
+```  
+
+* **masterfiduciarynode** - if you want to use an external master fiduciary, use this flag to set its identity (nodeID) and endpoint separated with a comma. For example:
+```json
+QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK,http://123.456.789.1:5556
+```
+:::note By default a D-TA will be both a principal and master fiduciary. 
+:::  
+* **nodename** - set your DT-A node name (nodeName) here.  By default, a random name with be generated.   
+* **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".
+* **interactive** - use this flag to prompt for values for the other flags.  For example, to set the name (nodeName) of this DT-A to "alice", the identity (nodeID) of the external fiduciary to "QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK", the endpoint of the master fiduciary to "http://123.456.789.1:5556" and to use the "bitcoinwallet" plugin: 
+ 
+```json
+./milagro init -interactive
+What is your node name?. Leave blank to generate a random name: alice 
+What is your Master Fiduciary DTA’s node name? Leave blank to use this DTA as the Master Fiduciary: QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK   
+What is your Master Fiduciary DTA’s address?: http://123.456.789.1:5556   
+What plugin do you want to install? (B)itcoin wallet address generator or (S)afeguard secret. Leave blank for no plugin: B
+```
+
+### DAEMON
+```json
+./milagro daemon -help
+Usage of daemon:
+  -service string
+    	Service plugin (default "bitcoinwallet")
+```
+* **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".
+
