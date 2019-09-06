@@ -34,7 +34,7 @@ Milagro D-TA provides a secure, distributed method of communication between bene
 
 3. How can different custodial services provide their own "special security sauce"?
 
-    **Answer:** Plugins
+    **Answer:** [Plugins](dta-details/d-ta-plugins.md)
 
 A more complete view of the Milagro D-TA ecosystem is shown below
 

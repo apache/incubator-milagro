@@ -3,7 +3,10 @@ id: configuration
 title: Configuration
 sidebar_label: Configuration
 ---
-The Milagro D-TA can be configured either by editing its configuration file or using command line flags.
+The Milagro D-TA can be configured either by editing its configuration file or using command line flags.   
+
+:::important running a D-TA as a principal with an external master fiduciary (as described below) is not currently supported but will be in the next release.
+:::
 
 ## Configuration File
 The config file is located in `~/.milagro/config.yaml`

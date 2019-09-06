@@ -13,7 +13,7 @@ Open-api specifications are provided for the core "vanilla" Milagro HTTP REST se
 
 ## Testing The API
 
-(This assumes that your local DTA is running on port 5558 as described in the [quick start guide](/docs/dta-details/quickstart)
+(This assumes that your local DTA is running on port 5556 as described in the [quick start guide](/docs/dta-details/quickstart)
 
 Instructions for installing Swagger UI can be found [here](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/installation.md)
 

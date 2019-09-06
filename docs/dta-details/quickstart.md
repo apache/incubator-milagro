@@ -16,11 +16,11 @@ cd incubator-milagro-dta
 
 docker build -t milagrodta .
 
-docker run -it -p 5558:5556 milagrodta
+docker run -it -p 5556:5556 milagrodta
 
 ```
 
-Now you can test if the D-TA is running by hitting [http://localhost:5558/v1/status](http://localhost:5558/v1/status)
+Now you can test if the D-TA is running by hitting [http://localhost:5556/v1/status](http://localhost:5556/v1/status)
 
 You should see something like...
 
@@ -45,17 +45,17 @@ Milagro D-TA comes with two aditional plugins out-of-the box, which are intended
 The Safeguard Secret plugin encrypts a string with the public key and decrypts it when the Master Feducuiary returns the secret key.
 
 ```
-docker run -it -p 5558:5556 milagrodta -service safeguardsecret
+docker run -it -p 5556:5556 milagrodta -service safeguardsecret
 ```
 
 **To Run Bitcoin Wallet**
 
 Bitcon Wallet uses the public key to create a Bitcoin address. When you want to spend your bitcoins you can get the secret key from the Master Fiduciary
 ```
-docker run -it -p 5558:5556 milagrodta -service bitcoinwallet
+docker run -it -p 5556:5556 milagrodta -service bitcoinwallet
 ```
 
-You can confirm that the plugins have loaded by hitting [http://localhost:5558/v1/status](http://localhost:5558/v1/status)
+You can confirm that the plugins have loaded by hitting [http://localhost:5556/v1/status](http://localhost:5556/v1/status)
 
 ## Hitting the API
 
@@ -76,7 +76,7 @@ The API has three parts to it:
 ### Example - To create a new Identity
 
 ```
-curl -X POST "http://localhost:5558/v1/identity" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"name\":\"thisNode\"}"
+curl -X POST "http://localhost:5556/v1/identity" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"name\":\"thisNode\"}"
 ```
 
 
