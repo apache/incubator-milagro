@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>FP12 · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;FP12&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="FP12 · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;a name=&quot;FP12&quot;&gt;&lt;/a&gt;"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class="siteNavGroupActive"><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class="siteNavGroupActive"><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>AMCL Library</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">About Milagro<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/milagro-intro">Milagro Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-crypto">Milagro Crypto</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-protocols">Milagro Protocols</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-design">Milagro Design</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AMCL Library<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/amcl-overview">AMCL Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/amcl-c-api">AMCL C API</a></li><li class="navListItem"><a class="navItem" href="/docs/amcl-javascript-api">AMCL JavaScript API</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle"></h4><ul><li class="navListItem"><a class="navItem" href="/docs/cryptojs/aes">AES</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/big">BIG</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls">BLS</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls192">BLS192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls256">BLS256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/dbig">DBIG</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecdh">ECDH</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp">ECP</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp2">ECP2</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp4">ECP4</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp8">ECP8</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ff">FF</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp">FP</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp2">FP2</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp4">FP4</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp8">FP8</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/cryptojs/fp12">FP12</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp16">FP16</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp24">FP24</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp48">FP48</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/gcm">GCM</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash256">HASH256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash384">HASH384</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash512">HASH512</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin">MPIN</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin192">MPIN192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin256">MPIN256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair">PAIR</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair192">PAIR192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair256">PAIR256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/rand">RAND</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/rsa">RSA</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/sha3">SHA3</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/unit64">UInt64</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/contributor-guide">Contributor&#x27;s Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/downloads">Downloads</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">FP12</h1></header><article><div><span><p><a name="FP12"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="fp12"></a><a href="#fp12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FP12</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<ul>
+<li><a href="#FP12">FP12</a>
+<ul>
+<li><a href="#new_FP12_new">new FP12()</a></li>
+<li><em>instance</em>
+<ul>
+<li><a href="#FP12+reduce">.reduce()</a></li>
+<li><a href="#FP12+norm">.norm()</a></li>
+<li><a href="#FP12+iszilch">.iszilch()</a></li>
+<li><a href="#FP12+isunity">.isunity()</a></li>
+<li><a href="#FP12+cmove">.cmove(g, d)</a></li>
+<li><a href="#FP12+select">.select()</a></li>
+<li><a href="#FP12+geta">.geta()</a></li>
+<li><a href="#FP12+getb">.getb()</a></li>
+<li><a href="#FP12+getc">.getc()</a></li>
+<li><a href="#FP12+equals">.equals(x)</a></li>
+<li><a href="#FP12+copy">.copy(x)</a></li>
+<li><a href="#FP12+one">.one(x)</a></li>
+<li><a href="#FP12+zero">.zero()</a></li>
+<li><a href="#FP12+conj">.conj()</a></li>
+<li><a href="#FP12+set">.set(d, e, f)</a></li>
+<li><a href="#FP12+seta">.seta(d)</a></li>
+<li><a href="#FP12+usqr">.usqr()</a></li>
+<li><a href="#FP12+sqr">.sqr()</a></li>
+<li><a href="#FP12+mul">.mul(y)</a></li>
+<li><a href="#FP12+smul">.smul(y)</a></li>
+<li><a href="#FP12+ssmul">.ssmul(y)</a></li>
+<li><a href="#FP12+inverse">.inverse()</a></li>
+<li><a href="#FP12+frob">.frob(f)</a></li>
+<li><a href="#FP12+trace">.trace()</a></li>
+<li><a href="#FP12+toString">.toString()</a></li>
+<li><a href="#FP12+toBytes">.toBytes(w)</a></li>
+<li><a href="#FP12+pow">.pow(e)</a></li>
+<li><a href="#FP12+pinpow">.pinpow(e, bts)</a></li>
+<li><a href="#FP12+compow">.compow(e, r)</a></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#FP12.fromBytes">.fromBytes(w)</a></li>
+<li><a href="#FP12.teq">.teq()</a></li>
+<li><a href="#FP12.pow4">.pow4()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="new_FP12_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-fp12"></a><a href="#new-fp12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new FP12()</h3>
+<p>Creates an instance of FP12.</p>
+<p><a name="FP12+reduce"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12reduce"></a><a href="#fp12reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.reduce()</h3>
+<p>Reduces all components of possibly unreduced FP12 mod Modulus</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+norm"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12norm"></a><a href="#fp12norm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.norm()</h3>
+<p>Normalises the components of an FP12</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+iszilch"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12iszilch"></a><a href="#fp12iszilch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.iszilch()</h3>
+<p>Tests for FP12 equal to zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+isunity"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12isunity"></a><a href="#fp12isunity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.isunity()</h3>
+<p>Tests for FP12 equal to unity</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+cmove"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12cmoveg-d"></a><a href="#fp12cmoveg-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.cmove(g, d)</h3>
+<p>Conditional copy of FP12 number</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>g</td><td>FP12 instance</td></tr>
+<tr><td>d</td><td>copy depends on this value</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+select"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12select"></a><a href="#fp12select" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.select()</h3>
+<p>Constant time select from pre-computed table</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+geta"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12geta"></a><a href="#fp12geta" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.geta()</h3>
+<p>extract a from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+getb"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12getb"></a><a href="#fp12getb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.getb()</h3>
+<p>extract b from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+getc"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12getc"></a><a href="#fp12getc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.getc()</h3>
+<p>extract c from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+equals"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12equalsx"></a><a href="#fp12equalsx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.equals(x)</h3>
+<p>Tests for equality of two FP12s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP12 instance to compare</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+copy"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12copyx"></a><a href="#fp12copyx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.copy(x)</h3>
+<p>Copy FP12 to another FP12</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP12 instance to be copied</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+one"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12onex"></a><a href="#fp12onex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.one(x)</h3>
+<p>Set FP12 to unity</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP12 instance to be set to one</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+zero"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12zero"></a><a href="#fp12zero" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.zero()</h3>
+<p>Set FP12 to zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+conj"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12conj"></a><a href="#fp12conj" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.conj()</h3>
+<p>Conjugation of FP12</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+set"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12setd-e-f"></a><a href="#fp12setd-e-f" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.set(d, e, f)</h3>
+<p>Set FP12 from three FP4 values</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>d</td><td>FP4 instance</td></tr>
+<tr><td>e</td><td>FP4 instance</td></tr>
+<tr><td>f</td><td>FP4 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+seta"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12setad"></a><a href="#fp12setad" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.seta(d)</h3>
+<p>Set FP12 from one FP4 value</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>d</td><td>FP4 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+usqr"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12usqr"></a><a href="#fp12usqr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.usqr()</h3>
+<p>Fast Squaring of an FP12 in &quot;unitary&quot; form</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+sqr"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12sqr"></a><a href="#fp12sqr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.sqr()</h3>
+<p>Fast Squaring of an FP12</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+mul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12muly"></a><a href="#fp12muly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.mul(y)</h3>
+<p>Full unconditional Multiplication of two FP12s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>y</td><td>FP12 instance, the multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+smul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12smuly"></a><a href="#fp12smuly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.smul(y)</h3>
+<p>Fast multiplication of two sparse FP12s that arises from ATE pairing line functions</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>y</td><td>FP12 instance, the multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+ssmul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12ssmuly"></a><a href="#fp12ssmuly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.ssmul(y)</h3>
+<p>Fast multiplication of what may be sparse multiplicands</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>y</td><td>FP12 instance, the multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+inverse"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12inverse"></a><a href="#fp12inverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.inverse()</h3>
+<p>Inverting an FP12</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+frob"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12frobf"></a><a href="#fp12frobf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.frob(f)</h3>
+<p>Raises an FP12 to the power of the internal modulus p, using the Frobenius</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>f</td><td>Modulus</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+trace"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12trace"></a><a href="#fp12trace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.trace()</h3>
+<p>Calculate the trace of an FP12</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+toString"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12tostring"></a><a href="#fp12tostring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.toString()</h3>
+<p>convert this to hex string</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12+toBytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12tobytesw"></a><a href="#fp12tobytesw" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.toBytes(w)</h3>
+<p>convert this to byte array</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>w</td><td>Byte array</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+pow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12powe"></a><a href="#fp12powe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.pow(e)</h3>
+<p>Raises an FP12 to the power of a BIG</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>BIG instance exponent</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+pinpow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12pinpowe-bts"></a><a href="#fp12pinpowe-bts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.pinpow(e, bts)</h3>
+<p>Raises an FP12 instance x to a small integer power, side-channel resistant</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>small integer exponent</td></tr>
+<tr><td>bts</td><td>maximum number of bits in exponent</td></tr>
+</tbody>
+</table>
+<p><a name="FP12+compow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12compowe-r"></a><a href="#fp12compowe-r" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP12.compow(e, r)</h3>
+<p>Raises an FP12 instance to a BIG power, compressed to FP4</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>BIG exponent</td></tr>
+<tr><td>r</td><td>BIG group order</td></tr>
+</tbody>
+</table>
+<p><a name="FP12.fromBytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12frombytesw"></a><a href="#fp12frombytesw" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FP12.fromBytes(w)</h3>
+<p>convert from byte array to FP12</p>
+<p><strong>Kind</strong>: static method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>w</td><td>Byte array</td></tr>
+</tbody>
+</table>
+<p><a name="FP12.teq"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12teq"></a><a href="#fp12teq" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FP12.teq()</h3>
+<p>return 1 if b==c, no branching</p>
+<p><strong>Kind</strong>: static method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code>  <br>
+<a name="FP12.pow4"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp12pow4"></a><a href="#fp12pow4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FP12.pow4()</h3>
+<p>p=q0^u0.q1^u1.q2^u2.q3^u3</p>
+<p><strong>Kind</strong>: static method of <a href="#FP12"><code>FP12</code></a>  <br>
+<strong>this</strong>: <code>{FP12}</code></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 01/08/2019 by John McCane-Whitney</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/cryptojs/fp8"><span class="arrow-prev">← </span><span>FP8</span></a><a class="docs-next button" href="/docs/cryptojs/fp16"><span>FP16</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#fp12">FP12</a><ul class="toc-headings"><li><a href="#new-fp12">new FP12()</a></li><li><a href="#fp12reduce">fP12.reduce()</a></li><li><a href="#fp12norm">fP12.norm()</a></li><li><a href="#fp12iszilch">fP12.iszilch()</a></li><li><a href="#fp12isunity">fP12.isunity()</a></li><li><a href="#fp12cmoveg-d">fP12.cmove(g, d)</a></li><li><a href="#fp12select">fP12.select()</a></li><li><a href="#fp12geta">fP12.geta()</a></li><li><a href="#fp12getb">fP12.getb()</a></li><li><a href="#fp12getc">fP12.getc()</a></li><li><a href="#fp12equalsx">fP12.equals(x)</a></li><li><a href="#fp12copyx">fP12.copy(x)</a></li><li><a href="#fp12onex">fP12.one(x)</a></li><li><a href="#fp12zero">fP12.zero()</a></li><li><a href="#fp12conj">fP12.conj()</a></li><li><a href="#fp12setd-e-f">fP12.set(d, e, f)</a></li><li><a href="#fp12setad">fP12.seta(d)</a></li><li><a href="#fp12usqr">fP12.usqr()</a></li><li><a href="#fp12sqr">fP12.sqr()</a></li><li><a href="#fp12muly">fP12.mul(y)</a></li><li><a href="#fp12smuly">fP12.smul(y)</a></li><li><a href="#fp12ssmuly">fP12.ssmul(y)</a></li><li><a href="#fp12inverse">fP12.inverse()</a></li><li><a href="#fp12frobf">fP12.frob(f)</a></li><li><a href="#fp12trace">fP12.trace()</a></li><li><a href="#fp12tostring">fP12.toString()</a></li><li><a href="#fp12tobytesw">fP12.toBytes(w)</a></li><li><a href="#fp12powe">fP12.pow(e)</a></li><li><a href="#fp12pinpowe-bts">fP12.pinpow(e, bts)</a></li><li><a href="#fp12compowe-r">fP12.compow(e, r)</a></li><li><a href="#fp12frombytesw">FP12.fromBytes(w)</a></li><li><a href="#fp12teq">FP12.teq()</a></li><li><a href="#fp12pow4">FP12.pow4()</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>
