@@ -107,7 +107,7 @@ QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK,http://123.456.789.1:5556
 ```
 :::note By default a D-TA will be both a principal and master fiduciary. 
 :::  
-* **nodename** - set your DT-A node name (nodeName) here.  By default, a random name with be generated.   
+* **nodename** - set your DT-A node name (nodeName) here.  By default, a random name with be generated if none is specified.   
 * **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".
 * **interactive** - use this flag to prompt for values for the other flags.  For example, to set the name (nodeName) of this DT-A to "alice", the identity (nodeID) of the external fiduciary to "QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK", the endpoint of the master fiduciary to "http://123.456.789.1:5556" and to use the "bitcoinwallet" plugin: 
  

@@ -18,7 +18,12 @@
         "d-ta-overview",
         "dta-details/quickstart",
         "dta-details/api",
-        "dta-details/configuration"
+        "dta-details/configuration",
+		"dta-details/identity-documents",
+		"dta-details/encrypted-envelope",
+		"dta-details/ipfs",
+		"dta-details/plugins-overview",
+		"dta-details/authentication"
     ],  
     "ZKP-MFA Clients/Servers": [
       "zkp-mfa-overview",

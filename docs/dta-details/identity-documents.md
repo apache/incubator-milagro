@@ -15,13 +15,14 @@ An Identity Document contains public keys for signing and key encapsulation.
 :::
 
 The definition of an identity document is:
-```
+```json
 message IDDocument {
-    string AuthenticationReference  = 2 ;
-    bytes SikePublicKey             = 3 ;
-    bytes PicnicPublicKey           = 4 ;    
-    string Username                 = 5 ;
-    int64 Timestamp                 = 6 ;
+    string IDDocumentCID			= 2 ;
+    string AuthenticationReference  = 3 ;
+    string BeneficiaryECPublicKey   = 4 ;    
+    string SikePublicKey            = 5 ;
+	string BlsPublicKey 			= 6 ;
+    int64 Timestamp                 = 7 ;
 }
 
 ```
@@ -32,12 +33,12 @@ message IDDocument {
 
 The node that is used to create an identity document will store the seed and secret keys associated with the Identity. In RC1 these are stored as a JSON file in the key value store:
 
-```
+```json
 //IdentitySecrets - keys required for decryption and signing
 type IdentitySecrets struct {
 	Name            string `json:"name"`
 	Seed            string `json:"seed"`
 	SikeSecretKey   string `json:"sikeSecretKey"`
-	PicnicSecretKey string `json:"picnicSecretKey"`
+	BlsSecretKey 	string `json:"BlsSecretKey"`
 }
 ```

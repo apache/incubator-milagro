@@ -38,11 +38,11 @@ You should see something like...
 
 ## Plugins
 
-Milagro D-TA comes with two aditional plugins out-of-the box, which are intended to demonstrate how it can be extended.
+The Milagro D-TA comes with two aditional plugins out-of-the box, which are intended to demonstrate how it can be extended.
 
 **To Run Safeguard Secret**
 
-The Safeguard Secret plugin encrypts a string with the public key and decrypts it when the Master Feducuiary returns the secret key.
+The Safeguard Secret plugin encrypts a string with the public key and decrypts it when the Master Fiducuiary returns the secret key.
 
 ```
 docker run -it -p 5556:5556 milagrodta -service safeguardsecret
@@ -61,7 +61,7 @@ You can confirm that the plugins have loaded by hitting [http://localhost:5556/v
 
 The details of the API can be  [seen here...](/swagger/index.html)
 
-Milagro D-TA can easily be integrated with an existing back office system, called from a front-end application or called from CURL, Postman, Swagger etc.
+The Milagro D-TA can easily be integrated with an existing back office system, called from a front-end application or called from CURL, Postman, Swagger etc.
 
 The API has three parts to it:
 
@@ -70,7 +70,7 @@ The API has three parts to it:
     1. Creates orders for new public keys
     2. Requests for secret keys to be revealed (redeemed)
     3. Allows orders to be searched and listed
-3. **Fulfillment RPC** - these are the server-to-server remnote procedure calls that enable a Principal D-TA to communicate with a Master Fiduciary D-TA
+3. **Fulfillment RPC** - these are the server-to-server remote procedure calls that enable a Principal D-TA to communicate with a Master Fiduciary D-TA
 
 
 ### Example - To create a new Identity

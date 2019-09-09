@@ -5,25 +5,25 @@ sidebar_label: D-TA Overview
 ---
 
 # Introduction
-Milagro D-TA is a colaborative key management server
+The Apache Milagro (Incubating) Decentralized Trust Authority (D-TA) is a collaborative key management server. 
 
-Milagro D-TA facilitates secure and auditable communication between someone who wants to use a key pair (the Principal) and service providers who can keep secret keys safe (Master Fiduciary). It is written in Go and uses REST services based on the GoKit microservices framework, it uses IPFS to create a shared immutable log of transactions and relies on Milagro-Crypto-C for it's crypto.
+The D-TA facilitates secure and auditable communication between someone who wants to use a key pair (the Principal) and service providers who can keep secret keys safe (Master Fiduciary). It is written in Go and uses REST services based on the GoKit microservices framework, it uses IPFS to create a shared immutable log of transactions and relies on Milagro-Crypto-C for it's crypto.
 
 ## Safeguarding Secrets 
 
-In order to safeguard a secret using Milagro D-TA a minimum of two roles are required: a client (refered to as the Principal) and a server (refered to as a Master Fiduciary). In addition a third party can be nominated as the ultimate recipient of the secret (refered to as the Beneficiary). You can run a single D-TA to provide all three roles if you want to see it in action. See the [quick start guide](/docs/dta-details/quickstart) for instructions on how to do that.
+In order to safeguard a secret using the D-TA a minimum of two roles are required: a client (refered to as the Principal) and a server (refered to as a Master Fiduciary). In addition a third party can be nominated as the ultimate recipient of the secret (refered to as the Beneficiary). You can run a single D-TA to provide all three roles if you want to see it in action. See the [quick start guide](/docs/dta-details/quickstart) for instructions on how to do that.
 
 This system can be imagined like a "network HSM". Here is a VERY simplified overview of the process:
 
 ![Figure 1](/img/dta/RC1-Overview-1.png)
 
 ## Milagro D-TA Security
-The **Seed** is the focus of the system - Milagro D-TA provides a method for Principals to communicate with Master Fiduciares who can secure their secret keys, it does not prescribe how the securing should be done. The most basic implementation of Milagro D-TA should secure seeds in an HSM using a PKCS#11 interface. 
+The **Seed** is the focus of the system - the D-TA provides a method for Principals to communicate with Master Fiduciares who can secure their secret keys, it does not prescribe how the securing should be done. The most basic implementation of a D-TA should secure seeds in an HSM using a PKCS#11 interface. 
 
-We hope that many custodial services will adopt Milagro D-TA as a communication protocol and that they will bring a profusion of security paradigms, by working together we can make a dynamic market place for custodial services and together make the Internet a safer place.
+We hope that many custodial services will adopt the Milagro D-TA as a communication protocol and that they will bring a profusion of security paradigms, by working together we can make a dynamic market place for custodial services and together make the Internet a safer place.
 
 ## The Milagro D-TA Communication Protocol
-Milagro D-TA provides a secure, distributed method of communication between beneficiaries, principals and fiduciaries. It aims to solve the following problems:
+The D-TA provides a secure, distributed method of communication between beneficiaries, principals and fiduciaries. It aims to solve the following problems:
 
 1. How can actors in the system be identified and trusted?
 
