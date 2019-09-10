@@ -16,13 +16,13 @@ A pairing is a kind of the bilinear map defined over an elliptic curve. Examples
 
 Pairings map pairs of points on an elliptic curve into the multiplicative group of a finite field. Their unique properties have enabled many new cryptographic protocols that had not previously been feasible.
 
-[Pairing-Based Cryptography (PBC)](https://en.wikipedia.org/wiki/Pairing-based_cryptography) is emerging as a solution to complex problems that proved intractable to the standard mathematics of Public-Key Cryptography such as Identity-Based Encryption, whereby the identity of a client can be used as their public key.
+[Pairing-Based Cryptography (PBC)](https://en.wikipedia.org/wiki/Pairing-based_cryptography) is emerging as a solution to complex problems that proved intractable to the standard mathematics of Public-Key Cryptography such as Identity-Based Encryption (IBE), whereby the identity of a client can be used as their public key.
 
-In certain use cases, this removes the need for a PKI infrastructure eliminates the root key 'single point of compromise' weakness, as the main reason to issue certificates is used to bind a public / private key pair to an identity.
+In certain use cases, this removes the need for a PKI infrastructure as the main reason to issue certificates is to bind a public / private key pair to an identity - a function not required when using IBE.
 
 Removing the certificate management burden enables the identity management and key lifecycle to take place within the decentralized cryptosystem itself.
 
-As a result, Milagro's decentralized cryptosystem design goals seek to deliver products that are easier to scale and manage that traditional PKI, and are a seamless fit for today's decentralized networks and distributed systems.
+As a result, Milagro's decentralized cryptosystem design goals seek to deliver products that are easier to scale and manage than traditional PKI, eliminate root key 'single point of compromise' weaknesses and are a seamless fit for today's decentralized networks and distributed systems.
 
 ## Pairings Go Mainstream
 
