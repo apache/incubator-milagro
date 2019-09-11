@@ -10,12 +10,13 @@ Milagro has several repos. The application repos are being overhauled to reflect
 * [Milagro JIRA](https://issues.apache.org/jira/projects/MILAGRO/issues/MILAGRO-18?filter=allopenissues)
 * [Milagro Wiki](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045)
 
-The most current libraries are the core crypto libraries:
+The C and JavaScript versions of the core cryptographic libraries have had major releases, and production ready, while the Rust version is under development:
 
 * [Milagro Crypto C Library](https://github.com/apache/incubator-milagro-crypto-c)
 * [Milagro Crypto JavaScript Library](https://github.com/apache/incubator-milagro-javascript)
+* [Milagro Crypto Rust Library](https://github.com/apache/incubator-milagro-crypto-rust/)
 
-For the time being, only the C, JavaScript & Rust libraries are being supported going forward.
+Note that only the C, JavaScript & Rust are being developed and supported going forward.
 
 Website Detail
 ============================
