@@ -3,13 +3,21 @@ id: d-ta-overview
 title: Decentralized Trust Authority Overview
 sidebar_label: D-TA Overview
 ---
-
 # Introduction
-The Apache Milagro (Incubating) Decentralized Trust Authority (D-TA) is a collaborative key management server. 
+The Apache Milagro (Incubating) Decentralized Trust Authority (D-TA) is a collaborative key management server. It has two primary functions. 
 
-The D-TA facilitates secure and auditable communication between someone who wants to use a key pair (the Principal) and service providers who can keep secret keys safe (Master Fiduciary). It is written in Go and uses REST services based on the GoKit microservices framework, it uses IPFS to create a shared immutable log of transactions and relies on Milagro-Crypto-C for it's crypto.
+1. **Issue** shares of identity-based Type-3 pairing secrets for initializing zero-knowledge proof multi-factor authentication (ZKP-MFA) networks of clients and authentication servers.
+2. **Safeguard** shares of generic secrets, acting independently but in conjunction with other D-TA nodes, for the benefit of other D-TA nodes. 
 
-## Safeguarding Secrets 
+In the use case where it issues shares, the D-TA holds nothing except for its Master Secret and acts as a distributed private key generation server. In the use case where it is safeguarding shares of secrets, it is up to the application developer to implement back-end application logic to hold those shares securely. Examples can include using Hardware Security Modules (HSMs) via an on-board PKCS#11 implementation to create a realm of key encryption keys.
+
+## Roles
+
+Operators of Decentralized Trust Authorities 
+
+A D-TA facilitates secure and auditable communication between someone who wants to use a key pair (the Principal) and service providers who can keep secret keys safe (Master Fiduciary). It is written in Go and uses REST services based on the GoKit microservices framework, it uses IPFS to create a shared immutable log of transactions and relies on Milagro-Crypto-C for it's crypto.
+
+# Safeguarding Secrets 
 
 In order to safeguard a secret using the D-TA a minimum of two roles are required: a client (refered to as the Principal) and a server (refered to as a Master Fiduciary). In addition a third party can be nominated as the ultimate recipient of the secret (refered to as the Beneficiary). You can run a single D-TA to provide all three roles if you want to see it in action. See the [quick start guide](/docs/dta-details/quickstart) for instructions on how to do that.
 
