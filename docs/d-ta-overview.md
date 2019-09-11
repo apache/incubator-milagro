@@ -4,7 +4,9 @@ title: Decentralized Trust Authority Overview
 sidebar_label: D-TA Overview
 ---
 ### VERSION: ALPHA RELEASE
-NOTES: The Alpha Release of the D-TA is not for production use. 
+
+:::important The Alpha Release of the D-TA is not for production use.
+:::
 
 #### Release Schedule:
 
