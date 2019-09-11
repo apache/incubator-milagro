@@ -15,7 +15,7 @@ Note that only the C, JavaScript & Rust are being developed and supported going 
 
 Applications being developed on these cryptographic libraries include the Milagro ZKP-MFA server and the Milagro Decentralized Trust Authority (D-TA). The Milagro D-TA is now at an alpha release stage.
 
-* [Apache Milagro Decentralized Trust Authority](https://issues.apache.org/jira/projects/MILAGRO/issues/MILAGRO-18?filter=allopenissues)
+* [Apache Milagro Decentralized Trust Authority](https://github.com/apache/incubator-milagro-dta)
 
 Website Detail
 ============================
