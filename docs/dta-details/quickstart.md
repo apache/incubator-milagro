@@ -5,7 +5,7 @@ sidebar_label: Quick Start
 ---
 
 ## Docker
-The easiest way to see a D-TA in action is to run it in a Docker container. The default settings will run a single D-TA that acts as Principal, Master Fiduciary and Beneficiary. The default settings include an embeded IPFS node connected to a private IPFS network and an embedded "Bolt" database. This will get you up and running quickly but is **not recommended for production use!**
+The easiest way to see a D-TA in action is to run it in a Docker container. The default settings will run a single D-TA that acts as Principal, Master Fiduciary and Beneficiary. The default settings include an embedded IPFS node connected to a private IPFS network and an embedded "Bolt" database. This will get you up and running quickly but is **not recommended for production use!**
 
 Please see the repo's [README](https://github.com/apache/incubator-milagro-dta) for alternative build instructions.
 
@@ -38,11 +38,11 @@ You should see something like...
 
 ## Plugins
 
-The Milagro D-TA comes with two aditional plugins out-of-the box, which are intended to demonstrate how it can be extended.
+The Milagro D-TA comes with two additional plugins out-of-the box, which are intended to demonstrate how it can be extended.
 
 **To Run Safeguard Secret**
 
-The Safeguard Secret plugin encrypts a string with the public key and decrypts it when the Master Fiducuiary returns the secret key.
+The Safeguard Secret plugin encrypts a string with the public key and decrypts it when the Master Fiduciary returns the secret key.
 
 ```
 docker run -it -p 5556:5556 milagrodta -service safeguardsecret
@@ -50,16 +50,16 @@ docker run -it -p 5556:5556 milagrodta -service safeguardsecret
 
 **To Run Bitcoin Wallet**
 
-Bitcon Wallet uses the public key to create a Bitcoin address. When you want to spend your bitcoins you can get the secret key from the Master Fiduciary
+Bitcoin Wallet uses the public key to create a Bitcoin address. When you want to spend your bitcoins you can get the secret key from the Master Fiduciary
 ```
 docker run -it -p 5556:5556 milagrodta -service bitcoinwallet
 ```
 
 You can confirm that the plugins have loaded by hitting [http://localhost:5556/v1/status](http://localhost:5556/v1/status)
 
-## Hitting the API
+## D-TA API
 
-The details of the API can be  [seen here...](/swagger/index.html)
+A Swagger description of the API is accessed [via this link.](/swagger/index.html)
 
 The Milagro D-TA can easily be integrated with an existing back office system, called from a front-end application or called from CURL, Postman, Swagger etc.
 
