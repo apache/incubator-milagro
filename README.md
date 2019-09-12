@@ -5,18 +5,15 @@ The Apache Milagro (incubating) website
 
 Milagro is a set of crypto libraries and core security infrastructure applications, built for decentralized networks yet suitable for enterprises.
 
-Milagro has several repos. The application repos are being overhauled to reflect new, modern architectures. Expect these to be merged into a Milagro ZKP-MFA server repo, and a Milagro Decentralized Trust Authority (D-TA) repo. More detail is available at:
-
-* [Milagro JIRA](https://issues.apache.org/jira/projects/MILAGRO/issues/MILAGRO-18?filter=allopenissues)
-* [Milagro Wiki](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045)
-
-The most current libraries are the core crypto libraries:
+Milagro has several repos. The C and JavaScript versions of the core cryptographic libraries have had major releases, and are production ready, while the Rust version is under development:
 
 * [Milagro Crypto C Library](https://github.com/apache/incubator-milagro-crypto-c)
 * [Milagro Crypto JavaScript Library](https://github.com/apache/incubator-milagro-javascript)
 * [Milagro Crypto Rust Library](https://github.com/apache/incubator-milagro-crypto-rust/)
 
-For the time being, only the C and JavaScript libraries are being supported going forward.
+Applications being developed on these cryptographic libraries include the Milagro ZKP-MFA server and the Milagro Decentralized Trust Authority (D-TA). The Milagro D-TA is now at an alpha release stage.
+
+* [Apache Milagro Decentralized Trust Authority](https://github.com/apache/incubator-milagro-dta)
 
 What's New
 ============================
