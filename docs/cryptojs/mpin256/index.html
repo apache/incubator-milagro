@@ -1,0 +1,573 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>MPIN256 · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;MPIN256&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="MPIN256 · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;a name=&quot;MPIN256&quot;&gt;&lt;/a&gt;"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class=""><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class=""><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">MPIN256</h1></header><article><div><span><p><a name="MPIN256"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="mpin256"></a><a href="#mpin256" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<ul>
+<li><a href="#MPIN256">MPIN256</a>
+<ul>
+<li><a href="#new_MPIN256_new">new MPIN256()</a></li>
+<li><a href="#MPIN256.today">.today()</a> ⇒</li>
+<li><a href="#MPIN256.bytestostring">.bytestostring(b)</a> ⇒</li>
+<li><a href="#MPIN256.stringtobytes">.stringtobytes(s)</a> ⇒</li>
+<li><a href="#MPIN256.comparebytes">.comparebytes(a, b)</a> ⇒</li>
+<li><a href="#MPIN256.mpin_hash">.mpin_hash(c, U)</a> ⇒</li>
+<li><a href="#MPIN256.hashit">.hashit(sha, n, B)</a> ⇒</li>
+<li><a href="#MPIN256.map">.map(u, cb)</a> ⇒</li>
+<li><a href="#MPIN256.unmap">.unmap(u, P)</a> ⇒</li>
+<li><a href="#MPIN256.RECOMBINE_G1">.RECOMBINE_G1(R1, R2, R)</a> ⇒</li>
+<li><a href="#MPIN256.RECOMBINE_G2">.RECOMBINE_G2(W1, W2, W)</a> ⇒</li>
+<li><a href="#MPIN256.HASH_ID">.HASH_ID(sha, ID)</a> ⇒</li>
+<li><a href="#MPIN256.RANDOM_GENERATE">.RANDOM_GENERATE(rng, S)</a> ⇒</li>
+<li><a href="#MPIN256.EXTRACT_PIN">.EXTRACT_PIN()</a> ⇒</li>
+<li><a href="#MPIN256.EXTRACT_FACTOR">.EXTRACT_FACTOR()</a> ⇒</li>
+<li><a href="#MPIN256.RESTORE_FACTOR">.RESTORE_FACTOR()</a> ⇒</li>
+<li><a href="#MPIN256.GET_SERVER_SECRET">.GET_SERVER_SECRET(S, SST)</a> ⇒</li>
+<li><a href="#MPIN256.GET_G1_MULTIPLE">.GET_G1_MULTIPLE(type, x, G, W)</a> ⇒</li>
+<li><a href="#MPIN256.GET_CLIENT_SECRET">.GET_CLIENT_SECRET(S, CID, CST)</a> ⇒</li>
+<li><a href="#MPIN256.GET_CLIENT_PERMIT">.GET_CLIENT_PERMIT(sha, date, S, CID, CTT)</a> ⇒</li>
+<li><a href="#MPIN256.CLIENT_1">.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT)</a> ⇒</li>
+<li><a href="#MPIN256.CLIENT_2">.CLIENT_2(X, Y, SEC)</a> ⇒</li>
+<li><a href="#MPIN256.SERVER_1">.SERVER_1(sha, date, CID, HID, HTID)</a> ⇒</li>
+<li><a href="#MPIN256.SERVER_2">.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa)</a> ⇒</li>
+<li><a href="#MPIN256.KANGAROO">.KANGAROO(E, F)</a> ⇒</li>
+<li><a href="#MPIN256.GET_TIME">.GET_TIME()</a> ⇒</li>
+<li><a href="#MPIN256.CLIENT">.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message)</a> ⇒</li>
+<li><a href="#MPIN256.SERVER">.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa)</a> ⇒</li>
+<li><a href="#MPIN256.PRECOMPUTE">.PRECOMPUTE(TOKEN, CID, G1, G2)</a> ⇒</li>
+<li><a href="#MPIN256.HASH_ALL">.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W)</a> ⇒</li>
+<li><a href="#MPIN256.CLIENT_KEY">.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK)</a> ⇒</li>
+<li><a href="#MPIN256.SERVER_KEY">.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK)</a> ⇒</li>
+<li><a href="#MPIN256.GET_DVS_KEYPAIR">.GET_DVS_KEYPAIR(rng, Z, Pa)</a> ⇒</li>
+</ul></li>
+</ul>
+<p><a name="new_MPIN256_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-mpin256"></a><a href="#new-mpin256" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new MPIN256()</h3>
+<p>Creates an instance of MPIN256</p>
+<p><a name="MPIN256.today"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256today"></a><a href="#mpin256today" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.today() ⇒</h3>
+<p>Get epoch time for day</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: time in slots since epoch<br>
+<strong>this</strong>: <code>{MPIN256}</code>  <br>
+<a name="MPIN256.bytestostring"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256bytestostringb"></a><a href="#mpin256bytestostringb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.bytestostring(b) ⇒</h3>
+<p>Convert byte array to string</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: s string<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>b</td><td>byte array</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.stringtobytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256stringtobytess"></a><a href="#mpin256stringtobytess" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.stringtobytes(s) ⇒</h3>
+<p>Convert a string to byte array</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: b byte array<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>string</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.comparebytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256comparebytesa-b"></a><a href="#mpin256comparebytesa-b" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.comparebytes(a, b) ⇒</h3>
+<p>Convert byte arrays</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: true if equal<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>a</td><td>byte array</td></tr>
+<tr><td>b</td><td>byte array</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.mpin_hash"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256mpin-_hashc-u"></a><a href="#mpin256mpin-_hashc-u" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.mpin_hash(c, U) ⇒</h3>
+<p>Hash values</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: R hash value<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>FP8 instance</td></tr>
+<tr><td>U</td><td>ECP unstancebyte array</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.hashit"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256hashitsha-n-b"></a><a href="#mpin256hashitsha-n-b" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.hashit(sha, n, B) ⇒</h3>
+<p>General purpose hash function</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: R hash value<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>n</td><td>Integer</td></tr>
+<tr><td>B</td><td>byte array</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.map"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256mapu-cb"></a><a href="#mpin256mapu-cb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.map(u, cb) ⇒</h3>
+<p>maps a random u to a point on the curve</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: P ECP pointhash value<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>u</td><td>BIG numberInteger</td></tr>
+<tr><td>cb</td><td>an integer representing the &quot;sign&quot; of y, in fact its least significant bit.</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.unmap"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256unmapu-p"></a><a href="#mpin256unmapu-p" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.unmap(u, P) ⇒</h3>
+<p>returns u derived from P. Random value in range 1 to return value should then be added to u</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: r Value that should be added to u to derive P<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>u</td><td>BIG numberInteger</td></tr>
+<tr><td>P</td><td>ECP pointhash value</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.RECOMBINE_G1"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256recombine-_g1r1-r2-r"></a><a href="#mpin256recombine-_g1r1-r2-r" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.RECOMBINE_G1(R1, R2, R) ⇒</h3>
+<p>Add two members from the group G1</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>R1</td><td>Input member of G1</td></tr>
+<tr><td>R2</td><td>Input member of G1</td></tr>
+<tr><td>R</td><td>Output member of G1. R=R1+R2</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.RECOMBINE_G2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256recombine-_g2w1-w2-w"></a><a href="#mpin256recombine-_g2w1-w2-w" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.RECOMBINE_G2(W1, W2, W) ⇒</h3>
+<p>Add two members from the group G2</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>W1</td><td>Input member of G2</td></tr>
+<tr><td>W2</td><td>Input member of G2</td></tr>
+<tr><td>W</td><td>Output member of G2. W=W1+W2</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.HASH_ID"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256hash-_idsha-id"></a><a href="#mpin256hash-_idsha-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.HASH_ID(sha, ID) ⇒</h3>
+<p>Hash the identity</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: hash value<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>ID</td><td>Identity as byte array</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.RANDOM_GENERATE"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256random-_generaterng-s"></a><a href="#mpin256random-_generaterng-s" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.RANDOM_GENERATE(rng, S) ⇒</h3>
+<p>Create random secret</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>rng</td><td>cryptographically secure random number generator</td></tr>
+<tr><td>S</td><td>Random secret value</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.EXTRACT_PIN"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256extract-_pin"></a><a href="#mpin256extract-_pin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.EXTRACT_PIN() ⇒</h3>
+<p>Extract a PIN number from a client secret</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: token<br>
+<strong>this</strong>: <code>{MPIN256}</code>  <br>
+<strong>Parameter</strong>: sha hash type<br>
+<strong>Parameter</strong>: CID Client identity<br>
+<strong>Parameter</strong>: pin PIN value<br>
+<strong>Parameter</strong>: TOKEN Client secret<br>
+<a name="MPIN256.EXTRACT_FACTOR"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256extract-_factor"></a><a href="#mpin256extract-_factor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.EXTRACT_FACTOR() ⇒</h3>
+<p>Extract factor from TOKEN for identity CID</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: token<br>
+<strong>this</strong>: <code>{MPIN256}</code>  <br>
+<strong>Parameter</strong>: sha hash type<br>
+<strong>Parameter</strong>: CID Client identity<br>
+<strong>Parameter</strong>: factor Value to extract<br>
+<strong>Parameter</strong>: facbits Number of bits in factor<br>
+<strong>Parameter</strong>: TOKEN Token value<br>
+<a name="MPIN256.RESTORE_FACTOR"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256restore-_factor"></a><a href="#mpin256restore-_factor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.RESTORE_FACTOR() ⇒</h3>
+<p>Restore factor to TOKEN for identity CID</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: token<br>
+<strong>this</strong>: <code>{MPIN256}</code>  <br>
+<strong>Parameter</strong>: sha hash type<br>
+<strong>Parameter</strong>: CID Client identity<br>
+<strong>Parameter</strong>: factor Value to extract<br>
+<strong>Parameter</strong>: facbits Number of bits in factor<br>
+<strong>Parameter</strong>: TOKEN Token value<br>
+<a name="MPIN256.GET_SERVER_SECRET"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256get-_server-_secrets-sst"></a><a href="#mpin256get-_server-_secrets-sst" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.GET_SERVER_SECRET(S, SST) ⇒</h3>
+<p>Create a server secret in G2 from a master secret</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>S</td><td>Master secret</td></tr>
+<tr><td>SST</td><td>Server secret = s.Q where Q is a fixed generator of G2</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.GET_G1_MULTIPLE"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256get-_g1-_multipletype-x-g-w"></a><a href="#mpin256get-_g1-_multipletype-x-g-w" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.GET_G1_MULTIPLE(type, x, G, W) ⇒</h3>
+<p>Find a random multiple of a point in G1</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code>  <br>
+<strong>Parameter</strong>: rng cryptographically secure random number generator</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>determines type of action to be taken</td></tr>
+<tr><td>x</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr>
+<tr><td>G</td><td>if type=0 a point in G1, else an octet to be mapped to G1</td></tr>
+<tr><td>W</td><td>the output =x.G or x.M(G), where M(.) is a mapping</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.GET_CLIENT_SECRET"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256get-_client-_secrets-cid-cst"></a><a href="#mpin256get-_client-_secrets-cid-cst" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.GET_CLIENT_SECRET(S, CID, CST) ⇒</h3>
+<p>Create a client secret in G1 from a master secret and the client ID</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>S</td><td>is an input master secret</td></tr>
+<tr><td>CID</td><td>is the input client identity</td></tr>
+<tr><td>CST</td><td>is the full client secret = s.H(ID)</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.GET_CLIENT_PERMIT"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256get-_client-_permitsha-date-s-cid-ctt"></a><a href="#mpin256get-_client-_permitsha-date-s-cid-ctt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.GET_CLIENT_PERMIT(sha, date, S, CID, CTT) ⇒</h3>
+<p>Create a Time Permit in G1 from a master secret and the client ID</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>date</td><td>is input date, in days since the epoch.</td></tr>
+<tr><td>S</td><td>is an input master secret</td></tr>
+<tr><td>CID</td><td>is the input client identity</td></tr>
+<tr><td>CTT</td><td>is a Time Permit for the given date = s.H(d</td><td>H(ID))</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.CLIENT_1"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256client-_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit"></a><a href="#mpin256client-_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT) ⇒</h3>
+<p>Perform first pass of the client side of the 3-pass version of the M-Pin protocol</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
+<tr><td>CLIENT_ID</td><td>is the input client identity</td></tr>
+<tr><td>rng</td><td>is a pointer to a cryptographically secure random number generator</td></tr>
+<tr><td>X</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr>
+<tr><td>pin</td><td>is the input PIN number</td></tr>
+<tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr>
+<tr><td>SEC</td><td>is output = CS+TP, where CS=is the reconstructed client secret, and TP is the time permit</td></tr>
+<tr><td>xID</td><td>is output = x.H(ID)</td></tr>
+<tr><td>xCID</td><td>is output = x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
+<tr><td>PERMIT</td><td>is the input time permit</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.CLIENT_2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256client-_2x-y-sec"></a><a href="#mpin256client-_2x-y-sec" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.CLIENT_2(X, Y, SEC) ⇒</h3>
+<p>Perform second pass of the client side of the 3-pass version of the M-Pin protocol</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>X</td><td>an input, a locally generated random number</td></tr>
+<tr><td>Y</td><td>an input random challenge from the server</td></tr>
+<tr><td>SEC</td><td>on output = -(x+y).V</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.SERVER_1"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256server-_1sha-date-cid-hid-htid"></a><a href="#mpin256server-_1sha-date-cid-hid-htid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.SERVER_1(sha, date, CID, HID, HTID) ⇒</h3>
+<p>Perform first pass of the server side of the 3-pass version of the M-Pin protocol</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
+<tr><td>CID</td><td>is the input claimed client identity</td></tr>
+<tr><td>HID</td><td>is output H(ID), a hash of the client ID</td></tr>
+<tr><td>HTID</td><td>is output H(ID)+H(d</td><td>H(ID))</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.SERVER_2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256server-_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa"></a><a href="#mpin256server-_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa) ⇒</h3>
+<p>Perform third pass on the server side of the 3-pass version of the M-Pin protocol</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
+<tr><td>HID</td><td>is input H(ID), a hash of the client ID</td></tr>
+<tr><td>HTID</td><td>is input H(ID)+H(d</td><td>H(ID))</td></tr>
+<tr><td>Y</td><td>is the input server's randomly generated challenge</td></tr>
+<tr><td>SST</td><td>is the input server secret</td></tr>
+<tr><td>xID</td><td>is input from the client = x.H(ID)</td></tr>
+<tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
+<tr><td>mSEC</td><td>is an input from the client</td></tr>
+<tr><td>E</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
+<tr><td>F</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
+<tr><td>Pa</td><td>is the input public key from the client, z.Q or NULL if the client uses regular mpin</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.KANGAROO"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256kangarooe-f"></a><a href="#mpin256kangarooe-f" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.KANGAROO(E, F) ⇒</h3>
+<p>Use Kangaroos to find PIN error</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: 0 if Kangaroos failed, or the PIN error e<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>E</td><td>a member of the group GT</td></tr>
+<tr><td>F</td><td>a member of the group GT =  E^e</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.GET_TIME"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256get-_time"></a><a href="#mpin256get-_time" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.GET_TIME() ⇒</h3>
+<p>Time since epoch</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: time since epoch<br>
+<strong>this</strong>: <code>{MPIN256}</code>  <br>
+<a name="MPIN256.CLIENT"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256clientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message"></a><a href="#mpin256clientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message) ⇒</h3>
+<p>Perform client side of the one-pass version of the M-Pin protocol</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
+<tr><td>CLIENT_ID</td><td>is the input client identity</td></tr>
+<tr><td>rng</td><td>is a pointer to a cryptographically secure random number generator</td></tr>
+<tr><td>X</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr>
+<tr><td>pin</td><td>is the input PIN number</td></tr>
+<tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr>
+<tr><td>SEC</td><td>is output = -(x+y)(CS+TP), where CS is the reconstructed client secret, and TP is the time permit</td></tr>
+<tr><td>xID</td><td>is output = x.H(ID)</td></tr>
+<tr><td>xCID</td><td>is output = x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
+<tr><td>PERMIT</td><td>is the input time permit</td></tr>
+<tr><td>TimeValue</td><td>is input epoch time in seconds - a timestamp</td></tr>
+<tr><td>Y</td><td>is output H(t</td><td>U) or H(t</td><td>UT) if Time Permits enabled</td></tr>
+<tr><td>Message</td><td>is the message to be signed</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.SERVER"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256serversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa"></a><a href="#mpin256serversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa) ⇒</h3>
+<p>Perform server side of the one-pass version of the M-Pin protocol</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
+<tr><td>HID</td><td>is output H(ID), a hash of the client ID</td></tr>
+<tr><td>HTID</td><td>is output H(ID)+H(d</td><td>H(ID))</td></tr>
+<tr><td>Y</td><td>is output H(t</td><td>U) or H(t</td><td>UT) if Time Permits enabled</td></tr>
+<tr><td>SST</td><td>is the input server secret</td></tr>
+<tr><td>xID</td><td>is input from the client = x.H(ID)</td></tr>
+<tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
+<tr><td>mSEC</td><td>is an input from the client</td></tr>
+<tr><td>E</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
+<tr><td>F</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
+<tr><td>CID</td><td>is the input claimed client identity</td></tr>
+<tr><td>TimeValue</td><td>is input epoch time in seconds - a timestamp</td></tr>
+<tr><td>MESSAGE</td><td>is the message to be signed</td></tr>
+<tr><td>Pa</td><td>is input from the client z.Q or NULL if the key-escrow less scheme is not used</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.PRECOMPUTE"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256precomputetoken-cid-g1-g2"></a><a href="#mpin256precomputetoken-cid-g1-g2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.PRECOMPUTE(TOKEN, CID, G1, G2) ⇒</h3>
+<p>Precompute values for use by the client side of M-Pin Full</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: O for success or else error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr>
+<tr><td>CID</td><td>is the input client identity</td></tr>
+<tr><td>G1</td><td>precomputed output</td></tr>
+<tr><td>G2</td><td>precomputed output</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.HASH_ALL"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256hash-_allsha-hid-xid-xcid-sec-y-r-w"></a><a href="#mpin256hash-_allsha-hid-xid-xcid-sec-y-r-w" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W) ⇒</h3>
+<p>Hash the session transcript</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: H the output is the hash of all of the above that apply<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>HID</td><td>is the hashed input client ID = H(ID)</td></tr>
+<tr><td>xID</td><td>is the client output = x.H(ID)</td></tr>
+<tr><td>xCID</td><td>is the client output = x.(H(ID)+H(T</td><td>H(ID)))</td></tr>
+<tr><td>SEC</td><td>is the client part response</td></tr>
+<tr><td>Y</td><td>is the server challenge</td></tr>
+<tr><td>R</td><td>is the client part response</td></tr>
+<tr><td>W</td><td>is the server part response</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.CLIENT_KEY"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256client-_keysha-g1-g2-pin-r-x-h-wcid-ck"></a><a href="#mpin256client-_keysha-g1-g2-pin-r-x-h-wcid-ck" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK) ⇒</h3>
+<p>Calculate Key on Client side for M-Pin Full</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sha</td><td>is the hash type</td></tr>
+<tr><td>G1</td><td>precomputed input</td></tr>
+<tr><td>G2</td><td>precomputed input</td></tr>
+<tr><td>pin</td><td>is the input PIN number</td></tr>
+<tr><td>R</td><td>is an input, a locally generated random number</td></tr>
+<tr><td>X</td><td>is an input, a locally generated random number</td></tr>
+<tr><td>H</td><td>is an input, hash of the protocol transcript</td></tr>
+<tr><td>wCID</td><td>is the input Server-side Diffie-Hellman component</td></tr>
+<tr><td>CK</td><td>is the output calculated shared key</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.SERVER_KEY"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256server-_keyh-z-sst-w-h-hid-xid-xcid-sk"></a><a href="#mpin256server-_keyh-z-sst-w-h-hid-xid-xcid-sk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK) ⇒</h3>
+<p>Calculate Key on Server side for M-Pin Full</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>h</td><td>is the hash type</td></tr>
+<tr><td>Z</td><td>is the input Client-side Diffie-Hellman component</td></tr>
+<tr><td>SST</td><td>is the input server secret</td></tr>
+<tr><td>W</td><td>is an input random number generated by the server</td></tr>
+<tr><td>H</td><td>is an input, hash of the protocol transcript</td></tr>
+<tr><td>HID</td><td>is the hashed input client ID = H(ID)</td></tr>
+<tr><td>xID</td><td>is input from the client = x.H(ID)</td></tr>
+<tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
+<tr><td>SK</td><td>is the output calculated shared key</td></tr>
+</tbody>
+</table>
+<p><a name="MPIN256.GET_DVS_KEYPAIR"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="mpin256get-_dvs-_keypairrng-z-pa"></a><a href="#mpin256get-_dvs-_keypairrng-z-pa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN256.GET_DVS_KEYPAIR(rng, Z, Pa) ⇒</h3>
+<p>Generates a random public key for the client z.Q</p>
+<p><strong>Kind</strong>: static method of <a href="#MPIN256"><code>MPIN256</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{MPIN256}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>rng</td><td>cryptographically secure random number generator</td></tr>
+<tr><td>Z</td><td>an output internally randomly generated if R!=NULL, otherwise it must be provided as an input</td></tr>
+<tr><td>Pa</td><td>the output public key for the client</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 01/08/2019 by John McCane-Whitney</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#mpin256">MPIN256</a><ul class="toc-headings"><li><a href="#new-mpin256">new MPIN256()</a></li><li><a href="#mpin256today">MPIN256.today() ⇒</a></li><li><a href="#mpin256bytestostringb">MPIN256.bytestostring(b) ⇒</a></li><li><a href="#mpin256stringtobytess">MPIN256.stringtobytes(s) ⇒</a></li><li><a href="#mpin256comparebytesa-b">MPIN256.comparebytes(a, b) ⇒</a></li><li><a href="#mpin256mpin-_hashc-u">MPIN256.mpin_hash(c, U) ⇒</a></li><li><a href="#mpin256hashitsha-n-b">MPIN256.hashit(sha, n, B) ⇒</a></li><li><a href="#mpin256mapu-cb">MPIN256.map(u, cb) ⇒</a></li><li><a href="#mpin256unmapu-p">MPIN256.unmap(u, P) ⇒</a></li><li><a href="#mpin256recombine-_g1r1-r2-r">MPIN256.RECOMBINE_G1(R1, R2, R) ⇒</a></li><li><a href="#mpin256recombine-_g2w1-w2-w">MPIN256.RECOMBINE_G2(W1, W2, W) ⇒</a></li><li><a href="#mpin256hash-_idsha-id">MPIN256.HASH_ID(sha, ID) ⇒</a></li><li><a href="#mpin256random-_generaterng-s">MPIN256.RANDOM_GENERATE(rng, S) ⇒</a></li><li><a href="#mpin256extract-_pin">MPIN256.EXTRACT_PIN() ⇒</a></li><li><a href="#mpin256extract-_factor">MPIN256.EXTRACT_FACTOR() ⇒</a></li><li><a href="#mpin256restore-_factor">MPIN256.RESTORE_FACTOR() ⇒</a></li><li><a href="#mpin256get-_server-_secrets-sst">MPIN256.GET_SERVER_SECRET(S, SST) ⇒</a></li><li><a href="#mpin256get-_g1-_multipletype-x-g-w">MPIN256.GET_G1_MULTIPLE(type, x, G, W) ⇒</a></li><li><a href="#mpin256get-_client-_secrets-cid-cst">MPIN256.GET_CLIENT_SECRET(S, CID, CST) ⇒</a></li><li><a href="#mpin256get-_client-_permitsha-date-s-cid-ctt">MPIN256.GET_CLIENT_PERMIT(sha, date, S, CID, CTT) ⇒</a></li><li><a href="#mpin256client-_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit">MPIN256.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT) ⇒</a></li><li><a href="#mpin256client-_2x-y-sec">MPIN256.CLIENT_2(X, Y, SEC) ⇒</a></li><li><a href="#mpin256server-_1sha-date-cid-hid-htid">MPIN256.SERVER_1(sha, date, CID, HID, HTID) ⇒</a></li><li><a href="#mpin256server-_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa">MPIN256.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa) ⇒</a></li><li><a href="#mpin256kangarooe-f">MPIN256.KANGAROO(E, F) ⇒</a></li><li><a href="#mpin256get-_time">MPIN256.GET_TIME() ⇒</a></li><li><a href="#mpin256clientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message">MPIN256.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message) ⇒</a></li><li><a href="#mpin256serversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa">MPIN256.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa) ⇒</a></li><li><a href="#mpin256precomputetoken-cid-g1-g2">MPIN256.PRECOMPUTE(TOKEN, CID, G1, G2) ⇒</a></li><li><a href="#mpin256hash-_allsha-hid-xid-xcid-sec-y-r-w">MPIN256.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W) ⇒</a></li><li><a href="#mpin256client-_keysha-g1-g2-pin-r-x-h-wcid-ck">MPIN256.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK) ⇒</a></li><li><a href="#mpin256server-_keyh-z-sst-w-h-hid-xid-xcid-sk">MPIN256.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK) ⇒</a></li><li><a href="#mpin256get-_dvs-_keypairrng-z-pa">MPIN256.GET_DVS_KEYPAIR(rng, Z, Pa) ⇒</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>
