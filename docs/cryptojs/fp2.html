@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>FP2 · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;a name=&quot;FP2&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="FP2 · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;p&gt;&lt;a name=&quot;FP2&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class=""><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class=""><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">FP2</h1></header><article><div><span><p><a name="FP2"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="fp2"></a><a href="#fp2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FP2</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<ul>
+<li><a href="#FP2">FP2</a>
+<ul>
+<li><a href="#new_FP2_new">new FP2()</a></li>
+<li><a href="#FP2+reduce">.reduce()</a></li>
+<li><a href="#FP2+norm">.norm()</a></li>
+<li><a href="#FP2+iszilch">.iszilch()</a></li>
+<li><a href="#FP2+isunity">.isunity()</a></li>
+<li><a href="#FP2+cmove">.cmove(g, d)</a></li>
+<li><a href="#FP2+equals">.equals(x)</a></li>
+<li><a href="#FP2+getA">.getA()</a></li>
+<li><a href="#FP2+getB">.getB()</a></li>
+<li><a href="#FP2+set">.set(c, d)</a></li>
+<li><a href="#FP2+seta">.seta(c)</a></li>
+<li><a href="#FP2+bset">.bset(c, d)</a></li>
+<li><a href="#FP2+bseta">.bseta(c)</a></li>
+<li><a href="#FP2+copy">.copy(x)</a></li>
+<li><a href="#FP2+zero">.zero()</a></li>
+<li><a href="#FP2+one">.one(x)</a></li>
+<li><a href="#FP2+neg">.neg(x)</a></li>
+<li><a href="#FP2+conj">.conj()</a></li>
+<li><a href="#FP2+add">.add(x)</a></li>
+<li><a href="#FP2+sub">.sub(x)</a></li>
+<li><a href="#FP2+pmul">.pmul(s)</a></li>
+<li><a href="#FP2+imul">.imul(s)</a></li>
+<li><a href="#FP2+sqr">.sqr()</a></li>
+<li><a href="#FP2+mul">.mul(y)</a></li>
+<li><a href="#FP2+sqrt">.sqrt()</a> ⇒</li>
+<li><a href="#FP2+toString">.toString()</a></li>
+<li><a href="#FP2+inverse">.inverse()</a></li>
+<li><a href="#FP2+div2">.div2()</a></li>
+<li><a href="#FP2+times_i">.times_i()</a></li>
+<li><a href="#FP2+mul_ip">.mul_ip()</a></li>
+<li><a href="#FP2+div_ip2">.div_ip2()</a></li>
+<li><a href="#FP2+div_ip">.div_ip()</a></li>
+<li><a href="#FP2+pow">.pow(e)</a></li>
+</ul></li>
+</ul>
+<p><a name="new_FP2_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-fp2"></a><a href="#new-fp2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new FP2()</h3>
+<p>Creates an instance of FP2.</p>
+<p><a name="FP2+reduce"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2reduce"></a><a href="#fp2reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.reduce()</h3>
+<p>Reduces all components of possibly unreduced FP2 mod Modulus</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+norm"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2norm"></a><a href="#fp2norm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.norm()</h3>
+<p>Normalises the components of an FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+iszilch"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2iszilch"></a><a href="#fp2iszilch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.iszilch()</h3>
+<p>Tests for FP2 equal to zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+isunity"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2isunity"></a><a href="#fp2isunity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.isunity()</h3>
+<p>Tests for FP2 equal to unity</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+cmove"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2cmoveg-d"></a><a href="#fp2cmoveg-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.cmove(g, d)</h3>
+<p>Conditional copy of FP2 number</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>g</td><td>FP2 instance</td></tr>
+<tr><td>d</td><td>copy depends on this value</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+equals"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2equalsx"></a><a href="#fp2equalsx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.equals(x)</h3>
+<p>Tests for equality of two FP2 instances</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP2 instance to compare</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+getA"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2geta"></a><a href="#fp2geta" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.getA()</h3>
+<p>extract a from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+getB"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2getb"></a><a href="#fp2getb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.getB()</h3>
+<p>extract b from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+set"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2setc-d"></a><a href="#fp2setc-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.set(c, d)</h3>
+<p>Set FP2 from two FP values</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>FP instance</td></tr>
+<tr><td>d</td><td>FP instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+seta"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2setac"></a><a href="#fp2setac" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.seta(c)</h3>
+<p>Set FP2 from one FP value</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>FP instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+bset"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2bsetc-d"></a><a href="#fp2bsetc-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.bset(c, d)</h3>
+<p>Set FP2 from two BIG values</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>BIG instance</td></tr>
+<tr><td>d</td><td>BIG instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+bseta"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2bsetac"></a><a href="#fp2bsetac" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.bseta(c)</h3>
+<p>Set FP2 from one BIG value</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>BIG instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+copy"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2copyx"></a><a href="#fp2copyx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.copy(x)</h3>
+<p>Copy FP2 to another FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP2 instance to be copied</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+zero"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2zero"></a><a href="#fp2zero" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.zero()</h3>
+<p>Set FP2 to zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+one"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2onex"></a><a href="#fp2onex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.one(x)</h3>
+<p>Set FP2 to unity</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP2 instance to be set to one</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+neg"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2negx"></a><a href="#fp2negx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.neg(x)</h3>
+<p>negate this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP2 instance to be set to one</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+conj"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2conj"></a><a href="#fp2conj" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.conj()</h3>
+<p>Conjugation of FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+add"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2addx"></a><a href="#fp2addx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.add(x)</h3>
+<p>addition of two FP2s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP2 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+sub"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2subx"></a><a href="#fp2subx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.sub(x)</h3>
+<p>subtraction of two FP2s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP2 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+pmul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2pmuls"></a><a href="#fp2pmuls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.pmul(s)</h3>
+<p>Multiplication of an FP2 by an FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>FP8 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+imul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2imuls"></a><a href="#fp2imuls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.imul(s)</h3>
+<p>Multiplication of an FP2 by a small integer</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>integer</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+sqr"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2sqr"></a><a href="#fp2sqr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.sqr()</h3>
+<p>Fast Squaring of an FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+mul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2muly"></a><a href="#fp2muly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.mul(y)</h3>
+<p>Full unconditional Multiplication of two FP2s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>y</td><td>FP2 instance, the multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP2+sqrt"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2sqrt"></a><a href="#fp2sqrt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.sqrt() ⇒</h3>
+<p>sqrt(a+ib) = sqrt(a+sqrt(a<em>a-n</em>b<em>b)/2)+ib/(2</em>sqrt(a+sqrt(a<em>a-n</em>b*b)/2))</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>Returns</strong>: true if this is QR<br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+toString"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2tostring"></a><a href="#fp2tostring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.toString()</h3>
+<p>convert this to hex string</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+inverse"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2inverse"></a><a href="#fp2inverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.inverse()</h3>
+<p>Inverting an FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+div2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2div2"></a><a href="#fp2div2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.div2()</h3>
+<p>Divide an FP2 by 2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+times_i"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2times-_i"></a><a href="#fp2times-_i" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.times_i()</h3>
+<p>Multiply an FP2 by sqrt(-1)</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+mul_ip"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2mul-_ip"></a><a href="#fp2mul-_ip" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.mul_ip()</h3>
+<p>Multiply an FP2 by (1+sqrt(-1))</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+div_ip2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2div-_ip2"></a><a href="#fp2div-_ip2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.div_ip2()</h3>
+<p>Divide an FP2 by (1+sqrt(-1))/2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+div_ip"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2div-_ip"></a><a href="#fp2div-_ip" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.div_ip()</h3>
+<p>Divide an FP2 by (1+sqrt(-1))</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code>  <br>
+<a name="FP2+pow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp2powe"></a><a href="#fp2powe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP2.pow(e)</h3>
+<p>Raises an FP2 to the power of a BIG</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP2"><code>FP2</code></a>  <br>
+<strong>this</strong>: <code>{FP2}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>BIG instance exponent</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 01/08/2019 by John McCane-Whitney</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#fp2">FP2</a><ul class="toc-headings"><li><a href="#new-fp2">new FP2()</a></li><li><a href="#fp2reduce">fP2.reduce()</a></li><li><a href="#fp2norm">fP2.norm()</a></li><li><a href="#fp2iszilch">fP2.iszilch()</a></li><li><a href="#fp2isunity">fP2.isunity()</a></li><li><a href="#fp2cmoveg-d">fP2.cmove(g, d)</a></li><li><a href="#fp2equalsx">fP2.equals(x)</a></li><li><a href="#fp2geta">fP2.getA()</a></li><li><a href="#fp2getb">fP2.getB()</a></li><li><a href="#fp2setc-d">fP2.set(c, d)</a></li><li><a href="#fp2setac">fP2.seta(c)</a></li><li><a href="#fp2bsetc-d">fP2.bset(c, d)</a></li><li><a href="#fp2bsetac">fP2.bseta(c)</a></li><li><a href="#fp2copyx">fP2.copy(x)</a></li><li><a href="#fp2zero">fP2.zero()</a></li><li><a href="#fp2onex">fP2.one(x)</a></li><li><a href="#fp2negx">fP2.neg(x)</a></li><li><a href="#fp2conj">fP2.conj()</a></li><li><a href="#fp2addx">fP2.add(x)</a></li><li><a href="#fp2subx">fP2.sub(x)</a></li><li><a href="#fp2pmuls">fP2.pmul(s)</a></li><li><a href="#fp2imuls">fP2.imul(s)</a></li><li><a href="#fp2sqr">fP2.sqr()</a></li><li><a href="#fp2muly">fP2.mul(y)</a></li><li><a href="#fp2sqrt">fP2.sqrt() ⇒</a></li><li><a href="#fp2tostring">fP2.toString()</a></li><li><a href="#fp2inverse">fP2.inverse()</a></li><li><a href="#fp2div2">fP2.div2()</a></li><li><a href="#fp2times-_i">fP2.times_i()</a></li><li><a href="#fp2mul-_ip">fP2.mul_ip()</a></li><li><a href="#fp2div-_ip2">fP2.div_ip2()</a></li><li><a href="#fp2div-_ip">fP2.div_ip()</a></li><li><a href="#fp2powe">fP2.pow(e)</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>

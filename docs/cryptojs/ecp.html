@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ECP · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;a name=&quot;ECP&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ECP · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;p&gt;&lt;a name=&quot;ECP&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class=""><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class=""><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">ECP</h1></header><article><div><span><p><a name="ECP"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="ecp"></a><a href="#ecp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECP</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<ul>
+<li><a href="#ECP">ECP</a>
+<ul>
+<li><a href="#new_ECP_new">new ECP()</a></li>
+<li><em>instance</em>
+<ul>
+<li><a href="#ECP+is_infinity">.is_infinity(1)</a></li>
+<li><a href="#ECP+cswap">.cswap()</a></li>
+<li><a href="#ECP+cmove">.cmove()</a></li>
+<li><a href="#ECP+select">.select()</a></li>
+<li><a href="#ECP+copy">.copy(P)</a></li>
+<li><a href="#ECP+neg">.neg()</a></li>
+<li><a href="#ECP+inf">.inf()</a></li>
+<li><a href="#ECP+setxy">.setxy(ix, iy)</a></li>
+<li><a href="#ECP+setxi">.setxi(ix, s)</a></li>
+<li><a href="#ECP+setx">.setx(ix)</a></li>
+<li><a href="#ECP+affine">.affine()</a></li>
+<li><a href="#ECP+getX">.getX()</a></li>
+<li><a href="#ECP+getY">.getY()</a></li>
+<li><a href="#ECP+getS">.getS()</a></li>
+<li><a href="#ECP+getx">.getx()</a></li>
+<li><a href="#ECP+gety">.gety()</a></li>
+<li><a href="#ECP+getz">.getz()</a></li>
+<li><a href="#ECP+toBytes">.toBytes(b)</a></li>
+<li><a href="#ECP+toString">.toString()</a> ⇒</li>
+<li><a href="#ECP+dbl">.dbl()</a></li>
+<li><a href="#ECP+add">.add()</a></li>
+<li><a href="#ECP+sub">.sub(Q)</a></li>
+<li><a href="#ECP+pinmul">.pinmul(e, bts)</a></li>
+<li><a href="#ECP+cfp">.cfp()</a></li>
+<li><a href="#ECP+mul">.mul(e)</a></li>
+<li><a href="#ECP+mul2">.mul2(e, Q, f)</a></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#ECP.generator">.generator()</a></li>
+<li><a href="#ECP.fromBytes">.fromBytes(b)</a></li>
+<li><a href="#ECP.RHS">.RHS(x)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="new_ECP_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-ecp"></a><a href="#new-ecp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new ECP()</h3>
+<p>Creates an instance of ECP</p>
+<p><a name="ECP+is_infinity"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpis-_infinity1"></a><a href="#ecpis-_infinity1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.is_infinity(1)</h3>
+<p>Tests for ECP point equal to infinity</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>if infinity, else returns 0</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+cswap"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpcswap"></a><a href="#ecpcswap" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.cswap()</h3>
+<p>conditional swap of this and Q dependant on dCopy ECP point to another ECP point</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+cmove"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpcmove"></a><a href="#ecpcmove" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.cmove()</h3>
+<p>conditional move of Q to P dependant on d</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+select"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpselect"></a><a href="#ecpselect" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.select()</h3>
+<p>Constant time select from pre-computed table</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+copy"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpcopyp"></a><a href="#ecpcopyp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.copy(P)</h3>
+<p>Copy ECP point to another ECP point</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>P</td><td>ECP instance</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+neg"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpneg"></a><a href="#ecpneg" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.neg()</h3>
+<p>set this=-this</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+inf"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpinf"></a><a href="#ecpinf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.inf()</h3>
+<p>Set ECP to point-at-infinity</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+setxy"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpsetxyix-iy"></a><a href="#ecpsetxyix-iy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.setxy(ix, iy)</h3>
+<p>set this=(x,y)</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ix</td><td>x-value</td></tr>
+<tr><td>iy</td><td>y-value</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+setxi"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpsetxiix-s"></a><a href="#ecpsetxiix-s" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.setxi(ix, s)</h3>
+<p>set this=x, where x is ctx.BIG, y is derived from sign s</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ix</td><td>x-value</td></tr>
+<tr><td>s</td><td>sign to derive y</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+setx"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpsetxix"></a><a href="#ecpsetxix" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.setx(ix)</h3>
+<p>set this=x, y calculated from curve equation</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ix</td><td>x-value</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+affine"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpaffine"></a><a href="#ecpaffine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.affine()</h3>
+<p>convert this to affine, from (x,y,z) to (x,y)</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+getX"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgetx"></a><a href="#ecpgetx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.getX()</h3>
+<p>extract affine x as ctx.FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+getY"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgety"></a><a href="#ecpgety" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.getY()</h3>
+<p>extract affine y as ctx.FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+getS"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgets"></a><a href="#ecpgets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.getS()</h3>
+<p>get sign of Y</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+getx"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgetx-1"></a><a href="#ecpgetx-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.getx()</h3>
+<p>extract x as ctx.FP</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+gety"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgety-1"></a><a href="#ecpgety-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.gety()</h3>
+<p>extract y as ctx.FP</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+getz"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgetz"></a><a href="#ecpgetz" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.getz()</h3>
+<p>extract z as ctx.FP</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+toBytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecptobytesb"></a><a href="#ecptobytesb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.toBytes(b)</h3>
+<p>convert this to byte arrayextract projective x</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>b</td><td>byte array output</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+toString"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecptostring"></a><a href="#ecptostring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.toString() ⇒</h3>
+<p>convert this to hex string</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>Returns</strong>: hex string<br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+dbl"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpdbl"></a><a href="#ecpdbl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.dbl()</h3>
+<p>this+=this</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+add"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpadd"></a><a href="#ecpadd" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.add()</h3>
+<p>Adds ECP instances</p>
+<p>param Q ECP instance</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+sub"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpsubq"></a><a href="#ecpsubq" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.sub(Q)</h3>
+<p>Subtracts ECP instance Q  from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Q</td><td>ECP instance</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+pinmul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecppinmule-bts"></a><a href="#ecppinmule-bts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.pinmul(e, bts)</h3>
+<p>constant time multiply by small integer of length bts - use ladder</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>small integer</td></tr>
+<tr><td>bts</td><td>e bit length</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+cfp"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpcfp"></a><a href="#ecpcfp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.cfp()</h3>
+<p>multiply this by the curves cofactor</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP+mul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpmule"></a><a href="#ecpmule" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.mul(e)</h3>
+<p>Multiplies an ECP instance P by a BIG, side-channel resistant</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>BIG number multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="ECP+mul2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpmul2e-q-f"></a><a href="#ecpmul2e-q-f" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ecP.mul2(e, Q, f)</h3>
+<p>Return e.this+f.Q</p>
+<p><strong>Kind</strong>: instance method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>BIG number multiplier</td></tr>
+<tr><td>Q</td><td>ECP instance</td></tr>
+<tr><td>f</td><td>BIG number multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="ECP.generator"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpgenerator"></a><a href="#ecpgenerator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECP.generator()</h3>
+<p>Set group generator</p>
+<p><strong>Kind</strong>: static method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code>  <br>
+<a name="ECP.fromBytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecpfrombytesb"></a><a href="#ecpfrombytesb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECP.fromBytes(b)</h3>
+<p>convert from byte array to point</p>
+<p><strong>Kind</strong>: static method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>b</td><td>input byte array</td></tr>
+</tbody>
+</table>
+<p><a name="ECP.RHS"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecprhsx"></a><a href="#ecprhsx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECP.RHS(x)</h3>
+<p>Calculate RHS of the curve equation</p>
+<p><strong>Kind</strong>: static method of <a href="#ECP"><code>ECP</code></a>  <br>
+<strong>this</strong>: <code>{ECP}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>x-value</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 01/08/2019 by John McCane-Whitney</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ecp">ECP</a><ul class="toc-headings"><li><a href="#new-ecp">new ECP()</a></li><li><a href="#ecpis-_infinity1">ecP.is_infinity(1)</a></li><li><a href="#ecpcswap">ecP.cswap()</a></li><li><a href="#ecpcmove">ecP.cmove()</a></li><li><a href="#ecpselect">ecP.select()</a></li><li><a href="#ecpcopyp">ecP.copy(P)</a></li><li><a href="#ecpneg">ecP.neg()</a></li><li><a href="#ecpinf">ecP.inf()</a></li><li><a href="#ecpsetxyix-iy">ecP.setxy(ix, iy)</a></li><li><a href="#ecpsetxiix-s">ecP.setxi(ix, s)</a></li><li><a href="#ecpsetxix">ecP.setx(ix)</a></li><li><a href="#ecpaffine">ecP.affine()</a></li><li><a href="#ecpgetx">ecP.getX()</a></li><li><a href="#ecpgety">ecP.getY()</a></li><li><a href="#ecpgets">ecP.getS()</a></li><li><a href="#ecpgetx-1">ecP.getx()</a></li><li><a href="#ecpgety-1">ecP.gety()</a></li><li><a href="#ecpgetz">ecP.getz()</a></li><li><a href="#ecptobytesb">ecP.toBytes(b)</a></li><li><a href="#ecptostring">ecP.toString() ⇒</a></li><li><a href="#ecpdbl">ecP.dbl()</a></li><li><a href="#ecpadd">ecP.add()</a></li><li><a href="#ecpsubq">ecP.sub(Q)</a></li><li><a href="#ecppinmule-bts">ecP.pinmul(e, bts)</a></li><li><a href="#ecpcfp">ecP.cfp()</a></li><li><a href="#ecpmule">ecP.mul(e)</a></li><li><a href="#ecpmul2e-q-f">ecP.mul2(e, Q, f)</a></li><li><a href="#ecpgenerator">ECP.generator()</a></li><li><a href="#ecpfrombytesb">ECP.fromBytes(b)</a></li><li><a href="#ecprhsx">ECP.RHS(x)</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>

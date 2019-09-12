@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>FP8 · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;a name=&quot;FP8&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="FP8 · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;p&gt;&lt;a name=&quot;FP8&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class=""><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class=""><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">FP8</h1></header><article><div><span><p><a name="FP8"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="fp8"></a><a href="#fp8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FP8</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{FP4}</code></p>
+<ul>
+<li><a href="#FP8">FP8</a>
+<ul>
+<li><a href="#new_FP8_new">new FP8(c, d)</a></li>
+<li><a href="#FP8+reduce">.reduce()</a></li>
+<li><a href="#FP8+norm">.norm()</a></li>
+<li><a href="#FP8+iszilch">.iszilch()</a></li>
+<li><a href="#FP8+isunity">.isunity()</a></li>
+<li><a href="#FP8+cmove">.cmove(g, d)</a></li>
+<li><a href="#FP8+isreal">.isreal()</a></li>
+<li><a href="#FP8+real">.real()</a></li>
+<li><a href="#FP8+geta">.geta()</a></li>
+<li><a href="#FP8+getb">.getb()</a></li>
+<li><a href="#FP8+equals">.equals(x)</a></li>
+<li><a href="#FP8+copy">.copy(x)</a></li>
+<li><a href="#FP8+zero">.zero()</a></li>
+<li><a href="#FP8+one">.one(x)</a></li>
+<li><a href="#FP8+set">.set(c, d)</a></li>
+<li><a href="#FP8+seta">.seta(c)</a></li>
+<li><a href="#FP8+neg">.neg()</a></li>
+<li><a href="#FP8+conj">.conj()</a></li>
+<li><a href="#FP8+nconj">.nconj()</a></li>
+<li><a href="#FP8+add">.add(x)</a></li>
+<li><a href="#FP8+sub">.sub(x)</a></li>
+<li><a href="#FP8+pmul">.pmul(s)</a></li>
+<li><a href="#FP8+imul">.imul(s)</a></li>
+<li><a href="#FP8+sqr">.sqr()</a></li>
+<li><a href="#FP8+mul">.mul(y)</a></li>
+<li><a href="#FP8+toString">.toString()</a></li>
+<li><a href="#FP8+inverse">.inverse()</a></li>
+<li><a href="#FP8+times_i">.times_i()</a></li>
+<li><a href="#FP8+times_i2">.times_i2()</a></li>
+<li><a href="#FP8+frob">.frob(f)</a></li>
+<li><a href="#FP8+pow">.pow(e)</a></li>
+<li><a href="#FP8+xtr_A">.xtr_A(w, y, z)</a></li>
+<li><a href="#FP8+xtr_D">.xtr_D()</a></li>
+<li><a href="#FP8+xtr_pow">.xtr_pow(n)</a></li>
+<li><a href="#FP8+xtr_pow2">.xtr_pow2()</a></li>
+<li><a href="#FP8+div2">.div2()</a></li>
+<li><a href="#FP8+div_i">.div_i()</a></li>
+<li><a href="#FP8+div_i2">.div_i2()</a></li>
+<li><a href="#FP8+div_2i">.div_2i()</a></li>
+<li><a href="#FP8+qmul">.qmul(s)</a></li>
+<li><a href="#FP8+tmul">.tmul(s)</a></li>
+<li><a href="#FP8+sqrt">.sqrt()</a></li>
+</ul></li>
+</ul>
+<p><a name="new_FP8_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-fp8c-d"></a><a href="#new-fp8c-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new FP8(c, d)</h3>
+<p>Creates an instance of FP8</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>FP8 / FP4 instance</td></tr>
+<tr><td>d</td><td>FP4 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+reduce"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8reduce"></a><a href="#fp8reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.reduce()</h3>
+<p>Reduces all components of possibly unreduced FP8 mod Modulus</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+norm"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8norm"></a><a href="#fp8norm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.norm()</h3>
+<p>Normalises the components of an FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+iszilch"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8iszilch"></a><a href="#fp8iszilch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.iszilch()</h3>
+<p>Tests for FP8 equal to zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+isunity"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8isunity"></a><a href="#fp8isunity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.isunity()</h3>
+<p>Tests for FP8 equal to unity</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+cmove"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8cmoveg-d"></a><a href="#fp8cmoveg-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.cmove(g, d)</h3>
+<p>Conditional copy of FP8 number</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>g</td><td>FP8 instance</td></tr>
+<tr><td>d</td><td>copy depends on this value</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+isreal"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8isreal"></a><a href="#fp8isreal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.isreal()</h3>
+<p>test is w real? That is in a+ib test b is zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+real"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8real"></a><a href="#fp8real" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.real()</h3>
+<p>extract real part a</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+geta"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8geta"></a><a href="#fp8geta" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.geta()</h3>
+<p>extract a from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+getb"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8getb"></a><a href="#fp8getb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.getb()</h3>
+<p>extract b from this</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+equals"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8equalsx"></a><a href="#fp8equalsx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.equals(x)</h3>
+<p>Tests for equality of two FP8s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP8 instance to compare</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+copy"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8copyx"></a><a href="#fp8copyx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.copy(x)</h3>
+<p>Copy FP8 to another FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP8 instance to be copied</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+zero"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8zero"></a><a href="#fp8zero" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.zero()</h3>
+<p>Set FP8 to zero</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+one"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8onex"></a><a href="#fp8onex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.one(x)</h3>
+<p>Set FP8 to unity</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP8 instance to be set to one</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+set"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8setc-d"></a><a href="#fp8setc-d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.set(c, d)</h3>
+<p>Set FP8 from two FP4 values</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>FP4 instance</td></tr>
+<tr><td>d</td><td>FP4 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+seta"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8setac"></a><a href="#fp8setac" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.seta(c)</h3>
+<p>Set FP8 from one FP4 value</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>c</td><td>FP4 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+neg"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8neg"></a><a href="#fp8neg" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.neg()</h3>
+<p>Negation of FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+conj"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8conj"></a><a href="#fp8conj" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.conj()</h3>
+<p>Conjugation of FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+nconj"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8nconj"></a><a href="#fp8nconj" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.nconj()</h3>
+<p>Negative conjugation of FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+add"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8addx"></a><a href="#fp8addx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.add(x)</h3>
+<p>addition of two FP8s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP8 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+sub"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8subx"></a><a href="#fp8subx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.sub(x)</h3>
+<p>subtraction of two FP8s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>FP8 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+pmul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8pmuls"></a><a href="#fp8pmuls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.pmul(s)</h3>
+<p>Multiplication of an FP8 by an FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>FP8 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+imul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8imuls"></a><a href="#fp8imuls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.imul(s)</h3>
+<p>Multiplication of an FP8 by a small integer</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>integer</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+sqr"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8sqr"></a><a href="#fp8sqr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.sqr()</h3>
+<p>Fast Squaring of an FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+mul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8muly"></a><a href="#fp8muly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.mul(y)</h3>
+<p>Full unconditional Multiplication of two FP8s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>y</td><td>FP8 instance, the multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+toString"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8tostring"></a><a href="#fp8tostring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.toString()</h3>
+<p>convert to hex string</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+inverse"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8inverse"></a><a href="#fp8inverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.inverse()</h3>
+<p>Inverting an FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+times_i"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8times-_i"></a><a href="#fp8times-_i" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.times_i()</h3>
+<p>multiplies an FP8 instance by irreducible polynomial sqrt(1+sqrt(-1))</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+times_i2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8times-_i2"></a><a href="#fp8times-_i2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.times_i2()</h3>
+<p>multiplies an FP8 instance by irreducible polynomial (1+sqrt(-1))</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+frob"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8frobf"></a><a href="#fp8frobf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.frob(f)</h3>
+<p>Raises an FP8 to the power of the internal modulus p, using the Frobenius</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>f</td><td>Modulus</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+pow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8powe"></a><a href="#fp8powe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.pow(e)</h3>
+<p>Raises an FP8 to the power of a BIG</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>e</td><td>BIG instance exponent</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+xtr_A"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8xtr-_aw-y-z"></a><a href="#fp8xtr-_aw-y-z" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.xtr_A(w, y, z)</h3>
+<p>Calculates the XTR addition function r=w<em>x-conj(x)</em>y+z</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>w</td><td>FP8 instance</td></tr>
+<tr><td>y</td><td>FP8 instance</td></tr>
+<tr><td>z</td><td>FP8 instance</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+xtr_D"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8xtr-_d"></a><a href="#fp8xtr-_d" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.xtr_D()</h3>
+<p>Calculates the XTR doubling function r=x^2-2*conj(x)</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+xtr_pow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8xtr-_pown"></a><a href="#fp8xtr-_pown" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.xtr_pow(n)</h3>
+<p>Calculates FP8 trace of an FP8 raised to the power of a BIG number</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>n</td><td>Big number</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+xtr_pow2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8xtr-_pow2"></a><a href="#fp8xtr-_pow2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.xtr_pow2()</h3>
+<p>Calculates FP8 trace of c^a.d^b, where c and d are derived from FP8 traces of FP8s</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+div2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8div2"></a><a href="#fp8div2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.div2()</h3>
+<p>Divide an FP8 by 2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+div_i"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8div-_i"></a><a href="#fp8div-_i" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.div_i()</h3>
+<p>Divide FP8 number by QNR</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+div_i2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8div-_i2"></a><a href="#fp8div-_i2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.div_i2()</h3>
+<p>Divide an FP8 by QNR twice</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+div_2i"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8div-_2i"></a><a href="#fp8div-_2i" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.div_2i()</h3>
+<p>Divide an FP8 by QNR/2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code>  <br>
+<a name="FP8+qmul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8qmuls"></a><a href="#fp8qmuls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.qmul(s)</h3>
+<p>Multiplication of an FP8 by an FP2</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>FP2 multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+tmul"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8tmuls"></a><a href="#fp8tmuls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.tmul(s)</h3>
+<p>Multiplication of an FP8 by an FP</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>s</td><td>FP multiplier</td></tr>
+</tbody>
+</table>
+<p><a name="FP8+sqrt"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="fp8sqrt"></a><a href="#fp8sqrt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fP8.sqrt()</h3>
+<p>Calculate square root of an FP8</p>
+<p><strong>Kind</strong>: instance method of <a href="#FP8"><code>FP8</code></a>  <br>
+<strong>this</strong>: <code>{FP8}</code></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 01/08/2019 by John McCane-Whitney</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#fp8">FP8</a><ul class="toc-headings"><li><a href="#new-fp8c-d">new FP8(c, d)</a></li><li><a href="#fp8reduce">fP8.reduce()</a></li><li><a href="#fp8norm">fP8.norm()</a></li><li><a href="#fp8iszilch">fP8.iszilch()</a></li><li><a href="#fp8isunity">fP8.isunity()</a></li><li><a href="#fp8cmoveg-d">fP8.cmove(g, d)</a></li><li><a href="#fp8isreal">fP8.isreal()</a></li><li><a href="#fp8real">fP8.real()</a></li><li><a href="#fp8geta">fP8.geta()</a></li><li><a href="#fp8getb">fP8.getb()</a></li><li><a href="#fp8equalsx">fP8.equals(x)</a></li><li><a href="#fp8copyx">fP8.copy(x)</a></li><li><a href="#fp8zero">fP8.zero()</a></li><li><a href="#fp8onex">fP8.one(x)</a></li><li><a href="#fp8setc-d">fP8.set(c, d)</a></li><li><a href="#fp8setac">fP8.seta(c)</a></li><li><a href="#fp8neg">fP8.neg()</a></li><li><a href="#fp8conj">fP8.conj()</a></li><li><a href="#fp8nconj">fP8.nconj()</a></li><li><a href="#fp8addx">fP8.add(x)</a></li><li><a href="#fp8subx">fP8.sub(x)</a></li><li><a href="#fp8pmuls">fP8.pmul(s)</a></li><li><a href="#fp8imuls">fP8.imul(s)</a></li><li><a href="#fp8sqr">fP8.sqr()</a></li><li><a href="#fp8muly">fP8.mul(y)</a></li><li><a href="#fp8tostring">fP8.toString()</a></li><li><a href="#fp8inverse">fP8.inverse()</a></li><li><a href="#fp8times-_i">fP8.times_i()</a></li><li><a href="#fp8times-_i2">fP8.times_i2()</a></li><li><a href="#fp8frobf">fP8.frob(f)</a></li><li><a href="#fp8powe">fP8.pow(e)</a></li><li><a href="#fp8xtr-_aw-y-z">fP8.xtr_A(w, y, z)</a></li><li><a href="#fp8xtr-_d">fP8.xtr_D()</a></li><li><a href="#fp8xtr-_pown">fP8.xtr_pow(n)</a></li><li><a href="#fp8xtr-_pow2">fP8.xtr_pow2()</a></li><li><a href="#fp8div2">fP8.div2()</a></li><li><a href="#fp8div-_i">fP8.div_i()</a></li><li><a href="#fp8div-_i2">fP8.div_i2()</a></li><li><a href="#fp8div-_2i">fP8.div_2i()</a></li><li><a href="#fp8qmuls">fP8.qmul(s)</a></li><li><a href="#fp8tmuls">fP8.tmul(s)</a></li><li><a href="#fp8sqrt">fP8.sqrt()</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>

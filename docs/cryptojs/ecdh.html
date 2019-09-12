@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ECDH · Apache Milagro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;a name=&quot;ECDH&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ECDH · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;p&gt;&lt;a name=&quot;ECDH&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Support</a></li><li class=""><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class=""><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">ECDH</h1></header><article><div><span><p><a name="ECDH"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="ecdh"></a><a href="#ecdh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{ECDH}</code></p>
+<ul>
+<li><a href="#ECDH">ECDH</a>
+<ul>
+<li><a href="#new_ECDH_new">new ECDH()</a></li>
+<li><a href="#ECDH.inttobytes">.inttobytes()</a> ⇒</li>
+<li><a href="#ECDH.bytestostring">.bytestostring()</a> ⇒</li>
+<li><a href="#ECDH.stringtobytes">.stringtobytes()</a> ⇒</li>
+<li><a href="#ECDH.hashit">.hashit()</a> ⇒</li>
+<li><a href="#ECDH.KDF2">.KDF2()</a> ⇒</li>
+<li><a href="#ECDH.PBKDF2">.PBKDF2()</a> ⇒</li>
+<li><a href="#ECDH.HMAC">.HMAC()</a> ⇒</li>
+<li><a href="#ECDH.AES_CBC_IV0_ENCRYPT">.AES_CBC_IV0_ENCRYPT()</a> ⇒</li>
+<li><a href="#ECDH.AES_CBC_IV0_DECRYPT">.AES_CBC_IV0_DECRYPT()</a> ⇒</li>
+<li><a href="#ECDH.KEY_PAIR_GENERATE">.KEY_PAIR_GENERATE()</a> ⇒</li>
+<li><a href="#ECDH.PUBLIC_KEY_VALIDATE">.PUBLIC_KEY_VALIDATE()</a> ⇒</li>
+<li><a href="#ECDH.ECPSVDP_DH">.ECPSVDP_DH()</a> ⇒</li>
+<li><a href="#ECDH.ECPSP_DSA">.ECPSP_DSA()</a> ⇒</li>
+<li><a href="#ECDH.ECPVP_DSA">.ECPVP_DSA()</a> ⇒</li>
+<li><a href="#ECDH.ECIES_ENCRYPT">.ECIES_ENCRYPT()</a> ⇒</li>
+<li><a href="#ECDH.ECIES_DECRYPT">.ECIES_DECRYPT()</a> ⇒</li>
+</ul></li>
+</ul>
+<p><a name="new_ECDH_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-ecdh"></a><a href="#new-ecdh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new ECDH()</h3>
+<p>Creates an instance of ECDH</p>
+<p><a name="ECDH.inttobytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhinttobytes"></a><a href="#ecdhinttobytes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.inttobytes() ⇒</h3>
+<p>Convert Integer to n-byte array</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: byte array<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: n integer<br>
+<strong>Parameter</strong>: len integer length<br>
+<a name="ECDH.bytestostring"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhbytestostring"></a><a href="#ecdhbytestostring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.bytestostring() ⇒</h3>
+<p>Convert byte array to string</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: string<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: b byte array<br>
+<a name="ECDH.stringtobytes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhstringtobytes"></a><a href="#ecdhstringtobytes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.stringtobytes() ⇒</h3>
+<p>Convert string to byte array</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: byte array<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: s string<br>
+<a name="ECDH.hashit"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhhashit"></a><a href="#ecdhhashit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.hashit() ⇒</h3>
+<p>general purpose hash function w=hash(B|n)</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: w output<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: A byte array involved in the hash<br>
+<strong>Parameter</strong>: n integer involved in the hash<br>
+<strong>Parameter</strong>: pad padding<br>
+<a name="ECDH.KDF2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhkdf2"></a><a href="#ecdhkdf2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.KDF2() ⇒</h3>
+<p>IEEE-1363 Key Derivation Function - generates key K from inputs Z and P</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: K derived key<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: Z input byte array<br>
+<strong>Parameter</strong>: P input key derivation parameters - can be NULL<br>
+<strong>Parameter</strong>: 0len is output desired length of key<br>
+<a name="ECDH.PBKDF2"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhpbkdf2"></a><a href="#ecdhpbkdf2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.PBKDF2() ⇒</h3>
+<p>Password Based Key Derivation Function - generates key K from password, salt and repeat counter</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: key derived key<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: Pass input password<br>
+<strong>Parameter</strong>: Salt salt value<br>
+<strong>Parameter</strong>: rep Number of times to be iterated.<br>
+<strong>Parameter</strong>: 0len is output desired length of key<br>
+<a name="ECDH.HMAC"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhhmac"></a><a href="#ecdhhmac" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.HMAC() ⇒</h3>
+<p>HMAC of message M using key K to create tag of length tag.length</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: error code<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: M input message<br>
+<strong>Parameter</strong>: K input encryption key<br>
+<strong>Parameter</strong>: tag is the output HMAC<br>
+<a name="ECDH.AES_CBC_IV0_ENCRYPT"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhaes-_cbc-_iv0-_encrypt"></a><a href="#ecdhaes-_cbc-_iv0-_encrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.AES_CBC_IV0_ENCRYPT() ⇒</h3>
+<p>AES encrypts a plaintext to a ciphtertext</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: C Ciphertext<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: M input message<br>
+<strong>Parameter</strong>: K AES key<br>
+<a name="ECDH.AES_CBC_IV0_DECRYPT"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhaes-_cbc-_iv0-_decrypt"></a><a href="#ecdhaes-_cbc-_iv0-_decrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.AES_CBC_IV0_DECRYPT() ⇒</h3>
+<p>AES encrypts a plaintext to a ciphtertext</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: P Plaintext<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: C Ciphertext<br>
+<strong>Parameter</strong>: K AES key<br>
+<a name="ECDH.KEY_PAIR_GENERATE"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhkey-_pair-_generate"></a><a href="#ecdhkey-_pair-_generate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.KEY_PAIR_GENERATE() ⇒</h3>
+<p>Generate an ECC public/private key pair</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: rng Cryptographically Secure Random Number Generator<br>
+<strong>Parameter</strong>: S the private key<br>
+<strong>Parameter</strong>: W the output public key, which is s.G, where G is a fixed generator<br>
+<a name="ECDH.PUBLIC_KEY_VALIDATE"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhpublic-_key-_validate"></a><a href="#ecdhpublic-_key-_validate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.PUBLIC_KEY_VALIDATE() ⇒</h3>
+<p>Generate an ECC public/private key pair</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: W the input public key to be validated<br>
+<a name="ECDH.ECPSVDP_DH"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhecpsvdp-_dh"></a><a href="#ecdhecpsvdp-_dh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.ECPSVDP_DH() ⇒</h3>
+<p>Generate Diffie-Hellman shared key</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: S the private key<br>
+<strong>Parameter</strong>: W the output public key, which is s.G, where G is a fixed generator<br>
+<strong>Parameter</strong>: K the output shared key, in fact the x-coordinate of s.W<br>
+<a name="ECDH.ECPSP_DSA"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhecpsp-_dsa"></a><a href="#ecdhecpsp-_dsa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.ECPSP_DSA() ⇒</h3>
+<p>ECDSA Signature</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: RNG Cryptographically Secure Random Number Generator<br>
+<strong>Parameter</strong>: S the private key<br>
+<strong>Parameter</strong>: F the input message to be signed<br>
+<strong>Parameter</strong>: C component of the output signature<br>
+<strong>Parameter</strong>: D component of the output signature<br>
+<a name="ECDH.ECPVP_DSA"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhecpvp-_dsa"></a><a href="#ecdhecpvp-_dsa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.ECPVP_DSA() ⇒</h3>
+<p>ECDSA Signature Verification</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: 0 or an error code<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: W the public key<br>
+<strong>Parameter</strong>: F the input message to be signed<br>
+<strong>Parameter</strong>: C component of the output signature<br>
+<strong>Parameter</strong>: D component of the output signature<br>
+<a name="ECDH.ECIES_ENCRYPT"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhecies-_encrypt"></a><a href="#ecdhecies-_encrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.ECIES_ENCRYPT() ⇒</h3>
+<p>ECIES Encryption</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: C ciphertext<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: P1 input Key Derivation parameters<br>
+<strong>Parameter</strong>: P2 input Encoding parameters<br>
+<strong>Parameter</strong>: RNG Cryptographically Secure Random Number Generator<br>
+<strong>Parameter</strong>: W the public key<br>
+<strong>Parameter</strong>: M the input message to be encrypted<br>
+<strong>Parameter</strong>: V component of the output ciphertext<br>
+<strong>Parameter</strong>: T the output HMAC tag, part of the ciphertext<br>
+<a name="ECDH.ECIES_DECRYPT"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="ecdhecies-_decrypt"></a><a href="#ecdhecies-_decrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECDH.ECIES_DECRYPT() ⇒</h3>
+<p>ECIES Encryption</p>
+<p><strong>Kind</strong>: static method of <a href="#ECDH"><code>ECDH</code></a>  <br>
+<strong>Returns</strong>: M plaintext<br>
+<strong>this</strong>: <code>{ECDH}</code>  <br>
+<strong>Parameter</strong>: sha is the hash type<br>
+<strong>Parameter</strong>: P1 input Key Derivation parameters<br>
+<strong>Parameter</strong>: P2 input Encoding parameters<br>
+<strong>Parameter</strong>: V component of the output ciphertext<br>
+<strong>Parameter</strong>: C Ciphertext<br>
+<strong>Parameter</strong>: T the output HMAC tag, part of the ciphertext<br>
+<strong>Parameter</strong>: U the private key</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 01/08/2019 by John McCane-Whitney</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ecdh">ECDH</a><ul class="toc-headings"><li><a href="#new-ecdh">new ECDH()</a></li><li><a href="#ecdhinttobytes">ECDH.inttobytes() ⇒</a></li><li><a href="#ecdhbytestostring">ECDH.bytestostring() ⇒</a></li><li><a href="#ecdhstringtobytes">ECDH.stringtobytes() ⇒</a></li><li><a href="#ecdhhashit">ECDH.hashit() ⇒</a></li><li><a href="#ecdhkdf2">ECDH.KDF2() ⇒</a></li><li><a href="#ecdhpbkdf2">ECDH.PBKDF2() ⇒</a></li><li><a href="#ecdhhmac">ECDH.HMAC() ⇒</a></li><li><a href="#ecdhaes-_cbc-_iv0-_encrypt">ECDH.AES_CBC_IV0_ENCRYPT() ⇒</a></li><li><a href="#ecdhaes-_cbc-_iv0-_decrypt">ECDH.AES_CBC_IV0_DECRYPT() ⇒</a></li><li><a href="#ecdhkey-_pair-_generate">ECDH.KEY_PAIR_GENERATE() ⇒</a></li><li><a href="#ecdhpublic-_key-_validate">ECDH.PUBLIC_KEY_VALIDATE() ⇒</a></li><li><a href="#ecdhecpsvdp-_dh">ECDH.ECPSVDP_DH() ⇒</a></li><li><a href="#ecdhecpsp-_dsa">ECDH.ECPSP_DSA() ⇒</a></li><li><a href="#ecdhecpvp-_dsa">ECDH.ECPVP_DSA() ⇒</a></li><li><a href="#ecdhecies-_encrypt">ECDH.ECIES_ENCRYPT() ⇒</a></li><li><a href="#ecdhecies-_decrypt">ECDH.ECIES_DECRYPT() ⇒</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../help">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2019  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>
