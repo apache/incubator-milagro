@@ -11,8 +11,6 @@ Milagro has several repos. The C and JavaScript versions of the core cryptograph
 * [Milagro Crypto JavaScript Library](https://github.com/apache/incubator-milagro-javascript)
 * [Milagro Crypto Rust Library](https://github.com/apache/incubator-milagro-crypto-rust/)
 
-Note that only the C, JavaScript & Rust are being developed and supported going forward.
-
 Applications being developed on these cryptographic libraries include the Milagro ZKP-MFA server and the Milagro Decentralized Trust Authority (D-TA). The Milagro D-TA is now at an alpha release stage.
 
 * [Apache Milagro Decentralized Trust Authority](https://github.com/apache/incubator-milagro-dta)
