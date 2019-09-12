@@ -21,6 +21,7 @@
 ];
 
 const siteConfig = {
+  separateCss: ['/cdocs'],
   title: 'Apache Milagro', // Title for your website.
   tagline: 'Core security infrastructure for decentralized networks',
   url: 'https://milagro.apache.org', // Your website URL
@@ -41,6 +42,7 @@ const siteConfig = {
     {doc: 'milagro-intro', label: 'Docs'},
     {page: 'help', label: 'Support'},
     {doc: 'contributor-guide', label: 'Contributing'},
+	{doc: 'downloads', label: 'Downloads'},
     {blog: true, label: 'Status'},
   ],
 
@@ -87,6 +89,10 @@ const siteConfig = {
   onPageNav: 'separate',
   // No .html extensions for paths.
   cleanUrl: true,
+  
+  // make side bar collapsible
+  docsSideNavCollapsible: true,
+
 
   // Open Graph and Twitter card images.
   // ogImage: 'img/undraw_online.svg',

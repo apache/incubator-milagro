@@ -15,6 +15,12 @@ Applications being developed on these cryptographic libraries include the Milagr
 
 * [Apache Milagro Decentralized Trust Authority](https://github.com/apache/incubator-milagro-dta)
 
+What's New
+============================
+
+* [apache-milagro-crypto-js-1.0.0-incubating](https://github.com/apache/incubator-milagro-crypto-js/releases/tag/1.0.0)- Initial release of the Crypto JS Library
+* [apache-milagro-crypto-c-1.0.0-incubating](https://github.com/apache/incubator-milagro-crypto-c/releases/tag/1.0.0)- Initial release of the Crypto C Library
+
 Website Detail
 ============================
 

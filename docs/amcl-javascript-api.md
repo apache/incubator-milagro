@@ -4,11 +4,15 @@ title: AMCL JavaScript API
 sidebar_label: AMCL JavaScript API
 ---
 
-:::tip WE NEED HELP DOCUMENTING!
-Interested in becoming a contributor? Milagro is looking for you.
-[CONTRIBUTOR'S GUIDE](/docs/contributor-guide.html).
-:::
+*MCJS - Milagro Crypto JavaScript*
 
-<!--
-Supported admonition types are: caution, note, important, tip, warning.
--->
+* MCJS is a standards compliant JavaScript cryptographic library with no
+external dependencies except for the random seed source.
+
+* MCJS supports the standards for RSA, ECDH, ECIES, ECDSA and M-PIN, AES-GCM
+encryption/decryption, SHA256, SHA384, SHA512 and SHA3 hash functions and a
+cryptographically secure random number generator. Furthermore we recently
+added New Hope, a post-quantum key exchange.
+
+* MCJS is [Node.js](https://nodejs.org/en/) compatible and browser compatible
+(see some examples by going to the next page).
