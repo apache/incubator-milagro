@@ -40,7 +40,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'milagro-intro', label: 'Docs'},
-    {page: 'help', label: 'Support'},
+    {doc: 'support', label: 'Support'},
     {doc: 'contributor-guide', label: 'Contributing'},
 	{doc: 'downloads', label: 'Downloads'},
     {blog: true, label: 'Status'},

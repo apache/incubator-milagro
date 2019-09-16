@@ -53,7 +53,7 @@ class Footer extends React.Component {
           <div>
             <h5>Community</h5>
             <a
-              href="../help">
+              href="../docs/support">
               Support
             </a>
             <a
