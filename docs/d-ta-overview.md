@@ -3,7 +3,7 @@ id: d-ta-overview
 title: Decentralized Trust Authority Overview
 sidebar_label: D-TA Overview
 ---
-### VERSION: ALPHA RELEASE
+### VERSION: ALPHA RELEASE 0.1.0
 
 :::important The Alpha Release of the D-TA is not for production use.
 :::
