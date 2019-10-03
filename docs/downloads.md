@@ -14,6 +14,23 @@ You can find instructions for checking hashes and signatures on the [Verifying A
 
 For fast downloads, current source distributions are hosted on mirror servers; older source distributions are in the archive. For security, public keys, hashes and signature files are always hosted at Apache.
 
+## Apache Milagro Decentralized Trust Authority Incubating v0.1.0 (Alpha Release)
+
+This is the initial release of the Apache Milagro Decentralized Trust Authority server.
+
+### Source Release
+
+|[tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz)|[sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz.asc)|
+| ----- | ----- | ----- |
+
+### Release Notes
+
+The latest release notes can be found [here](https://github.com/apache/incubator-milagro-dta/releases/tag/0.1.0)
+
+### Previous Releases
+
+None
+
 ## Apache Milagro Crypto C Incubating v1.0.0
 
 This is the initial release of the Apache Milagro Crypto C library.
@@ -30,6 +47,7 @@ The latest release notes can be found [here](https://github.com/apache/incubator
 ### Previous Releases
 
 None
+
 
 ## Apache Milagro Crypto JS Incubating v1.0.0
 
