@@ -18,7 +18,7 @@ Pairings map pairs of points on an elliptic curve into the multiplicative group 
 
 [Pairing-Based Cryptography (PBC)](https://en.wikipedia.org/wiki/Pairing-based_cryptography) is emerging as a solution to complex problems that proved intractable to the standard mathematics of Public-Key Cryptography such as Identity-Based Encryption (IBE), whereby the identity of a client can be used as their public key.
 
-In certain use cases, this removes the need for a PKI infrastructure as the main reason to issue certificates is to bind a public / private key pair to an identity - a function not required when using IBE.
+In certain use cases, this removes the need for a PKI infrastructure, since the main reason to issue certificates is to bind a public / private key pair to an identity - a function not required when using IBE.
 
 Removing the certificate management burden enables the identity management and key lifecycle to take place within the decentralized cryptosystem itself.
 
