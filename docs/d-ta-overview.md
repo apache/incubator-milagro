@@ -10,9 +10,9 @@ sidebar_label: D-TA Overview
 
 #### Release Schedule:
 
-Beta Release: 1st week October 2019
+Beta Release: Q4 2019
 
-RC1 Release: 1st week November 2019
+RC1 Release: Q1 2020
 
 # Introduction
 The Apache Milagro (Incubating) Decentralized Trust Authority (D-TA) is a collaborative key management server. It has two primary functions. 
