@@ -10,12 +10,12 @@
     "AMCL Library": 
       [
         "amcl-overview",                    
-        "amcl-c-api",
+        "amcl-c-api-2.0.0",
 				{
 		"type": "subcategory",
-		"label": "AMCL JavaScript API",
+		"label": "AMCL JavaScript API 1.0.0",
 		"ids": [
-				"cryptojs/amcl-javascript-api",
+				"cryptojs/amcl-javascript-api-1.0.0",
 				"cryptojs/aes",
 				"cryptojs/big",
 				"cryptojs/bls",
@@ -78,3 +78,4 @@
     ]
   }
 }
+

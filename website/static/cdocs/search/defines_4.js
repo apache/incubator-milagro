@@ -25,5 +25,7 @@ var searchData=
   ['fexcess_5fsecp256k1',['FEXCESS_SECP256K1',['../fp__SECP256K1_8h.html#ad2ec0536f260d035a05201ef89b20d49',1,'fp_SECP256K1.h']]],
   ['fflen_5f2048',['FFLEN_2048',['../config__ff__2048_8h.html#a9d97b1d9ded0164b99640480ddac4f1e',1,'config_ff_2048.h']]],
   ['fflen_5f3072',['FFLEN_3072',['../config__ff__3072_8h.html#aaaf83c3d8d02afcc96d24bcabc418da4',1,'config_ff_3072.h']]],
-  ['fflen_5f4096',['FFLEN_4096',['../config__ff__4096_8h.html#af3c21ac004bc32aa00e7a20811de549c',1,'config_ff_4096.h']]]
+  ['fflen_5f4096',['FFLEN_4096',['../config__ff__4096_8h.html#af3c21ac004bc32aa00e7a20811de549c',1,'config_ff_4096.h']]],
+  ['fs_5f2048',['FS_2048',['../paillier_8h.html#ae3ce9abc99cec679346a7d38bed96d9b',1,'paillier.h']]],
+  ['fs_5f4096',['FS_4096',['../paillier_8h.html#a8e7c673251fe80bcf47e9bb26674cd97',1,'paillier.h']]]
 ];

@@ -11,7 +11,7 @@ If you'd like to contribute, the first step is to subscribe to our developer's m
 
 <a href="mailto:dev-subscribe@milagro.apache.org?Subject=Subscribe" target="_top">dev-subscribe @ milagro.apache.org</a>
 
-## Issues
+## Repositories
 
 Our current GitHub repositories are:
 
