@@ -47,5 +47,7 @@ var searchData=
   ['modulus_5fnist256',['Modulus_NIST256',['../fp__NIST256_8h.html#a325c1d7a187eded1d3697e6e0ab55451',1,'fp_NIST256.h']]],
   ['modulus_5fnist384',['Modulus_NIST384',['../fp__NIST384_8h.html#a3ec2b2be30bd99b65e12c56750af1ab4',1,'fp_NIST384.h']]],
   ['modulus_5fnist521',['Modulus_NIST521',['../fp__NIST521_8h.html#af5cbfa91010d117a9fcb2fddad052c78',1,'fp_NIST521.h']]],
-  ['modulus_5fsecp256k1',['Modulus_SECP256K1',['../fp__SECP256K1_8h.html#a16483b07b42fa4c69f9fba84c7eee4a5',1,'fp_SECP256K1.h']]]
+  ['modulus_5fsecp256k1',['Modulus_SECP256K1',['../fp__SECP256K1_8h.html#a16483b07b42fa4c69f9fba84c7eee4a5',1,'fp_SECP256K1.h']]],
+  ['mp',['mp',['../structPAILLIER__private__key.html#a2baa64964f2d29de901c3495a0b10951',1,'PAILLIER_private_key']]],
+  ['mq',['mq',['../structPAILLIER__private__key.html#a8eabfd60330252513a941ff4eb60a74a',1,'PAILLIER_private_key']]]
 ];
