@@ -4,7 +4,7 @@ title: Milagro Introduction
 sidebar_label: Milagro Introduction
 ---
 
-Apache Milagro is core security infrastructure and crypto libraries purpose-built for decentralized networks and distributed systems, while also providing value to cloud-connected app-centric software and IoT devices that require Internet scale.
+Apache Milagro is a set of core security infrastructure and crypto libraries purpose-built for decentralized networks and distributed systems, while also providing value to cloud-connected app-centric software and IoT devices that require Internet scale.
 
 Milagro's purpose is to provide a secure and positive open source alternative to centralized and proprietary monolithic trust providers such as commercial certificate authorities and the certificate backed cryptosystems that rely on them.
 
