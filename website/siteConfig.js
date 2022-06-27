@@ -42,7 +42,7 @@ const siteConfig = {
     {doc: 'milagro-intro', label: 'Docs'},
     {doc: 'support', label: 'Support'},
     {doc: 'contributor-guide', label: 'Contributing'},
-	{doc: 'downloads', label: 'Downloads'},
+	  {doc: 'downloads', label: 'Downloads'},
     {blog: true, label: 'Status'},
   ],
 
