@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@wino/docusaurus-gist-embed": "^1.0.2",
-    "docusaurus": "^1.11.0"
+    "docusaurus": "^1.14.7"
   },
   "dependencies": {
     "fs-extra": "^8.0.1",
