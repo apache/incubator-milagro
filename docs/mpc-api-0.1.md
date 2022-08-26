@@ -1,5 +1,5 @@
 ---
-id: mpc-api-1.0
+id: mpc-api-0.1
 title: Multi-Party Computation (MPC) Library 0.1 (libmpc)
 sidebar_label: Multi-Party Computation Library 0.1
 ---
