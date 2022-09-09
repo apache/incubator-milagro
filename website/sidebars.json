@@ -65,6 +65,9 @@
 		"dta-details/plugins-overview",
 		"dta-details/authentication"
     ],  
+	"MPC Library": [
+		"mpc-api-0.1"
+	],
     "ZKP-MFA Clients/Servers": [
       "zkp-mfa-overview",
       "zkp-mfa-api"
