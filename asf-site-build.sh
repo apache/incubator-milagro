@@ -9,26 +9,38 @@ BRANCH=$(git branch | grep '^*' | sed 's/* //' )
 if [[ $BRANCH == "master" ]]; then
   location=$PWD # get current dir
   printf "\nThe current directory is %s\n" $location # print current dir
-  cd website # change to website dir
-  printf "\nThis directory should end in ../website: %s\n" $PWD # echo website directory just to be safe
-  printf "\nThe script is going to build the website now, this make take a few minutes.\n"
-  npm install
-  npm run build # build website
 
-  TEMPDIR=$(mktemp -d)
-  mv ./build/incubator-milagro/* $TEMPDIR # copy contents of directory
-  cd $location
-  BRANCHNAME="asf-build-$(date +%s)"
-  # [[ $TREEDIRTY -eq 1 ]] && git stash
-    git checkout -b $BRANCHNAME origin/asf-site && \
-    rm -rf * && \
-    cp -r $TEMPDIR/* . && \
-    echo '.DS_Store' > .gitignore && \
-    git add . && \
-    git commit -m "update website" && \
-    git checkout master
-  # [[ $TREEDIRTY -eq 1 ]] && git stash pop
-  rm -rf $TEMPDIR
+  docker build -t milagro-site .
+  # BRANCHNAME="asf-build-$(date +%s)"
+  #git checkout -b $BRANCHNAME origin/asf-site
+  git checkout asf-site
+  rm -rf *
+  echo '.DS_Store' > .gitignore
+  docker run --rm milagro-site tar c -C build/incubator-milagro build | tar -x
+  git add .
+  git commit -m "update website"
+  git checkout master
+
+  # cd website # change to website dir
+  # printf "\nThis directory should end in ../website: %s\n" $PWD # echo website directory just to be safe
+  # printf "\nThe script is going to build the website now, this make take a few minutes.\n"
+  # npm install
+  # npm run build # build website
+
+  # TEMPDIR=$(mktemp -d)
+  # # mv ./build/incubator-milagro/* $TEMPDIR # copy contents of directory
+  # cd $location
+  # BRANCHNAME="asf-build-$(date +%s)"
+  # # [[ $TREEDIRTY -eq 1 ]] && git stash
+  #   # git checkout -b $BRANCHNAME origin/asf-site && \
+  #   rm -rf * && \
+  #   cp -r $TEMPDIR/* . && \
+  #   echo '.DS_Store' > .gitignore && \
+  #   git add . && \
+  #   git commit -m "update website" && \
+  #   git checkout master
+  # # [[ $TREEDIRTY -eq 1 ]] && git stash pop
+  # rm -rf $TEMPDIR
 
   echo
   echo "> site built in" $BRANCHNAME
