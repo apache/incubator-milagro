@@ -21,7 +21,7 @@
 ];
 
 const siteConfig = {
-  separateCss: ['/cdocs', '/swagger'],
+  separateCss: ['/cdocs', '/swagger', '/mpcdocs'],
   title: 'Apache Milagro', // Title for your website.
   tagline: 'Core security infrastructure for decentralized networks',
   url: 'https://milagro.apache.org', // Your website URL
@@ -31,7 +31,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'incubator-milagro ',
+  projectName: 'incubator-milagro',
   organizationName: 'apache',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...

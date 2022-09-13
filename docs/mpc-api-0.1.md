@@ -3,7 +3,7 @@ id: mpc-api-0.1
 title: Multi-Party Computation (MPC) Library 0.1 (libmpc)
 sidebar_label: Multi-Party Computation Library 0.1
 ---
-Apache Milagro's Multi-Party Computation library (libmpc) is the latest addition to the project (as of June 2022), and uses the [Apache Milagro C Library](amcl-c-api-2.0.0) to implement Multi-Party Computation. It offers and API to allow for customs computations to be perfomed.
+Apache Milagro's Multi-Party Computation library (libmpc) is the latest addition to the project (as of June 2022), and uses the [Apache Milagro C Library](/docs/amcl-c-api-2.0.0) to implement Multi-Party Computation. It offers and API to allow for customs computations to be perfomed.
 
 ## Building and running libmpc
 

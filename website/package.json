@@ -10,11 +10,11 @@
   },
   "devDependencies": {
     "@wino/docusaurus-gist-embed": "^1.0.2",
-    "docusaurus": "^1.11.0"
+    "docusaurus": "^1.14.0"
   },
   "dependencies": {
     "fs-extra": "^8.0.1",
-    "mermaid.cli": "^0.5.1",
+    "mermaid.cli": "^0.3.1",
     "remark-graphviz": "^0.2.2",
     "remark-mermaid": "^0.2.0",
     "remarkable-admonitions": "^0.2.1",
