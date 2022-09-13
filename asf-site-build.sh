@@ -12,6 +12,7 @@ if [[ $BRANCH == "master" ]]; then
   cd website # change to website dir
   printf "\nThis directory should end in ../website: %s\n" $PWD # echo website directory just to be safe
   printf "\nThe script is going to build the website now, this make take a few minutes.\n"
+  npm install
   npm run build # build website
 
   TEMPDIR=$(mktemp -d)
