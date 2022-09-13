@@ -20,27 +20,6 @@ if [[ $BRANCH == "master" ]]; then
   git commit -m "update website"
   git checkout master
 
-  # cd website # change to website dir
-  # printf "\nThis directory should end in ../website: %s\n" $PWD # echo website directory just to be safe
-  # printf "\nThe script is going to build the website now, this make take a few minutes.\n"
-  # npm install
-  # npm run build # build website
-
-  # TEMPDIR=$(mktemp -d)
-  # # mv ./build/incubator-milagro/* $TEMPDIR # copy contents of directory
-  # cd $location
-  # BRANCHNAME="asf-build-$(date +%s)"
-  # # [[ $TREEDIRTY -eq 1 ]] && git stash
-  #   # git checkout -b $BRANCHNAME origin/asf-site && \
-  #   rm -rf * && \
-  #   cp -r $TEMPDIR/* . && \
-  #   echo '.DS_Store' > .gitignore && \
-  #   git add . && \
-  #   git commit -m "update website" && \
-  #   git checkout master
-  # # [[ $TREEDIRTY -eq 1 ]] && git stash pop
-  # rm -rf $TEMPDIR
-
   echo
   echo "> site built in" $BRANCHNAME
   echo "> please inspect and potentially push the result"

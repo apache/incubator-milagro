@@ -21,7 +21,7 @@
 ];
 
 const siteConfig = {
-  separateCss: ['/cdocs', '/swagger'],
+  separateCss: ['/cdocs', '/swagger', '/mpcdocs'],
   title: 'Apache Milagro', // Title for your website.
   tagline: 'Core security infrastructure for decentralized networks',
   url: 'https://milagro.apache.org', // Your website URL
