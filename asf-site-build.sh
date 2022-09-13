@@ -15,8 +15,7 @@ if [[ $BRANCH == "master" ]]; then
   #git checkout -b $BRANCHNAME origin/asf-site
   git checkout asf-site
   rm -rf *
-  echo '.DS_Store' > .gitignore
-  docker run --rm milagro-site tar c -C build/incubator-milagro build | tar -x
+  docker run --rm milagro-site tar c -C /app/website/build/incubator-milagro . | tar -x
   git add .
   git commit -m "update website"
   git checkout master
