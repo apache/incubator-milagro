@@ -22,6 +22,7 @@ if [[ $BRANCH == "master" ]]; then
     git checkout -b $BRANCHNAME origin/asf-site && \
     rm -rf * && \
     cp -r $TEMPDIR/* . && \
+    echo '.DS_Store' > .gitignore && \
     git add . && \
     git commit -m "update website" && \
     git checkout master
