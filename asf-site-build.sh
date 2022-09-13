@@ -35,7 +35,7 @@ if [[ $BRANCH == "master" ]]; then
   echo "> please inspect and potentially push the result"
   echo
   echo "git checkout $BRANCHNAME"
-  echo "git checkout asf-site && git merge --fast-forward $BRANCHNAME"
+  echo "git checkout asf-site && git merge $BRANCHNAME"
   echo
   echo "> when you are done, clean up after yourself:"
   echo "git branch -d $BRANCHNAME"
