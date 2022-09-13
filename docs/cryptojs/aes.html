@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>AES · Apache Milagro</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;AES&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="AES · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;a name=&quot;AES&quot;&gt;&lt;/a&gt;"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/support" target="_self">Support</a></li><li class="siteNavGroupActive"><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class="siteNavGroupActive"><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>AMCL JavaScript API 1.0.0</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">About Milagro<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/milagro-intro">Milagro Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-crypto">Milagro Crypto</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-protocols">Milagro Protocols</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-design">Milagro Design</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AMCL Library<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/amcl-overview">AMCL Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/amcl-c-api-2.0.0">AMCL C API 2.0.0</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">AMCL JavaScript API 1.0.0</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/cryptojs/aes">AES</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/big">BIG</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls">BLS</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls192">BLS192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls256">BLS256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/dbig">DBIG</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecdh">ECDH</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp">ECP</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp2">ECP2</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp4">ECP4</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp8">ECP8</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ff">FF</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp">FP</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp2">FP2</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp4">FP4</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp8">FP8</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp12">FP12</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp16">FP16</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp24">FP24</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp48">FP48</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/gcm">GCM</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash256">HASH256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash384">HASH384</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash512">HASH512</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin">MPIN</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin192">MPIN192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin256">MPIN256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair">PAIR</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair192">PAIR192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair256">PAIR256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/rand">RAND</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/rsa">RSA</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/sha3">SHA3</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/unit64">UInt64</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">D-TA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/d-ta-overview">D-TA Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/quickstart">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/api">API</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/identity-documents">Identity Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/encrypted-envelope">Encrypted Envelope</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/ipfs">IPFS</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/plugins-overview">Plugins Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/authentication">Authentication</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MPC Library<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/mpc-api-0.1">Multi-Party Computation Library 0.1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ZKP-MFA Clients/Servers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/zkp-mfa-overview">ZKP-MFA Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/zkp-mfa-api">ZKP-MFA API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/contributor-guide">Contributor&#x27;s Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/downloads">Downloads</a></li><li class="navListItem"><a class="navItem" href="/docs/support">Support</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">AES</h1></header><article><div><span><p><a name="AES"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="aes"></a><a href="#aes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AES</h2>
+<p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{AES}</code></p>
+<ul>
+<li><a href="#AES">AES</a>
+<ul>
+<li><a href="#new_AES_new">new AES()</a></li>
+<li><a href="#AES+reset">.reset(m, iv)</a></li>
+<li><a href="#AES+getreg">.getreg()</a> ⇒</li>
+<li><a href="#AES+init">.init(m, n, key, iv)</a></li>
+<li><a href="#AES+ecb_encrypt">.ecb_encrypt(buff)</a></li>
+<li><a href="#AES+ecb_decrypt">.ecb_decrypt(buff)</a></li>
+<li><a href="#AES+encrypt">.encrypt(buff)</a></li>
+<li><a href="#AES+decrypt">.decrypt(buff)</a></li>
+<li><a href="#AES+end">.end()</a></li>
+</ul></li>
+</ul>
+<p><a name="new_AES_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-aes"></a><a href="#new-aes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new AES()</h3>
+<p>Creates an instance of AES.</p>
+<p><a name="AES+reset"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesresetm-iv"></a><a href="#aesresetm-iv" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.reset(m, iv)</h3>
+<p>Reset AES mode or IV</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>m</td><td>The new active mode of operation (ECB, CBC, OFB, CFB etc)</td></tr>
+<tr><td>iv</td><td>The new Initialisation Vector</td></tr>
+</tbody>
+</table>
+<p><a name="AES+getreg"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesgetreg-"></a><a href="#aesgetreg-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.getreg() ⇒</h3>
+<p>Reset Extract chaining vector</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>Returns</strong>: f the extracted chaining vector<br>
+<strong>this</strong>: <code>{AES}</code>  <br>
+<a name="AES+init"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesinitm-n-key-iv"></a><a href="#aesinitm-n-key-iv" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.init(m, n, key, iv)</h3>
+<p>Initialise an instance of AES and its mode of operation</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>m</td><td>is the active mode of operation (ECB, CBC, OFB, CFB etc)</td></tr>
+<tr><td>n</td><td>is the key length in bytes, 16, 24 or 32</td></tr>
+<tr><td>key</td><td>the AES key as an array of 16 bytes</td></tr>
+<tr><td>iv</td><td>the Initialisation Vector</td></tr>
+</tbody>
+</table>
+<p><a name="AES+ecb_encrypt"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesecb_encryptbuff"></a><a href="#aesecb_encryptbuff" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.ecb_encrypt(buff)</h3>
+<p>Encrypt a single 16 byte block in ECB mode</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buff</td><td><code>string</code></td><td>is an array of 16 plaintext bytes, on exit becomes ciphertext</td></tr>
+</tbody>
+</table>
+<p><a name="AES+ecb_decrypt"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesecb_decryptbuff"></a><a href="#aesecb_decryptbuff" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.ecb_decrypt(buff)</h3>
+<p>Decrypt a single 16 byte block in ECB mode</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buff</td><td>is an array of 16 cipherext bytes, on exit becomes plaintext</td></tr>
+</tbody>
+</table>
+<p><a name="AES+encrypt"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesencryptbuff"></a><a href="#aesencryptbuff" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.encrypt(buff)</h3>
+<p>Encrypt using selected mode of operation</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buff</td><td><code>string</code></td><td>is an array of 16 plaintext bytes, on exit becomes ciphertext</td></tr>
+</tbody>
+</table>
+<p><a name="AES+decrypt"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesdecryptbuff"></a><a href="#aesdecryptbuff" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.decrypt(buff)</h3>
+<p>Decrypt using selected mode of operation</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buff</td><td><code>string</code></td><td>is an array of 16 cipherext bytes, on exit becomes plaintext</td></tr>
+</tbody>
+</table>
+<p><a name="AES+end"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="aesend"></a><a href="#aesend" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aeS.end()</h3>
+<p>Clean up and delete left-overs</p>
+<p><strong>Kind</strong>: instance method of <a href="#AES"><code>AES</code></a>  <br>
+<strong>this</strong>: <code>{AES}</code></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/cryptojs/amcl-javascript-api-1.0.0"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/cryptojs/big"><span>BIG</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#aes">AES</a><ul class="toc-headings"><li><a href="#new-aes">new AES()</a></li><li><a href="#aesresetm-iv">aeS.reset(m, iv)</a></li><li><a href="#aesgetreg-">aeS.getreg() ⇒</a></li><li><a href="#aesinitm-n-key-iv">aeS.init(m, n, key, iv)</a></li><li><a href="#aesecb_encryptbuff">aeS.ecb_encrypt(buff)</a></li><li><a href="#aesecb_decryptbuff">aeS.ecb_decrypt(buff)</a></li><li><a href="#aesencryptbuff">aeS.encrypt(buff)</a></li><li><a href="#aesdecryptbuff">aeS.decrypt(buff)</a></li><li><a href="#aesend">aeS.end()</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../docs/support">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2022  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>

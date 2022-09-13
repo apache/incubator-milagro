@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['s_105',['s',['../structMTA__RP__proof.html#a8040777a4b2f46d78a7f113e924b76d0',1,'MTA_RP_proof::s()'],['../structMTA__ZK__proof.html#a34c86cae80dc0f8688cd1f7d5f1801ab',1,'MTA_ZK_proof::s()']]],
+  ['s1_106',['s1',['../structMTA__RP__proof.html#aa0e204527ce83ab95daa7b6a9977e473',1,'MTA_RP_proof::s1()'],['../structMTA__ZK__proof.html#a44224d752605c42e4ec583442eb6a61a',1,'MTA_ZK_proof::s1()']]],
+  ['s2_107',['s2',['../structMTA__RP__proof.html#a22e41915856f9e6c60fbde988a81870c',1,'MTA_RP_proof::s2()'],['../structMTA__ZK__proof.html#a4141b24bb3ad79318884ac0facb65800',1,'MTA_ZK_proof::s2()']]],
+  ['schnorr_2eh_108',['schnorr.h',['../schnorr_8h.html',1,'']]],
+  ['schnorr_5fchallenge_109',['SCHNORR_challenge',['../schnorr_8h.html#a743028db55e66f4d30699e72a1b0bf1f',1,'schnorr.h']]],
+  ['schnorr_5fcommit_110',['SCHNORR_commit',['../schnorr_8h.html#aa8b82a3a089695a803f100b4a861c59b',1,'schnorr.h']]],
+  ['schnorr_5fd_5fchallenge_111',['SCHNORR_D_challenge',['../schnorr_8h.html#ad72917e4d1d2e9167c47062b4939dffb',1,'schnorr.h']]],
+  ['schnorr_5fd_5fcommit_112',['SCHNORR_D_commit',['../schnorr_8h.html#a20d267a63789b45faaf9b82018116268',1,'schnorr.h']]],
+  ['schnorr_5fd_5fprove_113',['SCHNORR_D_prove',['../schnorr_8h.html#a726141bddf04f630fe06e2f13a3d28e5',1,'schnorr.h']]],
+  ['schnorr_5fd_5fverify_114',['SCHNORR_D_verify',['../schnorr_8h.html#ab1c768caccc24700b28050962b603898',1,'schnorr.h']]],
+  ['schnorr_5ffail_115',['SCHNORR_FAIL',['../schnorr_8h.html#a4a5402fd8a88039b3f9cad0f508eec31',1,'schnorr.h']]],
+  ['schnorr_5finvalid_5fecp_116',['SCHNORR_INVALID_ECP',['../schnorr_8h.html#aacf81adc639d9529432d969dca09eb71',1,'schnorr.h']]],
+  ['schnorr_5fok_117',['SCHNORR_OK',['../schnorr_8h.html#a88f5f29dd2b59260b70ffcbc5f44c326',1,'schnorr.h']]],
+  ['schnorr_5fprove_118',['SCHNORR_prove',['../schnorr_8h.html#a874b17623254bc1701d1f25459770200',1,'schnorr.h']]],
+  ['schnorr_5frandom_5fchallenge_119',['SCHNORR_random_challenge',['../schnorr_8h.html#ab8e7127fb5812f3592da6ebf08b57512',1,'schnorr.h']]],
+  ['schnorr_5fverify_120',['SCHNORR_verify',['../schnorr_8h.html#a5f6c493e5b3acdc97acb0af7a0389723',1,'schnorr.h']]],
+  ['sfs_5fsecp256k1_121',['SFS_SECP256K1',['../schnorr_8h.html#a9d25d694a29331ea767179901f8ae601',1,'schnorr.h']]],
+  ['sgs_5fsecp256k1_122',['SGS_SECP256K1',['../schnorr_8h.html#ab5bcf782e8f2fcd1404d5de3b85707fd',1,'schnorr.h']]],
+  ['sigma_123',['sigma',['../structMTA__ZK__commitment__rv.html#ab26f42619df65db7f6dcdde009067ae9',1,'MTA_ZK_commitment_rv']]]
+];
