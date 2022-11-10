@@ -14,7 +14,7 @@ if [[ $BRANCH == "master" ]]; then
   # BRANCHNAME="asf-build-$(date +%s)"
   #git checkout -b $BRANCHNAME origin/asf-site
   git branch -D asf-site
-  git checkout asf-site origin/asf-site
+  git checkout -b asf-site origin/asf-site
   rm -rf *
   docker run --rm milagro-site tar c -C /app/website/build/incubator-milagro . | tar -x
   git add .
