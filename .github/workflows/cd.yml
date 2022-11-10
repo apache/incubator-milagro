@@ -1,0 +1,32 @@
+name: Deployment
+
+concurrency: production
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Build website
+        run: docker build -t milagro-site .
+      - name: Commit changes
+        run: |
+          git checkout -b asf-site origin/asf-site
+          docker run --rm milagro-site tar c -C /app/website/build/incubator-milagro . | tar -x
+          git config user.name "Continuous Delivery Bot"
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "update website"
+      - name: Deploy
+        run: |
+          git push origin asf-site:asf-site
