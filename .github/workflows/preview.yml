@@ -1,0 +1,26 @@
+name: Preview Pull Requests to master or develop
+
+env:
+  VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
+  VERCEL_PROJECT_ID: prj_4zo37n76MJyeXT4ymQuaN10gHSRh
+
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+    branches:
+      - master
+      - develop
+
+jobs:
+  deploy:
+    if: ${{ github.event.action == 'opened' || github.event.action == 'synchronize' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: snaplet/vercel-action@v2
+  delete:
+    if: ${{ github.event.action == 'closed' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: snaplet/vercel-action@v2
+        with:
+          delete: true
