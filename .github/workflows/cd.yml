@@ -5,7 +5,7 @@ concurrency: production
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -16,9 +16,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: deploy
-        run:
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           ./asf-site-build.sh
-      - uses: actions-go/push@master
-        with:
-          ref: asf-site
-          remoteref: asf-site
+          git push origin asf-site:asf-site
