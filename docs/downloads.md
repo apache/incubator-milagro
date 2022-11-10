@@ -31,6 +31,23 @@ The latest release notes can be found [here](https://github.com/apache/incubator
 
 1.0.0 (see below for details)
 
+## Apache Milagro libmpc v0.1
+
+This is the initial release of the Apache Milagro libmpc (Multi-Party Computation).
+
+### Source Release
+
+|[tar.gz](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz)|[sha512](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz.asc)|
+| ----- | ----- | ----- |
+
+### Release Notes
+
+The latest release notes can be found [here](https://github.com/apache/incubator-milagro-MPC/releases/tag/0.1)
+
+### Previous Releases
+
+none
+
 
 ## Apache Milagro Decentralized Trust Authority Incubating v0.1.0 (Alpha Release)
 

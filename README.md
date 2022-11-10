@@ -8,6 +8,7 @@ Milagro is a set of crypto libraries and core security infrastructure applicatio
 Milagro has several repos. The C and JavaScript versions of the core cryptographic libraries have had major releases, and are production ready, while the Rust version is under development:
 
 * [Milagro Crypto C Library](https://github.com/apache/incubator-milagro-crypto-c)
+* [Milagro Multi-Party Computation Library (libmpc)](https://github.com/apache/incubator-milagro-MPC)
 * [Milagro Crypto JavaScript Library](https://github.com/apache/incubator-milagro-javascript)
 * [Milagro Crypto Rust Library](https://github.com/apache/incubator-milagro-crypto-rust/)
 
@@ -18,7 +19,8 @@ Applications being developed on these cryptographic libraries include the Milagr
 What's New
 ============================
 
-* [apache-milagro-crypt0-c-2.0.1-incubating](https://github.com/apache/incubator-milagro-crypto-c/releases/tag/2.0.1) - Adding Shamir's Secret Sharing and Paillier encryption
+* [apache-milagro-libmpc-0.1-incubating](https://github.com/apache/incubator-milagro-MPC/releases/tag/0.1) - Initial release of libmpc (v0.1)
+* [apache-milagro-crypto-c-2.0.1-incubating](https://github.com/apache/incubator-milagro-crypto-c/releases/tag/2.0.1) - Adding Shamir's Secret Sharing and Paillier encryption
 * [apache-milagro-dta-0.1.0-incubating](https://github.com/apache/incubator-milagro-dta/releases/tag/0.1.0)- Initial release of the Decentralized Trust Authority server
 * [apache-milagro-crypto-js-1.0.0-incubating](https://github.com/apache/incubator-milagro-crypto-js/releases/tag/1.0.0)- Initial release of the Crypto JS Library
 * [apache-milagro-crypto-c-1.0.0-incubating](https://github.com/apache/incubator-milagro-crypto-c/releases/tag/1.0.0)- Initial release of the Crypto C Library
