@@ -61,7 +61,7 @@ These clients or peers become the only entities that know the completed whole ke
 
 Type-3 pairings were selected as they are the most efficient pairing and will work with non-supersingular pairing-friendly curves.
 
-These operate as \\( G_1 \\) x \\( G_2 \rightarrow G_T \\), where \\( G_2 \\) is a particular group of points, again of the order \\( q \\), but on a twisted elliptic curve defined over an extension which is a divisor of \\( k \\).
+These operate as \\( G_1 \\) x \\( G_2 \\rightarrow G_T \\), where \\( G_2 \\) is a particular group of points, again of the order \\( q \\), but on a twisted elliptic curve defined over an extension which is a divisor of \\( k \\).
 
 These curves can be constructed to be a near perfect fit at any required level of security. The pairing protocols within the Milagro framework all work on a Type-3 pairing.
 
@@ -79,7 +79,7 @@ We can also add extra components to create a secret of the form \\( s(P_1+P_2) =
 
 It is the flexibility that arises from this form of the secret that allows us to introduce the idea of chopping off a tiny sliver of the secret to support a PIN number.
 
-It also facilitates the concept of *Time Permits* as discussed in a later section.
+It also facilitates the concept of _Time Permits_ as discussed in a later section.
 
 Lastly, it enables Decentralized Trust.
 
@@ -89,9 +89,9 @@ A Trusted Authority will be in possession of a master secret \\( s \\), a random
 
 A client secret is of the form \\( s.H(ID) \\), where ID is the client identity and \\( H(.) \\) a hash function which maps to a point on \\( G_1 \\).
 
-From prior art, we assume that \\( H \\) is modeled as a random oracle where \\( H(ID) = r_{ID}.P \\)
+From prior art, we assume that \\( H \\) is modeled as a random oracle where \\( H(ID) = r\_{"{"}ID{"}"}.P \\)
 
-where \\( r_{ID} \in F_q \\) is random and \\( P \\) is a fixed generator of \\( G_1 \\).
+where \\( r\_{"{"}ID{"}"} \\in F_q \\) is random and \\( P \\) is a fixed generator of \\( G_1 \\).
 
 A Milagro ZKP-MFA Server will be issued with \\( sQ \\), where \\( Q \\) is a fixed generator of \\( G_2 \\).
 
@@ -111,9 +111,9 @@ In the age of self sovereign identity, any entity can be a Decentralized Trust A
 
 A D-TA may act as a Fiduciary over secrets where it can participate in a process to enable a Beneficiary to recover the secret. Using aggregated BLS signatures in a simple example, an entity running Milagro software may engage multiple D-TAs to act as Fiduciaries over its seed value used to generate and back up a cryptocurrency HD Wallet.
 
-As described in[^first] the first step is for each D-TA to generate a key pair by choosing \\( s k \stackrel{s}{\leftarrow} \mathbb{Z}_{q} \\) to compute:
+As described in[^first] the first step is for each D-TA to generate a key pair by choosing \\( s k \\stackrel{"{"}s{"}"}{"{"}\\leftarrow{"}"} \\mathbb{"{"}Z{"}"}\_{"{"}q{"}"} \\) to compute:
 
-$$ p k \leftarrow g_{2}^{s k}$$
+$$ p k \\leftarrow g\_{"{"}2{"}"}^{"{"}s k{"}"}$$
 
 which outputs the \\( (p k, s k) \\).
 
@@ -121,37 +121,40 @@ The Beneficiary would select which D-TA service providers (acting in concert) it
 
 [^first]: [Compact Multi-Signatures for Smaller Blockchains](https://eprint.iacr.org/2018/483)
 
-In advance of creating the HD Wallet seed, a Beneficiary would elicit the services of Decentralized Trust Authorities to act as Fiduciaries in a decentralized secret recovery protocol. The Beneficiary's next step calculates the aggregate public key by running protocol \\( \text { KAg }\\)({\\( p k_{1}, \ldots, p k_{n} \\)}) using the D-TA's known public keys as input (who have agreed to act as Fiduciaries to this process) and also its own public key.
+In advance of creating the HD Wallet seed, a Beneficiary would elicit the services of Decentralized Trust Authorities to act as Fiduciaries in a decentralized secret recovery protocol. The Beneficiary's next step calculates the aggregate public key by running protocol \\( \\text {"{"} KAg {"}"}\\)({"{"}\\( p k_{"{"}1{"}"}, \\ldots, p k_{"{"}n{"}"} \\){"}"}) using the D-TA's known public keys as input (who have agreed to act as Fiduciaries to this process) and also its own public key.
 
-The Beneficiary then requests a signature \\( \sigma \\) on a message \\( m \\) from each of the D-TAs acting as Fiduciaries, including itself. For each D-TA, singing is a single round protocol.
+The Beneficiary then requests a signature \\( \\sigma \\) on a message \\( m \\) from each of the D-TAs acting as Fiduciaries, including itself. For each D-TA, singing is a single round protocol.
 
-To finalize setup, each D-TA transmits its signature \\( \sigma \\) to the Beneficiary (acting as designated combiner). The Beneficiary generates its own signature and combines it with the received D-TA signatures for the final aggregated signature of \\( \sigma \leftarrow \prod_{j=1}^{n} s_{j} \\).
+To finalize setup, each D-TA transmits its signature \\( \\sigma \\) to the Beneficiary (acting as designated combiner). The Beneficiary generates its own signature and combines it with the received D-TA signatures for the final aggregated signature of \\( \\sigma \\leftarrow \\prod_{"{"}j=1{"}"}^{"{"}n{"}"} s_{"{"}j{"}"} \\).
 
-The final signature is verified against the aggregated public key if the verifier function outputs 1. Assuming so, the setup completes by hashing the aggregated signature where \\( H(\tilde{\sigma}) \\) is the seed of the HD Wallet.
+The final signature is verified against the aggregated public key if the verifier function outputs 1. Assuming so, the setup completes by hashing the aggregated signature where \\( H(\\tilde{"{"}\\sigma{"}"}) \\) is the seed of the HD Wallet.
 
 Assuming the Beneficiary has backed up their BLS signature key, recovering the HD Wallet seed from multiple Fiduciaries becomes as simple as re-running the setup protocol again. It is easy to envision Fiduciary services running D-TAs, responding and authenticating requests for recovering secrets.
 
 ## Summary
 
 ### Pairing and PQ Cryptography
+
 Milagro leverages a combination of pairing and post-quantum algorithms to distribute cryptographic operations and split cryptographic parameters, providing a level of security and functionality that is a step forward in when compared to the certificate backed cryptosystems in service today. With pairing cryptography, security systems such as multi-factor authentication using zero knowledge protocols, certificate-less authenticated key agreement with perfect forward secrecy and decentralized secret recovery can be deployed in real world scenarios. AES-256 bit encryption and post-quantum key encapsulation ensure that long-lived data is safe from intrusion, even in the face of a post-quantum adversary.
 
 ### Decentralized Cryptosystem
+
 Bitcoin's blockchain provides an alternative distributed approach to managing a currency without the need for a central bank. With bitcoin, the ledger is distributed, not centralized. Milagro's cryptosystem is decentralized to create the same advantages as a distributed ledger. While architecturally different to the blockchain, Milagro's cryptosystem and the applications built on it are compatible with and can add significant value to cryptocurrencies and other decentralized networks. 
 
 Milagro envisions a new class of cryptographic service providers called Decentralized Trust Authorities, or D-TAs for short. The purpose of a D-TA is to independently issue shares, or fractions, of cryptographic keys to Milagro clients and servers and application endpoints which have embedded Milagro cryptographic libraries. D-TA's also operate as 'Fiduciaries', to enable their 'Beneficiaries' to recover secrets in a decentralized manner, without keeping a share of the secret itself. D-TAs operate independently from each other, are isolated in totality, and completely unaware of the existence of other D-TAs.
 
 ### No Single Point of Compromise
+
 Milagro entities receive issued shares cryptographic keys or signatures and combine them to create the whole completed key or signature, thus becoming the only audience who possess knowledge of the entire key or signature. If D-TAs are under separate organizational controls, current root key compromises and key escrow threats inherent in PKI systems are an order of magnitude harder to achieve in a Milagro cryptosystem.  An attacker would need to subvert all independent parties.
 
 In other words, all D-TAs used to generate shares, or fractions, of keys for Milagro clients and servers must be compromised to create the equivalent of a PKI root key compromise. All D-TAs under the threshold needed to recreate a signature would need to be compromised (including the Beneficiary) in order to generate a final signature.
 
----
+* * *
 
 :::note See an error in this documentation? 
 Submit a pull request on the development branch of [Milagro Website Repo](https://github.com/apache/incubator-milagro).
 :::
 
-<!--
+
 Supported admonition types are: caution, note, important, tip, warning.
--->
+

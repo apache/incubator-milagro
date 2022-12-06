@@ -14,7 +14,9 @@ In order to create an identity document Milagro D-TA provides the following endp
 :::
 
 The definition of an identity document is:
+
 ```json
+
 message IDDocument {
     string IDDocumentCID			= 2 ;
     string AuthenticationReference  = 3 ;
@@ -24,13 +26,15 @@ message IDDocument {
     int64 Timestamp                 = 7 ;
 }
 
+
 ```
 
-* `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](authentication.md).
+-   `AuthenticationReference` refers to Milagro's out of the box [oAuth integration](authentication.md).
 
 The node that is used to create an Identity Document will store the seed and secret keys associated with the Identity. In the RC1 release these will be stored as a JSON file in the key value store:
 
 ```json
+
 //IdentitySecrets - keys required for decryption and signing
 type IdentitySecrets struct {
 	Name            string `json:"name"`
@@ -38,4 +42,5 @@ type IdentitySecrets struct {
 	SikeSecretKey   string `json:"sikeSecretKey"`
 	BlsSecretKey 	string `json:"BlsSecretKey"`
 }
+
 ```

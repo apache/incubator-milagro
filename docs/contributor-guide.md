@@ -3,8 +3,8 @@ id: contributor-guide
 title: Contributor's Guide
 sidebar_label: Contributor's Guide
 ---
-
 # Become a contributor
+
 ## Apache Milagro Mailing List
 
 If you'd like to contribute, the first step is to subscribe to our developer's mailing list. Please send an email to:
@@ -24,6 +24,4 @@ Our current GitHub repositories are:
 
 Please use the "Issues" tab on these repos to report any bugs or feature requests. 
 
-<!--
-Supported admonition types are: caution, note, important, tip, warning.
--->
+

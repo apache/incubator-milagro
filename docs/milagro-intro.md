@@ -3,7 +3,6 @@ id: milagro-intro
 title: Milagro Introduction
 sidebar_label: Milagro Introduction
 ---
-
 Apache Milagro is a set of core security infrastructure and crypto libraries purpose-built for decentralized networks and distributed systems, while also providing value to cloud-connected app-centric software and IoT devices that require Internet scale.
 
 Milagro's purpose is to provide a secure and positive open source alternative to centralized and proprietary monolithic trust providers such as commercial certificate authorities and the certificate backed cryptosystems that rely on them.
@@ -54,11 +53,15 @@ The Trusted Computing Group (TCG) specifies ECDAA (Elliptic Curve Direct Anonymo
 
 [^eighth]: [Web Authentication: An API for accessing Public Key Credentials Level 1 - W3C Candidate Recommendation](https://www.w3.org/TR/webauthn)
 
-In 2015, NIST [(***the 'post-NSA' NIST***)](http://www.theregister.co.uk/2014/05/26/congress_divorces_nist_from_nsa/) goes so far as to recommend standardization of pairing based cryptography in their publication, [Report on Pairing-Based Cryptography](http://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.002.pdf).
+In 2015, NIST [(**_the 'post-NSA' NIST_**)](http://www.theregister.co.uk/2014/05/26/congress_divorces_nist_from_nsa/) goes so far as to recommend standardization of pairing based cryptography in their publication, [Report on Pairing-Based Cryptography](http://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.002.pdf).
 
-> "Based on the study, the report suggests an approach for including pairing-based cryptography schemes in the NIST cryptographic toolkit. As we have seen, pairing-based cryptography has much to offer. Pairing-based schemes, such as IBE, provide special properties which cannot be provided through traditional PKI in a straightforward way. Therefore, pairing-based cryptographic schemes would make a nice addition to NIST’s cryptographic toolkit. In particular, we have focused attention on IBE. IBE simplifies key management procedures of certificate-based public key infrastructures. IBE also offers interesting features arising from the possibility of encoding additional information into a user’s identity.  It has been a decade since the first IBE schemes were proposed. These schemes have received sufficient attention from the cryptographic community and no weakness has been identified."
->
->      --- NIST, Report on Pairing-Based Cryptography
+&gt; "Based on the study, the report suggests an approach for including pairing-based cryptography schemes in the NIST cryptographic toolkit. As we have seen, pairing-based cryptography has much to offer. Pairing-based schemes, such as IBE, provide special properties which cannot be provided through traditional PKI in a straightforward way. Therefore, pairing-based cryptographic schemes would make a nice addition to NIST’s cryptographic toolkit. In particular, we have focused attention on IBE. IBE simplifies key management procedures of certificate-based public key infrastructures. IBE also offers interesting features arising from the possibility of encoding additional information into a user’s identity.  It has been a decade since the first IBE schemes were proposed. These schemes have received sufficient attention from the cryptographic community and no weakness has been identified."
+&gt;
+&gt; ```
+&gt;
+&gt;  --- NIST, Report on Pairing-Based Cryptography
+&gt;
+&gt; ```
 
 ## The Move to Post-Quantum
 
@@ -78,18 +81,18 @@ Milagro has begun implementing post-quantum algorithms into its code base, begin
 
 Obviously, data that is transient and that does not retain a long term value doesn't require a level of protection against a post-quantum adversary. It becomes an issue when data is retained for the long term. If data is harvested and stored, and has retained value even after decades, then it should be protected to a post-quantum degree. In short, you are protecting the data for the day _WHEN_ a working quantum computer comes online.
 
----
+* * *
 
 **It is hoped that Apache Milagro will become a safe, IPR free island of innovation for cryptographers interested in pairing protocols that deliver much needed core security infrastructure for the advancement of decentralized networks and distributed systems.**
 
 **We hope you join us and become part of this journey.**
 
----
+* * *
 
 :::note See an error in this documentation? 
 Submit a pull request on the development branch of [Milagro Website Repo](https://github.com/apache/incubator-milagro).
 :::
 
-<!--
+
 Supported admonition types are: caution, note, important, tip, warning.
--->
+

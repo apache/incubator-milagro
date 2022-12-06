@@ -3,53 +3,56 @@ id: unit64
 title: UInt64
 sidebar_label: UInt64
 ---
-
-<a name="UInt64"></a>
+<a name="UInt64" />
 
 ## UInt64
+
 **Kind**: global class  
-**this**: <code>{UInt64}</code>  
+**this**: <code>{"{"}UInt64{"}"}</code>  
 
-* [UInt64](#UInt64)
-    * [new UInt64(top, bot)](#new_UInt64_new)
-    * [.add(y)](#UInt64+add)
-    * [.copy()](#UInt64+copy)
-    * [.shlb()](#UInt64+shlb)
+-   [UInt64](#UInt64)
+    -   [new UInt64(top, bot)](#new_UInt64_new)
+    -   [.add(y)](#UInt64+add)
+    -   [.copy()](#UInt64+copy)
+    -   [.shlb()](#UInt64+shlb)
 
-<a name="new_UInt64_new"></a>
+<a name="new_UInt64_new" />
 
 ### new UInt64(top, bot)
+
 Creates an instance of UInt64. Rudimentary unsigned 64-bit type for SHA384 and SHA512
 
+| Param | Description    |
+| ----- | -------------- |
+| top   | Top 32 bits    |
+| bot   | Bottom 32 bits |
 
-| Param | Description |
-| --- | --- |
-| top | Top 32 bits |
-| bot | Bottom 32 bits |
-
-<a name="UInt64+add"></a>
+<a name="UInt64+add" />
 
 ### uInt64.add(y)
+
 Add value
 
 **Kind**: instance method of [<code>UInt64</code>](#UInt64)  
-**this**: <code>{UInt64}</code>  
+**this**: <code>{"{"}UInt64{"}"}</code>  
 
-| Param | Description |
-| --- | --- |
-| y | UInt64 value |
+| Param | Description  |
+| ----- | ------------ |
+| y     | UInt64 value |
 
-<a name="UInt64+copy"></a>
+<a name="UInt64+copy" />
 
 ### uInt64.copy()
+
 Copy value
 
 **Kind**: instance method of [<code>UInt64</code>](#UInt64)  
-**this**: <code>{UInt64}</code>  
-<a name="UInt64+shlb"></a>
+**this**: <code>{"{"}UInt64{"}"}</code>  
+<a name="UInt64+shlb" />
 
 ### uInt64.shlb()
+
 Shift left
 
 **Kind**: instance method of [<code>UInt64</code>](#UInt64)  
-**this**: <code>{UInt64}</code>  
+**this**: <code>{"{"}UInt64{"}"}</code>  
