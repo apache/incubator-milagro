@@ -1,3 +1,7 @@
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
+
 module.exports={
   "title": "Apache Milagro",
   "tagline": "Core security infrastructure for decentralized networks",
@@ -6,8 +10,7 @@ module.exports={
   "organizationName": "apache",
   "projectName": "incubator-milagro",
   "scripts": [
-    "https://buttons.github.io/buttons.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    "https://buttons.github.io/buttons.js"
   ],
   "favicon": "img/favicon.ico",
   "customFields": {
@@ -49,7 +52,9 @@ module.exports={
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../docs",
-          "sidebarPath": "sidebars.json"
+          "sidebarPath": "sidebars.json",
+          remarkPlugins: [math],
+          rehypePlugins: [katex]
         },
         "blog": {
           "path": "blog",
@@ -98,5 +103,14 @@ module.exports={
         "src": "img/milagro.svg"
       }
     }
-  }
+  },
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
 }

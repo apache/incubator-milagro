@@ -13,7 +13,7 @@ The M-Pin Protocol has been iterated on several times over the years since, to d
 
 [^first]: [M-Pin protocol](https://eprint.iacr.org/2002/164)
 
- As noted in [Milagro Crypto](milagro-crypto.html), the M-Pin Protocol is of these classifications and exploits the features of:
+ As noted in [Milagro Crypto](milagro-crypto), the M-Pin Protocol is of these classifications and exploits the features of:
 
 -   Elliptic Curve Cryptography
 -   Pairing Based Cryptography
@@ -58,7 +58,7 @@ Note that the Chow-Choo Protocol is not a Zero Knowledge Proof protocol.
 
 ## BLS Signatures - Introduction
 
-The BLS signature (Boneh-Lynn-Schacham) scheme[^fourth] uses a bilinear pairing for verification, and signatures are elements of an elliptic curve group. Working in an elliptic curve group provides some defense against index calculus attacks (with the caveat that such attacks are still possible in the target group \\( G\_{"{"}T{"}"} \\) of the pairing), allowing shorter signatures than other systems for similar levels of security. 
+The BLS signature (Boneh-Lynn-Schacham) scheme[^fourth] uses a bilinear pairing for verification, and signatures are elements of an elliptic curve group. Working in an elliptic curve group provides some defense against index calculus attacks (with the caveat that such attacks are still possible in the target group $G\_{T}$ of the pairing), allowing shorter signatures than other systems for similar levels of security. 
 
 [^fourth]: [Short Signatures from the Weil Pairing](https://www.iacr.org/archive/asiacrypt2001/22480516.pdf)
 
@@ -98,31 +98,31 @@ As opposed to Chow-Choo, which can be used in a client to server as well as a pe
 
 To embellish the security of the client-server protocol, it is important that client and server secrets should be kept distinct.
 
-A simple way to do this is to exploit the structure of a Type-3 pairing and put client secrets in \\( G_1 \\) and the server secret in \\( G_2 \\) as previously noted in the preceding section.
+A simple way to do this is to exploit the structure of a Type-3 pairing and put client secrets in $G_1$ and the server secret in $G_2$ as previously noted in the preceding section.
 
 For a Type-3 pairing there is assumed to be no computable isomorphism between these groups, even though both are of the same order.
 
 In the original implementation, the client was supplied with a challenge by the server as part of the second step within the protocol, after the first step whereby the client announced her identity to the server.
 
-In a later proposal, it was realised that an M-Pin 1-Pass Protocol could be obtained if the client itself derived the challenge as \\( y \\) as \\( y=H(U|T) \\) where \\( T \\) is a time-stamp transmitted by the Client along her claimed identity, \\( U \\) and \\( V \\).
+In a later proposal, it was realised that an M-Pin 1-Pass Protocol could be obtained if the client itself derived the challenge as $y$ as $y=H(U|T)$ where $T$ is a time-stamp transmitted by the Client along her claimed identity, $U$ and $V$.
 
 The protocol could then be reduced in an obvious way to a secure 1-pass protocol. However, this assumes that the Server checks the accuracy of the time-stamp before completing the protocol.
 
-This all works thanks to the pairing function \\( e(.,.) \\) and its remarkable bilinearity property \\( e(aP,Q) = e(P,aQ) = e(P,Q)^{"{"}a{"}"} \\).
+This all works thanks to the pairing function $e(.,.)$ and its remarkable bilinearity property $e(aP,Q) = e(P,aQ) = e(P,Q)^{a}$.
 
 * * *
 
-|              Alice - identity \\( ID_a \\)              |                   Server                   |
+|              Alice - identity $ID_a$              |                   Server                   |
 | :-----------------------------------------------------: | :----------------------------------------: |
-|             Generates random \\( x&lt;q \\)             |                                            |
-|                    \\( A=H(ID_a) \\)                    |                                            |
-|                      \\( U=x{"{"}A{"}"} \\)                     |                                            |
-|                \\( ID_a \\), \\( U\~~ \\)               |                                            |
-|               \\( y=H(U \\) \| \\( T) \\)               |                                            |
-| \\( V=-(x+y){"{"}((s-\\alpha)A+\\alpha A){"}"} \\rightarrow \\) |                                            |
-|                                                         |              \\( A=H(ID_a) \\)             |
-|                                                         |         \\( g=e(V,Q).e(U+yA,sQ) \\)        |
-|                                                         | if \\( g \\ne 1 \\), reject the connection |
+|             Generates random $x<q$             |                                            |
+|                    $A=H(ID_a)$                    |                                            |
+|                      $U=x{A}$                     |                                            |
+|                $ID_a$, $U\~~$               |                                            |
+|               $y=H(U$ \| $T)$               |                                            |
+| $V=-(x+y){((s-\alpha)A+\alpha A)} \rightarrow$ |                                            |
+|                                                         |              $A=H(ID_a)$             |
+|                                                         |         $g=e(V,Q).e(U+yA,sQ)$        |
+|                                                         | if $g \ne 1$, reject the connection |
 
 <figure>
   <strong>Figure 1.</strong> M-Pin 1-Pass
@@ -135,17 +135,17 @@ As you can see below in Fig 2., M-Pin in the two pass operation operates in a ch
 
 * * *
 
-|              Alice - identity \\( ID_a \\)              |                   Server                   |
+|              Alice - identity $ID_a$              |                   Server                   |
 | :-----------------------------------------------------: | :----------------------------------------: |
-|             Generates random \\( x&lt;q \\)             |       Generates random \\( y&lt;q \\)      |
-|                    \\( A=H(ID_a) \\)                    |                                            |
-|                      \\( U=x{"{"}A{"}"} \\)                     |                                            |
-|            \\( ID_a$, $U\~~ \\rightarrow  \\)           |                                            |
-|                                                         |            \\( \\leftarrow y \\)           |
-| \\( V=-(x+y){"{"}((s-\\alpha)A+\\alpha A){"}"} \\rightarrow \\) |                                            |
-|                                                         |              \\( A=H(ID_a) \\)             |
-|                                                         |         \\( g=e(V,Q).e(U+yA,sQ) \\)        |
-|                                                         | if \\( g \\ne 1 \\), reject the connection |
+|             Generates random $x&lt;q$             |       Generates random $y&lt;q$      |
+|                    $A=H(ID_a)$                    |                                            |
+|                      $U=x{A}$                     |                                            |
+|            $ID_a$, $U\~~ \rightarrow $           |                                            |
+|                                                         |            $\leftarrow y$           |
+| $V=-(x+y){((s-\alpha)A+\alpha A)} \rightarrow$ |                                            |
+|                                                         |              $A=H(ID_a)$             |
+|                                                         |         $g=e(V,Q).e(U+yA,sQ)$        |
+|                                                         | if $g \ne 1$, reject the connection |
 
 <figure>
   <strong>Figure 2.</strong> M-Pin 2-Pass
@@ -162,7 +162,7 @@ The idea is to run it first (to authenticate the client to the server), and then
 
 The first thing to note is that both the client and the server can already calculate a mutual authenticated encryption key!
 
-This protocol requires another general hash function \\( H_g(.) \\) which serializes, and hashes its input to a 256-bit value. Both sides can then extract a key from this value \\( K \\).
+This protocol requires another general hash function $H_g(.)$ which serializes, and hashes its input to a 256-bit value. Both sides can then extract a key from this value $K$.
 
 It is left as a simple exercise for the reader to confirm that both client and server end up with the same key.
 
@@ -170,20 +170,20 @@ Note that since the first part of the protocol is just the original M-Pin protoc
 
 * * *
 
-|                Alice - identity \\( ID_a \\)                |                    Server                    |
+|                Alice - identity $ID_a$                |                    Server                    |
 | :---------------------------------------------------------: | :------------------------------------------: |
-|               Generates random \\( x&lt;q \\)               |        Generates random \\( y&lt;q \\)       |
-|                      \\( A=H(ID_a) \\)                      |                                              |
-|                        \\( U=x{"{"}A{"}"} \\)                       |                                              |
-|              \\( ID_a$, $U\~~ \\rightarrow  \\)             |                                              |
-|                                                             |             \\( \\leftarrow y \\)            |
-|   \\( V=-(x+y){"{"}((s-\\alpha)A+\\alpha A){"}"} \\rightarrow \\)   |                                              |
-|                                                             |               \\( A=H(ID_a) \\)              |
-|                                                             |          \\( g=e(V,Q).e(U+yA,sQ) \\)         |
-|                                                             |  if \\( g \\ne 1 \\), reject the connection  |
-|                 \\( R=r{"{"}A{"}"} \\rightarrow \\)                 |          \\( \\leftarrow W=w{"{"}A{"}"} \\)          |
-|                   \\( h=H(A,U,y,V,R,W) \\)                  |           \\( h=H(A,U,y,V,R,W) \\)           |
-| \\( K=H_g((g_1.{"{"}g_2{"}"}^\\alpha)^{"{"}r+h{"}"} \\ \\) \| \\( x{"{"}W{"}"}) \\) | \\( K=H_g(e(R+hA,sQ) \\ \\) \| \\( w{"{"}U{"}"}) \\) |
+|               Generates random $x<q$               |        Generates random $y<q$       |
+|                      $A=H(ID_a)$                      |                                              |
+|                        $U=x{A}$                       |                                              |
+|              $ID_a$, $U\~~ \rightarrow$             |                                              |
+|                                                             |             $\leftarrow y$            |
+|   $V=-(x+y){( (s-\alpha)A+\alpha A)} \rightarrow$   |                                              |
+|                                                             |               $A=H(ID_a)$              |
+|                                                             |          $g=e(V,Q).e(U+yA,sQ)$         |
+|                                                             |  if $g \ne 1$, reject the connection  |
+|                 $R=r{A} \rightarrow$                  |          $\leftarrow W=w{A}$          |
+|                   $h=H(A,U,y,V,R,W)$                  |           $h=H(A,U,y,V,R,W)$           |
+| $K=H_g( (g_1.{g_2}^\alpha)^{r+h} \\$ \| $x{W})$        | $K=H_g(e(R+hA,sQ) \\$ \| $w{U})$ |
 
 <figure>
   <strong>Figure 3.</strong> M-Pin FULL
@@ -191,13 +191,13 @@ Note that since the first part of the protocol is just the original M-Pin protoc
 
 * * *
 
-Note that the transmission of \\( R \\) from the client to the server can be done at the same time as \\( V \\) is transmitted, and the transmission of \\( W \\) from the server to the client can be done at the same time as  \\( y \\) is transmitted, to avoid introducing any extra flows into the protocol.
+Note that the transmission of $R$ from the client to the server can be done at the same time as $V$ is transmitted, and the transmission of $W$ from the server to the client can be done at the same time as  $y$ is transmitted, to avoid introducing any extra flows into the protocol.
 
 ### Chow-Choo Protocol
 
 As initially proposed, the Chow-Choo Protocol was based on a type-1 pairing. Note that in the Milagro framework, the Chow-Choo Protocol is made to work in a Type-3 setting.
 
-Pairings are usually written as functions of the form \\( g=e(A,B) \\), where \\( A \\in G_1 \\), \\( g \\in G_T \\), and for a Type-1 pairing \\( B \\in G_1 \\) and for Type-3 \\( B \\in G_2 \\).
+Pairings are usually written as functions of the form $g=e(A,B)$, where $A \in G_1$, $g \in G_T$, and for a Type-1 pairing $B \in G_1$ and for Type-3 $B \in G_2$.
 
 Consider now an application of this protocol to an imagined Internet of Things (IoT) setting.
 
@@ -207,587 +207,33 @@ These keys may be embedded at the time of manufacture, by the manufacturer actin
 
 When a Thing needs to communicate with another Thing, an action which requires knowing only the identity of the other, both parties can activate the Chow-Choo Protocol to calculate the same key to encrypt their communication.
 
-For both sending and receiving, Alice is issued with \\( sA_1 \\) and \\( sA_2 \\), where \\( A_1=H_1 \\) and \\( A_2=H_2 \\) both in the \\( ID = Alice \\).
+For both sending and receiving, Alice is issued with $sA_1$ and $sA_2$, where $A_1=H_1$ and $A_2=H_2$ both in the $ID = \text{Alice}$.
 
-Similarly Bob is issued with \\( sB_1 \\) and \\( sB_2 \\). Now if Alice initiates and Bob responds, Alice calculates the key as \\( e(sA_1,B_2) \\) and Bob can calculate the same key as \\( e(A_1,sB_2) \\), where by convention the initiator uses their _sender_ key and the responder uses their _receiver_ key.
+Similarly Bob is issued with $sB_1$ and $sB_2$. Now if Alice initiates and Bob responds, Alice calculates the key as $e(sA_1,B_2)$ and Bob can calculate the same key as $e(A_1,sB_2)$, where by convention the initiator uses their _sender_ key and the responder uses their _receiver_ key.
 
 One thing we can exploit -- in any communication context there is an initiator and a responder, or a _sender_ and _receiver_, if you will.
 
 In the above example, Alice and Bob both were issued _sender_ and _receiver_ keys respectively, as this describes where they can appear in the pairing.
 
-An obvious advantage is to issue each Thing with two keys, one in \\( G_1 \\) and the other in \\( G_2 \\), **if** the Thing is approved to send and receive.
+An obvious advantage is to issue each Thing with two keys, one in $G_1$ and the other in $G_2$, **if** the Thing is approved to send and receive.
 
 However, the capability exists to cryptographically bound Things to only receiving information, or only sending information, based upon whether or not a Thing has been issued a sender and / or a receiver key.
 
 This capability is exploited in the Milagro framework to enable peer to peer authenticated key agreement.
 
 * * *
-
-- This is the Chow Choo protocol in a Mathml table / frame because redering in Math LaTex equations exposes a bug in MathJax. It's just one equation that has this bug!  -
-
-<figure>
-	
-	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-			mtable
-			
-		
-			
-				
-			
-			
-				
-					
-						
-							SENDER
-						
-						
-							RECEIVER
-						
-					
-					
-						
-							x
-							∈
-							
-								ℤ
-								q
-								*
-							
-						
-						
-						
-					
-					
-						
-							A
-							G
-							1
-							:
-							=
-							
-								H
-								1
-							
-							
-								(
-								I
-								ⅆ
-								A
-								)
-							
-						
-						
-						
-					
-					
-						
-							P
-							a
-							
-								G
-								1
-							
-							:
-							=
-							x
-							⋅
-							A
-							
-								G
-								1
-							
-						
-						
-						
-					
-					
-						
-							I
-							ⅆ
-							A
-							,
-							P
-							a
-							
-								G
-								1
-							
-							⟶
-						
-						
-						
-					
-					
-						
-						
-						
-							y
-							,
-							w
-							∈
-							
-								ℤ
-								q
-								*
-							
-						
-					
-					
-						
-						
-						
-							A
-							
-								G
-								1
-							
-							:
-							=
-							
-								H
-								1
-							
-							
-								(
-								I
-								ⅆ
-								A
-								)
-							
-						
-					
-					
-						
-						
-						
-							B
-							
-								G
-								2
-							
-							:
-							=
-							
-								H
-								2
-							
-							
-								(
-								I
-								ⅆ
-								B
-								)
-							
-						
-					
-					
-						
-						
-						
-							P
-							b
-							
-								G
-								2
-							
-							:
-							=
-							y
-							⋅
-							B
-							
-								G
-								2
-							
-						
-					
-					
-						
-						
-						
-							P
-							g
-							
-								G
-								1
-							
-							:
-							=
-							w
-							⋅
-							A
-							
-								G
-								1
-							
-						
-					
-					
-						
-						
-						
-							pia
-							:
-							=
-							
-								H
-								q
-							
-							
-								(
-								P
-								a
-								
-									G
-									1
-								
-								‖
-								P
-								b
-								
-									G
-									2
-								
-								‖
-								P
-								g
-								
-									G
-									1
-								
-								‖
-								I
-								ⅆ
-								B
-								)
-							
-						
-					
-					
-						
-						
-						
-							pib
-							:
-							=
-							
-								H
-								q
-							
-							
-								(
-								P
-								b
-								
-									G
-									2
-								
-								‖
-								P
-								a
-								
-									G
-									1
-								
-								‖
-								P
-								g
-								
-									G
-									1
-								
-								‖
-								I
-								ⅆ
-								A
-								)
-							
-						
-					
-					
-						
-						
-						
-							k
-							:
-							=
-							e
-							
-								(
-								pia
-								⋅
-								A
-								
-									G
-									1
-								
-								+
-								P
-								a
-								
-									G
-									1
-								
-								,
-								(
-								y
-								+
-								pib
-								)
-								⋯
-								⋅
-								B
-								
-									G
-									2
-								
-								)
-							
-						
-					
-					
-						
-						
-						
-							K
-							:
-							=
-							H
-							
-								(
-								k
-								,
-								w
-								⋅
-								P
-								a
-								
-									G
-									1
-								
-								)
-							
-						
-					
-					
-						
-						
-						
-							⟵
-							I
-							ⅆ
-							B
-							,
-							P
-							g
-							
-								G
-								1
-							
-							,
-							P
-							b
-							
-								G
-								2
-							
-						
-					
-					
-						
-							B
-							
-								G
-								2
-							
-							:
-							=
-							
-								H
-								2
-							
-							
-								(
-								I
-								ⅆ
-								B
-								)
-							
-						
-						
-						
-					
-					
-						
-							pia
-							:
-							=
-							
-								H
-								q
-							
-							
-								(
-								P
-								a
-								
-									G
-									1
-								
-								‖
-								P
-								b
-								
-									G
-									2
-								
-								‖
-								P
-								g
-								
-									G
-									1
-								
-								‖
-								I
-								ⅆ
-								B
-								)
-							
-						
-						
-						
-					
-					
-						
-							pib
-							:
-							=
-							
-								H
-								q
-							
-							
-								(
-								P
-								b
-								
-									G
-									2
-								
-								‖
-								P
-								a
-								
-									G
-									1
-								
-								‖
-								P
-								g
-								
-									G
-									1
-								
-								‖
-								I
-								ⅆ
-								A
-								)
-							
-						
-						
-						
-					
-					
-						
-							k
-							:
-							=
-							e
-							
-								(
-								(
-								x
-								+
-								p
-								i
-								a
-								)
-								⋯
-								⋅
-								A
-								
-									G
-									1
-								
-								,
-								pib
-								⋅
-								B
-								
-									G
-									2
-								
-								+
-								P
-								b
-								
-									G
-									2
-								
-								)
-							
-						
-						
-						
-					
-					
-						
-							K
-							:
-							=
-							H
-							
-								(
-								k
-								,
-								x
-								⋅
-								P
-								g
-								
-									G
-									1
-								
-								)
-							
-						
-						
-						
-					
-				
-			
-		
-	
-	</math>
-	
-</figure>
-<figure>
-  <strong>Figure 4.</strong> Chow-Choo Protocol
-</figure>
-
+![Alt text](/img/Chow-ChooProtocol.png)
 * * *
 
 **Notes on Chow-Choo Protocol:**
 
--   \\( G_1 \\): a \\( r \\)-order cyclic subgroup of \\( E(F_p) \\).
--   \\( G_2 \\): a subgroup of \\( E(F_{"{"}p^k{"}"}) \\), where \\( k \\) is the embedding degree of the Curve.
--   \\( H1 \\): Maps string value to a point on the curve in \\( G_1 \\).
--   \\( H2 \\): Maps string value to a point on the curve in \\( G_2 \\).
--   \\( Hq \\): Hashes inputs to an integer modulo the curve order \\( q \\).When run in the simple SIDH 
+-   $G_1$: a $r$-order cyclic subgroup of $E(F_p)$.
+-   $G_2$: a subgroup of $E(F_{p^k})$, where $k$ is the embedding degree of the Curve.
+-   $H1$: Maps string value to a point on the curve in $G_1$.
+-   $H2$: Maps string value to a point on the curve in $G_2$.
+-   $Hq$: Hashes inputs to an integer modulo the curve order $q$.When run in the simple SIDH 
 -   H(): Hash function.
--   \\( || \\): denotes the concatenation of messages.
+-   $||$: denotes the concatenation of messages.
 
 * * *
 
@@ -799,9 +245,9 @@ Milagro achieves a much more immediate revocation capability through the use of 
 
 The idea is that the server includes an explicitly described time slot in its construction of Alice's hashed identity. Unless Alice has a corresponding "Time permit" for the same time slot, she cannot complete the protocol.
 
-In the protocol above we instead calculate \\( H(ID_a) + H_T(T_i|ID_a) \\) on both sides of the protocol where \\( T_i \\) is a textual description of the \\( i \\)-th time slot and \\( H_T(.) \\) is a hash function distinct from \\( H(.) \\).
+In the protocol above we instead calculate $H(ID_a) + H_T(T_i|ID_a)$ on both sides of the protocol where $T_i$ is a textual description of the $i$-th time slot and $H_T(.)$ is a hash function distinct from $H(.)$.
 
-For the protocol to work correctly Alice must be issued by the Trusted Authority with a permit \\( s.H_T(T_i|ID_a) \\) which gets added to her combined PIN-plus-token secret \\( s.H(ID_a) \\).
+For the protocol to work correctly Alice must be issued by the Trusted Authority with a permit $s.H_T(T_i|ID_a)$ which gets added to her combined PIN-plus-token secret $s.H(ID_a)$.
 
 Observe that the permit is of no use to any other party, and hence can be issued publicly, uploaded to a public cloud data store (AWS S3), or delivered via the server directly.
 
@@ -815,15 +261,17 @@ A proof of security for this idea in the context of Boneh and Franklin IBE can b
 
 Dan Boneh, Ben Lynn and Hovav Schacham introduced their paper entitled "Short Signatures from the Weil Pairing" in 2001[^fourth]. The paper described a short signature scheme based on the computational Diffie-Hellman assumption on certain elliptic and hyper-elliptic curves. 
 
-In a simple instantiation, given a secret key \\( sk \\), a public key \\( p k=g^{"{"}S k{"}"} \\), a message \\( m \\), a hashing-into-the-curve function \\( H \\), and a bilinear pairing \\( e \\):
+In a simple instantiation, given a secret key $sk$, a public key $p k=g^{S k}$, a message $m$, a hashing-into-the-curve function $H$, and a bilinear pairing $e$:
 
--   Key Generation: \\( sk \\) is a random integer over the field, \\( p k=g^{"{"}S k{"}"} \\)
--   Signature: \\( S=H(m)^{"{"}s k{"}"} \\)
--   Verify: \\( e(H(m), p k)=e(S, g) \\)
+-   Key Generation: $sk$ is a random integer over the field, $p k=g^{S k}$
+-   Signature: $S=H(m)^{s k}$
+-   Verify: $e(H(m), p k)=e(S, g)$
 
 Biliniarity is on display as the signature 
 
-$$ \\begin{"{"}array{"}"}{"{"}c{"}"}{"{"}e(H(m), p k)=e\\left(H(m), g^{"{"}s k{"}"}\\right)=e(H(m), g)^{"{"}s k{"}"}={"}"} \\ {"{"}=e\\left(H(m)^{"{"}s k{"}"}, g\\right)=e(S, g){"}"}\\end{"{"}array{"}"} $$
+$$
+\begin{array}{c}{e(H(m), p k)=e\left(H(m), g^{s k}\right)=e(H(m), g)^{s k}=} \\ {=e\left(H(m)^{s k}, g\right)=e(S, g)}\end{array}
+$$
 
 but is also unique and deterministic, something missing from ECDSA. 
 
@@ -831,7 +279,7 @@ In June of 2018 Dan Boneh, Manu Drijvers and Gregory Neven released research tha
 
 [^sixth]: [Compact Multi-Signatures for Smaller Blockchains](https://eprint.iacr.org/2018/483)
 
-An ASM scheme enables any subset \\( S \\) of a set of \\( n \\) parties to sign a message \\( m \\) so that a valid signature discloses which subset generated the signature (hence the subset \\( S \\) is accountable for signing \\( m \\)).
+An ASM scheme enables any subset $S$ of a set of $n$ parties to sign a message $m$ so that a valid signature discloses which subset generated the signature (hence the subset $S$ is accountable for signing $m$).
 
 In addition to the ASM scheme, Milagro exploits a unique property of BLS signatures: Signing Keys can be split using Shamir's Secret Sharing[^seventh] in which the 'shares' of the keys, when distributed to signers, themselves become signing keys. By using a 'key splitter' and 'signature aggregator' role who also performs the Shamir Secret Sharing (SSS) dealer function, several benefits emerge.
 
@@ -855,22 +303,19 @@ A key encapsulation mechanism (KEM) is a set of three algorithms.
 
 and a defined key space, where
 
--   KeyGen(): returns a public and a secret key \\( (pk, sk) \\).
--   Encaps\\( (pk) \\): takes pk as input and outputs ciphertext \\( c \\) and a key \\( K \\) from the key space.
--   Decaps\\( (sk, c) \\): takes \\( sk \\) and \\( c \\) as input, and returns a key \\( K \\) or ERROR. \\( K \\) is called the session key.
+-   KeyGen(): returns a public and a secret key $(pk, sk)$.
+-   Encaps$(pk)$: takes pk as input and outputs ciphertext $c$ and a key $K$ from the key space.
+-   Decaps$(sk, c)$: takes $sk$ and $c$ as input, and returns a key $K$ or ERROR. $K$ is called the session key.
 
-SIKE uses Hofheinz transformation on SIDH to achieve CCA security. Let \\( p=2^{"{"}e_{"{"}A{"}"}{"}"} 3^{"{"}e_{"{"}3{"}"}{"}"}-1 \\), and let \\( E \\) be a supersingular elliptic curve defined over a field of characteristic \\( p \\). \\( E \\) can also be defined over \\( \\mathbb{"{"}F{"}"}\_{"{"}p^{"{"}2{"}"}{"}"} \\) up to its isomorphism. An isogeny \\( \\phi : E \\rightarrow E^{"{"}\\prime{"}"} \\) is a non-constant map from \\( E \\) to \\( E^{"{"}\\prime{"}"} \\) which translates the identity into the identity. 
+SIKE uses Hofheinz transformation on SIDH to achieve CCA security. Let $p=2^{e_{A}} 3^{e_{3}}-1$, and let $E$ be a supersingular elliptic curve defined over a field of characteristic $p$. $E$ can also be defined over $\mathbb{F}\_{p^{2}}$ up to its isomorphism. An isogeny $\phi : E \rightarrow E^{\prime}$ is a non-constant map from $E$ to $E^{\prime}$ which translates the identity into the identity. 
 
-An isogeny map is defined by its degree and kernel. The degree of an isogeny is its degree as morphism. An isogeny with degree \\( \\ell \\) map is called \\( \\ell \\)-isogeny. Let \\( G \\) be a subgroup of points on \\( E \\) which contains \\( \\ell \\) + 1 cyclic subgroups of order \\( \\ell \\). This subgroup is the torsion group \\( E[\ell] \\) and each element of this group is corresponding to an isogeny of degree \\( \\ell \\); accordingly, an isogeny also can be identified by \\( G \\), i.e., the kernel of isogeny.
+An isogeny map is defined by its degree and kernel. The degree of an isogeny is its degree as morphism. An isogeny with degree $\ell$ map is called $\ell$-isogeny. Let $G$ be a subgroup of points on $E$ which contains $\ell$ + 1 cyclic subgroups of order $\ell$. This subgroup is the torsion group $E[\ell]$ and each element of this group is corresponding to an isogeny of degree $\ell$; accordingly, an isogeny also can be identified by $G$, i.e., the kernel of isogeny.
 
 This section provides a brief presentation of the SIKE protocol. We refer readers to [^eighth] and [^fifth] for more detailed explanation of the supersignular isogeny problem and the base key-exchange protocol which the SIKE is constructed upon.
 
-## [^eighth]: [Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies](https://eprint.iacr.org/2011/506.pdf)
+[^eighth]: [Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies](https://eprint.iacr.org/2011/506.pdf)
 
-:::note See an error in this documentation? 
+:::tip See an error in this documentation? 
 Submit a pull request on the development branch of [Milagro Website Repo](https://github.com/apache/incubator-milagro).
-:::
 
-
-Supported admonition types are: caution, note, important, tip, warning.
 

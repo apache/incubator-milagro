@@ -3,68 +3,33 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '258'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', 'ab4'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '76d'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'e6e'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '0c7'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '501'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '639'),
-    exact: true
-  },
-  {
     path: '/blog',
-    component: ComponentCreator('/blog', 'c97'),
+    component: ComponentCreator('/blog', 'cf6'),
     exact: true
   },
   {
     path: '/blog/2019/06/10/miss-me',
-    component: ComponentCreator('/blog/2019/06/10/miss-me', 'c3b'),
+    component: ComponentCreator('/blog/2019/06/10/miss-me', 'ed6'),
     exact: true
   },
   {
     path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', 'bb4'),
+    component: ComponentCreator('/blog/archive', '6a1'),
     exact: true
   },
   {
     path: '/help',
-    component: ComponentCreator('/help', 'bc4'),
+    component: ComponentCreator('/help', '1b7'),
     exact: true
   },
   {
     path: '/index.js-old',
-    component: ComponentCreator('/index.js-old', '7d9'),
+    component: ComponentCreator('/index.js-old', 'a2e'),
     exact: true
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '5ed'),
+    component: ComponentCreator('/docs', '36e'),
     routes: [
       {
         path: '/docs/amcl-c-api-2.0.0',
@@ -421,7 +386,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'ddd'),
+    component: ComponentCreator('/', '6ca'),
     exact: true
   },
   {

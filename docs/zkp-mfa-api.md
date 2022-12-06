@@ -5,7 +5,7 @@ sidebar_label: ZKP-MFA API
 ---
 :::tip WE NEED HELP DOCUMENTING!
 Interested in becoming a contributor? Milagro is looking for you.
-[CONTRIBUTOR'S GUIDE](/docs/contributor-guide.html).
+[CONTRIBUTOR'S GUIDE](/docs/contributor-guide).
 :::
 
 
