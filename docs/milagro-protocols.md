@@ -11,14 +11,11 @@ The genesis of the M-Pin Protocol was first put forward in a research paper by [
 
 The M-Pin Protocol has been iterated on several times over the years since, to develop three distinct modes, which will be explored in the following sections.
 
-[^first]: [M-Pin protocol](https://eprint.iacr.org/2002/164)
-
- As noted in [Milagro Crypto](milagro-crypto), the M-Pin Protocol is of these classifications and exploits the features of:
-
--   Elliptic Curve Cryptography
--   Pairing Based Cryptography
--   Identity Based Encryption
--   Zero Knowledge Proof
+[^first]: [M-Pin protocol](https://eprint.iacr.org/2002/164). As noted in [Milagro Crypto](milagro-crypto), the M-Pin Protocol is of these classifications and exploits the features of:
+	- Elliptic Curve Cryptography
+	- Pairing Based Cryptography
+	- Identity Based Encryption
+	- Zero Knowledge Proof
 
 Because of the characteristics that M-Pin inherits from the four techniques above, the M-Pin Protocol and its variants are able to deliver:
 
@@ -127,7 +124,6 @@ This all works thanks to the pairing function $e(.,.)$ and its remarkable biline
 <figure>
   <strong>Figure 1.</strong> M-Pin 1-Pass
 </figure>
----
 
 ### M-Pin 2-Pass
 
@@ -137,10 +133,10 @@ As you can see below in Fig 2., M-Pin in the two pass operation operates in a ch
 
 |              Alice - identity $ID_a$              |                   Server                   |
 | :-----------------------------------------------------: | :----------------------------------------: |
-|             Generates random $x&lt;q$             |       Generates random $y&lt;q$      |
+|             Generates random $x<q$             |       Generates random $y<q$      |
 |                    $A=H(ID_a)$                    |                                            |
 |                      $U=x{A}$                     |                                            |
-|            $ID_a$, $U\~~ \rightarrow $           |                                            |
+|            $ID_a$, $U\~~ \rightarrow$           |                                            |
 |                                                         |            $\leftarrow y$           |
 | $V=-(x+y){((s-\alpha)A+\alpha A)} \rightarrow$ |                                            |
 |                                                         |              $A=H(ID_a)$             |
@@ -150,7 +146,6 @@ As you can see below in Fig 2., M-Pin in the two pass operation operates in a ch
 <figure>
   <strong>Figure 2.</strong> M-Pin 2-Pass
 </figure>
----
 
 ### M-Pin FULL
 
