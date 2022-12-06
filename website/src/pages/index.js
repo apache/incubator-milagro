@@ -25,7 +25,7 @@ class Index extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div className="prose" style={{alignItems: 'center', justifyContent: 'center', margin: 'auto'}}>
-              <img src='img/milagro_logo.svg' alt="Apache Milagro logo" style={{ margin: 'auto',  alignItems: 'center',  display: 'flex' }} />
+              <img src='images/milagro_logo.svg' alt="Apache Milagro logo" style={{ margin: 'auto',  alignItems: 'center',  display: 'flex' }} />
               <br /><br />
               {/* <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 'auto'}}>Apache Milagro</h1> */}
               <br /><br />
