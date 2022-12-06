@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/pair",
+  "id": "cryptojs/pair",
+  "title": "PAIR",
+  "description": "PAIR",
+  "source": "@site/../docs/cryptojs/pair.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/pair",
+  "permalink": "/docs/cryptojs/pair",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "pair",
+    "title": "PAIR",
+    "sidebar_label": "PAIR"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "MPIN256",
+    "permalink": "/docs/cryptojs/mpin256"
+  },
+  "next": {
+    "title": "PAIR192",
+    "permalink": "/docs/cryptojs/pair192"
+  }
+}

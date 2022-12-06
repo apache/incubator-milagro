@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/identity-documents",
+  "id": "dta-details/identity-documents",
+  "title": "Identity Documents",
+  "description": "The first problem that a Milagro D-TA aims to solve is how entities in the system can identify and trust each other. In order to participate in the Milagro D-TA ecosystem each entity must publish a set of public keys into IPFS. The IPFS hash for an identity documents is then the ID for each entity running a D-TA.",
+  "source": "@site/../docs/dta-details/identity-documents.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/identity-documents",
+  "permalink": "/docs/dta-details/identity-documents",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "identity-documents",
+    "title": "Identity Documents",
+    "sidebar_label": "Identity Documents"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/dta-details/configuration"
+  },
+  "next": {
+    "title": "Encrypted Envelope",
+    "permalink": "/docs/dta-details/encrypted-envelope"
+  }
+}

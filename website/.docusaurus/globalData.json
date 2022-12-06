@@ -1,0 +1,320 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "milagro-intro",
+          "docs": [
+            {
+              "id": "amcl-c-api-2.0.0",
+              "path": "/docs/amcl-c-api-2.0.0",
+              "sidebar": "docs"
+            },
+            {
+              "id": "amcl-javascript-api",
+              "path": "/docs/amcl-javascript-api"
+            },
+            {
+              "id": "amcl-overview",
+              "path": "/docs/amcl-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributor-guide",
+              "path": "/docs/contributor-guide",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/aes",
+              "path": "/docs/cryptojs/aes",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/amcl-javascript-api",
+              "path": "/docs/cryptojs/amcl-javascript-api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/big",
+              "path": "/docs/cryptojs/big",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/bls",
+              "path": "/docs/cryptojs/bls",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/bls192",
+              "path": "/docs/cryptojs/bls192",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/bls256",
+              "path": "/docs/cryptojs/bls256",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/dbig",
+              "path": "/docs/cryptojs/dbig",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/ecdh",
+              "path": "/docs/cryptojs/ecdh",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/ecp",
+              "path": "/docs/cryptojs/ecp",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/ecp2",
+              "path": "/docs/cryptojs/ecp2",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/ecp4",
+              "path": "/docs/cryptojs/ecp4",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/ecp8",
+              "path": "/docs/cryptojs/ecp8",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/ff",
+              "path": "/docs/cryptojs/ff",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp",
+              "path": "/docs/cryptojs/fp",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp12",
+              "path": "/docs/cryptojs/fp12",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp16",
+              "path": "/docs/cryptojs/fp16",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp2",
+              "path": "/docs/cryptojs/fp2",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp24",
+              "path": "/docs/cryptojs/fp24",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp4",
+              "path": "/docs/cryptojs/fp4",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp48",
+              "path": "/docs/cryptojs/fp48",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/fp8",
+              "path": "/docs/cryptojs/fp8",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/gcm",
+              "path": "/docs/cryptojs/gcm",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/hash256",
+              "path": "/docs/cryptojs/hash256",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/hash384",
+              "path": "/docs/cryptojs/hash384",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/hash512",
+              "path": "/docs/cryptojs/hash512",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/mpin",
+              "path": "/docs/cryptojs/mpin",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/mpin192",
+              "path": "/docs/cryptojs/mpin192",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/mpin256",
+              "path": "/docs/cryptojs/mpin256",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/pair",
+              "path": "/docs/cryptojs/pair",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/pair192",
+              "path": "/docs/cryptojs/pair192",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/pair256",
+              "path": "/docs/cryptojs/pair256",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/rand",
+              "path": "/docs/cryptojs/rand",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/rsa",
+              "path": "/docs/cryptojs/rsa",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/sha3",
+              "path": "/docs/cryptojs/sha3",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cryptojs/unit64",
+              "path": "/docs/cryptojs/unit64",
+              "sidebar": "docs"
+            },
+            {
+              "id": "d-ta-api",
+              "path": "/docs/d-ta-api"
+            },
+            {
+              "id": "d-ta-overview",
+              "path": "/docs/d-ta-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "downloads",
+              "path": "/docs/downloads",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/api",
+              "path": "/docs/dta-details/api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/authentication",
+              "path": "/docs/dta-details/authentication",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/configuration",
+              "path": "/docs/dta-details/configuration",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/encrypted-envelope",
+              "path": "/docs/dta-details/encrypted-envelope",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/identity-documents",
+              "path": "/docs/dta-details/identity-documents",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/ipfs",
+              "path": "/docs/dta-details/ipfs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/plugin-dev-guide",
+              "path": "/docs/dta-details/plugin-dev-guide"
+            },
+            {
+              "id": "dta-details/plugins-overview",
+              "path": "/docs/dta-details/plugins-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dta-details/quickstart",
+              "path": "/docs/dta-details/quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "milagro-crypto",
+              "path": "/docs/milagro-crypto",
+              "sidebar": "docs"
+            },
+            {
+              "id": "milagro-design",
+              "path": "/docs/milagro-design",
+              "sidebar": "docs"
+            },
+            {
+              "id": "milagro-intro",
+              "path": "/docs/milagro-intro",
+              "sidebar": "docs"
+            },
+            {
+              "id": "milagro-protocols",
+              "path": "/docs/milagro-protocols",
+              "sidebar": "docs"
+            },
+            {
+              "id": "mpc-api-0.1",
+              "path": "/docs/mpc-api-0.1",
+              "sidebar": "docs"
+            },
+            {
+              "id": "support",
+              "path": "/docs/support",
+              "sidebar": "docs"
+            },
+            {
+              "id": "zkp-mfa-api",
+              "path": "/docs/zkp-mfa-api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "zkp-mfa-overview",
+              "path": "/docs/zkp-mfa-overview",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/docs/milagro-intro",
+                "label": "milagro-intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

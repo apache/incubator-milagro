@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/hash512",
+  "id": "cryptojs/hash512",
+  "title": "HASH512",
+  "description": "HASH512",
+  "source": "@site/../docs/cryptojs/hash512.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/hash512",
+  "permalink": "/docs/cryptojs/hash512",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "hash512",
+    "title": "HASH512",
+    "sidebar_label": "HASH512"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "HASH384",
+    "permalink": "/docs/cryptojs/hash384"
+  },
+  "next": {
+    "title": "MPIN",
+    "permalink": "/docs/cryptojs/mpin"
+  }
+}

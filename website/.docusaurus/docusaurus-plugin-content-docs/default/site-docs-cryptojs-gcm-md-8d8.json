@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/gcm",
+  "id": "cryptojs/gcm",
+  "title": "GCM",
+  "description": "GCM",
+  "source": "@site/../docs/cryptojs/gcm.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/gcm",
+  "permalink": "/docs/cryptojs/gcm",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "gcm",
+    "title": "GCM",
+    "sidebar_label": "GCM"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FP48",
+    "permalink": "/docs/cryptojs/fp48"
+  },
+  "next": {
+    "title": "HASH256",
+    "permalink": "/docs/cryptojs/hash256"
+  }
+}

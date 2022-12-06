@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/fp4",
+  "id": "cryptojs/fp4",
+  "title": "FP4",
+  "description": "FP4",
+  "source": "@site/../docs/cryptojs/fp4.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/fp4",
+  "permalink": "/docs/cryptojs/fp4",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "fp4",
+    "title": "FP4",
+    "sidebar_label": "FP4"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FP2",
+    "permalink": "/docs/cryptojs/fp2"
+  },
+  "next": {
+    "title": "FP8",
+    "permalink": "/docs/cryptojs/fp8"
+  }
+}

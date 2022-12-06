@@ -1,0 +1,30 @@
+{
+  "unversionedId": "milagro-protocols",
+  "id": "milagro-protocols",
+  "title": "Milagro Protocols",
+  "description": "The Apache Milagro crypto libraries contain an (almost) overwhelming choice of algorithms and cryptographic primitives for robust and rapid application development. This section focuses specifically on a few protocols that are used extensively as key building blocks within the Milagro Zero-Knowledge Proof Multi-Factor Authentication (ZKP-MFA) server and clients, and Milagro Decentralized Trust Authority (D-TA) applications. Both applications implement these protocols using the Milagro crypto libraries.",
+  "source": "@site/../docs/milagro-protocols.md",
+  "sourceDirName": ".",
+  "slug": "/milagro-protocols",
+  "permalink": "/docs/milagro-protocols",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "milagro-protocols",
+    "title": "Milagro Protocols",
+    "sidebar_label": "Milagro Protocols"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Milagro Crypto",
+    "permalink": "/docs/milagro-crypto"
+  },
+  "next": {
+    "title": "Milagro Design",
+    "permalink": "/docs/milagro-design"
+  }
+}

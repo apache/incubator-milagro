@@ -1,0 +1,30 @@
+{
+  "unversionedId": "amcl-c-api-2.0.0",
+  "id": "amcl-c-api-2.0.0",
+  "title": "AMCL C API 2.0.0",
+  "description": "Doxygen support is available for Milagro Crypto Library.",
+  "source": "@site/../docs/amcl-c-api-2.0.0.md",
+  "sourceDirName": ".",
+  "slug": "/amcl-c-api-2.0.0",
+  "permalink": "/docs/amcl-c-api-2.0.0",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "amcl-c-api-2.0.0",
+    "title": "AMCL C API 2.0.0",
+    "sidebar_label": "AMCL C API 2.0.0"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "AMCL Overview",
+    "permalink": "/docs/amcl-overview"
+  },
+  "next": {
+    "title": "AMCL JavaScript API",
+    "permalink": "/docs/cryptojs/amcl-javascript-api"
+  }
+}

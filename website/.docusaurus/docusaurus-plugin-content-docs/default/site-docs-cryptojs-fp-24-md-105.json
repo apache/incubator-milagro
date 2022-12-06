@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/fp24",
+  "id": "cryptojs/fp24",
+  "title": "FP24",
+  "description": "FP24",
+  "source": "@site/../docs/cryptojs/fp24.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/fp24",
+  "permalink": "/docs/cryptojs/fp24",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "fp24",
+    "title": "FP24",
+    "sidebar_label": "FP24"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FP16",
+    "permalink": "/docs/cryptojs/fp16"
+  },
+  "next": {
+    "title": "FP48",
+    "permalink": "/docs/cryptojs/fp48"
+  }
+}

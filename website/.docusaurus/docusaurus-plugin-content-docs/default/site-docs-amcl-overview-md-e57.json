@@ -1,0 +1,30 @@
+{
+  "unversionedId": "amcl-overview",
+  "id": "amcl-overview",
+  "title": "Apache Milagro Crypto Library (AMCL)",
+  "description": "Introduction",
+  "source": "@site/../docs/amcl-overview.md",
+  "sourceDirName": ".",
+  "slug": "/amcl-overview",
+  "permalink": "/docs/amcl-overview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "amcl-overview",
+    "title": "Apache Milagro Crypto Library (AMCL)",
+    "sidebar_label": "AMCL Overview"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Milagro Design",
+    "permalink": "/docs/milagro-design"
+  },
+  "next": {
+    "title": "AMCL C API 2.0.0",
+    "permalink": "/docs/amcl-c-api-2.0.0"
+  }
+}

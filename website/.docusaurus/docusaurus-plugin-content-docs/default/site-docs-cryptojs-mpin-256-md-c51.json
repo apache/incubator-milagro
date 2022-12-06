@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/mpin256",
+  "id": "cryptojs/mpin256",
+  "title": "MPIN256",
+  "description": "MPIN256",
+  "source": "@site/../docs/cryptojs/mpin256.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/mpin256",
+  "permalink": "/docs/cryptojs/mpin256",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "mpin256",
+    "title": "MPIN256",
+    "sidebar_label": "MPIN256"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "MPIN192",
+    "permalink": "/docs/cryptojs/mpin192"
+  },
+  "next": {
+    "title": "PAIR",
+    "permalink": "/docs/cryptojs/pair"
+  }
+}

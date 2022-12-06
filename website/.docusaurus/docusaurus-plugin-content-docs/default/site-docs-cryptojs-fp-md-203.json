@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/fp",
+  "id": "cryptojs/fp",
+  "title": "FP",
+  "description": "FP",
+  "source": "@site/../docs/cryptojs/fp.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/fp",
+  "permalink": "/docs/cryptojs/fp",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "fp",
+    "title": "FP",
+    "sidebar_label": "FP"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FF",
+    "permalink": "/docs/cryptojs/ff"
+  },
+  "next": {
+    "title": "FP2",
+    "permalink": "/docs/cryptojs/fp2"
+  }
+}

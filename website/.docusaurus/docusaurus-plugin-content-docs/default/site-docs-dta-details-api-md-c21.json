@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/api",
+  "id": "dta-details/api",
+  "title": "API",
+  "description": "Open-API specifications are provided for the core \"vanilla\" Milagro D-TA HTTP REST services and for both the shipped plugins: Bitcoin Wallet Security and Safeguard Secret.",
+  "source": "@site/../docs/dta-details/api.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/api",
+  "permalink": "/docs/dta-details/api",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "api",
+    "title": "API",
+    "sidebar_label": "API"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Quick Start",
+    "permalink": "/docs/dta-details/quickstart"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/docs/dta-details/configuration"
+  }
+}

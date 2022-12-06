@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/authentication",
+  "id": "dta-details/authentication",
+  "title": "Authentication",
+  "description": "When you first install a Milagro D-TA, the API endpoints are not authenticated by default. In other words, any simple CURL command will elicit the expected response. Milagro D-TAs support the oAuth bearer token authentication out of the box.",
+  "source": "@site/../docs/dta-details/authentication.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/authentication",
+  "permalink": "/docs/dta-details/authentication",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "authentication",
+    "title": "Authentication",
+    "sidebar_label": "Authentication"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Plugins Overview",
+    "permalink": "/docs/dta-details/plugins-overview"
+  },
+  "next": {
+    "title": "Multi-Party Computation Library 0.1",
+    "permalink": "/docs/mpc-api-0.1"
+  }
+}

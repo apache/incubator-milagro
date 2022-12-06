@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/aes",
+  "id": "cryptojs/aes",
+  "title": "AES",
+  "description": "AES",
+  "source": "@site/../docs/cryptojs/aes.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/aes",
+  "permalink": "/docs/cryptojs/aes",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "aes",
+    "title": "AES",
+    "sidebar_label": "AES"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "AMCL JavaScript API",
+    "permalink": "/docs/cryptojs/amcl-javascript-api"
+  },
+  "next": {
+    "title": "BIG",
+    "permalink": "/docs/cryptojs/big"
+  }
+}

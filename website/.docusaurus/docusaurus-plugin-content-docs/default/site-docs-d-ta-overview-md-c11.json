@@ -1,0 +1,30 @@
+{
+  "unversionedId": "d-ta-overview",
+  "id": "d-ta-overview",
+  "title": "Decentralized Trust Authority Overview",
+  "description": "VERSION: ALPHA RELEASE 0.1.0",
+  "source": "@site/../docs/d-ta-overview.md",
+  "sourceDirName": ".",
+  "slug": "/d-ta-overview",
+  "permalink": "/docs/d-ta-overview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "d-ta-overview",
+    "title": "Decentralized Trust Authority Overview",
+    "sidebar_label": "D-TA Overview"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "UInt64",
+    "permalink": "/docs/cryptojs/unit64"
+  },
+  "next": {
+    "title": "Quick Start",
+    "permalink": "/docs/dta-details/quickstart"
+  }
+}
