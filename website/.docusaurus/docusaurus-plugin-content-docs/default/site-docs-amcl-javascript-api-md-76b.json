@@ -1,0 +1,21 @@
+{
+  "unversionedId": "amcl-javascript-api",
+  "id": "amcl-javascript-api",
+  "title": "AMCL JavaScript API",
+  "description": "MCJS - Milagro Crypto JavaScript",
+  "source": "@site/../docs/amcl-javascript-api.md",
+  "sourceDirName": ".",
+  "slug": "/amcl-javascript-api",
+  "permalink": "/docs/amcl-javascript-api",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "amcl-javascript-api",
+    "title": "AMCL JavaScript API",
+    "sidebar_label": "AMCL JavaScript API"
+  }
+}

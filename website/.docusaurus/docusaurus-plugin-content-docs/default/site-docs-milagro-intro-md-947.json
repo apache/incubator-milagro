@@ -1,0 +1,26 @@
+{
+  "unversionedId": "milagro-intro",
+  "id": "milagro-intro",
+  "title": "Milagro Introduction",
+  "description": "Apache Milagro is a set of core security infrastructure and crypto libraries purpose-built for decentralized networks and distributed systems, while also providing value to cloud-connected app-centric software and IoT devices that require Internet scale.",
+  "source": "@site/../docs/milagro-intro.md",
+  "sourceDirName": ".",
+  "slug": "/milagro-intro",
+  "permalink": "/docs/milagro-intro",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "milagro-intro",
+    "title": "Milagro Introduction",
+    "sidebar_label": "Milagro Introduction"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Milagro Crypto",
+    "permalink": "/docs/milagro-crypto"
+  }
+}

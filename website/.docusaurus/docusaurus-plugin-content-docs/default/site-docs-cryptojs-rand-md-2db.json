@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/rand",
+  "id": "cryptojs/rand",
+  "title": "RAND",
+  "description": "RAND",
+  "source": "@site/../docs/cryptojs/rand.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/rand",
+  "permalink": "/docs/cryptojs/rand",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "rand",
+    "title": "RAND",
+    "sidebar_label": "RAND"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "PAIR256",
+    "permalink": "/docs/cryptojs/pair256"
+  },
+  "next": {
+    "title": "RSA",
+    "permalink": "/docs/cryptojs/rsa"
+  }
+}

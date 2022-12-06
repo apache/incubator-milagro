@@ -1,0 +1,30 @@
+{
+  "unversionedId": "milagro-design",
+  "id": "milagro-design",
+  "title": "Milagro Design",
+  "description": "Protocols and Technology",
+  "source": "@site/../docs/milagro-design.md",
+  "sourceDirName": ".",
+  "slug": "/milagro-design",
+  "permalink": "/docs/milagro-design",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "milagro-design",
+    "title": "Milagro Design",
+    "sidebar_label": "Milagro Design"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Milagro Protocols",
+    "permalink": "/docs/milagro-protocols"
+  },
+  "next": {
+    "title": "AMCL Overview",
+    "permalink": "/docs/amcl-overview"
+  }
+}

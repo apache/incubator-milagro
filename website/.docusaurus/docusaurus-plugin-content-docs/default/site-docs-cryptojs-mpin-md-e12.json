@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/mpin",
+  "id": "cryptojs/mpin",
+  "title": "MPIN",
+  "description": "MPIN",
+  "source": "@site/../docs/cryptojs/mpin.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/mpin",
+  "permalink": "/docs/cryptojs/mpin",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "mpin",
+    "title": "MPIN",
+    "sidebar_label": "MPIN"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "HASH512",
+    "permalink": "/docs/cryptojs/hash512"
+  },
+  "next": {
+    "title": "MPIN192",
+    "permalink": "/docs/cryptojs/mpin192"
+  }
+}

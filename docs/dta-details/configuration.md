@@ -9,13 +9,16 @@ The Milagro D-TA can be configured either by editing its configuration file or u
 :::
 
 ## Configuration File
+
 The config file is located in `~/.milagro/config.yaml`
 
 :::important this configuration method is not yet supported when running in Docker.  Please use the command line flags described below.
 :::
 
 The default values are shown below with some explanatory comments:
+
 ```json
+
 // http ports
 http:
   listenAddr: :5556
@@ -68,12 +71,15 @@ log:
 // Define the plugin to be used.  Default is "milagro".  Currently available alternative plugins are "bitcoinwallet" and "safeguardsecret"
 plugins:
   service: milagro
+
 ```
+
 ## Command Line Flags
 
 To view available service commands:
 
 ```json
+
  ./milagro
 Milagro DTA
 USAGE
@@ -82,6 +88,7 @@ USAGE
 COMMANDS
 	init	Initialize configuration
 	daemon	Starts the milagro daemon
+
 ```
 
 To view the available initialization option flags, use the `-help` flag:
@@ -89,6 +96,7 @@ To view the available initialization option flags, use the `-help` flag:
 ### INIT
 
 ```json
+
 ./milagro init -help
 Usage of init:
   -interactive
@@ -99,32 +107,36 @@ Usage of init:
     	Node name
   -service string
     	Service plugin (default "milagro")
-```  
 
-* **masterfiduciarynode** - if you want to use an external master fiduciary, use this flag to set its identity (nodeID) and endpoint separated with a comma. For example:
-```json
-QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK,http://123.456.789.1:5556
 ```
+
+-   **masterfiduciarynode** - if you want to use an external master fiduciary, use this flag to set its identity (nodeID) and endpoint separated with a comma. For example:
+
+```json
+
+QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK,http://123.456.789.1:5556
+
+```
+
 :::note By default a D-TA will be both a principal and master fiduciary. 
 :::  
-* **nodename** - set your DT-A node name (nodeName) here.  By default, a random name with be generated if none is specified.   
-* **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".
-* **interactive** - use this flag to prompt for values for the other flags.  For example, to set the name (nodeName) of this DT-A to "alice", the identity (nodeID) of the external fiduciary to "QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK", the endpoint of the master fiduciary to "http://123.456.789.1:5556" and to use the "bitcoinwallet" plugin: 
- 
+
+-   **nodename** - set your DT-A node name (nodeName) here.  By default, a random name with be generated if none is specified.   
+-   **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".
+-   **interactive** - use this flag to prompt for values for the other flags.  For example, to set the name (nodeName) of this DT-A to "alice", the identity (nodeID) of the external fiduciary to "QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK", the endpoint of the master fiduciary to "http: and to use the "bitcoinwallet" plugin: 
+
 ```json
-./milagro init -interactive
-What is your node name?. Leave blank to generate a random name: alice 
-What is your Master Fiduciary DTA’s node name? Leave blank to use this DTA as the Master Fiduciary: QmR7JfvEwTbSkBZuRLdDcRTpZik2ZAuHnn9BA7giX7oJNK   
-What is your Master Fiduciary DTA’s address?: http://123.456.789.1:5556   
-What plugin do you want to install? (B)itcoin wallet address generator or (S)afeguard secret. Leave blank for no plugin: B
+
+
+
 ```
 
 ### DAEMON
-```json
-./milagro daemon -help
-Usage of daemon:
-  -service string
-    	Service plugin (default "bitcoinwallet")
-```
-* **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".
 
+```json
+
+
+
+```
+
+-   **service** - use this flag to set which plugin to use.  Default is "milagro".  Currently available plugins are "bitcoinwallet" and "safeguardsecret".

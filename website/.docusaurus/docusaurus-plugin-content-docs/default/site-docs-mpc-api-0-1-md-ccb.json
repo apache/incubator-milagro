@@ -1,0 +1,30 @@
+{
+  "unversionedId": "mpc-api-0.1",
+  "id": "mpc-api-0.1",
+  "title": "Multi-Party Computation (MPC) Library 0.1 (libmpc)",
+  "description": "Apache Milagro's Multi-Party Computation library (libmpc) is the latest addition to the project (as of June 2022), and uses the Apache Milagro C Library to implement Multi-Party Computation. It offers and API to allow for customs computations to be perfomed.",
+  "source": "@site/../docs/mpc-api-0.1.md",
+  "sourceDirName": ".",
+  "slug": "/mpc-api-0.1",
+  "permalink": "/docs/mpc-api-0.1",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "mpc-api-0.1",
+    "title": "Multi-Party Computation (MPC) Library 0.1 (libmpc)",
+    "sidebar_label": "Multi-Party Computation Library 0.1"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/docs/dta-details/authentication"
+  },
+  "next": {
+    "title": "ZKP-MFA Overview",
+    "permalink": "/docs/zkp-mfa-overview"
+  }
+}

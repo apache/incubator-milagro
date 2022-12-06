@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/fp16",
+  "id": "cryptojs/fp16",
+  "title": "FP16",
+  "description": "FP16",
+  "source": "@site/../docs/cryptojs/fp16.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/fp16",
+  "permalink": "/docs/cryptojs/fp16",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "fp16",
+    "title": "FP16",
+    "sidebar_label": "FP16"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FP12",
+    "permalink": "/docs/cryptojs/fp12"
+  },
+  "next": {
+    "title": "FP24",
+    "permalink": "/docs/cryptojs/fp24"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/big",
+  "id": "cryptojs/big",
+  "title": "BIG",
+  "description": "BIG",
+  "source": "@site/../docs/cryptojs/big.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/big",
+  "permalink": "/docs/cryptojs/big",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "big",
+    "title": "BIG",
+    "sidebar_label": "BIG"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "AES",
+    "permalink": "/docs/cryptojs/aes"
+  },
+  "next": {
+    "title": "BLS",
+    "permalink": "/docs/cryptojs/bls"
+  }
+}

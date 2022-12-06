@@ -1,0 +1,21 @@
+{
+  "unversionedId": "dta-details/plugin-dev-guide",
+  "id": "dta-details/plugin-dev-guide",
+  "title": "D-TA Plugins Developers Guide",
+  "description": "We have provided a template plugin that provides the same functionality as out-of-the-box milagro.",
+  "source": "@site/../docs/dta-details/plugin-dev-guide.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/plugin-dev-guide",
+  "permalink": "/docs/dta-details/plugin-dev-guide",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "plugin-dev-guide",
+    "title": "D-TA Plugins Developers Guide",
+    "sidebar_label": "Developers Guide"
+  }
+}

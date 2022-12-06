@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/configuration",
+  "id": "dta-details/configuration",
+  "title": "Configuration",
+  "description": "The Milagro D-TA can be configured either by editing its configuration file or using command line flags.",
+  "source": "@site/../docs/dta-details/configuration.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/configuration",
+  "permalink": "/docs/dta-details/configuration",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Configuration",
+    "sidebar_label": "Configuration"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "API",
+    "permalink": "/docs/dta-details/api"
+  },
+  "next": {
+    "title": "Identity Documents",
+    "permalink": "/docs/dta-details/identity-documents"
+  }
+}

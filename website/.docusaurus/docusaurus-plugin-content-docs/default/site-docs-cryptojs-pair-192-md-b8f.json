@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/pair192",
+  "id": "cryptojs/pair192",
+  "title": "PAIR192",
+  "description": "PAIR192",
+  "source": "@site/../docs/cryptojs/pair192.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/pair192",
+  "permalink": "/docs/cryptojs/pair192",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "pair192",
+    "title": "PAIR192",
+    "sidebar_label": "PAIR192"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "PAIR",
+    "permalink": "/docs/cryptojs/pair"
+  },
+  "next": {
+    "title": "PAIR256",
+    "permalink": "/docs/cryptojs/pair256"
+  }
+}

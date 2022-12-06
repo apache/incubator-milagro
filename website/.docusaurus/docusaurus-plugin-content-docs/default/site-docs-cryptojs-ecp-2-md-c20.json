@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/ecp2",
+  "id": "cryptojs/ecp2",
+  "title": "ECP2",
+  "description": "ECP2",
+  "source": "@site/../docs/cryptojs/ecp2.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/ecp2",
+  "permalink": "/docs/cryptojs/ecp2",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "ecp2",
+    "title": "ECP2",
+    "sidebar_label": "ECP2"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ECP",
+    "permalink": "/docs/cryptojs/ecp"
+  },
+  "next": {
+    "title": "ECP4",
+    "permalink": "/docs/cryptojs/ecp4"
+  }
+}

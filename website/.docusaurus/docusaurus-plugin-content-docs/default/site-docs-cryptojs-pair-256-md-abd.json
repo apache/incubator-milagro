@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/pair256",
+  "id": "cryptojs/pair256",
+  "title": "PAIR256",
+  "description": "PAIR256",
+  "source": "@site/../docs/cryptojs/pair256.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/pair256",
+  "permalink": "/docs/cryptojs/pair256",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "pair256",
+    "title": "PAIR256",
+    "sidebar_label": "PAIR256"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "PAIR192",
+    "permalink": "/docs/cryptojs/pair192"
+  },
+  "next": {
+    "title": "RAND",
+    "permalink": "/docs/cryptojs/rand"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "downloads",
+  "id": "downloads",
+  "title": "Downloads",
+  "description": "This page will be updated with all official Apache Software Foundation releases from the Apache Milagro (incubating) project.",
+  "source": "@site/../docs/downloads.md",
+  "sourceDirName": ".",
+  "slug": "/downloads",
+  "permalink": "/docs/downloads",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "downloads",
+    "title": "Downloads",
+    "sidebar_label": "Downloads"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Contributor's Guide",
+    "permalink": "/docs/contributor-guide"
+  },
+  "next": {
+    "title": "Support",
+    "permalink": "/docs/support"
+  }
+}

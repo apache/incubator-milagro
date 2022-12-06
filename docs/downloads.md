@@ -3,7 +3,6 @@ id: downloads
 title: Downloads
 sidebar_label: Downloads
 ---
-
 # Project Downloads
 
 This page will be updated with all official Apache Software Foundation releases from the Apache Milagro (incubating) project.
@@ -20,8 +19,8 @@ This is the initial release of the Apache Milagro Crypto C library.
 
 ### Source Release
 
-|[tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-crypto-c-2.0.1-incubating/apache-milagro-crypto-c-2.0.1-incubating-src.tar.gz)|[sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-2.0.1-incubating/apache-milagro-crypto-c-2.0.1-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-2.0.1-incubating/apache-milagro-crypto-c-2.0.1-incubating-src.tar.gz.asc)|
-| ----- | ----- | ----- |
+| [tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-crypto-c-2.0.1-incubating/apache-milagro-crypto-c-2.0.1-incubating-src.tar.gz) | [sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-2.0.1-incubating/apache-milagro-crypto-c-2.0.1-incubating-src.tar.gz.sha512) | [signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-2.0.1-incubating/apache-milagro-crypto-c-2.0.1-incubating-src.tar.gz.asc) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Release Notes
 
@@ -37,8 +36,8 @@ This is the initial release of the Apache Milagro libmpc (Multi-Party Computatio
 
 ### Source Release
 
-|[tar.gz](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz)|[sha512](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz.asc)|
-| ----- | ----- | ----- |
+| [tar.gz](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz) | [sha512](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz.sha512) | [signature](https://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-mpc-0.1-incubating/apache-milagro-mpc-0.1-incubating-src.tar.gz.asc) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Release Notes
 
@@ -48,15 +47,14 @@ The latest release notes can be found [here](https://github.com/apache/incubator
 
 none
 
-
 ## Apache Milagro Decentralized Trust Authority Incubating v0.1.0 (Alpha Release)
 
 This is the initial release of the Apache Milagro Decentralized Trust Authority server.
 
 ### Source Release
 
-|[tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz)|[sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz.asc)|
-| ----- | ----- | ----- |
+| [tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz) | [sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz.sha512) | [signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-dta-0.1.0-incubating/apache-milagro-dta-0.1.0-incubating-src.tar.gz.asc) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Release Notes
 
@@ -72,8 +70,8 @@ This is the initial release of the Apache Milagro Crypto C library.
 
 ### Source Release
 
-|[tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-crypto-c-1.0.0-incubating/apache-milagro-crypto-c-1.0.0-incubating-src.tar.gz)|[sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-1.0.0-incubating/apache-milagro-crypto-c-1.0.0-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-1.0.0-incubating/apache-milagro-crypto-c-1.0.0-incubating-src.tar.gz.asc)|
-| ----- | ----- | ----- |
+| [tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-crypto-c-1.0.0-incubating/apache-milagro-crypto-c-1.0.0-incubating-src.tar.gz) | [sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-1.0.0-incubating/apache-milagro-crypto-c-1.0.0-incubating-src.tar.gz.sha512) | [signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-c-1.0.0-incubating/apache-milagro-crypto-c-1.0.0-incubating-src.tar.gz.asc) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Release Notes
 
@@ -83,15 +81,14 @@ The latest release notes can be found [here](https://github.com/apache/incubator
 
 None
 
-
 ## Apache Milagro Crypto JS Incubating v1.0.0
 
 This is the initial release of the Apache Milagro Crypto JS library.
 
 ### Source Release
 
-|[tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-crypto-js-1.0.0-incubating/apache-milagro-crypto-js-1.0.0-incubating-src.tar.gz)|[sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-js-1.0.0-incubating/apache-milagro-crypto-js-1.0.0-incubating-src.tar.gz.sha512)|[signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-js-1.0.0-incubating/apache-milagro-crypto-js-1.0.0-incubating-src.tar.gz.asc)|
-| ----- | ----- | ----- |
+| [tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/milagro/apache-milagro-crypto-js-1.0.0-incubating/apache-milagro-crypto-js-1.0.0-incubating-src.tar.gz) | [sha512](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-js-1.0.0-incubating/apache-milagro-crypto-js-1.0.0-incubating-src.tar.gz.sha512) | [signature](https://www.apache.org/dist/incubator/milagro/apache-milagro-crypto-js-1.0.0-incubating/apache-milagro-crypto-js-1.0.0-incubating-src.tar.gz.asc) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### Release Notes
 
@@ -101,6 +98,6 @@ The latest release notes can be found [here](https://github.com/apache/incubator
 
 None
 
-<!--
+
 Supported admonition types are: caution, note, important, tip, warning.
--->
+

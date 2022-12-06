@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/unit64",
+  "id": "cryptojs/unit64",
+  "title": "UInt64",
+  "description": "UInt64",
+  "source": "@site/../docs/cryptojs/uint64.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/unit64",
+  "permalink": "/docs/cryptojs/unit64",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "unit64",
+    "title": "UInt64",
+    "sidebar_label": "UInt64"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "SHA3",
+    "permalink": "/docs/cryptojs/sha3"
+  },
+  "next": {
+    "title": "D-TA Overview",
+    "permalink": "/docs/d-ta-overview"
+  }
+}

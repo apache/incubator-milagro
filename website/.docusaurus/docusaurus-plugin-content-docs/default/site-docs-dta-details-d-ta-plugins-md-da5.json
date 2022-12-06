@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/plugins-overview",
+  "id": "dta-details/plugins-overview",
+  "title": "D-TA Plugins Overview",
+  "description": "The out-of-the-box Milagro D-TA doesn't do much: a Principal's D-TA gets a public key from a Fiduciary's D-TA, and at a later date, can request the corresponding secret key. It is simple conceptually, but the core operation does this in a hard-to-hack, and fully auditable way.",
+  "source": "@site/../docs/dta-details/d-ta-plugins.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/plugins-overview",
+  "permalink": "/docs/dta-details/plugins-overview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "plugins-overview",
+    "title": "D-TA Plugins Overview",
+    "sidebar_label": "Plugins Overview"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "IPFS",
+    "permalink": "/docs/dta-details/ipfs"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/docs/dta-details/authentication"
+  }
+}

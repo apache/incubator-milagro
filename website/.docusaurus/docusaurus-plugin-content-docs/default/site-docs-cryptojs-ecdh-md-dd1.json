@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/ecdh",
+  "id": "cryptojs/ecdh",
+  "title": "ECDH",
+  "description": "ECDH",
+  "source": "@site/../docs/cryptojs/ecdh.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/ecdh",
+  "permalink": "/docs/cryptojs/ecdh",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "ecdh",
+    "title": "ECDH",
+    "sidebar_label": "ECDH"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "DBIG",
+    "permalink": "/docs/cryptojs/dbig"
+  },
+  "next": {
+    "title": "ECP",
+    "permalink": "/docs/cryptojs/ecp"
+  }
+}

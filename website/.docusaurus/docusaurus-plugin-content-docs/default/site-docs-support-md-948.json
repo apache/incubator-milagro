@@ -1,0 +1,26 @@
+{
+  "unversionedId": "support",
+  "id": "support",
+  "title": "Support",
+  "description": "Issues",
+  "source": "@site/../docs/support.md",
+  "sourceDirName": ".",
+  "slug": "/support",
+  "permalink": "/docs/support",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "support",
+    "title": "Support",
+    "sidebar_label": "Support"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Downloads",
+    "permalink": "/docs/downloads"
+  }
+}

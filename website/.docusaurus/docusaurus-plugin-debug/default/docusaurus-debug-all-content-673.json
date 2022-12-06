@@ -1,0 +1,2119 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/app/website/sidebars.json",
+          "contentPath": "/app/docs",
+          "contentPathLocalized": "/app/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "amcl-c-api-2.0.0",
+              "id": "amcl-c-api-2.0.0",
+              "title": "AMCL C API 2.0.0",
+              "description": "Doxygen support is available for Milagro Crypto Library.",
+              "source": "@site/../docs/amcl-c-api-2.0.0.md",
+              "sourceDirName": ".",
+              "slug": "/amcl-c-api-2.0.0",
+              "permalink": "/docs/amcl-c-api-2.0.0",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "amcl-c-api-2.0.0",
+                "title": "AMCL C API 2.0.0",
+                "sidebar_label": "AMCL C API 2.0.0"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "AMCL Overview",
+                "permalink": "/docs/amcl-overview"
+              },
+              "next": {
+                "title": "AMCL JavaScript API",
+                "permalink": "/docs/cryptojs/amcl-javascript-api"
+              }
+            },
+            {
+              "unversionedId": "amcl-javascript-api",
+              "id": "amcl-javascript-api",
+              "title": "AMCL JavaScript API",
+              "description": "MCJS - Milagro Crypto JavaScript",
+              "source": "@site/../docs/amcl-javascript-api.md",
+              "sourceDirName": ".",
+              "slug": "/amcl-javascript-api",
+              "permalink": "/docs/amcl-javascript-api",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "amcl-javascript-api",
+                "title": "AMCL JavaScript API",
+                "sidebar_label": "AMCL JavaScript API"
+              }
+            },
+            {
+              "unversionedId": "amcl-overview",
+              "id": "amcl-overview",
+              "title": "Apache Milagro Crypto Library (AMCL)",
+              "description": "Introduction",
+              "source": "@site/../docs/amcl-overview.md",
+              "sourceDirName": ".",
+              "slug": "/amcl-overview",
+              "permalink": "/docs/amcl-overview",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "amcl-overview",
+                "title": "Apache Milagro Crypto Library (AMCL)",
+                "sidebar_label": "AMCL Overview"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Milagro Design",
+                "permalink": "/docs/milagro-design"
+              },
+              "next": {
+                "title": "AMCL C API 2.0.0",
+                "permalink": "/docs/amcl-c-api-2.0.0"
+              }
+            },
+            {
+              "unversionedId": "contributor-guide",
+              "id": "contributor-guide",
+              "title": "Contributor's Guide",
+              "description": "Apache Milagro Mailing List",
+              "source": "@site/../docs/contributor-guide.md",
+              "sourceDirName": ".",
+              "slug": "/contributor-guide",
+              "permalink": "/docs/contributor-guide",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "contributor-guide",
+                "title": "Contributor's Guide",
+                "sidebar_label": "Contributor's Guide"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ZKP-MFA API",
+                "permalink": "/docs/zkp-mfa-api"
+              },
+              "next": {
+                "title": "Downloads",
+                "permalink": "/docs/downloads"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/aes",
+              "id": "cryptojs/aes",
+              "title": "AES",
+              "description": "AES",
+              "source": "@site/../docs/cryptojs/aes.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/aes",
+              "permalink": "/docs/cryptojs/aes",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "aes",
+                "title": "AES",
+                "sidebar_label": "AES"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "AMCL JavaScript API",
+                "permalink": "/docs/cryptojs/amcl-javascript-api"
+              },
+              "next": {
+                "title": "BIG",
+                "permalink": "/docs/cryptojs/big"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/amcl-javascript-api",
+              "id": "cryptojs/amcl-javascript-api",
+              "title": "AMCL JavaScript API",
+              "description": "MCJS - Milagro Crypto JavaScript",
+              "source": "@site/../docs/cryptojs/amcl-javascript-api.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/amcl-javascript-api",
+              "permalink": "/docs/cryptojs/amcl-javascript-api",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "amcl-javascript-api",
+                "title": "AMCL JavaScript API",
+                "sidebar_label": "AMCL JavaScript API"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "AMCL C API 2.0.0",
+                "permalink": "/docs/amcl-c-api-2.0.0"
+              },
+              "next": {
+                "title": "AES",
+                "permalink": "/docs/cryptojs/aes"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/big",
+              "id": "cryptojs/big",
+              "title": "BIG",
+              "description": "BIG",
+              "source": "@site/../docs/cryptojs/big.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/big",
+              "permalink": "/docs/cryptojs/big",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "big",
+                "title": "BIG",
+                "sidebar_label": "BIG"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "AES",
+                "permalink": "/docs/cryptojs/aes"
+              },
+              "next": {
+                "title": "BLS",
+                "permalink": "/docs/cryptojs/bls"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/bls",
+              "id": "cryptojs/bls",
+              "title": "BLS",
+              "description": "BLS",
+              "source": "@site/../docs/cryptojs/bls.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/bls",
+              "permalink": "/docs/cryptojs/bls",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "bls",
+                "title": "BLS",
+                "sidebar_label": "BLS"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "BIG",
+                "permalink": "/docs/cryptojs/big"
+              },
+              "next": {
+                "title": "BLS192",
+                "permalink": "/docs/cryptojs/bls192"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/bls192",
+              "id": "cryptojs/bls192",
+              "title": "BLS192",
+              "description": "BLS192",
+              "source": "@site/../docs/cryptojs/bls192.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/bls192",
+              "permalink": "/docs/cryptojs/bls192",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "bls192",
+                "title": "BLS192",
+                "sidebar_label": "BLS192"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "BLS",
+                "permalink": "/docs/cryptojs/bls"
+              },
+              "next": {
+                "title": "BLS256",
+                "permalink": "/docs/cryptojs/bls256"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/bls256",
+              "id": "cryptojs/bls256",
+              "title": "BLS256",
+              "description": "BLS256",
+              "source": "@site/../docs/cryptojs/bls256.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/bls256",
+              "permalink": "/docs/cryptojs/bls256",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "bls256",
+                "title": "BLS256",
+                "sidebar_label": "BLS256"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "BLS192",
+                "permalink": "/docs/cryptojs/bls192"
+              },
+              "next": {
+                "title": "DBIG",
+                "permalink": "/docs/cryptojs/dbig"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/dbig",
+              "id": "cryptojs/dbig",
+              "title": "DBIG",
+              "description": "DBIG",
+              "source": "@site/../docs/cryptojs/dbig.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/dbig",
+              "permalink": "/docs/cryptojs/dbig",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "dbig",
+                "title": "DBIG",
+                "sidebar_label": "DBIG"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "BLS256",
+                "permalink": "/docs/cryptojs/bls256"
+              },
+              "next": {
+                "title": "ECDH",
+                "permalink": "/docs/cryptojs/ecdh"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/ecdh",
+              "id": "cryptojs/ecdh",
+              "title": "ECDH",
+              "description": "ECDH",
+              "source": "@site/../docs/cryptojs/ecdh.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/ecdh",
+              "permalink": "/docs/cryptojs/ecdh",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ecdh",
+                "title": "ECDH",
+                "sidebar_label": "ECDH"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "DBIG",
+                "permalink": "/docs/cryptojs/dbig"
+              },
+              "next": {
+                "title": "ECP",
+                "permalink": "/docs/cryptojs/ecp"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/ecp",
+              "id": "cryptojs/ecp",
+              "title": "ECP",
+              "description": "ECP",
+              "source": "@site/../docs/cryptojs/ecp.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/ecp",
+              "permalink": "/docs/cryptojs/ecp",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ecp",
+                "title": "ECP",
+                "sidebar_label": "ECP"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ECDH",
+                "permalink": "/docs/cryptojs/ecdh"
+              },
+              "next": {
+                "title": "ECP2",
+                "permalink": "/docs/cryptojs/ecp2"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/ecp2",
+              "id": "cryptojs/ecp2",
+              "title": "ECP2",
+              "description": "ECP2",
+              "source": "@site/../docs/cryptojs/ecp2.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/ecp2",
+              "permalink": "/docs/cryptojs/ecp2",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ecp2",
+                "title": "ECP2",
+                "sidebar_label": "ECP2"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ECP",
+                "permalink": "/docs/cryptojs/ecp"
+              },
+              "next": {
+                "title": "ECP4",
+                "permalink": "/docs/cryptojs/ecp4"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/ecp4",
+              "id": "cryptojs/ecp4",
+              "title": "ECP4",
+              "description": "ECP4",
+              "source": "@site/../docs/cryptojs/ecp4.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/ecp4",
+              "permalink": "/docs/cryptojs/ecp4",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ecp4",
+                "title": "ECP4",
+                "sidebar_label": "ECP4"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ECP2",
+                "permalink": "/docs/cryptojs/ecp2"
+              },
+              "next": {
+                "title": "ECP8",
+                "permalink": "/docs/cryptojs/ecp8"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/ecp8",
+              "id": "cryptojs/ecp8",
+              "title": "ECP8",
+              "description": "ECP8",
+              "source": "@site/../docs/cryptojs/ecp8.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/ecp8",
+              "permalink": "/docs/cryptojs/ecp8",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ecp8",
+                "title": "ECP8",
+                "sidebar_label": "ECP8"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ECP4",
+                "permalink": "/docs/cryptojs/ecp4"
+              },
+              "next": {
+                "title": "FF",
+                "permalink": "/docs/cryptojs/ff"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/ff",
+              "id": "cryptojs/ff",
+              "title": "FF",
+              "description": "FF",
+              "source": "@site/../docs/cryptojs/ff.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/ff",
+              "permalink": "/docs/cryptojs/ff",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ff",
+                "title": "FF",
+                "sidebar_label": "FF"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ECP8",
+                "permalink": "/docs/cryptojs/ecp8"
+              },
+              "next": {
+                "title": "FP",
+                "permalink": "/docs/cryptojs/fp"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp",
+              "id": "cryptojs/fp",
+              "title": "FP",
+              "description": "FP",
+              "source": "@site/../docs/cryptojs/fp.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp",
+              "permalink": "/docs/cryptojs/fp",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp",
+                "title": "FP",
+                "sidebar_label": "FP"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FF",
+                "permalink": "/docs/cryptojs/ff"
+              },
+              "next": {
+                "title": "FP2",
+                "permalink": "/docs/cryptojs/fp2"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp12",
+              "id": "cryptojs/fp12",
+              "title": "FP12",
+              "description": "FP12",
+              "source": "@site/../docs/cryptojs/fp12.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp12",
+              "permalink": "/docs/cryptojs/fp12",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp12",
+                "title": "FP12",
+                "sidebar_label": "FP12"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP8",
+                "permalink": "/docs/cryptojs/fp8"
+              },
+              "next": {
+                "title": "FP16",
+                "permalink": "/docs/cryptojs/fp16"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp16",
+              "id": "cryptojs/fp16",
+              "title": "FP16",
+              "description": "FP16",
+              "source": "@site/../docs/cryptojs/fp16.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp16",
+              "permalink": "/docs/cryptojs/fp16",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp16",
+                "title": "FP16",
+                "sidebar_label": "FP16"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP12",
+                "permalink": "/docs/cryptojs/fp12"
+              },
+              "next": {
+                "title": "FP24",
+                "permalink": "/docs/cryptojs/fp24"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp2",
+              "id": "cryptojs/fp2",
+              "title": "FP2",
+              "description": "FP2",
+              "source": "@site/../docs/cryptojs/fp2.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp2",
+              "permalink": "/docs/cryptojs/fp2",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp2",
+                "title": "FP2",
+                "sidebar_label": "FP2"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP",
+                "permalink": "/docs/cryptojs/fp"
+              },
+              "next": {
+                "title": "FP4",
+                "permalink": "/docs/cryptojs/fp4"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp24",
+              "id": "cryptojs/fp24",
+              "title": "FP24",
+              "description": "FP24",
+              "source": "@site/../docs/cryptojs/fp24.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp24",
+              "permalink": "/docs/cryptojs/fp24",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp24",
+                "title": "FP24",
+                "sidebar_label": "FP24"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP16",
+                "permalink": "/docs/cryptojs/fp16"
+              },
+              "next": {
+                "title": "FP48",
+                "permalink": "/docs/cryptojs/fp48"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp4",
+              "id": "cryptojs/fp4",
+              "title": "FP4",
+              "description": "FP4",
+              "source": "@site/../docs/cryptojs/fp4.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp4",
+              "permalink": "/docs/cryptojs/fp4",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp4",
+                "title": "FP4",
+                "sidebar_label": "FP4"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP2",
+                "permalink": "/docs/cryptojs/fp2"
+              },
+              "next": {
+                "title": "FP8",
+                "permalink": "/docs/cryptojs/fp8"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp48",
+              "id": "cryptojs/fp48",
+              "title": "FP48",
+              "description": "FP48",
+              "source": "@site/../docs/cryptojs/fp48.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp48",
+              "permalink": "/docs/cryptojs/fp48",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp48",
+                "title": "FP48",
+                "sidebar_label": "FP48"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP24",
+                "permalink": "/docs/cryptojs/fp24"
+              },
+              "next": {
+                "title": "GCM",
+                "permalink": "/docs/cryptojs/gcm"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/fp8",
+              "id": "cryptojs/fp8",
+              "title": "FP8",
+              "description": "FP8",
+              "source": "@site/../docs/cryptojs/fp8.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/fp8",
+              "permalink": "/docs/cryptojs/fp8",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "fp8",
+                "title": "FP8",
+                "sidebar_label": "FP8"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP4",
+                "permalink": "/docs/cryptojs/fp4"
+              },
+              "next": {
+                "title": "FP12",
+                "permalink": "/docs/cryptojs/fp12"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/gcm",
+              "id": "cryptojs/gcm",
+              "title": "GCM",
+              "description": "GCM",
+              "source": "@site/../docs/cryptojs/gcm.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/gcm",
+              "permalink": "/docs/cryptojs/gcm",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "gcm",
+                "title": "GCM",
+                "sidebar_label": "GCM"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "FP48",
+                "permalink": "/docs/cryptojs/fp48"
+              },
+              "next": {
+                "title": "HASH256",
+                "permalink": "/docs/cryptojs/hash256"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/hash256",
+              "id": "cryptojs/hash256",
+              "title": "HASH256",
+              "description": "HASH256",
+              "source": "@site/../docs/cryptojs/hash256.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/hash256",
+              "permalink": "/docs/cryptojs/hash256",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "hash256",
+                "title": "HASH256",
+                "sidebar_label": "HASH256"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "GCM",
+                "permalink": "/docs/cryptojs/gcm"
+              },
+              "next": {
+                "title": "HASH384",
+                "permalink": "/docs/cryptojs/hash384"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/hash384",
+              "id": "cryptojs/hash384",
+              "title": "HASH384",
+              "description": "HASH384",
+              "source": "@site/../docs/cryptojs/hash384.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/hash384",
+              "permalink": "/docs/cryptojs/hash384",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "hash384",
+                "title": "HASH384",
+                "sidebar_label": "HASH384"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "HASH256",
+                "permalink": "/docs/cryptojs/hash256"
+              },
+              "next": {
+                "title": "HASH512",
+                "permalink": "/docs/cryptojs/hash512"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/hash512",
+              "id": "cryptojs/hash512",
+              "title": "HASH512",
+              "description": "HASH512",
+              "source": "@site/../docs/cryptojs/hash512.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/hash512",
+              "permalink": "/docs/cryptojs/hash512",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "hash512",
+                "title": "HASH512",
+                "sidebar_label": "HASH512"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "HASH384",
+                "permalink": "/docs/cryptojs/hash384"
+              },
+              "next": {
+                "title": "MPIN",
+                "permalink": "/docs/cryptojs/mpin"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/mpin",
+              "id": "cryptojs/mpin",
+              "title": "MPIN",
+              "description": "MPIN",
+              "source": "@site/../docs/cryptojs/mpin.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/mpin",
+              "permalink": "/docs/cryptojs/mpin",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "mpin",
+                "title": "MPIN",
+                "sidebar_label": "MPIN"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "HASH512",
+                "permalink": "/docs/cryptojs/hash512"
+              },
+              "next": {
+                "title": "MPIN192",
+                "permalink": "/docs/cryptojs/mpin192"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/mpin192",
+              "id": "cryptojs/mpin192",
+              "title": "MPIN192",
+              "description": "MPIN192",
+              "source": "@site/../docs/cryptojs/mpin192.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/mpin192",
+              "permalink": "/docs/cryptojs/mpin192",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "mpin192",
+                "title": "MPIN192",
+                "sidebar_label": "MPIN192"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "MPIN",
+                "permalink": "/docs/cryptojs/mpin"
+              },
+              "next": {
+                "title": "MPIN256",
+                "permalink": "/docs/cryptojs/mpin256"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/mpin256",
+              "id": "cryptojs/mpin256",
+              "title": "MPIN256",
+              "description": "MPIN256",
+              "source": "@site/../docs/cryptojs/mpin256.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/mpin256",
+              "permalink": "/docs/cryptojs/mpin256",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "mpin256",
+                "title": "MPIN256",
+                "sidebar_label": "MPIN256"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "MPIN192",
+                "permalink": "/docs/cryptojs/mpin192"
+              },
+              "next": {
+                "title": "PAIR",
+                "permalink": "/docs/cryptojs/pair"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/pair",
+              "id": "cryptojs/pair",
+              "title": "PAIR",
+              "description": "PAIR",
+              "source": "@site/../docs/cryptojs/pair.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/pair",
+              "permalink": "/docs/cryptojs/pair",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "pair",
+                "title": "PAIR",
+                "sidebar_label": "PAIR"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "MPIN256",
+                "permalink": "/docs/cryptojs/mpin256"
+              },
+              "next": {
+                "title": "PAIR192",
+                "permalink": "/docs/cryptojs/pair192"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/pair192",
+              "id": "cryptojs/pair192",
+              "title": "PAIR192",
+              "description": "PAIR192",
+              "source": "@site/../docs/cryptojs/pair192.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/pair192",
+              "permalink": "/docs/cryptojs/pair192",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "pair192",
+                "title": "PAIR192",
+                "sidebar_label": "PAIR192"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "PAIR",
+                "permalink": "/docs/cryptojs/pair"
+              },
+              "next": {
+                "title": "PAIR256",
+                "permalink": "/docs/cryptojs/pair256"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/pair256",
+              "id": "cryptojs/pair256",
+              "title": "PAIR256",
+              "description": "PAIR256",
+              "source": "@site/../docs/cryptojs/pair256.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/pair256",
+              "permalink": "/docs/cryptojs/pair256",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "pair256",
+                "title": "PAIR256",
+                "sidebar_label": "PAIR256"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "PAIR192",
+                "permalink": "/docs/cryptojs/pair192"
+              },
+              "next": {
+                "title": "RAND",
+                "permalink": "/docs/cryptojs/rand"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/rand",
+              "id": "cryptojs/rand",
+              "title": "RAND",
+              "description": "RAND",
+              "source": "@site/../docs/cryptojs/rand.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/rand",
+              "permalink": "/docs/cryptojs/rand",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "rand",
+                "title": "RAND",
+                "sidebar_label": "RAND"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "PAIR256",
+                "permalink": "/docs/cryptojs/pair256"
+              },
+              "next": {
+                "title": "RSA",
+                "permalink": "/docs/cryptojs/rsa"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/rsa",
+              "id": "cryptojs/rsa",
+              "title": "RSA",
+              "description": "Classes",
+              "source": "@site/../docs/cryptojs/rsa.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/rsa",
+              "permalink": "/docs/cryptojs/rsa",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "rsa",
+                "title": "RSA",
+                "sidebar_label": "RSA"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "RAND",
+                "permalink": "/docs/cryptojs/rand"
+              },
+              "next": {
+                "title": "SHA3",
+                "permalink": "/docs/cryptojs/sha3"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/sha3",
+              "id": "cryptojs/sha3",
+              "title": "SHA3",
+              "description": "SHA3",
+              "source": "@site/../docs/cryptojs/sha3.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/sha3",
+              "permalink": "/docs/cryptojs/sha3",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "sha3",
+                "title": "SHA3",
+                "sidebar_label": "SHA3"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "RSA",
+                "permalink": "/docs/cryptojs/rsa"
+              },
+              "next": {
+                "title": "UInt64",
+                "permalink": "/docs/cryptojs/unit64"
+              }
+            },
+            {
+              "unversionedId": "cryptojs/unit64",
+              "id": "cryptojs/unit64",
+              "title": "UInt64",
+              "description": "UInt64",
+              "source": "@site/../docs/cryptojs/uint64.md",
+              "sourceDirName": "cryptojs",
+              "slug": "/cryptojs/unit64",
+              "permalink": "/docs/cryptojs/unit64",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "unit64",
+                "title": "UInt64",
+                "sidebar_label": "UInt64"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "SHA3",
+                "permalink": "/docs/cryptojs/sha3"
+              },
+              "next": {
+                "title": "D-TA Overview",
+                "permalink": "/docs/d-ta-overview"
+              }
+            },
+            {
+              "unversionedId": "d-ta-api",
+              "id": "d-ta-api",
+              "title": "D-TA Node API",
+              "description": "Interested in becoming a contributor? Milagro is looking for you.",
+              "source": "@site/../docs/d-ta-api.md",
+              "sourceDirName": ".",
+              "slug": "/d-ta-api",
+              "permalink": "/docs/d-ta-api",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "d-ta-api",
+                "title": "D-TA Node API",
+                "sidebar_label": "D-TA Node API"
+              }
+            },
+            {
+              "unversionedId": "d-ta-overview",
+              "id": "d-ta-overview",
+              "title": "Decentralized Trust Authority Overview",
+              "description": "VERSION: ALPHA RELEASE 0.1.0",
+              "source": "@site/../docs/d-ta-overview.md",
+              "sourceDirName": ".",
+              "slug": "/d-ta-overview",
+              "permalink": "/docs/d-ta-overview",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "d-ta-overview",
+                "title": "Decentralized Trust Authority Overview",
+                "sidebar_label": "D-TA Overview"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "UInt64",
+                "permalink": "/docs/cryptojs/unit64"
+              },
+              "next": {
+                "title": "Quick Start",
+                "permalink": "/docs/dta-details/quickstart"
+              }
+            },
+            {
+              "unversionedId": "downloads",
+              "id": "downloads",
+              "title": "Downloads",
+              "description": "This page will be updated with all official Apache Software Foundation releases from the Apache Milagro (incubating) project.",
+              "source": "@site/../docs/downloads.md",
+              "sourceDirName": ".",
+              "slug": "/downloads",
+              "permalink": "/docs/downloads",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "downloads",
+                "title": "Downloads",
+                "sidebar_label": "Downloads"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Contributor's Guide",
+                "permalink": "/docs/contributor-guide"
+              },
+              "next": {
+                "title": "Support",
+                "permalink": "/docs/support"
+              }
+            },
+            {
+              "unversionedId": "dta-details/api",
+              "id": "dta-details/api",
+              "title": "API",
+              "description": "Open-API specifications are provided for the core \"vanilla\" Milagro D-TA HTTP REST services and for both the shipped plugins: Bitcoin Wallet Security and Safeguard Secret.",
+              "source": "@site/../docs/dta-details/api.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/api",
+              "permalink": "/docs/dta-details/api",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "api",
+                "title": "API",
+                "sidebar_label": "API"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/docs/dta-details/quickstart"
+              },
+              "next": {
+                "title": "Configuration",
+                "permalink": "/docs/dta-details/configuration"
+              }
+            },
+            {
+              "unversionedId": "dta-details/authentication",
+              "id": "dta-details/authentication",
+              "title": "Authentication",
+              "description": "When you first install a Milagro D-TA, the API endpoints are not authenticated by default. In other words, any simple CURL command will elicit the expected response. Milagro D-TAs support the oAuth bearer token authentication out of the box.",
+              "source": "@site/../docs/dta-details/authentication.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/authentication",
+              "permalink": "/docs/dta-details/authentication",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "authentication",
+                "title": "Authentication",
+                "sidebar_label": "Authentication"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Plugins Overview",
+                "permalink": "/docs/dta-details/plugins-overview"
+              },
+              "next": {
+                "title": "Multi-Party Computation Library 0.1",
+                "permalink": "/docs/mpc-api-0.1"
+              }
+            },
+            {
+              "unversionedId": "dta-details/configuration",
+              "id": "dta-details/configuration",
+              "title": "Configuration",
+              "description": "The Milagro D-TA can be configured either by editing its configuration file or using command line flags.",
+              "source": "@site/../docs/dta-details/configuration.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/configuration",
+              "permalink": "/docs/dta-details/configuration",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "configuration",
+                "title": "Configuration",
+                "sidebar_label": "Configuration"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "API",
+                "permalink": "/docs/dta-details/api"
+              },
+              "next": {
+                "title": "Identity Documents",
+                "permalink": "/docs/dta-details/identity-documents"
+              }
+            },
+            {
+              "unversionedId": "dta-details/encrypted-envelope",
+              "id": "dta-details/encrypted-envelope",
+              "title": "Encrypted Envelope",
+              "description": "The Milagro D-TA enables Principals (who require secrets to be safeguarded) to communicate with Fiduciaries who provide custodian services for those secrets. To facilitate these transactions communication between the parties must be secure i.e., must have privacy, authentication, non-repudiation and message integrity. The Milagro D-TA delivers this using its \"Encrypted Envelope\" messaging format.",
+              "source": "@site/../docs/dta-details/encrypted-envelope.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/encrypted-envelope",
+              "permalink": "/docs/dta-details/encrypted-envelope",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "encrypted-envelope",
+                "title": "Encrypted Envelope",
+                "sidebar_label": "Encrypted Envelope"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Identity Documents",
+                "permalink": "/docs/dta-details/identity-documents"
+              },
+              "next": {
+                "title": "IPFS",
+                "permalink": "/docs/dta-details/ipfs"
+              }
+            },
+            {
+              "unversionedId": "dta-details/identity-documents",
+              "id": "dta-details/identity-documents",
+              "title": "Identity Documents",
+              "description": "The first problem that a Milagro D-TA aims to solve is how entities in the system can identify and trust each other. In order to participate in the Milagro D-TA ecosystem each entity must publish a set of public keys into IPFS. The IPFS hash for an identity documents is then the ID for each entity running a D-TA.",
+              "source": "@site/../docs/dta-details/identity-documents.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/identity-documents",
+              "permalink": "/docs/dta-details/identity-documents",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "identity-documents",
+                "title": "Identity Documents",
+                "sidebar_label": "Identity Documents"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Configuration",
+                "permalink": "/docs/dta-details/configuration"
+              },
+              "next": {
+                "title": "Encrypted Envelope",
+                "permalink": "/docs/dta-details/encrypted-envelope"
+              }
+            },
+            {
+              "unversionedId": "dta-details/ipfs",
+              "id": "dta-details/ipfs",
+              "title": "IPFS",
+              "description": "The Milagro D-TA aims to provide an auditable record of all interactions between actors in the system. It is vital that all the actors in the system can refer to an agreed record of these transactions in case of dispute or in response to requests from third parties such as law enforcement, audit or compliance organizations.  The Milagro D-TA creates immutable, secure and attributable records of every interaction that occurs in the lifecycle of entities and their dealings with secrets. We do this using the Inter Planetary File System - IPFS.",
+              "source": "@site/../docs/dta-details/ipfs.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/ipfs",
+              "permalink": "/docs/dta-details/ipfs",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "ipfs",
+                "title": "IPFS",
+                "sidebar_label": "IPFS"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Encrypted Envelope",
+                "permalink": "/docs/dta-details/encrypted-envelope"
+              },
+              "next": {
+                "title": "Plugins Overview",
+                "permalink": "/docs/dta-details/plugins-overview"
+              }
+            },
+            {
+              "unversionedId": "dta-details/plugin-dev-guide",
+              "id": "dta-details/plugin-dev-guide",
+              "title": "D-TA Plugins Developers Guide",
+              "description": "We have provided a template plugin that provides the same functionality as out-of-the-box milagro.",
+              "source": "@site/../docs/dta-details/plugin-dev-guide.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/plugin-dev-guide",
+              "permalink": "/docs/dta-details/plugin-dev-guide",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "plugin-dev-guide",
+                "title": "D-TA Plugins Developers Guide",
+                "sidebar_label": "Developers Guide"
+              }
+            },
+            {
+              "unversionedId": "dta-details/plugins-overview",
+              "id": "dta-details/plugins-overview",
+              "title": "D-TA Plugins Overview",
+              "description": "The out-of-the-box Milagro D-TA doesn't do much: a Principal's D-TA gets a public key from a Fiduciary's D-TA, and at a later date, can request the corresponding secret key. It is simple conceptually, but the core operation does this in a hard-to-hack, and fully auditable way.",
+              "source": "@site/../docs/dta-details/d-ta-plugins.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/plugins-overview",
+              "permalink": "/docs/dta-details/plugins-overview",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "plugins-overview",
+                "title": "D-TA Plugins Overview",
+                "sidebar_label": "Plugins Overview"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "IPFS",
+                "permalink": "/docs/dta-details/ipfs"
+              },
+              "next": {
+                "title": "Authentication",
+                "permalink": "/docs/dta-details/authentication"
+              }
+            },
+            {
+              "unversionedId": "dta-details/quickstart",
+              "id": "dta-details/quickstart",
+              "title": "Quick Start",
+              "description": "Docker",
+              "source": "@site/../docs/dta-details/quickstart.md",
+              "sourceDirName": "dta-details",
+              "slug": "/dta-details/quickstart",
+              "permalink": "/docs/dta-details/quickstart",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "quickstart",
+                "title": "Quick Start",
+                "sidebar_label": "Quick Start"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "D-TA Overview",
+                "permalink": "/docs/d-ta-overview"
+              },
+              "next": {
+                "title": "API",
+                "permalink": "/docs/dta-details/api"
+              }
+            },
+            {
+              "unversionedId": "milagro-crypto",
+              "id": "milagro-crypto",
+              "title": "Milagro Crypto",
+              "description": "One of the critical points about information security is to give access to resources only to authorized entities and deny access to unauthorized ones.",
+              "source": "@site/../docs/milagro-crypto.md",
+              "sourceDirName": ".",
+              "slug": "/milagro-crypto",
+              "permalink": "/docs/milagro-crypto",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "milagro-crypto",
+                "title": "Milagro Crypto",
+                "sidebar_label": "Milagro Crypto"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Milagro Introduction",
+                "permalink": "/docs/milagro-intro"
+              },
+              "next": {
+                "title": "Milagro Protocols",
+                "permalink": "/docs/milagro-protocols"
+              }
+            },
+            {
+              "unversionedId": "milagro-design",
+              "id": "milagro-design",
+              "title": "Milagro Design",
+              "description": "Protocols and Technology",
+              "source": "@site/../docs/milagro-design.md",
+              "sourceDirName": ".",
+              "slug": "/milagro-design",
+              "permalink": "/docs/milagro-design",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "milagro-design",
+                "title": "Milagro Design",
+                "sidebar_label": "Milagro Design"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Milagro Protocols",
+                "permalink": "/docs/milagro-protocols"
+              },
+              "next": {
+                "title": "AMCL Overview",
+                "permalink": "/docs/amcl-overview"
+              }
+            },
+            {
+              "unversionedId": "milagro-intro",
+              "id": "milagro-intro",
+              "title": "Milagro Introduction",
+              "description": "Apache Milagro is a set of core security infrastructure and crypto libraries purpose-built for decentralized networks and distributed systems, while also providing value to cloud-connected app-centric software and IoT devices that require Internet scale.",
+              "source": "@site/../docs/milagro-intro.md",
+              "sourceDirName": ".",
+              "slug": "/milagro-intro",
+              "permalink": "/docs/milagro-intro",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "milagro-intro",
+                "title": "Milagro Introduction",
+                "sidebar_label": "Milagro Introduction"
+              },
+              "sidebar": "docs",
+              "next": {
+                "title": "Milagro Crypto",
+                "permalink": "/docs/milagro-crypto"
+              }
+            },
+            {
+              "unversionedId": "milagro-protocols",
+              "id": "milagro-protocols",
+              "title": "Milagro Protocols",
+              "description": "The Apache Milagro crypto libraries contain an (almost) overwhelming choice of algorithms and cryptographic primitives for robust and rapid application development. This section focuses specifically on a few protocols that are used extensively as key building blocks within the Milagro Zero-Knowledge Proof Multi-Factor Authentication (ZKP-MFA) server and clients, and Milagro Decentralized Trust Authority (D-TA) applications. Both applications implement these protocols using the Milagro crypto libraries.",
+              "source": "@site/../docs/milagro-protocols.md",
+              "sourceDirName": ".",
+              "slug": "/milagro-protocols",
+              "permalink": "/docs/milagro-protocols",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "milagro-protocols",
+                "title": "Milagro Protocols",
+                "sidebar_label": "Milagro Protocols"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Milagro Crypto",
+                "permalink": "/docs/milagro-crypto"
+              },
+              "next": {
+                "title": "Milagro Design",
+                "permalink": "/docs/milagro-design"
+              }
+            },
+            {
+              "unversionedId": "mpc-api-0.1",
+              "id": "mpc-api-0.1",
+              "title": "Multi-Party Computation (MPC) Library 0.1 (libmpc)",
+              "description": "Apache Milagro's Multi-Party Computation library (libmpc) is the latest addition to the project (as of June 2022), and uses the Apache Milagro C Library to implement Multi-Party Computation. It offers and API to allow for customs computations to be perfomed.",
+              "source": "@site/../docs/mpc-api-0.1.md",
+              "sourceDirName": ".",
+              "slug": "/mpc-api-0.1",
+              "permalink": "/docs/mpc-api-0.1",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "mpc-api-0.1",
+                "title": "Multi-Party Computation (MPC) Library 0.1 (libmpc)",
+                "sidebar_label": "Multi-Party Computation Library 0.1"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Authentication",
+                "permalink": "/docs/dta-details/authentication"
+              },
+              "next": {
+                "title": "ZKP-MFA Overview",
+                "permalink": "/docs/zkp-mfa-overview"
+              }
+            },
+            {
+              "unversionedId": "support",
+              "id": "support",
+              "title": "Support",
+              "description": "Issues",
+              "source": "@site/../docs/support.md",
+              "sourceDirName": ".",
+              "slug": "/support",
+              "permalink": "/docs/support",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "support",
+                "title": "Support",
+                "sidebar_label": "Support"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Downloads",
+                "permalink": "/docs/downloads"
+              }
+            },
+            {
+              "unversionedId": "zkp-mfa-api",
+              "id": "zkp-mfa-api",
+              "title": "Zero Knowledge Proof MFA API",
+              "description": "Interested in becoming a contributor? Milagro is looking for you.",
+              "source": "@site/../docs/zkp-mfa-api.md",
+              "sourceDirName": ".",
+              "slug": "/zkp-mfa-api",
+              "permalink": "/docs/zkp-mfa-api",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "zkp-mfa-api",
+                "title": "Zero Knowledge Proof MFA API",
+                "sidebar_label": "ZKP-MFA API"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ZKP-MFA Overview",
+                "permalink": "/docs/zkp-mfa-overview"
+              },
+              "next": {
+                "title": "Contributor's Guide",
+                "permalink": "/docs/contributor-guide"
+              }
+            },
+            {
+              "unversionedId": "zkp-mfa-overview",
+              "id": "zkp-mfa-overview",
+              "title": "Zero Knowledge Proof MFA Overview",
+              "description": "Interested in becoming a contributor? Milagro is looking for you.",
+              "source": "@site/../docs/zkp-mfa-overview.md",
+              "sourceDirName": ".",
+              "slug": "/zkp-mfa-overview",
+              "permalink": "/docs/zkp-mfa-overview",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "zkp-mfa-overview",
+                "title": "Zero Knowledge Proof MFA Overview",
+                "sidebar_label": "ZKP-MFA Overview"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Multi-Party Computation Library 0.1",
+                "permalink": "/docs/mpc-api-0.1"
+              },
+              "next": {
+                "title": "ZKP-MFA API",
+                "permalink": "/docs/zkp-mfa-api"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "docs": [
+              {
+                "type": "category",
+                "label": "About Milagro",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "milagro-intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "milagro-crypto"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "milagro-protocols"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "milagro-design"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "AMCL Library",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "amcl-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "amcl-c-api-2.0.0"
+                  },
+                  {
+                    "type": "category",
+                    "label": "AMCL JavaScript API 1.0.0",
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/amcl-javascript-api"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/aes"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/big"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/bls"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/bls192"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/bls256"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/dbig"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/ecdh"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/ecp"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/ecp2"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/ecp4"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/ecp8"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/ff"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp2"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp4"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp8"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp12"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp16"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp24"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/fp48"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/gcm"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/hash256"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/hash384"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/hash512"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/mpin"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/mpin192"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/mpin256"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/pair"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/pair192"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/pair256"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/rand"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/rsa"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/sha3"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "cryptojs/unit64"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "D-TA",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "d-ta-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/quickstart"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/api"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/configuration"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/identity-documents"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/encrypted-envelope"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/ipfs"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/plugins-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dta-details/authentication"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "MPC Library",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "mpc-api-0.1"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "ZKP-MFA Clients/Servers",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "zkp-mfa-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "zkp-mfa-api"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Project Info",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "contributor-guide"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "downloads"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "support"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "blog": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [
+        {
+          "id": "/2019/06/10/miss-me",
+          "metadata": {
+            "permalink": "/blog/2019/06/10/miss-me",
+            "source": "@site/blog/2019-06-10-miss-me.md",
+            "title": "Miss us? We missed you.",
+            "description": "It's not often that Apache Incubation projects start, lay dormant for three years, and then spring to life. Yet, it's really happening. I pleased to report that in the past two weeks Milagro has added three new contributors, one new PPMC member and one new mentor. We launched a spartan, yet esthetically pleasing, project website. And, we have a roadmap.....",
+            "date": "2019-06-10T00:00:00.000Z",
+            "formattedDate": "June 10, 2019",
+            "tags": [],
+            "readingTime": 0.315,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Brian Spector",
+                "url": "http://twitter.com/bspector"
+              }
+            ],
+            "frontMatter": {
+              "title": "Miss us? We missed you.",
+              "author": "Brian Spector",
+              "authorURL": "http://twitter.com/bspector"
+            }
+          },
+          "content": "It's not often that Apache Incubation projects start, lay dormant for three years, and then spring to life. Yet, it's really happening. I pleased to report that in the past two weeks Milagro has added three new contributors, one new PPMC member and one new mentor. We launched a spartan, yet esthetically pleasing, project website. And, we have a roadmap.....\n\nMore details soon."
+        }
+      ],
+      "blogListPaginated": [
+        {
+          "items": [
+            "/2019/06/10/miss-me"
+          ],
+          "metadata": {
+            "permalink": "/blog",
+            "page": 1,
+            "postsPerPage": 10,
+            "totalPages": 1,
+            "totalCount": 1,
+            "blogDescription": "Blog",
+            "blogTitle": "Blog"
+          }
+        }
+      ],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags"
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/help",
+        "source": "@site/src/pages/help.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/index.js-old",
+        "source": "@site/src/pages/index.js-old.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

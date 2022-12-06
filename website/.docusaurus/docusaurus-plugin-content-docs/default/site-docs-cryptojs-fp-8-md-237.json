@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/fp8",
+  "id": "cryptojs/fp8",
+  "title": "FP8",
+  "description": "FP8",
+  "source": "@site/../docs/cryptojs/fp8.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/fp8",
+  "permalink": "/docs/cryptojs/fp8",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "fp8",
+    "title": "FP8",
+    "sidebar_label": "FP8"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FP4",
+    "permalink": "/docs/cryptojs/fp4"
+  },
+  "next": {
+    "title": "FP12",
+    "permalink": "/docs/cryptojs/fp12"
+  }
+}

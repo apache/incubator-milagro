@@ -1,0 +1,30 @@
+{
+  "unversionedId": "zkp-mfa-api",
+  "id": "zkp-mfa-api",
+  "title": "Zero Knowledge Proof MFA API",
+  "description": "Interested in becoming a contributor? Milagro is looking for you.",
+  "source": "@site/../docs/zkp-mfa-api.md",
+  "sourceDirName": ".",
+  "slug": "/zkp-mfa-api",
+  "permalink": "/docs/zkp-mfa-api",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "zkp-mfa-api",
+    "title": "Zero Knowledge Proof MFA API",
+    "sidebar_label": "ZKP-MFA API"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ZKP-MFA Overview",
+    "permalink": "/docs/zkp-mfa-overview"
+  },
+  "next": {
+    "title": "Contributor's Guide",
+    "permalink": "/docs/contributor-guide"
+  }
+}

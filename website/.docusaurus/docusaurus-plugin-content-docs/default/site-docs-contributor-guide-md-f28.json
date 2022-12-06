@@ -1,0 +1,30 @@
+{
+  "unversionedId": "contributor-guide",
+  "id": "contributor-guide",
+  "title": "Contributor's Guide",
+  "description": "Apache Milagro Mailing List",
+  "source": "@site/../docs/contributor-guide.md",
+  "sourceDirName": ".",
+  "slug": "/contributor-guide",
+  "permalink": "/docs/contributor-guide",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "contributor-guide",
+    "title": "Contributor's Guide",
+    "sidebar_label": "Contributor's Guide"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ZKP-MFA API",
+    "permalink": "/docs/zkp-mfa-api"
+  },
+  "next": {
+    "title": "Downloads",
+    "permalink": "/docs/downloads"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/ecp",
+  "id": "cryptojs/ecp",
+  "title": "ECP",
+  "description": "ECP",
+  "source": "@site/../docs/cryptojs/ecp.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/ecp",
+  "permalink": "/docs/cryptojs/ecp",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "ecp",
+    "title": "ECP",
+    "sidebar_label": "ECP"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ECDH",
+    "permalink": "/docs/cryptojs/ecdh"
+  },
+  "next": {
+    "title": "ECP2",
+    "permalink": "/docs/cryptojs/ecp2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/fp48",
+  "id": "cryptojs/fp48",
+  "title": "FP48",
+  "description": "FP48",
+  "source": "@site/../docs/cryptojs/fp48.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/fp48",
+  "permalink": "/docs/cryptojs/fp48",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "fp48",
+    "title": "FP48",
+    "sidebar_label": "FP48"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "FP24",
+    "permalink": "/docs/cryptojs/fp24"
+  },
+  "next": {
+    "title": "GCM",
+    "permalink": "/docs/cryptojs/gcm"
+  }
+}
