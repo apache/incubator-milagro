@@ -61,21 +61,21 @@ These clients or peers become the only entities that know the completed whole ke
 
 Type-3 pairings were selected as they are the most efficient pairing and will work with non-supersingular pairing-friendly curves.
 
-These operate as \\( G_1 \\) x \\( G_2 \\rightarrow G_T \\), where \\( G_2 \\) is a particular group of points, again of the order \\( q \\), but on a twisted elliptic curve defined over an extension which is a divisor of \\( k \\).
+These operate as $G_1$ x $G_2\rightarrow G_T$, where $G_2$ is a particular group of points, again of the order $q$, but on a twisted elliptic curve defined over an extension which is a divisor of $k$.
 
 These curves can be constructed to be a near perfect fit at any required level of security. The pairing protocols within the Milagro framework all work on a Type-3 pairing.
 
-One of the novel aspects of pairing-based cryptography is that deployed secrets are commonly represented as points on an elliptic curve, which are the result of multiplying a known point by a master secret \\( s \\).
+One of the novel aspects of pairing-based cryptography is that deployed secrets are commonly represented as points on an elliptic curve, which are the result of multiplying a known point by a master secret $s$.
 
-So for example a secret might be of the form \\( sP \\), where \\( P \\) is known.
+So for example a secret might be of the form $sP$, where $P$ is known.
 
 There are a number of interesting things we can do with secrets that have this form, that are not possible with the secrets that arise when using other cryptographic technologies.
 
-For example they can be split into two, into \\( s_1P \\) and \\( s_2P \\) where \\( s=s_1+s_2 \\) and \\( sP = s_1P +s_2P \\).
+For example they can be split into two, into $s_1P$ and $s_2P$ where $s=s_1+s_2$ and $sP = s_1P +s_2P$.
 
 In fact they can be just as easily split into multiple parts, just like chopping up a cucumber.
 
-We can also add extra components to create a secret of the form \\( s(P_1+P_2) = sP_1+sP_2 \\).
+We can also add extra components to create a secret of the form $s(P_1+P_2) = sP_1+sP_2$.
 
 It is the flexibility that arises from this form of the secret that allows us to introduce the idea of chopping off a tiny sliver of the secret to support a PIN number.
 
@@ -85,23 +85,23 @@ Lastly, it enables Decentralized Trust.
 
 ### Issuing Secrets
 
-A Trusted Authority will be in possession of a master secret \\( s \\), a random element of \\( F_q \\).
+A Trusted Authority will be in possession of a master secret $s$, a random element of $F_q$.
 
-A client secret is of the form \\( s.H(ID) \\), where ID is the client identity and \\( H(.) \\) a hash function which maps to a point on \\( G_1 \\).
+A client secret is of the form $s.H(ID)$, where ID is the client identity and $H(.)$ a hash function which maps to a point on $G_1$.
 
-From prior art, we assume that \\( H \\) is modeled as a random oracle where \\( H(ID) = r\_{"{"}ID{"}"}.P \\)
+From prior art, we assume that $H$ is modeled as a random oracle where $H(ID) = r\_{ID}.P$
 
-where \\( r\_{"{"}ID{"}"} \\in F_q \\) is random and \\( P \\) is a fixed generator of \\( G_1 \\).
+where $r\_{ID}\in F_q$ is random and $P$ is a fixed generator of $G_1$.
 
-A Milagro ZKP-MFA Server will be issued with \\( sQ \\), where \\( Q \\) is a fixed generator of \\( G_2 \\).
+A Milagro ZKP-MFA Server will be issued with $sQ$, where $Q$ is a fixed generator of $G_2$.
 
-Note that this will be the only multiple of \\( s \\) in \\( G_2 \\) ever provided by the TA. Servers will always be associated with their own unique master secrets.
+Note that this will be the only multiple of $s$ in $G_2$ ever provided by the TA. Servers will always be associated with their own unique master secrets.
 
 Note that the TA functionality can be trivially decentralized and distributed using a secret sharing scheme, to remove from the overall system a single point of compromise or coercion.
 
 In the simplest possible case there may be two Decentralized Trusted Authorities (D-TAs), each of which independently maintains their own share of the master key.
 
-So \\( s=s_1+s_2 \\), and each D-TA issues a part-client key to the client \\( s_1 H(ID) \\) and \\( s_2 H(ID) \\), which the client, after receiving the shares, adds together to form their full key.
+So $s=s_1+s_2$, and each D-TA issues a part-client key to the client $s_1 H(ID)$ and $s_2 H(ID)$, which the client, after receiving the shares, adds together to form their full key.
 
 Now even if one D-TA is compromised, the client key is still safe.
 
@@ -111,23 +111,25 @@ In the age of self sovereign identity, any entity can be a Decentralized Trust A
 
 A D-TA may act as a Fiduciary over secrets where it can participate in a process to enable a Beneficiary to recover the secret. Using aggregated BLS signatures in a simple example, an entity running Milagro software may engage multiple D-TAs to act as Fiduciaries over its seed value used to generate and back up a cryptocurrency HD Wallet.
 
-As described in[^first] the first step is for each D-TA to generate a key pair by choosing \\( s k \\stackrel{"{"}s{"}"}{"{"}\\leftarrow{"}"} \\mathbb{"{"}Z{"}"}\_{"{"}q{"}"} \\) to compute:
+As described in[^first] the first step is for each D-TA to generate a key pair by choosing $s k\stackrel{s}{\leftarrow}\mathbb{Z}\_{q}$ to compute:
 
-$$ p k \\leftarrow g\_{"{"}2{"}"}^{"{"}s k{"}"}$$
+$$
+p k\leftarrow g\_{2}^{s k}
+$$
 
-which outputs the \\( (p k, s k) \\).
+which outputs the $(p k, s k)$.
 
 The Beneficiary would select which D-TA service providers (acting in concert) it would use to help it generate a secret. Assume a Beneficiary is also a participant in this protocol, it also runs a D-TA and acts as the designated combiner in the protocol.
 
 [^first]: [Compact Multi-Signatures for Smaller Blockchains](https://eprint.iacr.org/2018/483)
 
-In advance of creating the HD Wallet seed, a Beneficiary would elicit the services of Decentralized Trust Authorities to act as Fiduciaries in a decentralized secret recovery protocol. The Beneficiary's next step calculates the aggregate public key by running protocol \\( \\text {"{"} KAg {"}"}\\)({"{"}\\( p k_{"{"}1{"}"}, \\ldots, p k_{"{"}n{"}"} \\){"}"}) using the D-TA's known public keys as input (who have agreed to act as Fiduciaries to this process) and also its own public key.
+In advance of creating the HD Wallet seed, a Beneficiary would elicit the services of Decentralized Trust Authorities to act as Fiduciaries in a decentralized secret recovery protocol. The Beneficiary's next step calculates the aggregate public key by running protocol $\text{KAg}(\{p k_1,\ldots, p k_n\})$ using the D-TA's known public keys as input (who have agreed to act as Fiduciaries to this process) and also its own public key.
 
-The Beneficiary then requests a signature \\( \\sigma \\) on a message \\( m \\) from each of the D-TAs acting as Fiduciaries, including itself. For each D-TA, singing is a single round protocol.
+The Beneficiary then requests a signature $\sigma$ on a message $m$ from each of the D-TAs acting as Fiduciaries, including itself. For each D-TA, singing is a single round protocol.
 
-To finalize setup, each D-TA transmits its signature \\( \\sigma \\) to the Beneficiary (acting as designated combiner). The Beneficiary generates its own signature and combines it with the received D-TA signatures for the final aggregated signature of \\( \\sigma \\leftarrow \\prod_{"{"}j=1{"}"}^{"{"}n{"}"} s_{"{"}j{"}"} \\).
+To finalize setup, each D-TA transmits its signature $\sigma$ to the Beneficiary (acting as designated combiner). The Beneficiary generates its own signature and combines it with the received D-TA signatures for the final aggregated signature of $\sigma\leftarrow\prod_{j=1}^{n} s_{j}$.
 
-The final signature is verified against the aggregated public key if the verifier function outputs 1. Assuming so, the setup completes by hashing the aggregated signature where \\( H(\\tilde{"{"}\\sigma{"}"}) \\) is the seed of the HD Wallet.
+The final signature is verified against the aggregated public key if the verifier function outputs 1. Assuming so, the setup completes by hashing the aggregated signature where $H(\tilde{\sigma})$ is the seed of the HD Wallet.
 
 Assuming the Beneficiary has backed up their BLS signature key, recovering the HD Wallet seed from multiple Fiduciaries becomes as simple as re-running the setup protocol again. It is easy to envision Fiduciary services running D-TAs, responding and authenticating requests for recovering secrets.
 
