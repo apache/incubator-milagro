@@ -53,8 +53,8 @@ module.exports={
           "showLastUpdateTime": true,
           "path": "../docs",
           "sidebarPath": "sidebars.json",
-          remarkPlugins: [math],
-          rehypePlugins: [katex]
+          "remarkPlugins": [math],
+          "rehypePlugins": [katex]
         },
         "blog": {
           "path": "blog",
