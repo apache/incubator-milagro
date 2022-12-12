@@ -34,7 +34,9 @@ Using elliptic curves we can now define on some elliptic curve a bilinear functi
 
 A **_bilinear pairing_** $e$ maps a pair of points (hence the name pairing) on an elliptic curve $E$, defined over some field $F_{q}$ to an element of the multiplicative group of a finite extension of ${F}_{q^k}$.
 
-$$ e(mA+B, nP + Q) = e(A,P)^{mn} e(B, Q) $$
+$$
+e(mA+B, nP + Q) = e(A,P)^{mn} e(B, Q)
+$$
 
 The elements $P$ and $Q$ lie in two different groups, respectively $G_{1}$ and $G_{2}$. The choice of those two different group determines a different **_types_** of pairing.
 
