@@ -53,15 +53,12 @@ The Trusted Computing Group (TCG) specifies ECDAA (Elliptic Curve Direct Anonymo
 
 [^eighth]: [Web Authentication: An API for accessing Public Key Credentials Level 1 - W3C Candidate Recommendation](https://www.w3.org/TR/webauthn)
 
-In 2015, NIST [(**_the 'post-NSA' NIST_**)](http://www.theregister.co.uk/2014/05/26/congress_divorces_nist_from_nsa/) goes so far as to recommend standardization of pairing based cryptography in their publication, [Report on Pairing-Based Cryptography](http://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.002.pdf).
+In 2015, NIST ([the 'post-NSA' NIST](http://www.theregister.co.uk/2014/05/26/congress_divorces_nist_from_nsa/)) goes so far as to recommend standardization of pairing based cryptography in their publication, [Report on Pairing-Based Cryptography](http://nvlpubs.nist.gov/nistpubs/jres/120/jres.120.002.pdf).
 
-&gt; "Based on the study, the report suggests an approach for including pairing-based cryptography schemes in the NIST cryptographic toolkit. As we have seen, pairing-based cryptography has much to offer. Pairing-based schemes, such as IBE, provide special properties which cannot be provided through traditional PKI in a straightforward way. Therefore, pairing-based cryptographic schemes would make a nice addition to NIST’s cryptographic toolkit. In particular, we have focused attention on IBE. IBE simplifies key management procedures of certificate-based public key infrastructures. IBE also offers interesting features arising from the possibility of encoding additional information into a user’s identity.  It has been a decade since the first IBE schemes were proposed. These schemes have received sufficient attention from the cryptographic community and no weakness has been identified."
-&gt;
-&gt; ```
-&gt;
-&gt;  --- NIST, Report on Pairing-Based Cryptography
-&gt;
-&gt; ```
+> "Based on the study, the report suggests an approach for including pairing-based cryptography schemes in the NIST cryptographic toolkit. As we have seen, pairing-based cryptography has much to offer. Pairing-based schemes, such as IBE, provide special properties which cannot be provided through traditional PKI in a straightforward way. Therefore, pairing-based cryptographic schemes would make a nice addition to NIST’s cryptographic toolkit. In particular, we have focused attention on IBE. IBE simplifies key management procedures of certificate-based public key infrastructures. IBE also offers interesting features arising from the possibility of encoding additional information into a user’s identity.  It has been a decade since the first IBE schemes were proposed. These schemes have received sufficient attention from the cryptographic community and no weakness has been identified."
+> 
+>  --- NIST, _Report on Pairing-Based Cryptography_
+>
 
 ## The Move to Post-Quantum
 
