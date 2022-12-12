@@ -43,19 +43,19 @@ The alternative idea is to use extra words for the representation, and then try 
 
 [^first]: [Curve41417 Karatsuba revisited](http://eprint.iacr.org/2014/526)
 
-Note that almost all arithmetic takes place modulo a 256-bit prime number, the modulus representing the field over which the elliptic curve is defined, here denoted as \\( p \\).
+Note that almost all arithmetic takes place modulo a 256-bit prime number, the modulus representing the field over which the elliptic curve is defined, here denoted as $p$.
 
-On 64-bit processors, AMCL represents numbers to the base \\( 2^{"{"}56{"}"} \\) in a 5 element array, the Word Excess is 7 bits, and for a 256-bit modulus the Field Excess is 24 bits.
+On 64-bit processors, AMCL represents numbers to the base $2^{56}$ in a 5 element array, the Word Excess is 7 bits, and for a 256-bit modulus the Field Excess is 24 bits.
 
-On 32-bit processors, AMCL represents numbers to the base \\( 2^{"{"}29{"}"} \\) in a 9 element array, the Word Excess is 2 bits, and for a 256-bit modulus the Field Excess is 5 bits.
+On 32-bit processors, AMCL represents numbers to the base $2^{29}$ in a 9 element array, the Word Excess is 2 bits, and for a 256-bit modulus the Field Excess is 5 bits.
 
-On 16-bit processors, AMCL represents numbers to the base \\( 2^{"{"}13{"}"} \\) in a 20 element array, the Word Excess is 2 bits, and for a 256-bit modulus the Field Excess is 4 bits.
+On 16-bit processors, AMCL represents numbers to the base $2^{13}$ in a 20 element array, the Word Excess is 2 bits, and for a 256-bit modulus the Field Excess is 4 bits.
 
 Such a representation of a 256-bit number is referred to as a **BIG**. Addition or subtraction of a pair of **BIG**s, results in another **BIG**.
 
 The Java version uses exactly the same 32-bit representation as above.
 
-For Javascript (where all numbers are stored as 64-bit floating point with a 52-bit mantissa, but mostly manipulated as 32-bit integers), numbers are represented to the base \\( 2^{"{"}24{"}"} \\) in an 11 element array, the Word Excess is 7 bits, and the Field Excess for a 256-bit modulus is 8 bits.
+For Javascript (where all numbers are stored as 64-bit floating point with a 52-bit mantissa, but mostly manipulated as 32-bit integers), numbers are represented to the base $2^{24}$ in an 11 element array, the Word Excess is 7 bits, and the Field Excess for a 256-bit modulus is 8 bits.
 
 ### Addition and Subtraction
 
@@ -67,7 +67,7 @@ The existence of a field excess means that, independent of the word excess, mult
 
 Note that these two mechanisms associated with the word excess and the field excess (often confused in the literature) operate largely independently of each other.
 
-AMCL has no support for negative numbers. Therefore subtraction will be implemented as field negation followed by addition. However a field element \\( x \\) can be negated by simply calculating \\( −x = e.p − x \\), where \\( e \\) is the current excess associated with \\( x \\). Therefore subtraction will be implemented as field negation followed by addition. In practice it is more convenient to round \\( e \\) up to next highest power of 2, in which case \\( e.p \\) can be calculated by a simple shift.
+AMCL has no support for negative numbers. Therefore subtraction will be implemented as field negation followed by addition. However a field element $x$ can be negated by simply calculating $−x = e.p − x$, where $e$ is the current excess associated with $x$. Therefore subtraction will be implemented as field negation followed by addition. In practice it is more convenient to round $e$ up to next highest power of 2, in which case $e.p$ can be calculated by a simple shift.
 
 ![client](/img/words.eps.jpg)
 
@@ -81,7 +81,7 @@ Final full reduction of unreduced field elements is carried out using a simple s
 
 So with careful programming we avoid any unpredictable program branches. Since the length of field elements is fixed at compile time, it is expected that the compiler will unroll most of the time-critical loops. In any case the conditional branch required at the foot of a fixed-size loop can be accurately predicted by modern hardware.
 
-Worst case field excesses are easy to calculate. If two elements \\( a \\) and \\( b \\) are to be added, and if their current field excesses are \\( e_{"{"}a{"}"} \\) and \\( e_{"{"}b{"}"} \\) respectively, then clearly their sum will have a worst-case field excess of \\( e_{"{"}a{"}"}+e_{"{"}b{"}"} \\). By careful programming and choice of number base, full reductions can be largely eliminated[^second].
+Worst case field excesses are easy to calculate. If two elements $a$ and $b$ are to be added, and if their current field excesses are $e_{a}$ and $e_{b}$ respectively, then clearly their sum will have a worst-case field excess of $e_{a}+e_{b}$. By careful programming and choice of number base, full reductions can be largely eliminated[^second].
 
 [^second]: [Slothful Reduction](http://eprint.iacr.org/2017/437)
 
@@ -93,19 +93,19 @@ Multiprecision multiplication is performed column by column, propagating the car
 
 [^third]:[Missing a trick: Karatsuba variations](http://eprint.iacr.org/2015/1247)
 
-The method used for full reduction of a **DBIG** back to a **BIG** depends on the form of the modulus. We choose to support three distinct types of modulus, (a) pseudo Mersenne of the form \\( 2^n-c \\) where \\( c \\) is small and $n$ is the size of the modulus in bits, (b) Montgomery-friendly of the form \\( k.2^n-1 \\), and (c) moduli of no special form. For cases (b) and (c) we convert all field elements to Montgomery's \\( n \\)-residue form, and use Montgomery's fast method for modular reduction.
+The method used for full reduction of a **DBIG** back to a **BIG** depends on the form of the modulus. We choose to support three distinct types of modulus, (a) pseudo Mersenne of the form $2^n-c$ where $c$ is small and $n$ is the size of the modulus in bits, (b) Montgomery-friendly of the form $k.2^n-1$, and (c) moduli of no special form. For cases (b) and (c) we convert all field elements to Montgomery's $n$-residue form, and use Montgomery's fast method for modular reduction.
 
-In all cases the **DBIG** number to be reduced \\( y \\) must be in the range \\( 0&lt;y&lt;pR \\) (a requirement of Montgomery's method), and the result \\( x \\) is guaranteed to be in the range \\( 0&lt;x&lt;2p \\) , where \\( R=2^{"{"}256+FE{"}"} \\) for a 256-bit modulus. Note that the **BIG** result will be (nearly) fully reduced. The fact than we allow \\( x \\) to be larger than \\( p \\) means that we can avoid the notorious Montgomery "final subtraction". Independent of the method used for reduction, we have found that it is much easier to obtain reduction in constant time to a value less than \\( 2p \\), than a full reduction to less than \\( p \\).
+In all cases the **DBIG** number to be reduced $y$ must be in the range $0&lt;y&lt;pR$ (a requirement of Montgomery's method), and the result $x$ is guaranteed to be in the range $0&lt;x&lt;2p$ , where $R=2^{256+FE}$ for a 256-bit modulus. Note that the **BIG** result will be (nearly) fully reduced. The fact than we allow $x$ to be larger than $p$ means that we can avoid the notorious Montgomery "final subtraction". Independent of the method used for reduction, we have found that it is much easier to obtain reduction in constant time to a value less than $2p$, than a full reduction to less than $p$.
 
-Observe how unreduced numbers involved in complex calculations tend to be (nearly fully) reduced if they are involved in a modular multiplication. So for example if field element \\( x \\) has a large field excess, and if we calculate \\( x=x.y \\), then as long as the unreduced product is less than \\( pR \\), the result will be a nearly fully reduced \\( x \\). So in many cases there is a natural tendency for field excesses not to grow without limit, and not to overflow, without requiring explicit action on our part.
+Observe how unreduced numbers involved in complex calculations tend to be (nearly fully) reduced if they are involved in a modular multiplication. So for example if field element $x$ has a large field excess, and if we calculate $x=x.y$, then as long as the unreduced product is less than $pR$, the result will be a nearly fully reduced $x$. So in many cases there is a natural tendency for field excesses not to grow without limit, and not to overflow, without requiring explicit action on our part.
 
 Consider now a sequence of code that adds, subtracts and multiplies field elements, as might arise in elliptic curve additions and doublings. Assume that the code has been analysed and that normalisation code has been inserted where needed. Assume that the reduction code that activates if there is a possibility of an element overflowing its field excess, while present, never in fact is triggered (due to the behaviour described above). Then we assert that once a program has initialised no unpredicted branches will occur during field arithmetic, and therefore the code will execute in constant time.
 
 ## Extension Field arithmetic
 
-To support cryptographic pairings we will need support for extension fields. We use a towering of extensions as required for BN curves and as required for higher security BLS curves. An element of the quadratic extension field will be represented as \\( f=a+ib \\), where \\( i \\) is the square root of the quadratic non-residue -1. To add, subtract and multiply them we use the obvious methods.
+To support cryptographic pairings we will need support for extension fields. We use a towering of extensions as required for BN curves and as required for higher security BLS curves. An element of the quadratic extension field will be represented as $f=a+ib$, where $i$ is the square root of the quadratic non-residue -1. To add, subtract and multiply them we use the obvious methods.
 
-However for negation we can construct \\( -f=-a-ib \\) as \\( b-(a+b)+i.(a-(a+b) \\) which requires only one base field negation. A similar idea can be used recursively for higher order extensions, so that only one base field negation is ever required.
+However for negation we can construct $-f=-a-ib$ as $b-(a+b)+i.(a-(a+b)$ which requires only one base field negation. A similar idea can be used recursively for higher order extensions, so that only one base field negation is ever required.
 
 ## Elliptic Curves
 
@@ -113,15 +113,15 @@ Three types of Elliptic curve are supported for the implementation of Elliptic C
 
 $$y^2=x^3+Ax+B$$
 
-where \\( A=0 \\) or \\( A=-3 \\). Edwards curves are supported using both regular and twisted Edwards format:
+where $A=0$ or $A=-3$. Edwards curves are supported using both regular and twisted Edwards format:
 
 $$Ax^2+y^2=1+Bx^2y^2$$
 
-where \\( A=1 \\) or \\( A=-1 \\). Montgomery curves are represented as:
+where $A=1$ or $A=-1$. Montgomery curves are represented as:
 
 $$y^2=x^3+Ax^2+x$$
 
-where \\( A \\) must be small. As mentioned in the introduction, in all cases we use exception-free formulae if available, as this facilitates constant time imple- mentation, even if this invokes a significant performance penalty.
+where $A$ must be small. As mentioned in the introduction, in all cases we use exception-free formulae if available, as this facilitates constant time imple- mentation, even if this invokes a significant performance penalty.
 
 In the particular case of elliptic curve point multiplication, there are potentially a myriad of very dangerous side-channel attacks that arise from using the classic double-and-add algorithm and its variants. Vulnerabilities arise if branches are taken that depend on secret bits, or if data is even accessed using secret values as indices. Many types of counter-measures have been suggested. The simplest solution is to use a constant-time algorithm like the Montgomery ladder, which has a very simple structure, uses very little  memory and has no key-bit-dependent branches.
 
@@ -140,7 +140,7 @@ And to claw back some decent performance use the Karatsuba method so that for ex
 
 Secret key operations like RSA decryption use the Montgomery ladder to achieve side-channel-attack resistance.
 
-The implementation can currently support \\( 1024.2^n \\) bit fields, so for example 2048-bit RSA can be used to get reasonably close to the AES-128-bit level of security, and if desired 4096 bit RSA can be used to comfortably exceed it.
+The implementation can currently support $1024.2^n$ bit fields, so for example 2048-bit RSA can be used to get reasonably close to the AES-128-bit level of security, and if desired 4096 bit RSA can be used to comfortably exceed it.
 
 Note that this code is supported independently of the elliptic curve code. So for example RSA and ECC can be run together within a single application.
 
