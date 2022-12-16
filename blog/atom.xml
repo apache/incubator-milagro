@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://milagro.apache.org/blog</id>
     <title>Apache Milagro Blog</title>
-    <updated>2019-06-10T06:00:00.000Z</updated>
+    <updated>2019-06-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://milagro.apache.org/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Apache Milagro news and events.</subtitle>
-    <logo>https://milagro.apache.org/img/milagro.svg</logo>
-    <rights>Copyright © 2022  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</rights>
+    <subtitle>Apache Milagro Blog</subtitle>
+    <icon>https://milagro.apache.org/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Miss us? We missed you.]]></title>
-        <id>https://milagro.apache.org/blog/2019/06/10/miss-me.html</id>
-        <link href="https://milagro.apache.org/blog/2019/06/10/miss-me.html"/>
-        <updated>2019-06-10T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>It's not often that Apache Incubation projects start, lay dormant for three years, and then spring to life. Yet, it's really happening. I pleased to report that in the past two weeks Milagro has added three new contributors, one new PPMC member and o...</p>]]></summary>
+        <id>/2019/06/10/miss-me</id>
+        <link href="https://milagro.apache.org/blog/2019/06/10/miss-me"/>
+        <updated>2019-06-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It's not often that Apache Incubation projects start, lay dormant for three years, and then spring to life. Yet, it's really happening. I pleased to report that in the past two weeks Milagro has added three new contributors, one new PPMC member and one new mentor. We launched a spartan, yet esthetically pleasing, project website. And, we have a roadmap.....]]></summary>
+        <content type="html"><![CDATA[<p>It's not often that Apache Incubation projects start, lay dormant for three years, and then spring to life. Yet, it's really happening. I pleased to report that in the past two weeks Milagro has added three new contributors, one new PPMC member and one new mentor. We launched a spartan, yet esthetically pleasing, project website. And, we have a roadmap.....</p><p>More details soon.</p>]]></content>
         <author>
             <name>Brian Spector</name>
             <uri>http://twitter.com/bspector</uri>

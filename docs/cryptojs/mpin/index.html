@@ -1,647 +1,104 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>MPIN · Apache Milagro</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;MPIN&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="MPIN · Apache Milagro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://milagro.apache.org/"/><meta property="og:description" content="&lt;a name=&quot;MPIN&quot;&gt;&lt;/a&gt;"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://milagro.apache.org/blog/atom.xml" title="Apache Milagro Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://milagro.apache.org/blog/feed.xml" title="Apache Milagro Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/milagro.svg" alt="Apache Milagro"/><h2 class="headerTitleWithLogo">Apache Milagro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/milagro-intro" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/support" target="_self">Support</a></li><li class="siteNavGroupActive"><a href="/docs/contributor-guide" target="_self">Contributing</a></li><li class="siteNavGroupActive"><a href="/docs/downloads" target="_self">Downloads</a></li><li class=""><a href="/blog/" target="_self">Status</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>AMCL JavaScript API 1.0.0</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">About Milagro<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/milagro-intro">Milagro Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-crypto">Milagro Crypto</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-protocols">Milagro Protocols</a></li><li class="navListItem"><a class="navItem" href="/docs/milagro-design">Milagro Design</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AMCL Library<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/amcl-overview">AMCL Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/amcl-c-api-2.0.0">AMCL C API 2.0.0</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">AMCL JavaScript API 1.0.0</h4><ul><li class="navListItem"><a class="navItem" href="/docs/cryptojs/aes">AES</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/big">BIG</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls">BLS</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls192">BLS192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/bls256">BLS256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/dbig">DBIG</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecdh">ECDH</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp">ECP</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp2">ECP2</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp4">ECP4</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ecp8">ECP8</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/ff">FF</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp">FP</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp2">FP2</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp4">FP4</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp8">FP8</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp12">FP12</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp16">FP16</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp24">FP24</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/fp48">FP48</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/gcm">GCM</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash256">HASH256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash384">HASH384</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/hash512">HASH512</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/cryptojs/mpin">MPIN</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin192">MPIN192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/mpin256">MPIN256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair">PAIR</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair192">PAIR192</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/pair256">PAIR256</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/rand">RAND</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/rsa">RSA</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/sha3">SHA3</a></li><li class="navListItem"><a class="navItem" href="/docs/cryptojs/unit64">UInt64</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">D-TA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/d-ta-overview">D-TA Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/quickstart">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/api">API</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/identity-documents">Identity Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/encrypted-envelope">Encrypted Envelope</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/ipfs">IPFS</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/plugins-overview">Plugins Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/dta-details/authentication">Authentication</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MPC Library<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/mpc-api-0.1">Multi-Party Computation Library 0.1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ZKP-MFA Clients/Servers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/zkp-mfa-overview">ZKP-MFA Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/zkp-mfa-api">ZKP-MFA API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/contributor-guide">Contributor&#x27;s Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/downloads">Downloads</a></li><li class="navListItem"><a class="navItem" href="/docs/support">Support</a></li></ul></div></div></section></div><script>
-            var coll = document.getElementsByClassName('collapsible');
-            var checkActiveCategory = true;
-            for (var i = 0; i < coll.length; i++) {
-              var links = coll[i].nextElementSibling.getElementsByTagName('*');
-              if (checkActiveCategory){
-                for (var j = 0; j < links.length; j++) {
-                  if (links[j].classList.contains('navListItemActive')){
-                    coll[i].nextElementSibling.classList.toggle('hide');
-                    coll[i].childNodes[1].classList.toggle('rotate');
-                    checkActiveCategory = false;
-                    break;
-                  }
-                }
-              }
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-default docs-doc-id-cryptojs/mpin">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.2.0">
+<title data-rh="true">MPIN | Apache Milagro</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://milagro.apache.org/docs/cryptojs/mpin"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="MPIN | Apache Milagro"><meta data-rh="true" name="description" content="MPIN"><meta data-rh="true" property="og:description" content="MPIN"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://milagro.apache.org/docs/cryptojs/mpin"><link data-rh="true" rel="alternate" href="https://milagro.apache.org/docs/cryptojs/mpin" hreflang="en"><link data-rh="true" rel="alternate" href="https://milagro.apache.org/docs/cryptojs/mpin" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Apache Milagro RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Apache Milagro Atom Feed">
 
-              coll[i].addEventListener('click', function() {
-                var arrow = this.childNodes[1];
-                arrow.classList.toggle('rotate');
-                var content = this.nextElementSibling;
-                content.classList.toggle('hide');
-              });
-            }
 
-            document.addEventListener('DOMContentLoaded', function() {
-              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
-              createToggler('#tocToggler', 'body', 'tocActive');
 
-              var headings = document.querySelector('.toc-headings');
-              headings && headings.addEventListener('click', function(event) {
-                var el = event.target;
-                while(el !== headings){
-                  if (el.tagName === 'A') {
-                    document.body.classList.remove('tocActive');
-                    break;
-                  } else{
-                    el = el.parentNode;
-                  }
-                }
-              }, false);
-
-              function createToggler(togglerSelector, targetSelector, className) {
-                var toggler = document.querySelector(togglerSelector);
-                var target = document.querySelector(targetSelector);
-
-                if (!toggler) {
-                  return;
-                }
-
-                toggler.onclick = function(event) {
-                  event.preventDefault();
-
-                  target.classList.toggle(className);
-                };
-              }
-            });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">MPIN</h1></header><article><div><span><p><a name="MPIN"></a></p>
-<h2><a class="anchor" aria-hidden="true" id="mpin"></a><a href="#mpin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN</h2>
-<p><strong>Kind</strong>: global class<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<ul>
-<li><a href="#MPIN">MPIN</a>
-<ul>
-<li><a href="#new_MPIN_new">new MPIN()</a></li>
-<li><a href="#MPIN.today">.today()</a> ⇒</li>
-<li><a href="#MPIN.bytestostring">.bytestostring(b)</a> ⇒</li>
-<li><a href="#MPIN.stringtobytes">.stringtobytes(s)</a> ⇒</li>
-<li><a href="#MPIN.comparebytes">.comparebytes(a, b)</a> ⇒</li>
-<li><a href="#MPIN.mpin_hash">.mpin_hash(c, U)</a> ⇒</li>
-<li><a href="#MPIN.hashit">.hashit(sha, n, B)</a> ⇒</li>
-<li><a href="#MPIN.map">.map(u, cb)</a> ⇒</li>
-<li><a href="#MPIN.unmap">.unmap(u, P)</a> ⇒</li>
-<li><a href="#MPIN.RECOMBINE_G1">.RECOMBINE_G1(R1, R2, R)</a> ⇒</li>
-<li><a href="#MPIN.RECOMBINE_G2">.RECOMBINE_G2(W1, W2, W)</a> ⇒</li>
-<li><a href="#MPIN.HASH_ID">.HASH_ID(sha, ID)</a> ⇒</li>
-<li><a href="#MPIN.RANDOM_GENERATE">.RANDOM_GENERATE(rng, S)</a> ⇒</li>
-<li><a href="#MPIN.EXTRACT_PIN">.EXTRACT_PIN()</a> ⇒</li>
-<li><a href="#MPIN.EXTRACT_FACTOR">.EXTRACT_FACTOR()</a> ⇒</li>
-<li><a href="#MPIN.RESTORE_FACTOR">.RESTORE_FACTOR()</a> ⇒</li>
-<li><a href="#MPIN.GET_SERVER_SECRET">.GET_SERVER_SECRET(S, SST)</a> ⇒</li>
-<li><a href="#MPIN.GET_G1_MULTIPLE">.GET_G1_MULTIPLE(type, x, G, W)</a> ⇒</li>
-<li><a href="#MPIN.GET_CLIENT_SECRET">.GET_CLIENT_SECRET(S, CID, CST)</a> ⇒</li>
-<li><a href="#MPIN.GET_CLIENT_PERMIT">.GET_CLIENT_PERMIT(sha, date, S, CID, CTT)</a> ⇒</li>
-<li><a href="#MPIN.CLIENT_1">.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT)</a> ⇒</li>
-<li><a href="#MPIN.CLIENT_2">.CLIENT_2(X, Y, SEC)</a> ⇒</li>
-<li><a href="#MPIN.SERVER_1">.SERVER_1(sha, date, CID, HID, HTID)</a> ⇒</li>
-<li><a href="#MPIN.SERVER_2">.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa)</a> ⇒</li>
-<li><a href="#MPIN.KANGAROO">.KANGAROO(E, F)</a> ⇒</li>
-<li><a href="#MPIN.GET_TIME">.GET_TIME()</a> ⇒</li>
-<li><a href="#MPIN.GET_Y">.GET_Y(sha, TimeValue, xCID, Y)</a> ⇒</li>
-<li><a href="#MPIN.CLIENT">.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message)</a> ⇒</li>
-<li><a href="#MPIN.SERVER">.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa)</a> ⇒</li>
-<li><a href="#MPIN.PRECOMPUTE">.PRECOMPUTE(TOKEN, CID, G1, G2)</a> ⇒</li>
-<li><a href="#MPIN.HASH_ALL">.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W)</a> ⇒</li>
-<li><a href="#MPIN.CLIENT_KEY">.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK)</a> ⇒</li>
-<li><a href="#MPIN.SERVER_KEY">.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK)</a> ⇒</li>
-<li><a href="#MPIN.GET_DVS_KEYPAIR">.GET_DVS_KEYPAIR(rng, Z, Pa)</a> ⇒</li>
-</ul></li>
-</ul>
-<p><a name="new_MPIN_new"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="new-mpin"></a><a href="#new-mpin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new MPIN()</h3>
-<p>Creates an instance of MPIN</p>
-<p><a name="MPIN.today"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpintoday-"></a><a href="#mpintoday-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.today() ⇒</h3>
-<p>Get epoch time for today</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
+<script src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/assets/css/styles.e187d088.css">
+<link rel="preload" href="/assets/js/runtime~main.2c187651.js" as="script">
+<link rel="preload" href="/assets/js/main.98efe6b5.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/milagro.svg" alt="" class="themedImage_ToTc themedImage--light_HNdA"><img src="/img/milagro.svg" alt="" class="themedImage_ToTc themedImage--dark_i4oU"></div><b class="navbar__title text--truncate">Apache Milagro</b></a><a class="navbar__item navbar__link" href="/docs/milagro-intro">Docs</a><a class="navbar__item navbar__link" href="/docs/support">Support</a><a class="navbar__item navbar__link" href="/docs/contributor-guide">Contributing</a><a class="navbar__item navbar__link" href="/docs/downloads">Downloads</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docPage__5DB"><aside class="theme-doc-sidebar-container docSidebarContainer_b6E3"><div class="sidebar_njMd"><nav class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/milagro-intro">About Milagro</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/docs/amcl-overview">AMCL Library</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/amcl-overview">AMCL Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/amcl-c-api-2.0.0">AMCL C API 2.0.0</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" tabindex="0" href="/docs/cryptojs/amcl-javascript-api">AMCL JavaScript API 1.0.0</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/amcl-javascript-api">AMCL JavaScript API</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/aes">AES</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/big">BIG</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/bls">BLS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/bls192">BLS192</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/bls256">BLS256</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/dbig">DBIG</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/ecdh">ECDH</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/ecp">ECP</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/ecp2">ECP2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/ecp4">ECP4</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/ecp8">ECP8</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/ff">FF</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp">FP</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp2">FP2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp4">FP4</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp8">FP8</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp12">FP12</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp16">FP16</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp24">FP24</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/fp48">FP48</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/gcm">GCM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/hash256">HASH256</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/hash384">HASH384</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/hash512">HASH512</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/cryptojs/mpin">MPIN</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/mpin192">MPIN192</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/mpin256">MPIN256</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/pair">PAIR</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/pair192">PAIR192</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/pair256">PAIR256</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/rand">RAND</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/rsa">RSA</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/sha3">SHA3</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/cryptojs/unit64">UInt64</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/d-ta-overview">D-TA</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/mpc-api-0.1">MPC Library</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/zkp-mfa-overview">ZKP-MFA Clients/Servers</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/contributor-guide">Project Info</a></div></li></ul></nav></div></aside><main class="docMainContainer_gTbr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_OVgt"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">AMCL Library</span><meta itemprop="position" content="1"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">AMCL JavaScript API 1.0.0</span><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">MPIN</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>MPIN</h1></header><a name="MPIN"></a><h2 class="anchor anchorWithStickyNavbar_LWe7" id="mpin">MPIN<a class="hash-link" href="#mpin" title="Direct link to heading">​</a></h2><p><strong>Kind</strong>: global class<br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><ul><li><a href="#MPIN">MPIN</a><ul><li><a href="#new_MPIN_new">new MPIN()</a></li><li><a href="#MPIN.today">.today()</a> ⇒</li><li><a href="#MPIN.bytestostring">.bytestostring(b)</a> ⇒</li><li><a href="#MPIN.stringtobytes">.stringtobytes(s)</a> ⇒</li><li><a href="#MPIN.comparebytes">.comparebytes(a, b)</a> ⇒</li><li><a href="#MPIN.mpin_hash">.mpin_hash(c, U)</a> ⇒</li><li><a href="#MPIN.hashit">.hashit(sha, n, B)</a> ⇒</li><li><a href="#MPIN.map">.map(u, cb)</a> ⇒</li><li><a href="#MPIN.unmap">.unmap(u, P)</a> ⇒</li><li><a href="#MPIN.RECOMBINE_G1">.RECOMBINE_G1(R1, R2, R)</a> ⇒</li><li><a href="#MPIN.RECOMBINE_G2">.RECOMBINE_G2(W1, W2, W)</a> ⇒</li><li><a href="#MPIN.HASH_ID">.HASH_ID(sha, ID)</a> ⇒</li><li><a href="#MPIN.RANDOM_GENERATE">.RANDOM_GENERATE(rng, S)</a> ⇒</li><li><a href="#MPIN.EXTRACT_PIN">.EXTRACT_PIN()</a> ⇒</li><li><a href="#MPIN.EXTRACT_FACTOR">.EXTRACT_FACTOR()</a> ⇒</li><li><a href="#MPIN.RESTORE_FACTOR">.RESTORE_FACTOR()</a> ⇒</li><li><a href="#MPIN.GET_SERVER_SECRET">.GET_SERVER_SECRET(S, SST)</a> ⇒</li><li><a href="#MPIN.GET_G1_MULTIPLE">.GET_G1_MULTIPLE(type, x, G, W)</a> ⇒</li><li><a href="#MPIN.GET_CLIENT_SECRET">.GET_CLIENT_SECRET(S, CID, CST)</a> ⇒</li><li><a href="#MPIN.GET_CLIENT_PERMIT">.GET_CLIENT_PERMIT(sha, date, S, CID, CTT)</a> ⇒</li><li><a href="#MPIN.CLIENT_1">.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT)</a> ⇒</li><li><a href="#MPIN.CLIENT_2">.CLIENT_2(X, Y, SEC)</a> ⇒</li><li><a href="#MPIN.SERVER_1">.SERVER_1(sha, date, CID, HID, HTID)</a> ⇒</li><li><a href="#MPIN.SERVER_2">.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa)</a> ⇒</li><li><a href="#MPIN.KANGAROO">.KANGAROO(E, F)</a> ⇒</li><li><a href="#MPIN.GET_TIME">.GET_TIME()</a> ⇒</li><li><a href="#MPIN.GET_Y">.GET_Y(sha, TimeValue, xCID, Y)</a> ⇒</li><li><a href="#MPIN.CLIENT">.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message)</a> ⇒</li><li><a href="#MPIN.SERVER">.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa)</a> ⇒</li><li><a href="#MPIN.PRECOMPUTE">.PRECOMPUTE(TOKEN, CID, G1, G2)</a> ⇒</li><li><a href="#MPIN.HASH_ALL">.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W)</a> ⇒</li><li><a href="#MPIN.CLIENT_KEY">.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK)</a> ⇒</li><li><a href="#MPIN.SERVER_KEY">.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK)</a> ⇒</li><li><a href="#MPIN.GET_DVS_KEYPAIR">.GET_DVS_KEYPAIR(rng, Z, Pa)</a> ⇒</li></ul></li></ul><a name="new_MPIN_new"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-mpin">new MPIN()<a class="hash-link" href="#new-mpin" title="Direct link to heading">​</a></h3><p>Creates an instance of MPIN</p><a name="MPIN.today"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpintoday-">MPIN.today() ⇒<a class="hash-link" href="#mpintoday-" title="Direct link to heading">​</a></h3><p>Get epoch time for today</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: time in slots since epoch<br>
-<strong>this</strong>: <code>{MPIN}</code>  <br>
-<a name="MPIN.bytestostring"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinbytestostringb-"></a><a href="#mpinbytestostringb-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.bytestostring(b) ⇒</h3>
-<p>Convert byte array to string</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><a name="MPIN.bytestostring"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinbytestostringb-">MPIN.bytestostring(b) ⇒<a class="hash-link" href="#mpinbytestostringb-" title="Direct link to heading">​</a></h3><p>Convert byte array to string</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: s string<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>b</td><td>byte array</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.stringtobytes"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinstringtobytess-"></a><a href="#mpinstringtobytess-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.stringtobytes(s) ⇒</h3>
-<p>Convert a string to byte array</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>b</td><td>byte array</td></tr></tbody></table><a name="MPIN.stringtobytes"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinstringtobytess-">MPIN.stringtobytes(s) ⇒<a class="hash-link" href="#mpinstringtobytess-" title="Direct link to heading">​</a></h3><p>Convert a string to byte array</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: b byte array<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>s</td><td>string</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.comparebytes"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpincomparebytesa-b-"></a><a href="#mpincomparebytesa-b-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.comparebytes(a, b) ⇒</h3>
-<p>Convert byte arrays</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>s</td><td>string</td></tr></tbody></table><a name="MPIN.comparebytes"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpincomparebytesa-b-">MPIN.comparebytes(a, b) ⇒<a class="hash-link" href="#mpincomparebytesa-b-" title="Direct link to heading">​</a></h3><p>Convert byte arrays</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: true if equal<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>a</td><td>byte array</td></tr>
-<tr><td>b</td><td>byte array</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.mpin_hash"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinmpin_hashc-u-"></a><a href="#mpinmpin_hashc-u-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.mpin_hash(c, U) ⇒</h3>
-<p>Hash values</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>a</td><td>byte array</td></tr><tr><td>b</td><td>byte array</td></tr></tbody></table><a name="MPIN.mpin_hash"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinmpin_hashc-u-">MPIN.mpin_hash(c, U) ⇒<a class="hash-link" href="#mpinmpin_hashc-u-" title="Direct link to heading">​</a></h3><p>Hash values</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: R hash value<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>c</td><td>FP8 instance</td></tr>
-<tr><td>U</td><td>ECP unstancebyte array</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.hashit"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinhashitsha-n-b-"></a><a href="#mpinhashitsha-n-b-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.hashit(sha, n, B) ⇒</h3>
-<p>General purpose hash function</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>c</td><td>FP8 instance</td></tr><tr><td>U</td><td>ECP unstancebyte array</td></tr></tbody></table><a name="MPIN.hashit"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinhashitsha-n-b-">MPIN.hashit(sha, n, B) ⇒<a class="hash-link" href="#mpinhashitsha-n-b-" title="Direct link to heading">​</a></h3><p>General purpose hash function</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: R hash value<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>n</td><td>Integer</td></tr>
-<tr><td>B</td><td>byte array</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.map"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinmapu-cb-"></a><a href="#mpinmapu-cb-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.map(u, cb) ⇒</h3>
-<p>maps a random u to a point on the curve</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td></tr><tr><td>n</td><td>Integer</td></tr><tr><td>B</td><td>byte array</td></tr></tbody></table><a name="MPIN.map"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinmapu-cb-">MPIN.map(u, cb) ⇒<a class="hash-link" href="#mpinmapu-cb-" title="Direct link to heading">​</a></h3><p>maps a random u to a point on the curve</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: P ECP pointhash value<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>u</td><td>BIG numberInteger</td></tr>
-<tr><td>cb</td><td>an integer representing the &quot;sign&quot; of y, in fact its least significant bit.</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.unmap"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinunmapu-p-"></a><a href="#mpinunmapu-p-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.unmap(u, P) ⇒</h3>
-<p>returns u derived from P. Random value in range 1 to return value should then be added to u</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>u</td><td>BIG numberInteger</td></tr><tr><td>cb</td><td>an integer representing the &quot;sign&quot; of y, in fact its least significant bit.</td></tr></tbody></table><a name="MPIN.unmap"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinunmapu-p-">MPIN.unmap(u, P) ⇒<a class="hash-link" href="#mpinunmapu-p-" title="Direct link to heading">​</a></h3><p>returns u derived from P. Random value in range 1 to return value should then be added to u</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: r Value that should be added to u to derive P<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>u</td><td>BIG numberInteger</td></tr>
-<tr><td>P</td><td>ECP pointhash value</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.RECOMBINE_G1"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinrecombine_g1r1-r2-r-"></a><a href="#mpinrecombine_g1r1-r2-r-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.RECOMBINE_G1(R1, R2, R) ⇒</h3>
-<p>Add two members from the group G1</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>u</td><td>BIG numberInteger</td></tr><tr><td>P</td><td>ECP pointhash value</td></tr></tbody></table><a name="MPIN.RECOMBINE_G1"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinrecombine_g1r1-r2-r-">MPIN.RECOMBINE_G1(R1, R2, R) ⇒<a class="hash-link" href="#mpinrecombine_g1r1-r2-r-" title="Direct link to heading">​</a></h3><p>Add two members from the group G1</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: 0 or an error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>R1</td><td>Input member of G1</td></tr>
-<tr><td>R2</td><td>Input member of G1</td></tr>
-<tr><td>R</td><td>Output member of G1. R=R1+R2</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.RECOMBINE_G2"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinrecombine_g2w1-w2-w-"></a><a href="#mpinrecombine_g2w1-w2-w-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.RECOMBINE_G2(W1, W2, W) ⇒</h3>
-<p>Add two members from the group G2</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>R1</td><td>Input member of G1</td></tr><tr><td>R2</td><td>Input member of G1</td></tr><tr><td>R</td><td>Output member of G1. R=R1+R2</td></tr></tbody></table><a name="MPIN.RECOMBINE_G2"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinrecombine_g2w1-w2-w-">MPIN.RECOMBINE_G2(W1, W2, W) ⇒<a class="hash-link" href="#mpinrecombine_g2w1-w2-w-" title="Direct link to heading">​</a></h3><p>Add two members from the group G2</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: 0 or an error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>W1</td><td>Input member of G2</td></tr>
-<tr><td>W2</td><td>Input member of G2</td></tr>
-<tr><td>W</td><td>Output member of G2. W=W1+W2</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.HASH_ID"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinhash_idsha-id-"></a><a href="#mpinhash_idsha-id-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.HASH_ID(sha, ID) ⇒</h3>
-<p>Hash the identity</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>W1</td><td>Input member of G2</td></tr><tr><td>W2</td><td>Input member of G2</td></tr><tr><td>W</td><td>Output member of G2. W=W1+W2</td></tr></tbody></table><a name="MPIN.HASH_ID"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinhash_idsha-id-">MPIN.HASH_ID(sha, ID) ⇒<a class="hash-link" href="#mpinhash_idsha-id-" title="Direct link to heading">​</a></h3><p>Hash the identity</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: hash value<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>ID</td><td>Identity as byte array</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.RANDOM_GENERATE"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinrandom_generaterng-s-"></a><a href="#mpinrandom_generaterng-s-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.RANDOM_GENERATE(rng, S) ⇒</h3>
-<p>Create random secret</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td></tr><tr><td>ID</td><td>Identity as byte array</td></tr></tbody></table><a name="MPIN.RANDOM_GENERATE"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinrandom_generaterng-s-">MPIN.RANDOM_GENERATE(rng, S) ⇒<a class="hash-link" href="#mpinrandom_generaterng-s-" title="Direct link to heading">​</a></h3><p>Create random secret</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>rng</td><td>cryptographically secure random number generator</td></tr>
-<tr><td>S</td><td>Random secret value</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.EXTRACT_PIN"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinextract_pin-"></a><a href="#mpinextract_pin-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.EXTRACT_PIN() ⇒</h3>
-<p>Extract a PIN number from a client secret</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>rng</td><td>cryptographically secure random number generator</td></tr><tr><td>S</td><td>Random secret value</td></tr></tbody></table><a name="MPIN.EXTRACT_PIN"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinextract_pin-">MPIN.EXTRACT_PIN() ⇒<a class="hash-link" href="#mpinextract_pin-" title="Direct link to heading">​</a></h3><p>Extract a PIN number from a client secret</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: token<br>
-<strong>this</strong>: <code>{MPIN}</code>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code><br>
 <strong>Parameter</strong>: sha hash type<br>
 <strong>Parameter</strong>: CID Client identity<br>
 <strong>Parameter</strong>: pin PIN value<br>
-<strong>Parameter</strong>: TOKEN Client secret<br>
-<a name="MPIN.EXTRACT_FACTOR"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinextract_factor-"></a><a href="#mpinextract_factor-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.EXTRACT_FACTOR() ⇒</h3>
-<p>Extract factor from TOKEN for identity CID</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>Parameter</strong>: TOKEN Client secret  </p><a name="MPIN.EXTRACT_FACTOR"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinextract_factor-">MPIN.EXTRACT_FACTOR() ⇒<a class="hash-link" href="#mpinextract_factor-" title="Direct link to heading">​</a></h3><p>Extract factor from TOKEN for identity CID</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: token<br>
-<strong>this</strong>: <code>{MPIN}</code>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code><br>
 <strong>Parameter</strong>: sha hash type<br>
 <strong>Parameter</strong>: CID Client identity<br>
 <strong>Parameter</strong>: factor Value to extract<br>
 <strong>Parameter</strong>: facbits Number of bits in factor<br>
-<strong>Parameter</strong>: TOKEN Token value<br>
-<a name="MPIN.RESTORE_FACTOR"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinrestore_factor-"></a><a href="#mpinrestore_factor-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.RESTORE_FACTOR() ⇒</h3>
-<p>Restore factor to TOKEN for identity CID</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>Parameter</strong>: TOKEN Token value  </p><a name="MPIN.RESTORE_FACTOR"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinrestore_factor-">MPIN.RESTORE_FACTOR() ⇒<a class="hash-link" href="#mpinrestore_factor-" title="Direct link to heading">​</a></h3><p>Restore factor to TOKEN for identity CID</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: token<br>
-<strong>this</strong>: <code>{MPIN}</code>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code><br>
 <strong>Parameter</strong>: sha hash type<br>
 <strong>Parameter</strong>: CID Client identity<br>
 <strong>Parameter</strong>: factor Value to extract<br>
 <strong>Parameter</strong>: facbits Number of bits in factor<br>
-<strong>Parameter</strong>: TOKEN Token value<br>
-<a name="MPIN.GET_SERVER_SECRET"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_server_secrets-sst-"></a><a href="#mpinget_server_secrets-sst-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_SERVER_SECRET(S, SST) ⇒</h3>
-<p>Create a server secret in G2 from a master secret</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>Parameter</strong>: TOKEN Token value  </p><a name="MPIN.GET_SERVER_SECRET"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_server_secrets-sst-">MPIN.GET_SERVER_SECRET(S, SST) ⇒<a class="hash-link" href="#mpinget_server_secrets-sst-" title="Direct link to heading">​</a></h3><p>Create a server secret in G2 from a master secret</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>S</td><td>Master secret</td></tr>
-<tr><td>SST</td><td>Server secret = s.Q where Q is a fixed generator of G2</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.GET_G1_MULTIPLE"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_g1_multipletype-x-g-w-"></a><a href="#mpinget_g1_multipletype-x-g-w-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_G1_MULTIPLE(type, x, G, W) ⇒</h3>
-<p>Find a random multiple of a point in G1</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>S</td><td>Master secret</td></tr><tr><td>SST</td><td>Server secret = s.Q where Q is a fixed generator of G2</td></tr></tbody></table><a name="MPIN.GET_G1_MULTIPLE"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_g1_multipletype-x-g-w-">MPIN.GET_G1_MULTIPLE(type, x, G, W) ⇒<a class="hash-link" href="#mpinget_g1_multipletype-x-g-w-" title="Direct link to heading">​</a></h3><p>Find a random multiple of a point in G1</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code>  <br>
-<strong>Parameter</strong>: rng cryptographically secure random number generator</p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>type</td><td>determines type of action to be taken</td></tr>
-<tr><td>x</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr>
-<tr><td>G</td><td>if type=0 a point in G1, else an octet to be mapped to G1</td></tr>
-<tr><td>W</td><td>the output =x.G or x.M(G), where M(.) is a mapping</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.GET_CLIENT_SECRET"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_client_secrets-cid-cst-"></a><a href="#mpinget_client_secrets-cid-cst-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_CLIENT_SECRET(S, CID, CST) ⇒</h3>
-<p>Create a client secret in G1 from a master secret and the client ID</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code><br>
+<strong>Parameter</strong>: rng cryptographically secure random number generator  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>determines type of action to be taken</td></tr><tr><td>x</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr><tr><td>G</td><td>if type=0 a point in G1, else an octet to be mapped to G1</td></tr><tr><td>W</td><td>the output =x.G or x.M(G), where M(.) is a mapping</td></tr></tbody></table><a name="MPIN.GET_CLIENT_SECRET"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_client_secrets-cid-cst-">MPIN.GET_CLIENT_SECRET(S, CID, CST) ⇒<a class="hash-link" href="#mpinget_client_secrets-cid-cst-" title="Direct link to heading">​</a></h3><p>Create a client secret in G1 from a master secret and the client ID</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>S</td><td>is an input master secret</td></tr>
-<tr><td>CID</td><td>is the input client identity</td></tr>
-<tr><td>CST</td><td>is the full client secret = s.H(ID)</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.GET_CLIENT_PERMIT"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_client_permitsha-date-s-cid-ctt-"></a><a href="#mpinget_client_permitsha-date-s-cid-ctt-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_CLIENT_PERMIT(sha, date, S, CID, CTT) ⇒</h3>
-<p>Create a Time Permit in G1 from a master secret and the client ID</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>S</td><td>is an input master secret</td></tr><tr><td>CID</td><td>is the input client identity</td></tr><tr><td>CST</td><td>is the full client secret = s.H(ID)</td></tr></tbody></table><a name="MPIN.GET_CLIENT_PERMIT"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_client_permitsha-date-s-cid-ctt-">MPIN.GET_CLIENT_PERMIT(sha, date, S, CID, CTT) ⇒<a class="hash-link" href="#mpinget_client_permitsha-date-s-cid-ctt-" title="Direct link to heading">​</a></h3><p>Create a Time Permit in G1 from a master secret and the client ID</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>date</td><td>is input date, in days since the epoch.</td></tr>
-<tr><td>S</td><td>is an input master secret</td></tr>
-<tr><td>CID</td><td>is the input client identity</td></tr>
-<tr><td>CTT</td><td>is a Time Permit for the given date = s.H(d</td><td>H(ID))</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.CLIENT_1"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinclient_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-"></a><a href="#mpinclient_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT) ⇒</h3>
-<p>Perform first pass of the client side of the 3-pass version of the M-Pin protocol</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td><td></td></tr><tr><td>date</td><td>is input date, in days since the epoch.</td><td></td></tr><tr><td>S</td><td>is an input master secret</td><td></td></tr><tr><td>CID</td><td>is the input client identity</td><td></td></tr><tr><td>CTT</td><td>is a Time Permit for the given date = s.H(d</td><td>H(ID))</td></tr></tbody></table><a name="MPIN.CLIENT_1"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinclient_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-">MPIN.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT) ⇒<a class="hash-link" href="#mpinclient_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-" title="Direct link to heading">​</a></h3><p>Perform first pass of the client side of the 3-pass version of the M-Pin protocol</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
-<tr><td>CLIENT_ID</td><td>is the input client identity</td></tr>
-<tr><td>rng</td><td>is a pointer to a cryptographically secure random number generator</td></tr>
-<tr><td>X</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr>
-<tr><td>pin</td><td>is the input PIN number</td></tr>
-<tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr>
-<tr><td>SEC</td><td>is output = CS+TP, where CS=is the reconstructed client secret, and TP is the time permit</td></tr>
-<tr><td>xID</td><td>is output = x.H(ID)</td></tr>
-<tr><td>xCID</td><td>is output = x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
-<tr><td>PERMIT</td><td>is the input time permit</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.CLIENT_2"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinclient_2x-y-sec-"></a><a href="#mpinclient_2x-y-sec-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.CLIENT_2(X, Y, SEC) ⇒</h3>
-<p>Perform second pass of the client side of the 3-pass version of the M-Pin protocol</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td><td></td></tr><tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td><td></td></tr><tr><td>CLIENT_ID</td><td>is the input client identity</td><td></td></tr><tr><td>rng</td><td>is a pointer to a cryptographically secure random number generator</td><td></td></tr><tr><td>X</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td><td></td></tr><tr><td>pin</td><td>is the input PIN number</td><td></td></tr><tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td><td></td></tr><tr><td>SEC</td><td>is output = CS+TP, where CS=is the reconstructed client secret, and TP is the time permit</td><td></td></tr><tr><td>xID</td><td>is output = x.H(ID)</td><td></td></tr><tr><td>xCID</td><td>is output = x.(H(ID)+H(d</td><td>H(ID)))</td></tr><tr><td>PERMIT</td><td>is the input time permit</td><td></td></tr></tbody></table><a name="MPIN.CLIENT_2"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinclient_2x-y-sec-">MPIN.CLIENT_2(X, Y, SEC) ⇒<a class="hash-link" href="#mpinclient_2x-y-sec-" title="Direct link to heading">​</a></h3><p>Perform second pass of the client side of the 3-pass version of the M-Pin protocol</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>X</td><td>an input, a locally generated random number</td></tr>
-<tr><td>Y</td><td>an input random challenge from the server</td></tr>
-<tr><td>SEC</td><td>on output = -(x+y).V</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.SERVER_1"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinserver_1sha-date-cid-hid-htid-"></a><a href="#mpinserver_1sha-date-cid-hid-htid-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.SERVER_1(sha, date, CID, HID, HTID) ⇒</h3>
-<p>Perform first pass of the server side of the 3-pass version of the M-Pin protocol</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>X</td><td>an input, a locally generated random number</td></tr><tr><td>Y</td><td>an input random challenge from the server</td></tr><tr><td>SEC</td><td>on output = -(x+y).V</td></tr></tbody></table><a name="MPIN.SERVER_1"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinserver_1sha-date-cid-hid-htid-">MPIN.SERVER_1(sha, date, CID, HID, HTID) ⇒<a class="hash-link" href="#mpinserver_1sha-date-cid-hid-htid-" title="Direct link to heading">​</a></h3><p>Perform first pass of the server side of the 3-pass version of the M-Pin protocol</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
-<tr><td>CID</td><td>is the input claimed client identity</td></tr>
-<tr><td>HID</td><td>is output H(ID), a hash of the client ID</td></tr>
-<tr><td>HTID</td><td>is output H(ID)+H(d</td><td>H(ID))</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.SERVER_2"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinserver_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa-"></a><a href="#mpinserver_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa) ⇒</h3>
-<p>Perform third pass on the server side of the 3-pass version of the M-Pin protocol</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td><td></td></tr><tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td><td></td></tr><tr><td>CID</td><td>is the input claimed client identity</td><td></td></tr><tr><td>HID</td><td>is output H(ID), a hash of the client ID</td><td></td></tr><tr><td>HTID</td><td>is output H(ID)+H(d</td><td>H(ID))</td></tr></tbody></table><a name="MPIN.SERVER_2"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinserver_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa-">MPIN.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa) ⇒<a class="hash-link" href="#mpinserver_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa-" title="Direct link to heading">​</a></h3><p>Perform third pass on the server side of the 3-pass version of the M-Pin protocol</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
-<tr><td>HID</td><td>is input H(ID), a hash of the client ID</td></tr>
-<tr><td>HTID</td><td>is input H(ID)+H(d</td><td>H(ID))</td></tr>
-<tr><td>Y</td><td>is the input server's randomly generated challenge</td></tr>
-<tr><td>SST</td><td>is the input server secret</td></tr>
-<tr><td>xID</td><td>is input from the client = x.H(ID)</td></tr>
-<tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
-<tr><td>mSEC</td><td>is an input from the client</td></tr>
-<tr><td>E</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
-<tr><td>F</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
-<tr><td>Pa</td><td>is the input public key from the client, z.Q or NULL if the client uses regular mpin</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.KANGAROO"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinkangarooe-f-"></a><a href="#mpinkangarooe-f-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.KANGAROO(E, F) ⇒</h3>
-<p>Use Kangaroos to find PIN error</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th></tr></thead><tbody><tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td><td></td></tr><tr><td>HID</td><td>is input H(ID), a hash of the client ID</td><td></td></tr><tr><td>HTID</td><td>is input H(ID)+H(d</td><td>H(ID))</td></tr><tr><td>Y</td><td>is the input server&#x27;s randomly generated challenge</td><td></td></tr><tr><td>SST</td><td>is the input server secret</td><td></td></tr><tr><td>xID</td><td>is input from the client = x.H(ID)</td><td></td></tr><tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr><tr><td>mSEC</td><td>is an input from the client</td><td></td></tr><tr><td>E</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td><td></td></tr><tr><td>F</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td><td></td></tr><tr><td>Pa</td><td>is the input public key from the client, z.Q or NULL if the client uses regular mpin</td><td></td></tr></tbody></table><a name="MPIN.KANGAROO"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinkangarooe-f-">MPIN.KANGAROO(E, F) ⇒<a class="hash-link" href="#mpinkangarooe-f-" title="Direct link to heading">​</a></h3><p>Use Kangaroos to find PIN error</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: 0 if Kangaroos failed, or the PIN error e<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>E</td><td>a member of the group GT</td></tr>
-<tr><td>F</td><td>a member of the group GT =  E^e</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.GET_TIME"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_time-"></a><a href="#mpinget_time-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_TIME() ⇒</h3>
-<p>Time since epoch</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>E</td><td>a member of the group GT</td></tr><tr><td>F</td><td>a member of the group GT =  E^e</td></tr></tbody></table><a name="MPIN.GET_TIME"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_time-">MPIN.GET_TIME() ⇒<a class="hash-link" href="#mpinget_time-" title="Direct link to heading">​</a></h3><p>Time since epoch</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: time since epoch<br>
-<strong>this</strong>: <code>{MPIN}</code>  <br>
-<a name="MPIN.GET_Y"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_ysha-timevalue-xcid-y-"></a><a href="#mpinget_ysha-timevalue-xcid-y-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_Y(sha, TimeValue, xCID, Y) ⇒</h3>
-<p>Generate Y=H(s,O), where s is epoch time, O is a byte array, and H(.) is a hash function</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><a name="MPIN.GET_Y"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_ysha-timevalue-xcid-y-">MPIN.GET_Y(sha, TimeValue, xCID, Y) ⇒<a class="hash-link" href="#mpinget_ysha-timevalue-xcid-y-" title="Direct link to heading">​</a></h3><p>Generate Y=H(s,O), where s is epoch time, O is a byte array, and H(.) is a hash function</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>TimeValue</td><td>is epoch time in seconds</td></tr>
-<tr><td>xCID</td><td>input bytearray is an input octet</td></tr>
-<tr><td>Y</td><td>output value</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.CLIENT"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinclientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message-"></a><a href="#mpinclientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message) ⇒</h3>
-<p>Perform client side of the one-pass version of the M-Pin protocol</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td></tr><tr><td>TimeValue</td><td>is epoch time in seconds</td></tr><tr><td>xCID</td><td>input bytearray is an input octet</td></tr><tr><td>Y</td><td>output value</td></tr></tbody></table><a name="MPIN.CLIENT"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinclientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message-">MPIN.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message) ⇒<a class="hash-link" href="#mpinclientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message-" title="Direct link to heading">​</a></h3><p>Perform client side of the one-pass version of the M-Pin protocol</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
-<tr><td>CLIENT_ID</td><td>is the input client identity</td></tr>
-<tr><td>rng</td><td>is a pointer to a cryptographically secure random number generator</td></tr>
-<tr><td>X</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td></tr>
-<tr><td>pin</td><td>is the input PIN number</td></tr>
-<tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr>
-<tr><td>SEC</td><td>is output = -(x+y)(CS+TP), where CS is the reconstructed client secret, and TP is the time permit</td></tr>
-<tr><td>xID</td><td>is output = x.H(ID)</td></tr>
-<tr><td>xCID</td><td>is output = x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
-<tr><td>PERMIT</td><td>is the input time permit</td></tr>
-<tr><td>TimeValue</td><td>is input epoch time in seconds - a timestamp</td></tr>
-<tr><td>Y</td><td>is output H(t</td><td>U) or H(t</td><td>UT) if Time Permits enabled</td></tr>
-<tr><td>Message</td><td>is the message to be signed</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.SERVER"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinserversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa-"></a><a href="#mpinserversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa) ⇒</h3>
-<p>Perform server side of the one-pass version of the M-Pin protocol</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th><th></th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td><td></td><td></td></tr><tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td><td></td><td></td></tr><tr><td>CLIENT_ID</td><td>is the input client identity</td><td></td><td></td></tr><tr><td>rng</td><td>is a pointer to a cryptographically secure random number generator</td><td></td><td></td></tr><tr><td>X</td><td>an output internally randomly generated if R!=NULL, otherwise must be provided as an input</td><td></td><td></td></tr><tr><td>pin</td><td>is the input PIN number</td><td></td><td></td></tr><tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td><td></td><td></td></tr><tr><td>SEC</td><td>is output = -(x+y)(CS+TP), where CS is the reconstructed client secret, and TP is the time permit</td><td></td><td></td></tr><tr><td>xID</td><td>is output = x.H(ID)</td><td></td><td></td></tr><tr><td>xCID</td><td>is output = x.(H(ID)+H(d</td><td>H(ID)))</td><td></td></tr><tr><td>PERMIT</td><td>is the input time permit</td><td></td><td></td></tr><tr><td>TimeValue</td><td>is input epoch time in seconds - a timestamp</td><td></td><td></td></tr><tr><td>Y</td><td>is output H(t</td><td>U) or H(t</td><td>UT) if Time Permits enabled</td></tr><tr><td>Message</td><td>is the message to be signed</td><td></td><td></td></tr></tbody></table><a name="MPIN.SERVER"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinserversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa-">MPIN.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa) ⇒<a class="hash-link" href="#mpinserversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa-" title="Direct link to heading">​</a></h3><p>Perform server side of the one-pass version of the M-Pin protocol</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td></tr>
-<tr><td>HID</td><td>is output H(ID), a hash of the client ID</td></tr>
-<tr><td>HTID</td><td>is output H(ID)+H(d</td><td>H(ID))</td></tr>
-<tr><td>Y</td><td>is output H(t</td><td>U) or H(t</td><td>UT) if Time Permits enabled</td></tr>
-<tr><td>SST</td><td>is the input server secret</td></tr>
-<tr><td>xID</td><td>is input from the client = x.H(ID)</td></tr>
-<tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
-<tr><td>mSEC</td><td>is an input from the client</td></tr>
-<tr><td>E</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
-<tr><td>F</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td></tr>
-<tr><td>CID</td><td>is the input claimed client identity</td></tr>
-<tr><td>TimeValue</td><td>is input epoch time in seconds - a timestamp</td></tr>
-<tr><td>MESSAGE</td><td>is the message to be signed</td></tr>
-<tr><td>Pa</td><td>is input from the client z.Q or NULL if the key-escrow less scheme is not used</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.PRECOMPUTE"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinprecomputetoken-cid-g1-g2-"></a><a href="#mpinprecomputetoken-cid-g1-g2-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.PRECOMPUTE(TOKEN, CID, G1, G2) ⇒</h3>
-<p>Precompute values for use by the client side of M-Pin Full</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th><th></th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td><td></td><td></td></tr><tr><td>date</td><td>is input date, in days since the epoch. Set to 0 if Time permits disabled</td><td></td><td></td></tr><tr><td>HID</td><td>is output H(ID), a hash of the client ID</td><td></td><td></td></tr><tr><td>HTID</td><td>is output H(ID)+H(d</td><td>H(ID))</td><td></td></tr><tr><td>Y</td><td>is output H(t</td><td>U) or H(t</td><td>UT) if Time Permits enabled</td></tr><tr><td>SST</td><td>is the input server secret</td><td></td><td></td></tr><tr><td>xID</td><td>is input from the client = x.H(ID)</td><td></td><td></td></tr><tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td><td></td></tr><tr><td>mSEC</td><td>is an input from the client</td><td></td><td></td></tr><tr><td>E</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td><td></td><td></td></tr><tr><td>F</td><td>is an output to help the Kangaroos to find the PIN error, or NULL if not required</td><td></td><td></td></tr><tr><td>CID</td><td>is the input claimed client identity</td><td></td><td></td></tr><tr><td>TimeValue</td><td>is input epoch time in seconds - a timestamp</td><td></td><td></td></tr><tr><td>MESSAGE</td><td>is the message to be signed</td><td></td><td></td></tr><tr><td>Pa</td><td>is input from the client z.Q or NULL if the key-escrow less scheme is not used</td><td></td><td></td></tr></tbody></table><a name="MPIN.PRECOMPUTE"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinprecomputetoken-cid-g1-g2-">MPIN.PRECOMPUTE(TOKEN, CID, G1, G2) ⇒<a class="hash-link" href="#mpinprecomputetoken-cid-g1-g2-" title="Direct link to heading">​</a></h3><p>Precompute values for use by the client side of M-Pin Full</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: O for success or else error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr>
-<tr><td>CID</td><td>is the input client identity</td></tr>
-<tr><td>G1</td><td>precomputed output</td></tr>
-<tr><td>G2</td><td>precomputed output</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.HASH_ALL"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinhash_allsha-hid-xid-xcid-sec-y-r-w-"></a><a href="#mpinhash_allsha-hid-xid-xcid-sec-y-r-w-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W) ⇒</h3>
-<p>Hash the session transcript</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>TOKEN</td><td>is the input M-Pin token (the client secret with PIN portion removed)</td></tr><tr><td>CID</td><td>is the input client identity</td></tr><tr><td>G1</td><td>precomputed output</td></tr><tr><td>G2</td><td>precomputed output</td></tr></tbody></table><a name="MPIN.HASH_ALL"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinhash_allsha-hid-xid-xcid-sec-y-r-w-">MPIN.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W) ⇒<a class="hash-link" href="#mpinhash_allsha-hid-xid-xcid-sec-y-r-w-" title="Direct link to heading">​</a></h3><p>Hash the session transcript</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: H the output is the hash of all of the above that apply<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>HID</td><td>is the hashed input client ID = H(ID)</td></tr>
-<tr><td>xID</td><td>is the client output = x.H(ID)</td></tr>
-<tr><td>xCID</td><td>is the client output = x.(H(ID)+H(T</td><td>H(ID)))</td></tr>
-<tr><td>SEC</td><td>is the client part response</td></tr>
-<tr><td>Y</td><td>is the server challenge</td></tr>
-<tr><td>R</td><td>is the client part response</td></tr>
-<tr><td>W</td><td>is the server part response</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.CLIENT_KEY"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinclient_keysha-g1-g2-pin-r-x-h-wcid-ck-"></a><a href="#mpinclient_keysha-g1-g2-pin-r-x-h-wcid-ck-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK) ⇒</h3>
-<p>Calculate Key on Client side for M-Pin Full</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td><td></td></tr><tr><td>HID</td><td>is the hashed input client ID = H(ID)</td><td></td></tr><tr><td>xID</td><td>is the client output = x.H(ID)</td><td></td></tr><tr><td>xCID</td><td>is the client output = x.(H(ID)+H(T</td><td>H(ID)))</td></tr><tr><td>SEC</td><td>is the client part response</td><td></td></tr><tr><td>Y</td><td>is the server challenge</td><td></td></tr><tr><td>R</td><td>is the client part response</td><td></td></tr><tr><td>W</td><td>is the server part response</td><td></td></tr></tbody></table><a name="MPIN.CLIENT_KEY"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinclient_keysha-g1-g2-pin-r-x-h-wcid-ck-">MPIN.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK) ⇒<a class="hash-link" href="#mpinclient_keysha-g1-g2-pin-r-x-h-wcid-ck-" title="Direct link to heading">​</a></h3><p>Calculate Key on Client side for M-Pin Full</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: 0 or an error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>sha</td><td>is the hash type</td></tr>
-<tr><td>G1</td><td>precomputed input</td></tr>
-<tr><td>G2</td><td>precomputed input</td></tr>
-<tr><td>pin</td><td>is the input PIN number</td></tr>
-<tr><td>R</td><td>is an input, a locally generated random number</td></tr>
-<tr><td>X</td><td>is an input, a locally generated random number</td></tr>
-<tr><td>H</td><td>is an input, hash of the protocol transcript</td></tr>
-<tr><td>wCID</td><td>is the input Server-side Diffie-Hellman component</td></tr>
-<tr><td>CK</td><td>is the output calculated shared key</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.SERVER_KEY"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinserver_keyh-z-sst-w-h-hid-xid-xcid-sk-"></a><a href="#mpinserver_keyh-z-sst-w-h-hid-xid-xcid-sk-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK) ⇒</h3>
-<p>Calculate Key on Server side for M-Pin Full</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>sha</td><td>is the hash type</td></tr><tr><td>G1</td><td>precomputed input</td></tr><tr><td>G2</td><td>precomputed input</td></tr><tr><td>pin</td><td>is the input PIN number</td></tr><tr><td>R</td><td>is an input, a locally generated random number</td></tr><tr><td>X</td><td>is an input, a locally generated random number</td></tr><tr><td>H</td><td>is an input, hash of the protocol transcript</td></tr><tr><td>wCID</td><td>is the input Server-side Diffie-Hellman component</td></tr><tr><td>CK</td><td>is the output calculated shared key</td></tr></tbody></table><a name="MPIN.SERVER_KEY"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinserver_keyh-z-sst-w-h-hid-xid-xcid-sk-">MPIN.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK) ⇒<a class="hash-link" href="#mpinserver_keyh-z-sst-w-h-hid-xid-xcid-sk-" title="Direct link to heading">​</a></h3><p>Calculate Key on Server side for M-Pin Full</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: 0 or an error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>h</td><td>is the hash type</td></tr>
-<tr><td>Z</td><td>is the input Client-side Diffie-Hellman component</td></tr>
-<tr><td>SST</td><td>is the input server secret</td></tr>
-<tr><td>W</td><td>is an input random number generated by the server</td></tr>
-<tr><td>H</td><td>is an input, hash of the protocol transcript</td></tr>
-<tr><td>HID</td><td>is the hashed input client ID = H(ID)</td></tr>
-<tr><td>xID</td><td>is input from the client = x.H(ID)</td></tr>
-<tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr>
-<tr><td>SK</td><td>is the output calculated shared key</td></tr>
-</tbody>
-</table>
-<p><a name="MPIN.GET_DVS_KEYPAIR"></a></p>
-<h3><a class="anchor" aria-hidden="true" id="mpinget_dvs_keypairrng-z-pa-"></a><a href="#mpinget_dvs_keypairrng-z-pa-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MPIN.GET_DVS_KEYPAIR(rng, Z, Pa) ⇒</h3>
-<p>Generates a random public key for the client z.Q</p>
-<p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a>  <br>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th><th></th></tr></thead><tbody><tr><td>h</td><td>is the hash type</td><td></td></tr><tr><td>Z</td><td>is the input Client-side Diffie-Hellman component</td><td></td></tr><tr><td>SST</td><td>is the input server secret</td><td></td></tr><tr><td>W</td><td>is an input random number generated by the server</td><td></td></tr><tr><td>H</td><td>is an input, hash of the protocol transcript</td><td></td></tr><tr><td>HID</td><td>is the hashed input client ID = H(ID)</td><td></td></tr><tr><td>xID</td><td>is input from the client = x.H(ID)</td><td></td></tr><tr><td>xCID</td><td>is input from the client= x.(H(ID)+H(d</td><td>H(ID)))</td></tr><tr><td>SK</td><td>is the output calculated shared key</td><td></td></tr></tbody></table><a name="MPIN.GET_DVS_KEYPAIR"></a><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mpinget_dvs_keypairrng-z-pa-">MPIN.GET_DVS_KEYPAIR(rng, Z, Pa) ⇒<a class="hash-link" href="#mpinget_dvs_keypairrng-z-pa-" title="Direct link to heading">​</a></h3><p>Generates a random public key for the client z.Q</p><p><strong>Kind</strong>: static method of <a href="#MPIN"><code>MPIN</code></a><br>
 <strong>Returns</strong>: 0 or an error code<br>
-<strong>this</strong>: <code>{MPIN}</code></p>
-<table>
-<thead>
-<tr><th>Param</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>rng</td><td>cryptographically secure random number generator</td></tr>
-<tr><td>Z</td><td>an output internally randomly generated if R!=NULL, otherwise it must be provided as an input</td></tr>
-<tr><td>Pa</td><td>the output public key for the client</td></tr>
-</tbody>
-</table>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/cryptojs/hash512"><span class="arrow-prev">← </span><span>HASH512</span></a><a class="docs-next button" href="/docs/cryptojs/mpin192"><span>MPIN192</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#mpin">MPIN</a><ul class="toc-headings"><li><a href="#new-mpin">new MPIN()</a></li><li><a href="#mpintoday-">MPIN.today() ⇒</a></li><li><a href="#mpinbytestostringb-">MPIN.bytestostring(b) ⇒</a></li><li><a href="#mpinstringtobytess-">MPIN.stringtobytes(s) ⇒</a></li><li><a href="#mpincomparebytesa-b-">MPIN.comparebytes(a, b) ⇒</a></li><li><a href="#mpinmpin_hashc-u-">MPIN.mpin_hash(c, U) ⇒</a></li><li><a href="#mpinhashitsha-n-b-">MPIN.hashit(sha, n, B) ⇒</a></li><li><a href="#mpinmapu-cb-">MPIN.map(u, cb) ⇒</a></li><li><a href="#mpinunmapu-p-">MPIN.unmap(u, P) ⇒</a></li><li><a href="#mpinrecombine_g1r1-r2-r-">MPIN.RECOMBINE_G1(R1, R2, R) ⇒</a></li><li><a href="#mpinrecombine_g2w1-w2-w-">MPIN.RECOMBINE_G2(W1, W2, W) ⇒</a></li><li><a href="#mpinhash_idsha-id-">MPIN.HASH_ID(sha, ID) ⇒</a></li><li><a href="#mpinrandom_generaterng-s-">MPIN.RANDOM_GENERATE(rng, S) ⇒</a></li><li><a href="#mpinextract_pin-">MPIN.EXTRACT_PIN() ⇒</a></li><li><a href="#mpinextract_factor-">MPIN.EXTRACT_FACTOR() ⇒</a></li><li><a href="#mpinrestore_factor-">MPIN.RESTORE_FACTOR() ⇒</a></li><li><a href="#mpinget_server_secrets-sst-">MPIN.GET_SERVER_SECRET(S, SST) ⇒</a></li><li><a href="#mpinget_g1_multipletype-x-g-w-">MPIN.GET_G1_MULTIPLE(type, x, G, W) ⇒</a></li><li><a href="#mpinget_client_secrets-cid-cst-">MPIN.GET_CLIENT_SECRET(S, CID, CST) ⇒</a></li><li><a href="#mpinget_client_permitsha-date-s-cid-ctt-">MPIN.GET_CLIENT_PERMIT(sha, date, S, CID, CTT) ⇒</a></li><li><a href="#mpinclient_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-">MPIN.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT) ⇒</a></li><li><a href="#mpinclient_2x-y-sec-">MPIN.CLIENT_2(X, Y, SEC) ⇒</a></li><li><a href="#mpinserver_1sha-date-cid-hid-htid-">MPIN.SERVER_1(sha, date, CID, HID, HTID) ⇒</a></li><li><a href="#mpinserver_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa-">MPIN.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa) ⇒</a></li><li><a href="#mpinkangarooe-f-">MPIN.KANGAROO(E, F) ⇒</a></li><li><a href="#mpinget_time-">MPIN.GET_TIME() ⇒</a></li><li><a href="#mpinget_ysha-timevalue-xcid-y-">MPIN.GET_Y(sha, TimeValue, xCID, Y) ⇒</a></li><li><a href="#mpinclientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message-">MPIN.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message) ⇒</a></li><li><a href="#mpinserversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa-">MPIN.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa) ⇒</a></li><li><a href="#mpinprecomputetoken-cid-g1-g2-">MPIN.PRECOMPUTE(TOKEN, CID, G1, G2) ⇒</a></li><li><a href="#mpinhash_allsha-hid-xid-xcid-sec-y-r-w-">MPIN.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W) ⇒</a></li><li><a href="#mpinclient_keysha-g1-g2-pin-r-x-h-wcid-ck-">MPIN.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK) ⇒</a></li><li><a href="#mpinserver_keyh-z-sst-w-h-hid-xid-xcid-sk-">MPIN.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK) ⇒</a></li><li><a href="#mpinget_dvs_keypairrng-z-pa-">MPIN.GET_DVS_KEYPAIR(rng, Z, Pa) ⇒</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/milagro.svg" alt="Apache Milagro" width="50" height="100"/></a><div><h5>Docs</h5><a href="/docs/milagro-intro.html">Milagro Intro</a><a href="/docs/amcl-overview.html">Apache Milagro Crypto Library</a><a href="/docs/d-ta-overview.html">Decentralized Trust Authority</a><a href="/docs/zkp-mfa-overview.html">Zero Knowledge Proof MFA</a></div><div><h5>Community</h5><a href="../docs/support">Support</a><a href="../docs/contributor-guide">Contributing</a><a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=115529045" target="_blank" rel="noreferrer noopener">Developer Wiki</a><a href="https://twitter.com/apachemilagro?lang=en" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Status</a><a href="https://github.com/apache/incubator-milagro-crypto-c">GitHub</a><a class="github-button" href="https://github.com/apache/incubator-milagro" data-icon="octicon-star" data-count-href="/apache/incubator-milagro-crypto/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://apache.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Apache Incubator" width="170" height="45"/></a><section class="copyright"><div>Apache Milagro is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</div></section><p></p><section class="copyright">Copyright © 2022  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</section></footer></div></body></html>
+<strong>this</strong>: <code>{&quot;{&quot;}MPIN{&quot;}&quot;}</code>  </p><table><thead><tr><th>Param</th><th>Description</th></tr></thead><tbody><tr><td>rng</td><td>cryptographically secure random number generator</td></tr><tr><td>Z</td><td>an output internally randomly generated if R!=NULL, otherwise it must be provided as an input</td></tr><tr><td>Pa</td><td>the output public key for the client</td></tr></tbody></table></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages navigation"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/cryptojs/hash512"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">HASH512</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/cryptojs/mpin192"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">MPIN192</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#mpin" class="table-of-contents__link toc-highlight">MPIN</a><ul><li><a href="#new-mpin" class="table-of-contents__link toc-highlight">new MPIN()</a></li><li><a href="#mpintoday-" class="table-of-contents__link toc-highlight">MPIN.today() ⇒</a></li><li><a href="#mpinbytestostringb-" class="table-of-contents__link toc-highlight">MPIN.bytestostring(b) ⇒</a></li><li><a href="#mpinstringtobytess-" class="table-of-contents__link toc-highlight">MPIN.stringtobytes(s) ⇒</a></li><li><a href="#mpincomparebytesa-b-" class="table-of-contents__link toc-highlight">MPIN.comparebytes(a, b) ⇒</a></li><li><a href="#mpinmpin_hashc-u-" class="table-of-contents__link toc-highlight">MPIN.mpin_hash(c, U) ⇒</a></li><li><a href="#mpinhashitsha-n-b-" class="table-of-contents__link toc-highlight">MPIN.hashit(sha, n, B) ⇒</a></li><li><a href="#mpinmapu-cb-" class="table-of-contents__link toc-highlight">MPIN.map(u, cb) ⇒</a></li><li><a href="#mpinunmapu-p-" class="table-of-contents__link toc-highlight">MPIN.unmap(u, P) ⇒</a></li><li><a href="#mpinrecombine_g1r1-r2-r-" class="table-of-contents__link toc-highlight">MPIN.RECOMBINE_G1(R1, R2, R) ⇒</a></li><li><a href="#mpinrecombine_g2w1-w2-w-" class="table-of-contents__link toc-highlight">MPIN.RECOMBINE_G2(W1, W2, W) ⇒</a></li><li><a href="#mpinhash_idsha-id-" class="table-of-contents__link toc-highlight">MPIN.HASH_ID(sha, ID) ⇒</a></li><li><a href="#mpinrandom_generaterng-s-" class="table-of-contents__link toc-highlight">MPIN.RANDOM_GENERATE(rng, S) ⇒</a></li><li><a href="#mpinextract_pin-" class="table-of-contents__link toc-highlight">MPIN.EXTRACT_PIN() ⇒</a></li><li><a href="#mpinextract_factor-" class="table-of-contents__link toc-highlight">MPIN.EXTRACT_FACTOR() ⇒</a></li><li><a href="#mpinrestore_factor-" class="table-of-contents__link toc-highlight">MPIN.RESTORE_FACTOR() ⇒</a></li><li><a href="#mpinget_server_secrets-sst-" class="table-of-contents__link toc-highlight">MPIN.GET_SERVER_SECRET(S, SST) ⇒</a></li><li><a href="#mpinget_g1_multipletype-x-g-w-" class="table-of-contents__link toc-highlight">MPIN.GET_G1_MULTIPLE(type, x, G, W) ⇒</a></li><li><a href="#mpinget_client_secrets-cid-cst-" class="table-of-contents__link toc-highlight">MPIN.GET_CLIENT_SECRET(S, CID, CST) ⇒</a></li><li><a href="#mpinget_client_permitsha-date-s-cid-ctt-" class="table-of-contents__link toc-highlight">MPIN.GET_CLIENT_PERMIT(sha, date, S, CID, CTT) ⇒</a></li><li><a href="#mpinclient_1sha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-" class="table-of-contents__link toc-highlight">MPIN.CLIENT_1(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT) ⇒</a></li><li><a href="#mpinclient_2x-y-sec-" class="table-of-contents__link toc-highlight">MPIN.CLIENT_2(X, Y, SEC) ⇒</a></li><li><a href="#mpinserver_1sha-date-cid-hid-htid-" class="table-of-contents__link toc-highlight">MPIN.SERVER_1(sha, date, CID, HID, HTID) ⇒</a></li><li><a href="#mpinserver_2date-hid-htid-y-sst-xid-xcid-msec-e-f-pa-" class="table-of-contents__link toc-highlight">MPIN.SERVER_2(date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, Pa) ⇒</a></li><li><a href="#mpinkangarooe-f-" class="table-of-contents__link toc-highlight">MPIN.KANGAROO(E, F) ⇒</a></li><li><a href="#mpinget_time-" class="table-of-contents__link toc-highlight">MPIN.GET_TIME() ⇒</a></li><li><a href="#mpinget_ysha-timevalue-xcid-y-" class="table-of-contents__link toc-highlight">MPIN.GET_Y(sha, TimeValue, xCID, Y) ⇒</a></li><li><a href="#mpinclientsha-date-client_id-rng-x-pin-token-sec-xid-xcid-permit-timevalue-y-message-" class="table-of-contents__link toc-highlight">MPIN.CLIENT(sha, date, CLIENT_ID, rng, X, pin, TOKEN, SEC, xID, xCID, PERMIT, TimeValue, Y, Message) ⇒</a></li><li><a href="#mpinserversha-date-hid-htid-y-sst-xid-xcid-msec-e-f-cid-timevalue-message-pa-" class="table-of-contents__link toc-highlight">MPIN.SERVER(sha, date, HID, HTID, Y, SST, xID, xCID, mSEC, E, F, CID, TimeValue, MESSAGE, Pa) ⇒</a></li><li><a href="#mpinprecomputetoken-cid-g1-g2-" class="table-of-contents__link toc-highlight">MPIN.PRECOMPUTE(TOKEN, CID, G1, G2) ⇒</a></li><li><a href="#mpinhash_allsha-hid-xid-xcid-sec-y-r-w-" class="table-of-contents__link toc-highlight">MPIN.HASH_ALL(sha, HID, xID, xCID, SEC, Y, R, W) ⇒</a></li><li><a href="#mpinclient_keysha-g1-g2-pin-r-x-h-wcid-ck-" class="table-of-contents__link toc-highlight">MPIN.CLIENT_KEY(sha, G1, G2, pin, R, X, H, wCID, CK) ⇒</a></li><li><a href="#mpinserver_keyh-z-sst-w-h-hid-xid-xcid-sk-" class="table-of-contents__link toc-highlight">MPIN.SERVER_KEY(h, Z, SST, W, H, HID, xID, xCID, SK) ⇒</a></li><li><a href="#mpinget_dvs_keypairrng-z-pa-" class="table-of-contents__link toc-highlight">MPIN.GET_DVS_KEYPAIR(rng, Z, Pa) ⇒</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="margin-bottom--sm"><img src="/img/milagro.svg" class="themedImage_ToTc themedImage--light_HNdA footer__logo"><img src="/img/milagro.svg" class="themedImage_ToTc themedImage--dark_i4oU footer__logo"></div><div class="footer__copyright">Copyright © 2022  The Apache Software Foundation. Apache Milagro, Milagro, Apache, the Apache feather, and the Apache Milagro project logo are either registered trademarks or trademarks of the Apache Software Foundation.</div></div></div></footer></div>
+<script src="/assets/js/runtime~main.2c187651.js"></script>
+<script src="/assets/js/main.98efe6b5.js"></script>
+</body>
+</html>
