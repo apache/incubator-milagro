@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/dbig",
+  "id": "cryptojs/dbig",
+  "title": "DBIG",
+  "description": "DBIG",
+  "source": "@site/../docs/cryptojs/dbig.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/dbig",
+  "permalink": "/docs/cryptojs/dbig",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dbig",
+    "title": "DBIG",
+    "sidebar_label": "DBIG"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "BLS256",
+    "permalink": "/docs/cryptojs/bls256"
+  },
+  "next": {
+    "title": "ECDH",
+    "permalink": "/docs/cryptojs/ecdh"
+  }
+}

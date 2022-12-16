@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/bls",
+  "id": "cryptojs/bls",
+  "title": "BLS",
+  "description": "BLS",
+  "source": "@site/../docs/cryptojs/bls.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/bls",
+  "permalink": "/docs/cryptojs/bls",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "bls",
+    "title": "BLS",
+    "sidebar_label": "BLS"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "BIG",
+    "permalink": "/docs/cryptojs/big"
+  },
+  "next": {
+    "title": "BLS192",
+    "permalink": "/docs/cryptojs/bls192"
+  }
+}

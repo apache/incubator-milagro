@@ -1,0 +1,30 @@
+{
+  "unversionedId": "zkp-mfa-overview",
+  "id": "zkp-mfa-overview",
+  "title": "Zero Knowledge Proof MFA Overview",
+  "description": "Interested in becoming a contributor? Milagro is looking for you.",
+  "source": "@site/../docs/zkp-mfa-overview.md",
+  "sourceDirName": ".",
+  "slug": "/zkp-mfa-overview",
+  "permalink": "/docs/zkp-mfa-overview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "zkp-mfa-overview",
+    "title": "Zero Knowledge Proof MFA Overview",
+    "sidebar_label": "ZKP-MFA Overview"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Multi-Party Computation Library 0.1",
+    "permalink": "/docs/mpc-api-0.1"
+  },
+  "next": {
+    "title": "ZKP-MFA API",
+    "permalink": "/docs/zkp-mfa-api"
+  }
+}

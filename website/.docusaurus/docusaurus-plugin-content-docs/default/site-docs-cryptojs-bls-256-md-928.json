@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/bls256",
+  "id": "cryptojs/bls256",
+  "title": "BLS256",
+  "description": "BLS256",
+  "source": "@site/../docs/cryptojs/bls256.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/bls256",
+  "permalink": "/docs/cryptojs/bls256",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "bls256",
+    "title": "BLS256",
+    "sidebar_label": "BLS256"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "BLS192",
+    "permalink": "/docs/cryptojs/bls192"
+  },
+  "next": {
+    "title": "DBIG",
+    "permalink": "/docs/cryptojs/dbig"
+  }
+}

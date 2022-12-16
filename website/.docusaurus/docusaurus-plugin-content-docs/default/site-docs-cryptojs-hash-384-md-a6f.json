@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/hash384",
+  "id": "cryptojs/hash384",
+  "title": "HASH384",
+  "description": "HASH384",
+  "source": "@site/../docs/cryptojs/hash384.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/hash384",
+  "permalink": "/docs/cryptojs/hash384",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "hash384",
+    "title": "HASH384",
+    "sidebar_label": "HASH384"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "HASH256",
+    "permalink": "/docs/cryptojs/hash256"
+  },
+  "next": {
+    "title": "HASH512",
+    "permalink": "/docs/cryptojs/hash512"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "milagro-crypto",
+  "id": "milagro-crypto",
+  "title": "Milagro Crypto",
+  "description": "One of the critical points about information security is to give access to resources only to authorized entities and deny access to unauthorized ones.",
+  "source": "@site/../docs/milagro-crypto.md",
+  "sourceDirName": ".",
+  "slug": "/milagro-crypto",
+  "permalink": "/docs/milagro-crypto",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "milagro-crypto",
+    "title": "Milagro Crypto",
+    "sidebar_label": "Milagro Crypto"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Milagro Introduction",
+    "permalink": "/docs/milagro-intro"
+  },
+  "next": {
+    "title": "Milagro Protocols",
+    "permalink": "/docs/milagro-protocols"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/ff",
+  "id": "cryptojs/ff",
+  "title": "FF",
+  "description": "FF",
+  "source": "@site/../docs/cryptojs/ff.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/ff",
+  "permalink": "/docs/cryptojs/ff",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "ff",
+    "title": "FF",
+    "sidebar_label": "FF"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ECP8",
+    "permalink": "/docs/cryptojs/ecp8"
+  },
+  "next": {
+    "title": "FP",
+    "permalink": "/docs/cryptojs/fp"
+  }
+}

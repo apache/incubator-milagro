@@ -15,18 +15,22 @@ Please report any bugs or feature requests using the "Issues" tab within our Git
 * [**incubator-milagro-dta** (Decentralized Trust Authority (D-TA) - a collaborative key management server)](https://github.com/apache/incubator-milagro-dta/issues)
 
 ## Get Involved
+
 To join the Milagro developer's mailing list, please send an email to:
 <a href="mailto:dev-subscribe@milagro.apache.org?Subject=Subscribe" target="_top">dev-subscribe @ milagro.apache.org</a>
 
 ## Milagro Overview
+
 Learn more about Milagro.  [Read the docs.](milagro-intro.md)
 
 ## Like cutting-edge crypto?
-Join us.  [Become a contributor.](contributor-guide.md)
+
+Join us.  [Become a contributor.](/docs/contributor-guide)
 
 ## Need Status?
+
 We blog. [No, really.](http://milagro.apache.org/blog/)
 
-<!--
+
 Supported admonition types are: caution, note, important, tip, warning.
--->
+

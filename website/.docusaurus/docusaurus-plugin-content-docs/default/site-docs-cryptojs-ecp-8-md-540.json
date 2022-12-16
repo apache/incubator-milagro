@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/ecp8",
+  "id": "cryptojs/ecp8",
+  "title": "ECP8",
+  "description": "ECP8",
+  "source": "@site/../docs/cryptojs/ecp8.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/ecp8",
+  "permalink": "/docs/cryptojs/ecp8",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "ecp8",
+    "title": "ECP8",
+    "sidebar_label": "ECP8"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ECP4",
+    "permalink": "/docs/cryptojs/ecp4"
+  },
+  "next": {
+    "title": "FF",
+    "permalink": "/docs/cryptojs/ff"
+  }
+}

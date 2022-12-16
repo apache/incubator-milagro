@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/quickstart",
+  "id": "dta-details/quickstart",
+  "title": "Quick Start",
+  "description": "Docker",
+  "source": "@site/../docs/dta-details/quickstart.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/quickstart",
+  "permalink": "/docs/dta-details/quickstart",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "quickstart",
+    "title": "Quick Start",
+    "sidebar_label": "Quick Start"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "D-TA Overview",
+    "permalink": "/docs/d-ta-overview"
+  },
+  "next": {
+    "title": "API",
+    "permalink": "/docs/dta-details/api"
+  }
+}

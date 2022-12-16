@@ -1,0 +1,21 @@
+{
+  "unversionedId": "d-ta-api",
+  "id": "d-ta-api",
+  "title": "D-TA Node API",
+  "description": "Interested in becoming a contributor? Milagro is looking for you.",
+  "source": "@site/../docs/d-ta-api.md",
+  "sourceDirName": ".",
+  "slug": "/d-ta-api",
+  "permalink": "/docs/d-ta-api",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "d-ta-api",
+    "title": "D-TA Node API",
+    "sidebar_label": "D-TA Node API"
+  }
+}

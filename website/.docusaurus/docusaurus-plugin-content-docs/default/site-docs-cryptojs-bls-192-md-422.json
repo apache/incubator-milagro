@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/bls192",
+  "id": "cryptojs/bls192",
+  "title": "BLS192",
+  "description": "BLS192",
+  "source": "@site/../docs/cryptojs/bls192.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/bls192",
+  "permalink": "/docs/cryptojs/bls192",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "bls192",
+    "title": "BLS192",
+    "sidebar_label": "BLS192"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "BLS",
+    "permalink": "/docs/cryptojs/bls"
+  },
+  "next": {
+    "title": "BLS256",
+    "permalink": "/docs/cryptojs/bls256"
+  }
+}

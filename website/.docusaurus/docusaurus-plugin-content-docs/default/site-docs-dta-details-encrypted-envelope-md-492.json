@@ -1,0 +1,30 @@
+{
+  "unversionedId": "dta-details/encrypted-envelope",
+  "id": "dta-details/encrypted-envelope",
+  "title": "Encrypted Envelope",
+  "description": "The Milagro D-TA enables Principals (who require secrets to be safeguarded) to communicate with Fiduciaries who provide custodian services for those secrets. To facilitate these transactions communication between the parties must be secure i.e., must have privacy, authentication, non-repudiation and message integrity. The Milagro D-TA delivers this using its \"Encrypted Envelope\" messaging format.",
+  "source": "@site/../docs/dta-details/encrypted-envelope.md",
+  "sourceDirName": "dta-details",
+  "slug": "/dta-details/encrypted-envelope",
+  "permalink": "/docs/dta-details/encrypted-envelope",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "encrypted-envelope",
+    "title": "Encrypted Envelope",
+    "sidebar_label": "Encrypted Envelope"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Identity Documents",
+    "permalink": "/docs/dta-details/identity-documents"
+  },
+  "next": {
+    "title": "IPFS",
+    "permalink": "/docs/dta-details/ipfs"
+  }
+}

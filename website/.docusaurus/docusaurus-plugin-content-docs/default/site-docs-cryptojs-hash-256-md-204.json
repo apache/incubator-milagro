@@ -1,0 +1,30 @@
+{
+  "unversionedId": "cryptojs/hash256",
+  "id": "cryptojs/hash256",
+  "title": "HASH256",
+  "description": "HASH256",
+  "source": "@site/../docs/cryptojs/hash256.md",
+  "sourceDirName": "cryptojs",
+  "slug": "/cryptojs/hash256",
+  "permalink": "/docs/cryptojs/hash256",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "hash256",
+    "title": "HASH256",
+    "sidebar_label": "HASH256"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "GCM",
+    "permalink": "/docs/cryptojs/gcm"
+  },
+  "next": {
+    "title": "HASH384",
+    "permalink": "/docs/cryptojs/hash384"
+  }
+}
